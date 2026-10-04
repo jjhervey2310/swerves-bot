@@ -77,9 +77,11 @@ CREATE TABLE IF NOT EXISTS market_sentiment_daily (
   fear_greed     INT,
   classification TEXT,
   source         TEXT NOT NULL DEFAULT 'alternative.me',
-  observed_at    TIMESTAMPTZ NOT NULL DEFAULT now()
+  observed_at    TIMESTAMPTZ NOT NULL DEFAULT now(),
+  available_at   TIMESTAMPTZ                        -- when a decision may first use the reading: live capture time; NULL for backfilled history (unusable, Phase 4 round 2 R-W #3b)
 );
 ALTER TABLE market_sentiment_daily ENABLE ROW LEVEL SECURITY;
+CREATE POLICY market_sentiment_public_read ON market_sentiment_daily FOR SELECT TO anon, authenticated USING (true);   -- research export with the publishable key (migration sentiment_available_at_and_anon_read, 2026-10-03)
 
 -- ---------- join key: protocol -> token -> venue pairs ----------
 CREATE TABLE IF NOT EXISTS token_map (

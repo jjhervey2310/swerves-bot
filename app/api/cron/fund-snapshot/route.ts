@@ -22,7 +22,10 @@ async function handle(req: Request) {
     const fg = await getJson<{ data: { value: string; value_classification: string; timestamp: string }[] }>(LLAMA.fearGreed)
     const d = fg.data?.[0]
     if (d) {
-      const { error } = await sb.from('market_sentiment_daily').upsert({ snapshot_date: new Date(Number(d.timestamp) * 1000).toISOString().slice(0, 10), fear_greed: Number(d.value), classification: d.value_classification, observed_at: new Date().toISOString() }, { onConflict: 'snapshot_date' })
+      // available_at = the moment this collector captured the reading: the point-in-time timestamp a decision may use
+      // (Phase 4 round 2, R-W #3b). Backfilled history carries NULL here and is unusable by rule.
+      const now = new Date().toISOString()
+      const { error } = await sb.from('market_sentiment_daily').upsert({ snapshot_date: new Date(Number(d.timestamp) * 1000).toISOString().slice(0, 10), fear_greed: Number(d.value), classification: d.value_classification, source: 'alternative.me/fng live (fund-snapshot collector)', observed_at: now, available_at: now }, { onConflict: 'snapshot_date' })
       if (error) notes.push(`sentiment: ${error.message}`)
     }
   } catch (e) { notes.push(`fear&greed: ${e instanceof Error ? e.message : e}`) }

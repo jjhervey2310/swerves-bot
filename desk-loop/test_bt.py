@@ -48,7 +48,7 @@ class AsOf(unittest.TestCase):
     def test_view_holds_no_market_reference(self):
         v = market().as_of(T0 + 10 * DAY)
         self.assertFalse(hasattr(v, "_m"))
-        self.assertEqual(set(v.__slots__), {"t", "_bars", "_universe", "_bar_seconds", "_regime"})
+        self.assertEqual(set(v.__slots__), {"t", "_bars", "_universe", "_bar_seconds", "_regime", "_members", "_exog"})
 
     def test_stale_asset_is_not_in_universe(self):
         m = market()

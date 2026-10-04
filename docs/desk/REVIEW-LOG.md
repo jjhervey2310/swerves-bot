@@ -420,3 +420,113 @@ below 10%), not that the strategies survived the haircut. Hardening item impleme
 holds the last completed close; `Portfolio.equity()` marks a held name with no bar today at that close, never at entry
 price; each such bar-day is an engine event `stale_mark` and the run result carries `stale_marks`. Test
 `StaleMarks.test_missing_bar_marks_at_last_close_not_entry`. 83/83.
+
+---
+
+## R-2026-10-03-W — ChatGPT review of the round-2 pre-registration draft v1 (four blockers, one HIGH, two fixes, three answers)
+
+All accepted; draft v2 written before any round-2 code (`PHASE4-ROUND2-PREREGISTRATION.md`). Fact found while answering
+#3 that the reviewer must rule on: the F&G table holds 2 live rows (2026-10-02/03), no history over the OOS span.
+
+| # | Severity | Claim | Verdict | Action in v2 |
+|---|---|---|---|---|
+| 1 | BLOCKER | A and B are responses to observed round-1 results; the 2021–2026 span is no longer untouched for them; round-2 historical results cannot confer `research_accepted` | **Correct.** | Evidence status rule at the top of v2: round 2 = post-Round-1 hypothesis screening; outcomes `historical_survivor` / `historical_rejected` / `inconclusive`; survivors advance only to a forward-validation stage on bars after the freeze; that stage is pre-registered and reviewed BEFORE the round-2 table is run; only it can confer `research_accepted`. A and B carry explicit provenance lines ("post-Round-1 decomposition hypothesis", "post-Round-1 response"). Heading rewritten as recommended. |
+| 2 | BLOCKER | Inherited ≥100-trade, `symbols>=min` and symbol-concentration gates are structurally impossible for BTC-only A and C; pre-register candidate-class gates and an episode minimum now | **Correct.** | §0 classes: S (A, C) — positive continuous OOS, positive ×1.25, ≥2/3 thirds, positive P&L in ≥2 calendar years, scale invariant, no boundary dependency, P&L ex-top-3 trades > 50% of total, own falsifier; episode minimums frozen: A ≥ 10 completed round trips, C ≥ 8 completed non-overlapping episodes, fewer ⇒ `inconclusive`. X (B) keeps the full 11-boolean round-1 gate and ≥100 trades. Numbers offered for the reviewer to confirm or replace (Q1). |
+| 3 | BLOCKER | C as written ("another slot every 7 days") cannot execute on a one-position-per-symbol engine; choose Option I (timing) or II (lot-aware accumulation) before coding | **Correct.** Option I adopted. | Rule: when flat and the usable reading ≤ threshold, buy next open, hold exactly 90 bars, sell next open, ignore readings while holding, no stop; verdict at 1 slot = 100%; Option II deferred to the accumulation phase. Falsifier uses the same non-overlapping executed signals; all-fear-days event study is descriptive only. |
+| 3b | BLOCKER | "F&G dated D is known at D's close" cannot be assumed; store `observed_for_date`, `available_at`, `value`, `source`; a decision at t may use a reading only if `available_at ≤ t`; no provenance ⇒ not trustworthy | **Correct, and it bites harder than the draft knew.** `market_sentiment_daily` (snapshot_date, fear_greed, classification, source, observed_at) holds 2 rows, both live captures at 00:20 UTC of the dated day; there is no F&G history over 2021–2026 at all. A backfill from alternative.me gives date and value, not publication time. | v2 freezes the availability rule, `available_at` = collector capture for live rows, NULL (unusable) for backfilled rows, so C's verified-availability coverage of the OOS span is 0% ⇒ `inconclusive` by rule. Two pre-registered options for the reviewer (Q2): (i) C forward-only; (ii) a declared assumed-availability screening run (reading dated D usable from the close of D+1, ~47 h beyond the observed live lag, `evidence_class = assumed_availability`, best outcome `historical_survivor (assumed availability)`, still needing forward validation). Live collection continues daily meanwhile. |
+| 4 | HIGH | B's floor/no-floor comparison must share the exact parameter picks per fold; select on the floor candidate; breadth from the contemporaneous top-20 only, not Phase-3 breadth; fail closed to cash on a missing constituent | **Correct.** | Paired twin runs the same selected parameters over the same OOS windows and continuous schedule; selection on the floor variant. Breadth = top-20 members above own SMA50 / members, computed at the rebalance close; fail closed to cash when membership < 20 or any member's bar is missing (`breadth_fail_closed` counted). Falsifier unchanged: return AND max DD AND PF. |
+| Q1 | — | A at max_positions = 1? | Yes | Verdict run 100% BTC; 10-slot version is a sizing sensitivity; benchmarks 100% BTC B&H and cash (10%-slot B&H kept for continuity). |
+| Q2 | — | B breadth source? | Top-20 only | As #4. |
+| Q3 | — | C coverage < 80%? | Yes, plus any unexplained contiguous gap > 30 days; "usable" = verified `available_at ≤ decision close`; never forward-fill | Frozen verbatim. |
+| fix | — | A's falsifier too loose | **Correct.** | R_A ≥ R_BH, or (R_A ≥ 0.70 × R_BH and DD_A ≤ 0.70 × DD_BH); positive after canonical and stress costs independently. |
+| fix | — | C's hypothesis says 90 d but H includes 30 | **Correct.** | 90 d is the primary structural horizon and the only H in the grid; 30 d is a pre-registered sensitivity. |
+
+No round-2 code written (handoff rule); build starts on `claude/phase-4-round2` after written acceptance of v2 and a
+reviewed forward-validation pre-registration. Branch-keeping note: a parallel cloud session, unaware of PR #49, rebuilt
+the round-1 infrastructure as PR #50; it was closed as superseded the same day, nothing from it is used.
+
+---
+
+## R-2026-10-03-X — ChatGPT acceptance of the round-2 pre-registration v2 (FROZEN)
+
+> R-X — Phase 4 Round 2 pre-registration v2 ACCEPTED AND FROZEN at PR #51 @ `8a52e079`. Episode minimums A ≥10 and C ≥8
+> accepted. Candidate C may run the pre-registered D+1 assumed-availability historical screening, explicitly labelled
+> `assumed_availability`; it cannot confer research acceptance. Historical Round-2 results can only be
+> `historical_survivor`, `historical_rejected`, or `inconclusive`. No Round-2 historical survivor may become
+> `research_accepted` without the separately pre-registered fresh forward-validation stage.
+
+Recorded verbatim; the three answers (Accept / ii / Freeze) are written into the frozen document's header. Reviewer's
+procedural requirement applied: `docs/desk/PHASE4-FORWARD-VALIDATION.md` v1 is pre-registered and sent for review before
+the round-2 historical table is run. Round-2 code build starts on `claude/phase-4-round2` (allowed from this acceptance);
+the table is NOT run until the forward-validation stage is accepted.
+
+---
+
+## R-2026-10-04-Y — ChatGPT review of the forward-validation stage v1 (Revise / Accept / Freeze on revision)
+
+> 1. Revise 2. Accept 3. Not yet. I found one internal contradiction in v1. The forward minimum of 4 class-S episodes cannot
+> coexist sensibly with the frozen gate requiring P&L excluding the three best completed trades >50% of total P&L. With only
+> four episodes, that leaves only the single worst episode after removing the best three; for a profitable strategy it is
+> effectively impossible for that remainder to constitute >50% of total profit. Use the already-frozen candidate-specific
+> Round-2 minimums forward as well: A ≥10 completed forward round trips; C ≥8 completed forward episodes. Keep the ≥365
+> forward days requirement. For B, I accept ≥60 trades at first evaluation, ≥100 from the second onward. Everything else in
+> the forward-validation document is acceptable, including two consecutive passes for `research_accepted`, any scheduled
+> failure being final, fixed 90-day evaluation boundaries, forward-only gates, no historical pooling, and verified live
+> `available_at` for C. So once §4 changes from generic `S ≥4` to A ≥10 / C ≥8, my answer to Q3 becomes Freeze.
+
+| # | Claim | Verdict | Action |
+|---|---|---|---|
+| 1 | A 4-episode minimum makes the ex-top-3 > 50% gate unsatisfiable | **Correct.** | §4 now carries the frozen round-2 minimums forward: A ≥ 10 round trips, C ≥ 8 episodes, 365 days kept; B ≥ 60 at the first evaluation, ≥ 100 from the second. Document frozen as v1.1. |
+| 2 | Two consecutive passes, any fail final | Accepted | Unchanged. |
+| 3 | Freeze on the revision | Condition met verbatim | `PHASE4-FORWARD-VALIDATION.md` v1.1 FROZEN. The round-2 historical table now runs once on data_hash `8df7990c93dcc632` (re-exported this session with an end bound of 2026-10-01, hash reproduced exactly; sentiment snapshot `fng_2026-10-03.json`, 3,163 rows, 2 with verified `available_at`). |
+
+---
+
+## R-2026-10-04-Z — Phase 4 round 2 historical screening table, run once (UNREVIEWED; nothing promoted)
+
+Table: `docs/desk/PHASE4-ROUND2-TABLE-2026-10-04.{md,json}` @ PR #51, run 2026-10-04 ~03:2x UTC after R-Y. Snapshot re-exported
+this session with an end bound of 2026-10-01: data_hash `8df7990c93dcc632`, universe_hash `64e00348d99bb713`,
+membership_hash `99c437c3e40dbb57` (identical to round 1). Sentiment snapshot: 3,163 rows, 2 with verified `available_at`.
+Trials 176 (A 44 + B 88 + C 44; the control never counts). OOS span 2021-03-08 → 2026-08-09, 22 folds. Outcomes under the
+frozen rules, sent unchanged:
+
+| candidate | class | evidence | episodes / trades | OOS continuous | ×1.25 | severe | max DD | PF | falsifier | outcome |
+|---|---|---|---|---|---|---|---|---|---|---|
+| A_btc_trend (100% BTC) | S | — | 26 round trips | −36.6% | −40.6% | −49.8% | −63.3% | 0.65 | fails (BTC B&H +22.6% / DD −76.7%; A has neither the return nor the 70%/30% clause) | **historical_rejected** |
+| B_momentum_floor | X | — | 97 trades | −35.8% | −37.2% | −41.0% | −45.6% | 0.70 | **passes** (no-floor twin on the same picks −54.6% / DD −56.8% / PF 0.65) | **historical_rejected** (97 < 100 trades; also oos_positive, both fee-stress checks, thirds, not_top3 fail) |
+| C_fear_greed, verified availability | S | verified | 0 | — | — | — | — | — | — | **inconclusive** (coverage 0%, gap 1,981 d — exactly as frozen) |
+| C_fear_greed, assumed availability (D+1) | S | assumed_availability | 10 episodes (11 entries) | −58.5% | −59.6% | −62.4% | −77.7% | 0.33 | fails (signal 90 d mean −2.3%, hit 36%, vs base rate +5.8%, hit 52%) | **historical_rejected** |
+| btc_bh_100pct / btc_bh_10pct_slot / cash | benchmarks | | | +22.6% / +2.3% / 0% | | | −76.7% / −11.1% / 0 | | | n/a |
+| breakout20 | control | | 331 | −64.9% | | | −86.4% | | | n/a |
+
+Readings, descriptive only: (1) the breadth cash floor is the one mechanism in two rounds that measurably helped — it
+cut the no-floor twin's loss by 19 points and its drawdown by 11 — yet the floored rule still lost 36%; a mechanism that
+loses less is not an edge. (2) Extreme Fear entries (D+1 lag) were followed by below-base-rate 90-day BTC returns on this
+span (11 non-overlapping signals); the overlapping all-fear-days event study (263 days) shows +1.6% mean, 43% hit, also
+below base rate; H-SWEEP-A as a timing rule is not supported here. (3) BTC-only trend lost 37% while 100% BTC B&H made
+23% with a 77% drawdown; the 10-slot version lost 1.8%. (4) All candidates pass scale invariance and boundary dependency;
+delisting exposure ≤ 3%; `stale_marks` 0 everywhere. Note on the printed reason for B: the outcome line names the trade
+hurdle first; the boolean row lists every failing check. Nothing in `research_runs`. Awaiting the independent verdict
+(outcomes are screening outcomes; no candidate enters forward validation unless the reviewer finds otherwise).
+
+---
+
+## R-2026-10-04-AA — ChatGPT independent verdict on the round-2 screening table (PR #51 @ 45cc49a)
+
+> **R-AA — Phase 4 Round 2 historical screening table VALID. A_btc_trend = historical_rejected. B_momentum_floor =
+> historical_rejected; its breadth cash-floor mechanism passes the paired falsifier but the strategy itself fails the
+> frozen class-X gate. C_fear_greed verified = inconclusive for 0% verified historical coverage and is not
+> forward-eligible because the shortfall is not episode-count-only. C_fear_greed assumed D+1 = historical_rejected. No
+> Round-2 candidate advances to forward validation, Phase 5, or Phase 10. Nothing is promoted to research_accepted.**
+
+Recorded verbatim. Table integrity PASS (hashes, stale marks 0, scale, boundary, delisting immaterial, evidence-status
+rules applied). Zero entrants to the forward-validation stage; C-verified is retired (coverage, not episode shortfall).
+Presentation note on B's outcome line acknowledged; no effect on the verdict, nothing edited after the run. Nothing in
+`research_runs`. Reviewer: PR #51 ready for merge from the research-governance standpoint; merge is Jacob's call.
+
+State after two rounds (for the next pre-registration, not a conclusion): six hypotheses tested under frozen rules on
+2021-03 → 2026-08 (three generic alt rules, BTC-only trend, breadth-floored alt momentum, Extreme-Fear BTC timing); none
+positive after costs; the only measurably helpful mechanism was the breadth cash floor (loss reduced, not eliminated);
+100% BTC buy-and-hold made +22.6% with a −76.7% drawdown; cash 0%. The forward-validation stage exists and is frozen but
+has no entrant; the live F&G collector keeps accumulating verified rows regardless.
+

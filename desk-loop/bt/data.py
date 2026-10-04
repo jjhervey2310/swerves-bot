@@ -38,8 +38,8 @@ class Market:
         """Index one past the last bar completed by t (bars[:i] are visible at t)."""
         return bisect.bisect_right(self._ts.get(sym, []), t - self.bar_seconds)
 
-    def as_of(self, t, regime=None, universe=None):
-        return AsOfView.build(self, int(t), regime, universe)
+    def as_of(self, t, regime=None, universe=None, exog=None):
+        return AsOfView.build(self, int(t), regime, universe, exog)
 
     def bar_opening_at(self, sym, t):
         """The engine's fill bar: the bar whose open time is exactly t, else None. Not exposed to strategies."""
@@ -68,13 +68,15 @@ class AsOfView:
     the Market (R-F #5): the visible slices are materialised as tuples. `test_bt.StrategyHygiene` additionally
     greps tournament strategies for raw-market references, because Python cannot forbid a closure."""
 
-    __slots__ = ("t", "_bars", "_universe", "_bar_seconds", "_regime")
+    __slots__ = ("t", "_bars", "_universe", "_bar_seconds", "_regime", "_members", "_exog")
 
     @classmethod
-    def build(cls, market, t, regime=None, universe=None):
+    def build(cls, market, t, regime=None, universe=None, exog=None):
         v = cls.__new__(cls)
         v.t, v._bar_seconds = t, market.bar_seconds
         v._regime = regime.at(t) if regime is not None else None      # Phase 3: the published label at the last decision time <= t, materialised (no series reference)
+        v._members = tuple(sorted(universe.at(t))) if universe is not None else None   # Phase 4 round 2: the frozen membership itself (B's breadth denominator), missing bars included
+        v._exog = {k: s.at(t) for k, s in (exog or {}).items()}       # round 2: one usable point-in-time reading per series (available_at <= t), materialised
         v._bars = {}
         uni = []
         for s, bs in market.bars.items():
@@ -104,6 +106,16 @@ class AsOfView:
     def regime(self):
         """Phase 3 label as (state, since_t, votes, vetoes), or None when the run has no regime series attached."""
         return self._regime
+
+    def universe_members(self):
+        """Round 2 (B): the frozen monthly membership in force at t, including a member whose bar is missing today
+        (universe() drops it). None when the run has no universe schedule attached."""
+        return list(self._members) if self._members is not None else None
+
+    def exog(self, name):
+        """Round 2 (C): the latest reading of an exogenous series usable at t (available_at <= t), as a dict with
+        observed_for_date / value / available_at, or None. Never a reading that was not yet available."""
+        return self._exog.get(name)
 
     def bar_at(self, sym, t):
         if t + self._bar_seconds > self.t:

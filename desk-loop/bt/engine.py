@@ -63,7 +63,7 @@ class Portfolio:
         return self.cash + sum(p.units * prices.get(s, p.last_mark or p.entry_px) for s, p in self.positions.items())
 
 
-def run(market, strategy, costs: CostModel, start_cash=10_000.0, start_t=None, end_t=None, max_positions=10, gross_cap=1.0, fixed_usd=None, regime=None, universe=None, liquidate_at_end=True):
+def run(market, strategy, costs: CostModel, start_cash=10_000.0, start_t=None, end_t=None, max_positions=10, gross_cap=1.0, fixed_usd=None, regime=None, universe=None, liquidate_at_end=True, exog=None):
     """fixed_usd: DIAGNOSTIC ONLY (sizing attribution, review R-I). Every fill is exactly fixed_usd regardless of
     equity — the legacy house convention. Never a research configuration; results so sized are not evidence."""
     bar = market.bar_seconds
@@ -132,7 +132,7 @@ def run(market, strategy, costs: CostModel, start_cash=10_000.0, start_t=None, e
                 stale += 1; events.append((t, s, "stale_mark", f"{pf.positions[s].last_mark:.6g}", pf.positions[s].tag))   # surfaced, never silent
         equity.append((t + bar, pf.equity(prices))); cash_curve.append((t + bar, pf.cash))
         # (4) decide on the completed bar
-        pending = list(strategy(market.as_of(t + bar, regime, universe), pf) or [])
+        pending = list(strategy(market.as_of(t + bar, regime, universe, exog), pf) or [])
     if times and liquidate_at_end:
         t = times[-1]
         for s in list(pf.positions):

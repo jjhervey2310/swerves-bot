@@ -163,6 +163,75 @@ def breakout_legacy(lookback=20, vol_mult=1.5, max_ext=0.15, trail_major=0.12, t
     return s
 
 
+def momentum_floor(n, lookback=90, rebalance_days=30, breadth_floor=0.50, floor=True, sma_n=50, members_required=20):
+    """Round 2 candidate B (PHASE4-ROUND2-PREREGISTRATION v2, FROZEN R-X). At each rebalance close: breadth = frozen
+    top-20 members with close > own SMA50 / members. Fail closed to cash when the membership has fewer than
+    `members_required` names or any member's completed bar is missing (counted in state['fail_closed']). Breadth below the
+    floor => cash (sell all, no buys). Otherwise rank members by `lookback`-day return and hold the top n. `floor=False`
+    is the paired no-floor twin: identical rule, identical parameters, the breadth branch skipped (its breadth is still
+    computed and logged so the twin is exactly paired)."""
+    state = {"last": 0, "fail_closed": 0, "cash_rebalances": 0, "rebalances": 0, "breadth": []}
+    def s(view, pf):
+        if view.t - state["last"] < rebalance_days * 86400:
+            return []
+        state["last"] = view.t; state["rebalances"] += 1
+        members = view.universe_members()
+        if members is None:
+            members = view.universe()
+        present = set(view.universe())
+        sell_all = [Order(sym, "sell", tag="momf") for sym in pf.positions]
+        if len(members) < members_required or any(m not in present for m in members):
+            state["fail_closed"] += 1; state["breadth"].append((view.t, None))
+            return sell_all
+        above = 0
+        for sym in members:
+            c = view.closes(sym, sma_n)
+            if len(c) >= sma_n and c[-1] > sum(c) / sma_n:
+                above += 1
+        breadth = above / len(members)
+        state["breadth"].append((view.t, breadth))
+        if floor and breadth < breadth_floor:
+            state["cash_rebalances"] += 1
+            return sell_all
+        scores = []
+        for sym in members:
+            c = view.closes(sym, lookback + 1)
+            if len(c) >= lookback + 1 and c[-lookback - 1] > 0:
+                scores.append((c[-1] / c[-lookback - 1] - 1, sym))
+        top = {sym for _, sym in sorted(scores, reverse=True)[:n]}
+        out = [Order(sym, "sell", tag="momf") for sym in pf.positions if sym not in top]
+        rank = {sym: sc for sc, sym in scores}
+        out += [Order(sym, "buy", priority=rank[sym], tag="momf") for sym in top if sym not in pf.positions]
+        return out
+    s.state = state
+    return s
+
+
+def fear_greed_timing(threshold=25, hold_bars=90, btc="BTC", series="fear_greed"):
+    """Round 2 candidate C, Option I (FROZEN R-X): when FLAT and the usable reading for the completed day D (the bar that
+    closed at view.t) is <= threshold, buy BTC at the next open; hold exactly `hold_bars` bars; sell at the open after
+    the last holding bar; no stop; readings while holding are ignored. The engine materialises at most one reading into
+    the view: available_at <= view.t and dated within the series' declared freshness (verified: dated D; the assumed-lag
+    series: D or D-1); anything older is never carried forward, so view.exog() is None on a missing day."""
+    state = {"signals": 0, "ignored_while_holding": 0, "episodes": []}
+    def s(view, pf):
+        if btc in pf.positions:
+            p = pf.positions[btc]
+            if view.t >= p.entry_t + hold_bars * 86400:
+                return [Order(btc, "sell", tag="fng")]
+            r = view.exog(series)
+            if r is not None and r["value"] <= threshold:
+                state["ignored_while_holding"] += 1
+            return []
+        r = view.exog(series)
+        if r is None or r["value"] > threshold or btc not in view.universe():
+            return []
+        state["signals"] += 1; state["episodes"].append((view.t, r["value"]))
+        return [Order(btc, "buy", tag="fng")]
+    s.state = state
+    return s
+
+
 def regime_gate(strategy):
     """Canonical Phase 3 entry rule (design §1/§8): new long entries only when the published label is risk_on. Sells
     always pass. A run without a regime series attached (view.regime() is None) is unfiltered and unchanged."""
@@ -176,4 +245,5 @@ def regime_gate(strategy):
 
 
 REGISTRY = {
-    "breakout_legacy": breakout_legacy,"buy_and_hold": buy_and_hold, "cash": cash, "dca": dca, "sma_trend": sma_trend, "breakout20": breakout20, "momentum_top": momentum_top, "mean_reversion": mean_reversion}
+    "breakout_legacy": breakout_legacy,"buy_and_hold": buy_and_hold, "cash": cash, "dca": dca, "sma_trend": sma_trend, "breakout20": breakout20, "momentum_top": momentum_top, "mean_reversion": mean_reversion,
+    "momentum_floor": momentum_floor, "fear_greed_timing": fear_greed_timing}
