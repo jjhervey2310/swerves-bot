@@ -26,9 +26,17 @@ export const RH_SYMBOLS = new Set([
 // the buy button never fires for them, but the grade is computed on merit like everyone else and the
 // row stays visible. A Kraken name can never take the pole seat: the pole is a standing pre-approved
 // buy, and there is no executor for it.
-export const KRAKEN_SYMBOLS = new Set(['GRASS', 'DRV'])
-export type Venue = 'robinhood' | 'kraken' | 'none'
+export const KRAKEN_SYMBOLS = new Set(['GRASS', 'DRV', 'SUPER'])   // SUPERUSD confirmed 2026-10-03
+// ON NO EXCHANGE WE USE, BUT ON A DEX. Jacob can buy these by hand with a wallet; nothing here can.
+// Where, so the row can say it (CoinGecko tickers, 2026-10-03): ORBIO — Uniswap V4/V3 on Robinhood
+// Chain, ~$8M/day (Jacob: "orbio might be on uniswap" — he was right). BP — Meteora and Raydium on
+// Solana, or Backpack's own exchange; not on Coinbase.
+export const DEX_SYMBOLS: Record<string, string> = {
+  ORBIO: 'Uniswap on Robinhood Chain',
+  BP: 'Meteora / Raydium on Solana, or Backpack Exchange',
+}
+export type Venue = 'robinhood' | 'kraken' | 'dex' | 'none'
 export function venueFor(sym: string): Venue {
   const s = sym.toUpperCase()
-  return RH_SYMBOLS.has(s) ? 'robinhood' : KRAKEN_SYMBOLS.has(s) ? 'kraken' : 'none'
+  return RH_SYMBOLS.has(s) ? 'robinhood' : KRAKEN_SYMBOLS.has(s) ? 'kraken' : s in DEX_SYMBOLS ? 'dex' : 'none'
 }

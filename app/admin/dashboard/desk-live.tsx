@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState, type ReactNode } from 'react'
-import { venueFor } from '@/lib/rh-universe'
+import { venueFor, DEX_SYMBOLS } from '@/lib/rh-universe'
 import { Panel } from './ui'
 import HoldingChart from './holding-chart'
 import PerfChart, { type PerfItem } from './perf-chart'
@@ -83,7 +83,7 @@ interface Timing {
   size: { usd: number; pctBook: number; halfSize: boolean; cappedBy: string | null }
   stop: { price: number; source: string; pct: number }
   buyable: boolean; overridable: boolean; rh_configured: boolean
-  venue?: 'robinhood' | 'kraken' | 'none'; venueNote?: string | null
+  venue?: 'robinhood' | 'kraken' | 'dex' | 'none'; venueNote?: string | null
 }
 interface BuyResult { ok?: boolean; state?: string; order_id?: string; qty?: number; avg_price?: number; notional?: number; stop?: { order_id: string; stop: string; limit: string } | null; stop_error?: string | null; ledger_errors?: string[]; error?: string; message?: string }
 
@@ -1027,6 +1027,7 @@ export default function DeskLive({ initial, secret, cg, chart, realized, capital
                     <span className="text-[16px] font-black text-neutral-800 dark:text-neutral-100">{t.symbol}</span>
                     <span className={`rounded px-1.5 py-px text-[9px] font-bold uppercase tracking-wide ${STATUS[t.status] ?? 'bg-neutral-100 text-neutral-600'}`}>{t.status}</span>
                     {venueFor(t.symbol) === 'kraken' && <span className="rounded bg-amber-100 px-1.5 py-px text-[9px] font-bold uppercase tracking-wide text-amber-800 dark:bg-amber-400/15 dark:text-amber-200" title="Not on Robinhood. Buyable on Kraken by hand. The grade is real; the buy button is not, because this account cannot place the order.">kraken · buy by hand</span>}
+                    {venueFor(t.symbol) === 'dex' && <span className="rounded bg-amber-100 px-1.5 py-px text-[9px] font-bold uppercase tracking-wide text-amber-800 dark:bg-amber-400/15 dark:text-amber-200" title={`Not on Robinhood or Kraken. Buyable by hand with a wallet: ${DEX_SYMBOLS[t.symbol] ?? 'a DEX'}. The grade is real; the buy button is not.`}>dex · buy by hand</span>}
                     {venueFor(t.symbol) === 'none' && <span className="rounded bg-rose-100 px-1.5 py-px text-[9px] font-bold uppercase tracking-wide text-rose-700 dark:bg-rose-400/15 dark:text-rose-200" title="Not on Robinhood or Kraken. On the list to be watched, not bought anywhere we trade.">no venue · watch only</span>}
                     <span className="font-mono text-[14px] font-bold tabular-nums text-neutral-800 dark:text-neutral-100">{lv ? fmt(lv.price) : '…'}</span>
                     <span className="text-neutral-500">24h <Pct v={lv?.d1} /> · 7d <Pct v={lv?.d7} /> · 30d <Pct v={lv?.d30} /></span>
@@ -1083,7 +1084,7 @@ export default function DeskLive({ initial, secret, cg, chart, realized, capital
                       <div className="flex flex-wrap items-center gap-3">
                         <span className={`flex h-12 w-12 items-center justify-center rounded-xl text-[26px] font-black ${GRADE[T.grade]}`}>{T.grade}</span>
                         <div className="text-[12px] leading-snug">
-                          <div className="font-bold text-neutral-800 dark:text-neutral-100">Timing {T.score}/100 · {T.hard.length ? 'BARRED by law' : T.venue === 'kraken' ? 'clear on the chart — Kraken, buy by hand' : T.venue === 'none' ? 'no venue — watch only' : T.buyable ? 'clear to buy' : 'soft bars — override only'}</div>
+                          <div className="font-bold text-neutral-800 dark:text-neutral-100">Timing {T.score}/100 · {T.hard.length ? 'BARRED by law' : T.venue === 'kraken' ? 'clear on the chart — Kraken, buy by hand' : T.venue === 'dex' ? 'clear on the chart — DEX, buy by hand with a wallet' : T.venue === 'none' ? 'no venue — watch only' : T.buyable ? 'clear to buy' : 'soft bars — override only'}</div>
                           <div className="text-neutral-500">as of {denver(T.at)} · price <b className="font-mono text-neutral-700 dark:text-neutral-200">{fmt(T.price)}</b> · 24h volume <b className="font-mono text-neutral-700 dark:text-neutral-200">{T.vol24h != null ? big(T.vol24h) : '—'}</b>{T.volX != null && <span> ({T.volX.toFixed(1)}× its 20d avg)</span>}</div>
                           <div className="text-neutral-500">24h <Pct v={T.d1} /> · 7d <Pct v={T.d7} /> · 30d <Pct v={T.d30} /> · vs 20d high <Pct v={T.extPct} /> · vs BTC 7d <Pct v={T.rs7VsBtc} /></div>
                         </div>

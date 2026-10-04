@@ -196,6 +196,7 @@ export function gradeTiming(i: TimingInput): TimingResult {
     overridable: onRh && hard.length === 0 && usd > 0,
     venue,
     venueNote: venue === 'kraken' ? 'Not on Robinhood. Buyable on Kraken by hand — this account cannot place the order.'
+      : venue === 'dex' ? 'Not on Robinhood or Kraken. Buyable by hand on a DEX with a wallet — this account cannot place the order.'
       : venue === 'none' ? 'Not on Robinhood or Kraken. Watch only.' : null,
   }
 }
