@@ -509,3 +509,24 @@ delisting exposure ≤ 3%; `stale_marks` 0 everywhere. Note on the printed reaso
 hurdle first; the boolean row lists every failing check. Nothing in `research_runs`. Awaiting the independent verdict
 (outcomes are screening outcomes; no candidate enters forward validation unless the reviewer finds otherwise).
 
+---
+
+## R-2026-10-04-AA — ChatGPT independent verdict on the round-2 screening table (PR #51 @ 45cc49a)
+
+> **R-AA — Phase 4 Round 2 historical screening table VALID. A_btc_trend = historical_rejected. B_momentum_floor =
+> historical_rejected; its breadth cash-floor mechanism passes the paired falsifier but the strategy itself fails the
+> frozen class-X gate. C_fear_greed verified = inconclusive for 0% verified historical coverage and is not
+> forward-eligible because the shortfall is not episode-count-only. C_fear_greed assumed D+1 = historical_rejected. No
+> Round-2 candidate advances to forward validation, Phase 5, or Phase 10. Nothing is promoted to research_accepted.**
+
+Recorded verbatim. Table integrity PASS (hashes, stale marks 0, scale, boundary, delisting immaterial, evidence-status
+rules applied). Zero entrants to the forward-validation stage; C-verified is retired (coverage, not episode shortfall).
+Presentation note on B's outcome line acknowledged; no effect on the verdict, nothing edited after the run. Nothing in
+`research_runs`. Reviewer: PR #51 ready for merge from the research-governance standpoint; merge is Jacob's call.
+
+State after two rounds (for the next pre-registration, not a conclusion): six hypotheses tested under frozen rules on
+2021-03 → 2026-08 (three generic alt rules, BTC-only trend, breadth-floored alt momentum, Extreme-Fear BTC timing); none
+positive after costs; the only measurably helpful mechanism was the breadth cash floor (loss reduced, not eliminated);
+100% BTC buy-and-hold made +22.6% with a −76.7% drawdown; cash 0%. The forward-validation stage exists and is frozen but
+has no entrant; the live F&G collector keeps accumulating verified rows regardless.
+
