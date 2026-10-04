@@ -480,3 +480,32 @@ the table is NOT run until the forward-validation stage is accepted.
 | 2 | Two consecutive passes, any fail final | Accepted | Unchanged. |
 | 3 | Freeze on the revision | Condition met verbatim | `PHASE4-FORWARD-VALIDATION.md` v1.1 FROZEN. The round-2 historical table now runs once on data_hash `8df7990c93dcc632` (re-exported this session with an end bound of 2026-10-01, hash reproduced exactly; sentiment snapshot `fng_2026-10-03.json`, 3,163 rows, 2 with verified `available_at`). |
 
+---
+
+## R-2026-10-04-Z — Phase 4 round 2 historical screening table, run once (UNREVIEWED; nothing promoted)
+
+Table: `docs/desk/PHASE4-ROUND2-TABLE-2026-10-04.{md,json}` @ PR #51, run 2026-10-04 ~03:2x UTC after R-Y. Snapshot re-exported
+this session with an end bound of 2026-10-01: data_hash `8df7990c93dcc632`, universe_hash `64e00348d99bb713`,
+membership_hash `99c437c3e40dbb57` (identical to round 1). Sentiment snapshot: 3,163 rows, 2 with verified `available_at`.
+Trials 176 (A 44 + B 88 + C 44; the control never counts). OOS span 2021-03-08 → 2026-08-09, 22 folds. Outcomes under the
+frozen rules, sent unchanged:
+
+| candidate | class | evidence | episodes / trades | OOS continuous | ×1.25 | severe | max DD | PF | falsifier | outcome |
+|---|---|---|---|---|---|---|---|---|---|---|
+| A_btc_trend (100% BTC) | S | — | 26 round trips | −36.6% | −40.6% | −49.8% | −63.3% | 0.65 | fails (BTC B&H +22.6% / DD −76.7%; A has neither the return nor the 70%/30% clause) | **historical_rejected** |
+| B_momentum_floor | X | — | 97 trades | −35.8% | −37.2% | −41.0% | −45.6% | 0.70 | **passes** (no-floor twin on the same picks −54.6% / DD −56.8% / PF 0.65) | **historical_rejected** (97 < 100 trades; also oos_positive, both fee-stress checks, thirds, not_top3 fail) |
+| C_fear_greed, verified availability | S | verified | 0 | — | — | — | — | — | — | **inconclusive** (coverage 0%, gap 1,981 d — exactly as frozen) |
+| C_fear_greed, assumed availability (D+1) | S | assumed_availability | 10 episodes (11 entries) | −58.5% | −59.6% | −62.4% | −77.7% | 0.33 | fails (signal 90 d mean −2.3%, hit 36%, vs base rate +5.8%, hit 52%) | **historical_rejected** |
+| btc_bh_100pct / btc_bh_10pct_slot / cash | benchmarks | | | +22.6% / +2.3% / 0% | | | −76.7% / −11.1% / 0 | | | n/a |
+| breakout20 | control | | 331 | −64.9% | | | −86.4% | | | n/a |
+
+Readings, descriptive only: (1) the breadth cash floor is the one mechanism in two rounds that measurably helped — it
+cut the no-floor twin's loss by 19 points and its drawdown by 11 — yet the floored rule still lost 36%; a mechanism that
+loses less is not an edge. (2) Extreme Fear entries (D+1 lag) were followed by below-base-rate 90-day BTC returns on this
+span (11 non-overlapping signals); the overlapping all-fear-days event study (263 days) shows +1.6% mean, 43% hit, also
+below base rate; H-SWEEP-A as a timing rule is not supported here. (3) BTC-only trend lost 37% while 100% BTC B&H made
+23% with a 77% drawdown; the 10-slot version lost 1.8%. (4) All candidates pass scale invariance and boundary dependency;
+delisting exposure ≤ 3%; `stale_marks` 0 everywhere. Note on the printed reason for B: the outcome line names the trade
+hurdle first; the boolean row lists every failing check. Nothing in `research_runs`. Awaiting the independent verdict
+(outcomes are screening outcomes; no candidate enters forward validation unless the reviewer finds otherwise).
+
