@@ -1,4 +1,8 @@
-# Phase 4, round 3 — runner forensics. Pre-registration DRAFT v1 (for independent review before any code, label or feature is computed)
+# Phase 4, round 3 — runner forensics. Pre-registration DRAFT v2 (after review R-AC; for independent review before any code, label or feature is computed)
+
+Changes from v1 are marked **[R-AC n]**: (1) OOS scoring and the gate run on the FULL eligible universe, gray zone and
+delisted names included; (2) label denominator is the next executable open; (3) base rate is the 3× share of all
+eligible candidates; (4) verified and assumed are two separate pipelines, never a selectable hyperparameter.
 
 Status: post-Round-2 hypothesis screening (R-AA: zero survivors in two rounds). Outcomes are `historical_survivor` /
 `historical_rejected` / `inconclusive (reason)`; nothing here confers `research_accepted`; a survivor feeds a round-4
@@ -35,39 +39,58 @@ NULL (unusable in the verified study) and the declared lag rule of §3 applies o
 - **Candidate set at a formation date** (survivorship control): every name listed at that close with ≥ 90 completed
   contiguous bars and 3-day median dollar volume ≥ $250k, INCLUDING names later delisted (a delisting inside the horizon
   is a non-runner, never a dropped row). Exclusion map of round 1 applies (stablecoins, wrapped assets).
-- **Labels** (from the next open forward; the formation close is never inside the window): `runner_3x` = max close
-  within 180 bars ≥ 3 × formation close; `runner_5x` = ≥ 5 ×; `non_runner` = max close within 180 bars < 1.5 ×; names in
-  between are neither and are excluded from training and scoring (they are counted and reported). Primary label:
-  `runner_3x`; `runner_5x` reported.
-- **Liquidity control (matching)**: inside each formation month, names are bucketed into dollar-volume quintiles; each
-  runner is matched to the non-runners of its own month and quintile; all lift statistics are computed within (month,
-  quintile) strata and then averaged with runner-count weights, so a model cannot win by preferring small names.
+- **Labels [R-AC 2]**: `entry_reference` = the next available executable OPEN after the formation decision close (the
+  formation close itself is never a reference, so an overnight gap is never counted as capturable return);
+  `runner_3x` = max completed close during the next 180 bars (starting at the entry-reference bar) ≥ 3 × entry_reference;
+  `runner_5x` = ≥ 5 ×; `gray` = 1.5 × ≤ max < 3 ×; `non_runner` = max < 1.5 ×. A name with no executable open after
+  the formation close is ineligible that month (counted). A delisting inside the horizon ends the window early; the
+  label is computed on the closes that exist (a delisted name is never dropped). Primary label `runner_3x`; `runner_5x`
+  reported with the same definition.
+- **Training set vs scoring set [R-AC 1]**: the binary model may be TRAINED on `runner_3x` vs `non_runner` only (the gray
+  zone left out of the fit is a modelling choice, declared here). The OOS model SCORES every eligible name at every
+  formation date; nothing is removed from the ranked population by a future label. The primary metric is population
+  precision: positive = `runner_3x`; non-positive = every other eligible name, gray zone and delisted names included.
+  Matched 3× vs < 1.5× discrimination is reported separately as a diagnostic only; it never gates.
+- **Liquidity control (stratification)**: inside each formation month, eligible names are bucketed into dollar-volume
+  quintiles; precision@k and the base rate are computed within each (month, quintile) stratum on the FULL eligible
+  population of that stratum [R-AC 1], then averaged with positive-count weights, so a model cannot win by preferring
+  small names. The matched 3× vs < 1.5× diagnostic uses the same strata.
 - **Features at formation** (Stage-0 manifest; all from bars completed by the formation close): 30/90-day returns,
   relative strength vs BTC (7/30/90 d), dollar-volume acceleration (7 d vs 30 d, 30 d vs 90 d), volume z-score,
   distance from 90-day high and from 365-day high, drawdown from listing high, realised vol 20/60 d, age since first
   bar, market-breadth context (share of candidates above their SMA50). Assumed study adds: fees/revenue 7 d and 30 d
   growth, revenue yield (revenue / market cap), TVL change 30 d, stablecoin supply change 30 d.
 - **Model (frozen, simple on purpose)**: L2-regularised logistic regression on standardised features, fit on formation
-  months strictly earlier than the test year. Grid ≤ 4: C ∈ {0.1, 1.0} × feature set ∈ {verified, assumed}. Selection
-  by in-fit log-loss only. Test years 2022, 2023, 2024, 2025 (expanding window; 2021 is fit-only). Trials counted.
-- **Statistic**: precision@k with k = the top 10% of each formation month's candidates by model score, versus the base
-  rate (runner share of that month's candidates), computed within strata as above. Also reported: lift at top 5% and
-  top 20%, AUC, calibration by decile, and the same numbers for `runner_5x`.
-- **"Materially better than base rate" (frozen now)**: precision@10% ≥ 2 × base rate in the pooled OOS AND ≥ 1.5 × base
-  rate in at least 3 of the 4 test years AND the lift survives when the most liquid quintile is removed AND when the
-  top three contributing months are removed. Anything less is `historical_rejected`.
-- **Minimum evidence**: ≥ 40 runners (3x) across the OOS test years in total and ≥ 5 in every test year; fewer ⇒
-  `inconclusive (episodes)`.
-- **Leakage controls**: features from completed bars only; labels start at the next open; the formation close is excluded
-  from both; standardisation statistics fit on training months only; no feature uses market cap or supply figures that
+  months strictly earlier than the test year. **Two separate pipelines [R-AC 4]** — `verified` (price/volume features
+  only) and `assumed` (adds the backfilled fundamentals of §3) — each with its own run, outcome and evidence class;
+  the evidence class is never a hyperparameter and no selection step ever compares the two. Within each pipeline the
+  only selected parameter is C ∈ {0.1, 1.0}, by in-fit log-loss. Test years 2022, 2023, 2024, 2025 (expanding window;
+  2021 is fit-only). Trials counted per pipeline (2 × 4 = 8 each).
+- **Statistic [R-AC 1, 3]**: population precision@k with k = the top 10% of each formation month's ELIGIBLE names by
+  model score (every eligible name is scored), versus the **base rate = share of `runner_3x` among all eligible names**
+  of the same stratum (never the runner / < 1.5× subset), computed within (month, quintile) strata and averaged with
+  positive-count weights. Also reported: lift at top 5% and top 20%, AUC on the full population, calibration by decile,
+  the matched 3× vs < 1.5× diagnostic, and the same numbers for `runner_5x`.
+- **"Materially better than base rate" (frozen now; operates on the full-population metric above)**: population
+  precision@10% ≥ 2 × the full-universe base rate in the pooled OOS AND ≥ 1.5 × in at least 3 of the 4 test years AND
+  the lift survives when the most liquid quintile is removed AND when the top three contributing months are removed.
+  Anything less is `historical_rejected`.
+- **Minimum evidence**: ≥ 40 `runner_3x` positives among eligible names across the OOS test years in total and ≥ 5 in
+  every test year; fewer ⇒ `inconclusive (episodes)`.
+- **Leakage controls**: features from completed bars only; labels start at the next executable open; no future label
+  ever removes a name from the scored population [R-AC 1]; the formation close is excluded from both; standardisation
+  statistics fit on training months only; no feature uses market cap or supply figures that
   are not point-in-time; the delisted names' bars end at delisting and their labels are computed on what exists.
-- **Negative control**: the same pipeline on labels shuffled within (month, quintile) strata; its precision must sit at
-  the base rate; if it does not, the pipeline leaks and the table is invalid.
+- **Negative control**: each pipeline re-run on labels shuffled within (month, quintile) strata of the full eligible
+  population; its population precision must sit at the base rate; if it does not, the pipeline leaks and the table is
+  invalid.
 - **Permutation p-value**: 1,000 within-stratum label permutations; reported, not a gate.
 
 ## 3. Assumed-availability rule for backfilled fundamentals (assumed study only)
 A value dated D is usable from the decision close of D + 7 (a week's lag, since DeFiLlama figures are revised for days
-after the date); evidence_class = `assumed_availability`; the verified study never sees them.
+after the date); evidence_class = `assumed_availability`; the verified pipeline never sees them. **Subordination
+[R-AC]**: the assumed pipeline is explicitly subordinate — its survivor can only generate a round-4 hypothesis; it can
+never establish a verified fundamental edge, and its outcome is always suffixed "(assumed availability)".
 
 ## 4. What a survivor leads to
 A `historical_survivor` (either study) does not trade. It qualifies the score as an input to a round-4 strategy
@@ -80,8 +103,9 @@ verified fundamentals before any forward evaluation.
 Nothing in §2 changes after the first label is computed; Stage 0 is reviewed first; no feature is added after seeing a
 lift; the negative control is run every time the real pipeline is; nothing to `research_runs` before review.
 
-## Questions for the reviewer (one word each)
-1. Labels: 3× within 180 bars primary, 5× reported, non-runner < 1.5×, in-between excluded — accept?
-2. "Materially better": precision@10% ≥ 2× base rate pooled, ≥ 1.5× in 3 of 4 years, survives removing the top liquidity quintile and the top three months — accept?
-3. Two studies (verified price-only; assumed with backfilled fundamentals at a 7-day lag), tokenomics and catalysts excluded for lack of point-in-time sources — accept, or defer round 3 until such sources exist?
-4. Stage 0 feature manifest reviewed before any label is computed — accept?
+## Questions for the reviewer — v1 answers R-AC (Revise / Revise / Accept / Accept) applied above
+1. Labels now: entry_reference = next executable open; 3× / 5× / gray 1.5–<3× / non-runner < 1.5× on max completed close
+   within 180 bars; full-universe scoring and population precision; gray-zone exclusion only in training — accept?
+2. "Materially better" unchanged in thresholds, now on the full-population metric with the full-universe base rate — accept?
+3. Two separate pipelines (verified; assumed, subordinate), C the only selected parameter — accept?
+4. Freeze v2?

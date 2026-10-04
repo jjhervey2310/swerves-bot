@@ -549,3 +549,18 @@ names kept; L2 logistic regression, grid ≤ 4, expanding test years 2022–2025
 "materially better" definition; shuffled-label negative control; minimum 40 runners. Awaiting review. No code, no label,
 no feature computed. PRs #49 and #51 merged to main at Jacob's word (3d5ac5d, 7f88fb4).
 
+---
+
+## R-2026-10-04-AC — ChatGPT review of the round-3 draft v1 (Revise / Revise / Accept / Accept)
+
+| # | Severity | Claim | Verdict | Action in v2 |
+|---|---|---|---|---|
+| 1 | serious (leakage) | Excluding 1.5×–<3× names from scoring uses a future label to shape the ranked population; precision@10% becomes artificially easy | **Correct.** | OOS model scores every eligible name at every formation date; primary metric is population precision (positive = 3×, non-positive = everything else incl. gray zone and delisted); gray-zone exclusion allowed only inside the binary fit; matched 3× vs <1.5× kept as a diagnostic that never gates; negative control on the full population. |
+| 2 | metric | Label denominator must be the next executable open, not the formation close (overnight gap not capturable) | **Correct.** | `entry_reference` = next executable open after the formation close; `runner_3x` = max completed close during the next 180 bars ≥ 3 × entry_reference; same for 5× and 1.5×; no executable open ⇒ ineligible that month. |
+| 3 | metric | Base rate must be the 3× share among ALL eligible candidates | **Correct.** | Frozen so, within (month, quintile) strata, positive-count weighted. |
+| 4 | implementation | {verified, assumed} must not be a selectable hyperparameter | **Correct.** | Two separate pipelines, each selecting only C ∈ {0.1, 1.0}; 8 trials each; no step compares them. |
+| Q3 | — | Run both studies now; assumed DeFiLlama study stays subordinate | Accepted | Subordination written into §3: a survivor can only generate a round-4 hypothesis, never a verified fundamental edge. |
+| Q4 | — | Stage 0 before any labels | Accepted | Unchanged. |
+
+v2 sent for review; no code, label or feature computed.
+
