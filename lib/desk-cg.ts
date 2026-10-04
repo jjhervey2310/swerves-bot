@@ -14,6 +14,8 @@ export const CG: Record<string, string> = {
   OP: 'optimism', XPL: 'plasma', ZRO: 'layerzero', ENA: 'ethena', AERO: 'aerodrome-finance', JTO: 'jito-governance-token',
   SYRUP: 'syrup', ASTER: 'aster-2', AVNT: 'avantis', MORPHO: 'morpho', EIGEN: 'eigenlayer', WLFI: 'world-liberty-financial',
   TON: 'the-open-network', TAO: 'bittensor', CC: 'canton-network', WLD: 'worldcoin-wld', TRUMP: 'official-trump', SKR: 'seeker',
+  // Watch-list names the account cannot buy (lib/rh-universe.ts). Priced and charted here, never queued.
+  GRASS: 'grass', ORBIO: 'orbio-so',
 }
 
 /** CoinGecko fetch carrying the demo key when one is set.

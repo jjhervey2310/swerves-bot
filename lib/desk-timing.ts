@@ -41,6 +41,9 @@ export interface TimingInput {
   regime?: Regime; regimeWhy?: string
   breaker?: string | null                // ISO since-timestamp when the A9 sleeve breaker is tripped
   sleeveUsd?: number; nameUsd?: number
+  // Venue. false = the broker has no tradeable pair for this symbol, however many places show a price
+  // for it. Optional so older callers keep working; only an explicit false bars.
+  onRobinhood?: boolean
 }
 
 export interface TimingResult {
@@ -77,6 +80,10 @@ export function gradeTiming(i: TimingInput): TimingResult {
   // the name must not clear. 2026-09-11: a rate limit nulled d30 and ARB — up 84% in 30 days and
   // hard-barred — graded A/100 and read as buyable. A check that cannot run is never a pass.
   if (i.d1 == null || i.d30 == null) hard.push(`CHASE LAWS UNCHECKABLE: ${i.d1 == null ? '24h' : ''}${i.d1 == null && i.d30 == null ? ' and ' : ''}${i.d30 == null ? '30d' : ''} change unavailable from every source. Cannot confirm the name has not already run.`)
+  // A name the account cannot buy is never a buy, whatever the chart says. This bar is MERIT, not a data
+  // gap: it stays in meritHard, so the grade is F and not '?', and it is listed first so it is the reason
+  // you read. GRASS (2026-10-03) had a live Robinhood quote, a Coinbase price and a clean tape — and no pair.
+  if (i.onRobinhood === false) hard.unshift('NOT ON ROBINHOOD: no tradeable pair for this symbol in the broker catalog. A quote page is not a listing. Watch it, chart it, never queue it.')
   if (i.halted) hard.push('desk loop halted or paused — no new entries')
   if (i.held) hard.push('already held — adds go through the deposit basket, not the queue')
   // A rate-limited quote falls back to the last daily close so the grade is still readable, but an

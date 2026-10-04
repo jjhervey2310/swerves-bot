@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState, type ReactNode } from 'react'
+import { RH_SYMBOLS } from '@/lib/rh-universe'
 import { Panel } from './ui'
 import HoldingChart from './holding-chart'
 import PerfChart, { type PerfItem } from './perf-chart'
@@ -1022,6 +1023,7 @@ export default function DeskLive({ initial, secret, cg, chart, realized, capital
                     <span className="flex h-6 w-6 items-center justify-center rounded-full bg-neutral-800 font-mono text-[11px] font-bold text-white dark:bg-white dark:text-black">{rank + 1}</span>
                     <span className="text-[16px] font-black text-neutral-800 dark:text-neutral-100">{t.symbol}</span>
                     <span className={`rounded px-1.5 py-px text-[9px] font-bold uppercase tracking-wide ${STATUS[t.status] ?? 'bg-neutral-100 text-neutral-600'}`}>{t.status}</span>
+                    {!RH_SYMBOLS.has(t.symbol) && <span className="rounded bg-rose-100 px-1.5 py-px text-[9px] font-bold uppercase tracking-wide text-rose-700 dark:bg-rose-400/15 dark:text-rose-200" title="Robinhood has no tradeable pair for this symbol. A quote page is not a listing. It is on the list to be watched, not bought.">not on robinhood</span>}
                     <span className="font-mono text-[14px] font-bold tabular-nums text-neutral-800 dark:text-neutral-100">{lv ? fmt(lv.price) : '…'}</span>
                     <span className="text-neutral-500">24h <Pct v={lv?.d1} /> · 7d <Pct v={lv?.d7} /> · 30d <Pct v={lv?.d30} /></span>
                     {lv?.vol != null && <span className="text-neutral-500">vol {big(lv.vol)}</span>}

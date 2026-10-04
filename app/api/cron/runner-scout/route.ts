@@ -7,18 +7,10 @@ import { createServiceClient } from '@/lib/supabase'
 // with no laptop involved. LLM investigation of flagged signals happens locally.
 
 export const dynamic = 'force-dynamic'
+import { RH_SYMBOLS } from '@/lib/rh-universe'
+
 export const maxDuration = 60
 
-// Robinhood tradeable crypto symbols (catalog pulled 2026-08-23, stables removed).
-// The catalog changes rarely; refresh this list when Robinhood lists/delists.
-const RH_SYMBOLS = new Set([
-  'AAVE','ADA','AERO','ALGO','ARB','ASTER','ATOM','AVAX','AVNT','AXS','BAT','BCH','BILL','BIO','BNB',
-  'BONK','BTC','CASHCAT','CC','CHIP','COMP','CRV','DOGE','DOT','EIGEN','ENA','ETC','ETH','FET','FLOKI',
-  'FLR','GRAM','GRT','HBAR','HYPE','IMX','INJ','JTO','LDO','LINK','LIT','LTC','MEGA','MEW','MNT',
-  'MOODENG','NEAR','ONDO','OP','ORCA','PENGU','PEPE','PNUT','POL','POPCAT','PYTH','QNT','RAY','RE',
-  'RENDER','SEI','SENT','SHIB','SKR','SKY','SNX','SOL','STRK','SUI','SYRUP','TRUMP','UNI','VIRTUAL',
-  'VVV','W','WIF','WLD','WLFI','XCN','XLM','XPL','XRP','XTZ','ZEC','ZORA','ZRO','ZRX','PUMP',
-])
 
 interface CgRow {
   symbol: string; name: string; current_price: number | null
