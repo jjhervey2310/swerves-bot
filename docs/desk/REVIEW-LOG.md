@@ -530,3 +530,22 @@ positive after costs; the only measurably helpful mechanism was the breadth cash
 100% BTC buy-and-hold made +22.6% with a −76.7% drawdown; cash 0%. The forward-validation stage exists and is frozen but
 has no entrant; the live F&G collector keeps accumulating verified rows regardless.
 
+---
+
+## R-2026-10-04-AB — ChatGPT direction for round 3 and its falsifier; data audit; draft v1 for review
+
+Direction received after R-AA: **round 3 — runner forensics**, falsifier verbatim: "if a point-in-time runner-forensics
+model built from fundamentals, revenue/fees, tokenomics, liquidity/volume acceleration, relative strength, flows, and
+catalysts cannot distinguish future 3x–5x runners from matched non-runners out-of-sample with materially better precision
+than the base rate, after liquidity and survivorship controls, reject the entire Round-3 hypothesis."
+
+Data audit before design (Supabase, 2026-10-04): point-in-time history over 2021–2026 exists only for price/volume
+(`md_candles`, `universe_history`). `fund_snapshots_daily` (fees/revenue/TVL/DEX volume, 2,629 names) starts 2026-10-02
+(3 days); `features_daily` 2026-09-30; `flow_radar` 10 days in September; no tokenomics or catalyst history anywhere.
+Draft v1 (`docs/desk/PHASE4-ROUND3-PREREGISTRATION.md`) therefore: Stage 0 feature manifest reviewed before any label;
+two studies (verified price-only; assumed-availability with backfilled DeFiLlama fundamentals at a 7-day lag); tokenomics
+and catalysts excluded for lack of point-in-time sources; case-control with (month, liquidity-quintile) matching, delisted
+names kept; L2 logistic regression, grid ≤ 4, expanding test years 2022–2025; precision@10% vs base rate with a frozen
+"materially better" definition; shuffled-label negative control; minimum 40 runners. Awaiting review. No code, no label,
+no feature computed. PRs #49 and #51 merged to main at Jacob's word (3d5ac5d, 7f88fb4).
+
