@@ -460,3 +460,23 @@ procedural requirement applied: `docs/desk/PHASE4-FORWARD-VALIDATION.md` v1 is p
 the round-2 historical table is run. Round-2 code build starts on `claude/phase-4-round2` (allowed from this acceptance);
 the table is NOT run until the forward-validation stage is accepted.
 
+---
+
+## R-2026-10-04-Y — ChatGPT review of the forward-validation stage v1 (Revise / Accept / Freeze on revision)
+
+> 1. Revise 2. Accept 3. Not yet. I found one internal contradiction in v1. The forward minimum of 4 class-S episodes cannot
+> coexist sensibly with the frozen gate requiring P&L excluding the three best completed trades >50% of total P&L. With only
+> four episodes, that leaves only the single worst episode after removing the best three; for a profitable strategy it is
+> effectively impossible for that remainder to constitute >50% of total profit. Use the already-frozen candidate-specific
+> Round-2 minimums forward as well: A ≥10 completed forward round trips; C ≥8 completed forward episodes. Keep the ≥365
+> forward days requirement. For B, I accept ≥60 trades at first evaluation, ≥100 from the second onward. Everything else in
+> the forward-validation document is acceptable, including two consecutive passes for `research_accepted`, any scheduled
+> failure being final, fixed 90-day evaluation boundaries, forward-only gates, no historical pooling, and verified live
+> `available_at` for C. So once §4 changes from generic `S ≥4` to A ≥10 / C ≥8, my answer to Q3 becomes Freeze.
+
+| # | Claim | Verdict | Action |
+|---|---|---|---|
+| 1 | A 4-episode minimum makes the ex-top-3 > 50% gate unsatisfiable | **Correct.** | §4 now carries the frozen round-2 minimums forward: A ≥ 10 round trips, C ≥ 8 episodes, 365 days kept; B ≥ 60 at the first evaluation, ≥ 100 from the second. Document frozen as v1.1. |
+| 2 | Two consecutive passes, any fail final | Accepted | Unchanged. |
+| 3 | Freeze on the revision | Condition met verbatim | `PHASE4-FORWARD-VALIDATION.md` v1.1 FROZEN. The round-2 historical table now runs once on data_hash `8df7990c93dcc632` (re-exported this session with an end bound of 2026-10-01, hash reproduced exactly; sentiment snapshot `fng_2026-10-03.json`, 3,163 rows, 2 with verified `available_at`). |
+

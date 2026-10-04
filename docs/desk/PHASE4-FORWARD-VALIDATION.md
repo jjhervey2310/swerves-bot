@@ -1,4 +1,8 @@
-# Phase 4 — forward-validation stage. Pre-registration DRAFT v1 (written 2026-10-03, BEFORE the round-2 historical table is run)
+# Phase 4 — forward-validation stage. Pre-registration v1.1 — FROZEN (R-Y, ChatGPT, 2026-10-04; written 2026-10-03 BEFORE the round-2 historical table was run)
+
+R-Y: v1 accepted on one revision, applied verbatim before freezing — §4 class-S minimum changed from a generic 4 episodes
+(incompatible with the ex-top-3 concentration gate) to the already-frozen candidate minimums A ≥ 10 / C ≥ 8; 365 forward
+days kept; B ≥ 60 trades at the first evaluation, ≥ 100 from the second. Nothing else changed.
 
 Required by the frozen round-2 document (R-X): this is the only path from `historical_survivor` to `research_accepted`.
 It is frozen on written acceptance; it is never edited after the first forward evaluation, and it is written before
@@ -36,7 +40,7 @@ completed. Boundary dates are fixed now: 2026-10-04 + k × 90 days.
 ## 4. Minimum forward sample before any evaluation (frozen)
 | class | minimum | rationale |
 |---|---|---|
-| S (A, C) | ≥ 365 forward calendar days AND ≥ 4 completed forward episodes | one full year so the calendar-year test can run; four episodes is the smallest count at which "three best trades" is a meaningful concentration test |
+| S (A, C) | ≥ 365 forward calendar days AND the candidate's frozen round-2 minimum of completed forward episodes: **A ≥ 10 round trips, C ≥ 8 episodes** | one full year so the calendar-year test can run; the ex-top-3 concentration gate needs well over three episodes to be meaningful (R-Y: a 4-episode minimum would have made it unsatisfiable) |
 | X (B) | ≥ 365 forward calendar days AND ≥ 60 completed forward trades | monthly rebalance with n ∈ {3, 5} yields roughly 40–80 trades per year; 100 would take two years and is set for the second evaluation instead |
 Before the minimum is reached nothing is evaluated; a dashboard monitor may display the running curve (descriptive, no
 decision, no rule change). If the minimum is not reached within 3 years of the freeze the candidate is retired
@@ -68,7 +72,7 @@ Changing a grid, threshold, cost assumption (other than the logged live-tier rea
 boundary date or evaluation cadence; evaluating off-schedule; reading forward results before the first scheduled
 evaluation other than the descriptive monitor; pooling historical and forward spans into one verdict.
 
-## Questions for the reviewer (one word each)
-1. Minimums (S: 365 d + 4 episodes; X: 365 d + 60 trades, 100 from the second evaluation): accept?
-2. Two consecutive passing evaluations for acceptance, any fail final: accept?
-3. Freeze v1 as written?
+## Questions for the reviewer — answered R-Y (Revise → applied / Accept / Freeze on revision)
+1. Minimums: S revised to A ≥ 10 / C ≥ 8 forward episodes with 365 days; X 365 d + 60 trades, 100 from the second evaluation → accepted.
+2. Two consecutive passing evaluations for acceptance, any fail final → accepted.
+3. Frozen as v1.1 once §4 carried the revision.
