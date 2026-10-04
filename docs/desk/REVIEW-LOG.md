@@ -564,3 +564,16 @@ no feature computed. PRs #49 and #51 merged to main at Jacob's word (3d5ac5d, 7f
 
 v2 sent for review; no code, label or feature computed.
 
+---
+
+## R-2026-10-04-AD — ChatGPT review of the round-3 draft v2 (Revise / Revise / Accept / Not yet)
+
+| # | Claim | Verdict | Action in v3 |
+|---|---|---|---|
+| 1 | 3× primary no longer matches the stated objective (2× and above is a win); hierarchy must be 2× primary / 3× secondary / 5× tail; non-positive = everything below 2× incl. delisted; no gray zone removed from scoring | **Correct.** | Labels rewritten; primary positive `runner_2x` = max completed close within 180 bars ≥ 2 × next executable open; 3× and 5× tiers defined identically; primary non-positive = M < 2×. |
+| 2 | Do not train on 3× vs <1.5× and grade on another objective; the primary model learns 2× vs not-2×; the case-control contrast may remain a diagnostic model only | **Correct.** | Training population = scoring population, 2× vs not-2×; 3× vs <1.5× demoted to a labelled diagnostic that never gates. |
+| 3 | Gate base rate and precision@10% become 2× population precision; keep the existing bar (≥ 2× pooled, ≥ 1.5× in 3 of 4 years, liquidity and top-month removals); report 3× and 5× lift as enrichment | **Correct.** | Statistic and gate rewritten on `runner_2x`; enrichment tests for 3×/5× in the top-10/5/20% buckets vs their own base rates, reported only; minimum evidence and negative control re-based on 2×. |
+| Q3 | Separate verified / assumed pipelines | Accepted | Unchanged. |
+
+v3 sent for review; no code, label or feature computed.
+
