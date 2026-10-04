@@ -37,16 +37,22 @@ def dca(symbols, every_days=30):
     return s
 
 
-def sma_trend(symbols, fast=50, slow=200):
+def _scope(symbols, view, pf):
+    """Names a strategy evaluates: its fixed list, or the view's universe (Phase 4 monthly membership) — plus every
+    held name, so a position whose symbol dropped out of the universe still runs its exit rule (pre-registration §1)."""
+    return sorted(set(symbols or view.universe()) | set(pf.positions))
+
+
+def sma_trend(symbols=None, fast=50, slow=200):
     def s(view, pf):
         out = []
-        for sym in symbols:
+        for sym in _scope(symbols, view, pf):
             c = view.closes(sym, slow + 1)
             f, sl = _sma(c, fast), _sma(c, slow)
             if f is None or sl is None:
                 continue
             long = c[-1] > sl and f > sl
-            if long and sym not in pf.positions:
+            if long and sym not in pf.positions and sym in view.universe():
                 out.append(Order(sym, "buy", tag="trend"))
             elif not long and sym in pf.positions:
                 out.append(Order(sym, "sell", tag="trend"))
@@ -61,7 +67,7 @@ def breakout20(lookback=20, vol_mult=1.5, max_ext=0.15, stop_pct=0.12, btc="BTC"
         out = []
         bc = view.closes(btc, 8)
         btc7 = bc[-1] / bc[-8] - 1 if len(bc) >= 8 else None
-        for sym in view.universe():
+        for sym in _scope(None, view, pf):
             bars = view.bars(sym, lookback + 8)
             if len(bars) < lookback + 8 or btc7 is None:
                 continue
@@ -99,10 +105,11 @@ def momentum_top(n, lookback=90, rebalance_days=30):
     return s
 
 
-def mean_reversion(symbols, n=20, dip=0.10, stop_pct=0.15):
+def mean_reversion(symbols=None, n=20, dip=0.10, stop_pct=0.15):
+    """n is the moving-average lookback (bars), never a count of names (pre-registration §5)."""
     def s(view, pf):
         out = []
-        for sym in symbols:
+        for sym in _scope(symbols, view, pf):
             c = view.closes(sym, n + 1)
             m = _sma(c, n)
             if m is None:
@@ -110,7 +117,7 @@ def mean_reversion(symbols, n=20, dip=0.10, stop_pct=0.15):
             if sym in pf.positions:
                 if c[-1] >= m:
                     out.append(Order(sym, "sell", tag="mr"))
-            elif c[-1] <= m * (1 - dip):
+            elif c[-1] <= m * (1 - dip) and sym in view.universe():
                 out.append(Order(sym, "buy", stop=c[-1] * (1 - stop_pct), target=m, priority=m / c[-1] - 1, tag="mr"))   # deeper dip first
         return out
     return s

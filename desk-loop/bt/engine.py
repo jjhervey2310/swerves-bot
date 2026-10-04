@@ -35,6 +35,7 @@ class Position:
     tag: str = ""
     trail: float = None
     hc: float = 0.0      # highest close since entry (entry bar close at fill), drives `trail`
+    last_mark: float = 0.0   # last known COMPLETED close; used to mark a held name whose bar is missing today (R-V hardening)
 
 
 @dataclasses.dataclass
@@ -58,10 +59,11 @@ class Portfolio:
         self.last_fills = []     # symbols whose BUY filled at the most recent open (reset every bar; strategies may read it)
 
     def equity(self, prices):
-        return self.cash + sum(p.units * prices.get(s, p.entry_px) for s, p in self.positions.items())
+        # a held name with no bar today is marked at its last known completed close, never at entry price (R-V hardening)
+        return self.cash + sum(p.units * prices.get(s, p.last_mark or p.entry_px) for s, p in self.positions.items())
 
 
-def run(market, strategy, costs: CostModel, start_cash=10_000.0, start_t=None, end_t=None, max_positions=10, gross_cap=1.0, fixed_usd=None, regime=None):
+def run(market, strategy, costs: CostModel, start_cash=10_000.0, start_t=None, end_t=None, max_positions=10, gross_cap=1.0, fixed_usd=None, regime=None, universe=None, liquidate_at_end=True):
     """fixed_usd: DIAGNOSTIC ONLY (sizing attribution, review R-I). Every fill is exactly fixed_usd regardless of
     equity — the legacy house convention. Never a research configuration; results so sized are not evidence."""
     bar = market.bar_seconds
@@ -71,6 +73,7 @@ def run(market, strategy, costs: CostModel, start_cash=10_000.0, start_t=None, e
     if end_t is not None:
         times = [t for t in times if t + bar <= end_t]      # information boundary, not a label filter (R-F #1)
     pf, trades, equity, events, cash_curve = Portfolio(start_cash), [], [], [], []
+    stale = 0                                   # held-position bar-days marked at the last known close because today's bar is missing
     pending = []
     side_cost = costs.per_side(taker=True)
     for t in times:
@@ -100,7 +103,7 @@ def run(market, strategy, costs: CostModel, start_cash=10_000.0, start_t=None, e
             stop = o.stop
             if o.trail:
                 stop = max(stop if stop is not None else 0.0, px * (1 - o.trail))   # structural stop, never wider than the trail
-            pf.positions[o.symbol] = Position(o.symbol, slot_usd / px, px, t, stop, o.target, b.o, o.tag, o.trail, b.c)
+            pf.positions[o.symbol] = Position(o.symbol, slot_usd / px, px, t, stop, o.target, b.o, o.tag, o.trail, b.c, b.c)
             events.append((t, o.symbol, "fill", f"{slot_usd:.2f}", o.tag)); pf.last_fills.append(o.symbol)
         pending = []
         # (2) stops / targets on this bar's range, entry bar included (R-F #2)
@@ -116,7 +119,7 @@ def run(market, strategy, costs: CostModel, start_cash=10_000.0, start_t=None, e
                 _close(pf, trades, s, min(p.stop, b.o) * (1 - side_cost), t, "stop"); continue
             if p.target is not None and b.h >= p.target:
                 _close(pf, trades, s, max(p.target, b.o) * (1 - side_cost), t, "target"); continue
-            p.high = max(p.high, b.h)
+            p.high = max(p.high, b.h); p.last_mark = b.c
             if p.trail and b.c > p.hc:                     # ratchet on a new closing high only; the entry bar's close is the seed
                 p.hc = b.c; p.stop = max(p.stop, b.c * (1 - p.trail))
         # (3) mark at the close, stamped with the close time (R-F #7)
@@ -125,10 +128,12 @@ def run(market, strategy, costs: CostModel, start_cash=10_000.0, start_t=None, e
             b = market.bar_opening_at(s, t)
             if b is not None:
                 prices[s] = b.c
+            else:
+                stale += 1; events.append((t, s, "stale_mark", f"{pf.positions[s].last_mark:.6g}", pf.positions[s].tag))   # surfaced, never silent
         equity.append((t + bar, pf.equity(prices))); cash_curve.append((t + bar, pf.cash))
         # (4) decide on the completed bar
-        pending = list(strategy(market.as_of(t + bar, regime), pf) or [])
-    if times:
+        pending = list(strategy(market.as_of(t + bar, regime, universe), pf) or [])
+    if times and liquidate_at_end:
         t = times[-1]
         for s in list(pf.positions):
             b = market.bar_opening_at(s, t)
@@ -136,7 +141,7 @@ def run(market, strategy, costs: CostModel, start_cash=10_000.0, start_t=None, e
         equity[-1] = (t + bar, pf.cash); cash_curve[-1] = (t + bar, pf.cash)
     return {"equity": equity, "trades": trades, "events": events, "final_cash": pf.cash, "start_cash": start_cash, "cash_curve": cash_curve,
             "sizing": {"rule": "fixed-usd DIAGNOSTIC", "fixed_usd": fixed_usd} if fixed_usd else {"rule": "slot", "gross_cap": gross_cap, "max_positions": max_positions},
-            "regime_filtered": regime is not None,
+            "regime_filtered": regime is not None, "stale_marks": stale,
             "no_fills": sum(1 for e in events if e[2] == "no_fill"),
             "no_fill_reasons": _reason_counts(events)}
 

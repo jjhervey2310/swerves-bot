@@ -1,0 +1,7856 @@
+{
+ "frozen_rules": "docs/desk/PHASE4-PREREGISTRATION.md v2 (R-S FINAL)",
+ "data_hash": "8df7990c93dcc632",
+ "universe_hash": "64e00348d99bb713",
+ "universe_schedule": {
+  "top": 20,
+  "lookback_bars": 90,
+  "excluded": [
+   "CBBTC",
+   "CBETH",
+   "DAI",
+   "EURC",
+   "EUROC",
+   "FDUSD",
+   "GUSD",
+   "LSETH",
+   "PYUSD",
+   "RETH",
+   "STETH",
+   "TUSD",
+   "USDC",
+   "USDP",
+   "USDS",
+   "USDT",
+   "WBTC",
+   "WETH"
+  ],
+  "rankings": 77,
+  "membership_hash": "99c437c3e40dbb57",
+  "months": [
+   {
+    "t": 1591401600,
+    "members": [
+     "ALGO",
+     "ATOM",
+     "BCH",
+     "BTC",
+     "DASH",
+     "EOS",
+     "ETC",
+     "ETH",
+     "KNC",
+     "LINK",
+     "LTC",
+     "OXT",
+     "XLM",
+     "XTZ",
+     "ZRX"
+    ]
+   },
+   {
+    "t": 1593648000,
+    "members": [
+     "ALGO",
+     "ATOM",
+     "BCH",
+     "BTC",
+     "DASH",
+     "EOS",
+     "ETC",
+     "ETH",
+     "KNC",
+     "LINK",
+     "LTC",
+     "OXT",
+     "XLM",
+     "XTZ",
+     "ZRX"
+    ]
+   },
+   {
+    "t": 1596326400,
+    "members": [
+     "ALGO",
+     "ATOM",
+     "BCH",
+     "BTC",
+     "DASH",
+     "EOS",
+     "ETC",
+     "ETH",
+     "KNC",
+     "LINK",
+     "LTC",
+     "OXT",
+     "XLM",
+     "XTZ",
+     "ZRX"
+    ]
+   },
+   {
+    "t": 1599004800,
+    "members": [
+     "ALGO",
+     "ATOM",
+     "BCH",
+     "BTC",
+     "DASH",
+     "EOS",
+     "ETC",
+     "ETH",
+     "KNC",
+     "LINK",
+     "LTC",
+     "OXT",
+     "XLM",
+     "XTZ",
+     "ZRX"
+    ]
+   },
+   {
+    "t": 1601596800,
+    "members": [
+     "ALGO",
+     "ATOM",
+     "BCH",
+     "BTC",
+     "COMP",
+     "DASH",
+     "EOS",
+     "ETC",
+     "ETH",
+     "KNC",
+     "LINK",
+     "LTC",
+     "MKR",
+     "OXT",
+     "XLM",
+     "XTZ",
+     "ZRX"
+    ]
+   },
+   {
+    "t": 1604275200,
+    "members": [
+     "ALGO",
+     "ATOM",
+     "BCH",
+     "BTC",
+     "COMP",
+     "DASH",
+     "EOS",
+     "ETC",
+     "ETH",
+     "KNC",
+     "LINK",
+     "LTC",
+     "MKR",
+     "OXT",
+     "XLM",
+     "XTZ",
+     "ZRX"
+    ]
+   },
+   {
+    "t": 1606867200,
+    "members": [
+     "ALGO",
+     "ATOM",
+     "BAND",
+     "BCH",
+     "BTC",
+     "CGLD",
+     "COMP",
+     "DASH",
+     "EOS",
+     "ETC",
+     "ETH",
+     "KNC",
+     "LINK",
+     "LTC",
+     "MKR",
+     "NMR",
+     "OXT",
+     "XLM",
+     "XTZ",
+     "ZRX"
+    ]
+   },
+   {
+    "t": 1609545600,
+    "members": [
+     "ALGO",
+     "ATOM",
+     "BAND",
+     "BCH",
+     "BTC",
+     "COMP",
+     "EOS",
+     "ETC",
+     "ETH",
+     "KNC",
+     "LINK",
+     "LRC",
+     "LTC",
+     "OXT",
+     "UMA",
+     "UNI",
+     "XLM",
+     "XTZ",
+     "YFI",
+     "ZRX"
+    ]
+   },
+   {
+    "t": 1612224000,
+    "members": [
+     "ALGO",
+     "ATOM",
+     "BAND",
+     "BCH",
+     "BTC",
+     "CGLD",
+     "COMP",
+     "EOS",
+     "ETC",
+     "ETH",
+     "LINK",
+     "LRC",
+     "LTC",
+     "MKR",
+     "OXT",
+     "UNI",
+     "XLM",
+     "XTZ",
+     "YFI",
+     "ZRX"
+    ]
+   },
+   {
+    "t": 1614643200,
+    "members": [
+     "ALGO",
+     "ATOM",
+     "BAND",
+     "BCH",
+     "BTC",
+     "CGLD",
+     "COMP",
+     "EOS",
+     "ETC",
+     "ETH",
+     "LINK",
+     "LRC",
+     "LTC",
+     "MKR",
+     "OXT",
+     "UNI",
+     "XLM",
+     "XTZ",
+     "YFI",
+     "ZRX"
+    ]
+   },
+   {
+    "t": 1617321600,
+    "members": [
+     "AAVE",
+     "ALGO",
+     "ATOM",
+     "BCH",
+     "BNT",
+     "BTC",
+     "EOS",
+     "ETH",
+     "FIL",
+     "GRT",
+     "LINK",
+     "LRC",
+     "LTC",
+     "OXT",
+     "SNX",
+     "UNI",
+     "XLM",
+     "XTZ",
+     "YFI",
+     "ZRX"
+    ]
+   },
+   {
+    "t": 1619913600,
+    "members": [
+     "AAVE",
+     "ALGO",
+     "ATOM",
+     "BCH",
+     "BTC",
+     "COMP",
+     "EOS",
+     "ETC",
+     "ETH",
+     "FIL",
+     "GRT",
+     "LINK",
+     "LTC",
+     "MKR",
+     "OXT",
+     "UNI",
+     "XLM",
+     "XTZ",
+     "YFI",
+     "ZRX"
+    ]
+   },
+   {
+    "t": 1622592000,
+    "members": [
+     "AAVE",
+     "ALGO",
+     "ATOM",
+     "BCH",
+     "BTC",
+     "COMP",
+     "EOS",
+     "ETC",
+     "ETH",
+     "FIL",
+     "GRT",
+     "LINK",
+     "LTC",
+     "MKR",
+     "OXT",
+     "UNI",
+     "XLM",
+     "XTZ",
+     "YFI",
+     "ZRX"
+    ]
+   },
+   {
+    "t": 1625184000,
+    "members": [
+     "AAVE",
+     "ADA",
+     "ALGO",
+     "ANKR",
+     "ATOM",
+     "BCH",
+     "BTC",
+     "EOS",
+     "ETC",
+     "ETH",
+     "FIL",
+     "GRT",
+     "LINK",
+     "LTC",
+     "MKR",
+     "SUSHI",
+     "UNI",
+     "XLM",
+     "XTZ",
+     "YFI"
+    ]
+   },
+   {
+    "t": 1627862400,
+    "members": [
+     "AAVE",
+     "ADA",
+     "ALGO",
+     "ANKR",
+     "ATOM",
+     "BCH",
+     "BTC",
+     "COMP",
+     "EOS",
+     "ETC",
+     "ETH",
+     "FIL",
+     "GRT",
+     "LINK",
+     "LTC",
+     "MKR",
+     "SUSHI",
+     "UNI",
+     "XLM",
+     "YFI"
+    ]
+   },
+   {
+    "t": 1630540800,
+    "members": [
+     "AAVE",
+     "ADA",
+     "ALGO",
+     "ATOM",
+     "BCH",
+     "BTC",
+     "CGLD",
+     "COMP",
+     "DOGE",
+     "ETC",
+     "ETH",
+     "FIL",
+     "GRT",
+     "ICP",
+     "LINK",
+     "LTC",
+     "SUSHI",
+     "UNI",
+     "XLM",
+     "XTZ"
+    ]
+   },
+   {
+    "t": 1633132800,
+    "members": [
+     "ADA",
+     "ALGO",
+     "AMP",
+     "ATOM",
+     "BTC",
+     "CGLD",
+     "DOGE",
+     "DOT",
+     "ETC",
+     "ETH",
+     "FIL",
+     "GRT",
+     "ICP",
+     "LINK",
+     "LTC",
+     "QNT",
+     "SOL",
+     "UNI",
+     "XLM",
+     "XTZ"
+    ]
+   },
+   {
+    "t": 1635811200,
+    "members": [
+     "ACH",
+     "ADA",
+     "ALGO",
+     "AMP",
+     "ATOM",
+     "BTC",
+     "DOGE",
+     "DOT",
+     "ETH",
+     "FIL",
+     "GRT",
+     "ICP",
+     "LINK",
+     "LTC",
+     "MANA",
+     "QNT",
+     "SOL",
+     "UNI",
+     "XLM",
+     "XTZ"
+    ]
+   },
+   {
+    "t": 1638403200,
+    "members": [
+     "ACH",
+     "ADA",
+     "ALGO",
+     "AMP",
+     "ATOM",
+     "BTC",
+     "DOGE",
+     "DOT",
+     "ETH",
+     "FIL",
+     "GRT",
+     "ICP",
+     "IOTX",
+     "LINK",
+     "LRC",
+     "LTC",
+     "MANA",
+     "SOL",
+     "XLM",
+     "XTZ"
+    ]
+   },
+   {
+    "t": 1641081600,
+    "members": [
+     "ADA",
+     "ALGO",
+     "AMP",
+     "ATOM",
+     "AVAX",
+     "BTC",
+     "DOGE",
+     "DOT",
+     "ETH",
+     "ICP",
+     "IOTX",
+     "LINK",
+     "LRC",
+     "LTC",
+     "MANA",
+     "REQ",
+     "SHIB",
+     "SOL",
+     "XLM",
+     "XYO"
+    ]
+   },
+   {
+    "t": 1643760000,
+    "members": [
+     "ADA",
+     "ALGO",
+     "ATOM",
+     "AVAX",
+     "BTC",
+     "CRO",
+     "DOGE",
+     "DOT",
+     "ETH",
+     "ICP",
+     "IOTX",
+     "JASMY",
+     "LINK",
+     "LRC",
+     "LTC",
+     "MANA",
+     "REQ",
+     "SHIB",
+     "SOL",
+     "XLM"
+    ]
+   },
+   {
+    "t": 1646179200,
+    "members": [
+     "ADA",
+     "ALGO",
+     "ATOM",
+     "AVAX",
+     "BTC",
+     "CRO",
+     "CRV",
+     "DOGE",
+     "DOT",
+     "ETH",
+     "ICP",
+     "JASMY",
+     "LINK",
+     "LRC",
+     "LTC",
+     "MANA",
+     "SHIB",
+     "SOL",
+     "XLM",
+     "XTZ"
+    ]
+   },
+   {
+    "t": 1648857600,
+    "members": [
+     "ADA",
+     "ALGO",
+     "ATOM",
+     "AVAX",
+     "BTC",
+     "CRO",
+     "CRV",
+     "DOGE",
+     "DOT",
+     "ETH",
+     "ICP",
+     "JASMY",
+     "LINK",
+     "LRC",
+     "LTC",
+     "MANA",
+     "SHIB",
+     "SOL",
+     "SPELL",
+     "XLM"
+    ]
+   },
+   {
+    "t": 1651449600,
+    "members": [
+     "AAVE",
+     "ADA",
+     "ALGO",
+     "ATOM",
+     "AVAX",
+     "BTC",
+     "CRO",
+     "DOGE",
+     "DOT",
+     "ETH",
+     "ICP",
+     "JASMY",
+     "LINK",
+     "LRC",
+     "LTC",
+     "MANA",
+     "SHIB",
+     "SOL",
+     "XLM",
+     "XTZ"
+    ]
+   },
+   {
+    "t": 1654128000,
+    "members": [
+     "AAVE",
+     "ADA",
+     "ALGO",
+     "ATOM",
+     "AVAX",
+     "BTC",
+     "DOGE",
+     "DOT",
+     "ETC",
+     "ETH",
+     "GRT",
+     "ICP",
+     "JASMY",
+     "LINK",
+     "LRC",
+     "LTC",
+     "MANA",
+     "SHIB",
+     "SOL",
+     "XLM"
+    ]
+   },
+   {
+    "t": 1656720000,
+    "members": [
+     "AAVE",
+     "ADA",
+     "ALGO",
+     "APE",
+     "ATOM",
+     "AVAX",
+     "BTC",
+     "DOGE",
+     "DOT",
+     "ETH",
+     "ICP",
+     "JASMY",
+     "LINK",
+     "LRC",
+     "LTC",
+     "MANA",
+     "SHIB",
+     "SOL",
+     "XLM",
+     "XTZ"
+    ]
+   },
+   {
+    "t": 1659398400,
+    "members": [
+     "AAVE",
+     "ADA",
+     "ALGO",
+     "APE",
+     "ATOM",
+     "AVAX",
+     "BTC",
+     "DOGE",
+     "DOT",
+     "ETH",
+     "ICP",
+     "JASMY",
+     "LINK",
+     "LRC",
+     "LTC",
+     "MANA",
+     "SHIB",
+     "SOL",
+     "XLM",
+     "XTZ"
+    ]
+   },
+   {
+    "t": 1662076800,
+    "members": [
+     "AAVE",
+     "ADA",
+     "ALGO",
+     "APE",
+     "ATOM",
+     "AVAX",
+     "BTC",
+     "DOGE",
+     "DOT",
+     "ETC",
+     "ETH",
+     "FIL",
+     "ICP",
+     "LINK",
+     "LTC",
+     "MANA",
+     "SHIB",
+     "SOL",
+     "UNI",
+     "XLM"
+    ]
+   },
+   {
+    "t": 1664668800,
+    "members": [
+     "AAVE",
+     "ADA",
+     "ALGO",
+     "APE",
+     "ATOM",
+     "AVAX",
+     "BTC",
+     "DOGE",
+     "DOT",
+     "ETC",
+     "ETH",
+     "FIL",
+     "ICP",
+     "LINK",
+     "LTC",
+     "SHIB",
+     "SOL",
+     "UNI",
+     "XLM",
+     "YFI"
+    ]
+   },
+   {
+    "t": 1667347200,
+    "members": [
+     "AAVE",
+     "ADA",
+     "ALGO",
+     "APE",
+     "ATOM",
+     "AVAX",
+     "BTC",
+     "DOGE",
+     "DOT",
+     "ETC",
+     "ETH",
+     "FIL",
+     "JASMY",
+     "LINK",
+     "LTC",
+     "QNT",
+     "SHIB",
+     "SOL",
+     "UNI",
+     "XLM"
+    ]
+   },
+   {
+    "t": 1669939200,
+    "members": [
+     "AAVE",
+     "ADA",
+     "ALGO",
+     "APE",
+     "ATOM",
+     "AVAX",
+     "BTC",
+     "CHZ",
+     "DOGE",
+     "DOT",
+     "ETC",
+     "ETH",
+     "FIL",
+     "LINK",
+     "LTC",
+     "QNT",
+     "SHIB",
+     "SOL",
+     "UNI",
+     "XLM"
+    ]
+   },
+   {
+    "t": 1672617600,
+    "members": [
+     "AAVE",
+     "ADA",
+     "ALGO",
+     "APE",
+     "ATOM",
+     "AVAX",
+     "BTC",
+     "CHZ",
+     "DOGE",
+     "DOT",
+     "ETH",
+     "FIL",
+     "ICP",
+     "LINK",
+     "LTC",
+     "QNT",
+     "SHIB",
+     "SOL",
+     "UNI",
+     "XLM"
+    ]
+   },
+   {
+    "t": 1675296000,
+    "members": [
+     "AAVE",
+     "ADA",
+     "ALGO",
+     "APE",
+     "ATOM",
+     "AVAX",
+     "BTC",
+     "DOGE",
+     "DOT",
+     "ETH",
+     "FIL",
+     "ICP",
+     "LINK",
+     "LTC",
+     "MANA",
+     "QNT",
+     "SHIB",
+     "SOL",
+     "UNI",
+     "XLM"
+    ]
+   },
+   {
+    "t": 1677715200,
+    "members": [
+     "AAVE",
+     "ADA",
+     "ALGO",
+     "ATOM",
+     "AVAX",
+     "BTC",
+     "DOGE",
+     "DOT",
+     "ETH",
+     "FET",
+     "FIL",
+     "GRT",
+     "ICP",
+     "LINK",
+     "LTC",
+     "MANA",
+     "OP",
+     "SHIB",
+     "SOL",
+     "XLM"
+    ]
+   },
+   {
+    "t": 1680393600,
+    "members": [
+     "AAVE",
+     "ACH",
+     "ADA",
+     "ALGO",
+     "ATOM",
+     "AVAX",
+     "BTC",
+     "DOGE",
+     "DOT",
+     "ETH",
+     "FET",
+     "FIL",
+     "GRT",
+     "LINK",
+     "LTC",
+     "MANA",
+     "OP",
+     "SHIB",
+     "SOL",
+     "XLM"
+    ]
+   },
+   {
+    "t": 1682985600,
+    "members": [
+     "ACH",
+     "ADA",
+     "ALGO",
+     "ATOM",
+     "AVAX",
+     "BTC",
+     "DOGE",
+     "DOT",
+     "ETH",
+     "FET",
+     "FIL",
+     "GRT",
+     "LDO",
+     "LINK",
+     "LTC",
+     "OP",
+     "SHIB",
+     "SOL",
+     "STX",
+     "XLM"
+    ]
+   },
+   {
+    "t": 1685664000,
+    "members": [
+     "ACH",
+     "ADA",
+     "ATOM",
+     "AVAX",
+     "BLUR",
+     "BTC",
+     "DOGE",
+     "DOT",
+     "ETH",
+     "FET",
+     "FIL",
+     "GRT",
+     "LDO",
+     "LINK",
+     "LTC",
+     "OP",
+     "SHIB",
+     "SOL",
+     "STX",
+     "XLM"
+    ]
+   },
+   {
+    "t": 1688256000,
+    "members": [
+     "ADA",
+     "ARB",
+     "ATOM",
+     "AVAX",
+     "BCH",
+     "BLUR",
+     "BTC",
+     "DOGE",
+     "DOT",
+     "ETH",
+     "FET",
+     "GRT",
+     "JASMY",
+     "LINK",
+     "LTC",
+     "OP",
+     "SHIB",
+     "SOL",
+     "STX",
+     "XLM"
+    ]
+   },
+   {
+    "t": 1690934400,
+    "members": [
+     "AAVE",
+     "ADA",
+     "ALGO",
+     "ARB",
+     "ATOM",
+     "AVAX",
+     "BCH",
+     "BTC",
+     "DOGE",
+     "DOT",
+     "ETH",
+     "GRT",
+     "LDO",
+     "LINK",
+     "LTC",
+     "MKR",
+     "OP",
+     "SHIB",
+     "SOL",
+     "XLM"
+    ]
+   },
+   {
+    "t": 1693612800,
+    "members": [
+     "AAVE",
+     "ADA",
+     "ALGO",
+     "ARB",
+     "ATOM",
+     "AVAX",
+     "BCH",
+     "BTC",
+     "DOGE",
+     "ETH",
+     "HBAR",
+     "LINK",
+     "LTC",
+     "MKR",
+     "OP",
+     "SHIB",
+     "SOL",
+     "SUSHI",
+     "UNI",
+     "XLM"
+    ]
+   },
+   {
+    "t": 1696204800,
+    "members": [
+     "AAVE",
+     "ADA",
+     "ARB",
+     "ATOM",
+     "AVAX",
+     "BCH",
+     "BTC",
+     "COMP",
+     "DOGE",
+     "ETH",
+     "HBAR",
+     "LINK",
+     "LTC",
+     "MKR",
+     "OP",
+     "SHIB",
+     "SOL",
+     "SUSHI",
+     "UNI",
+     "XLM"
+    ]
+   },
+   {
+    "t": 1698883200,
+    "members": [
+     "AAVE",
+     "ADA",
+     "ARB",
+     "AVAX",
+     "BCH",
+     "BTC",
+     "DOGE",
+     "DOT",
+     "ETH",
+     "FET",
+     "HBAR",
+     "LINK",
+     "LTC",
+     "MKR",
+     "OP",
+     "SHIB",
+     "SOL",
+     "TRB",
+     "XLM",
+     "XRP"
+    ]
+   },
+   {
+    "t": 1701475200,
+    "members": [
+     "AAVE",
+     "ADA",
+     "ARB",
+     "AVAX",
+     "BCH",
+     "BTC",
+     "DOGE",
+     "DOT",
+     "ETH",
+     "FET",
+     "LDO",
+     "LINK",
+     "LTC",
+     "OP",
+     "SHIB",
+     "SOL",
+     "TRB",
+     "XLM",
+     "XRP",
+     "YFI"
+    ]
+   },
+   {
+    "t": 1704153600,
+    "members": [
+     "AAVE",
+     "ADA",
+     "ARB",
+     "AVAX",
+     "BCH",
+     "BTC",
+     "DOGE",
+     "DOT",
+     "ETH",
+     "FET",
+     "ICP",
+     "INJ",
+     "LINK",
+     "LTC",
+     "OP",
+     "SEI",
+     "SHIB",
+     "SOL",
+     "XLM",
+     "XRP"
+    ]
+   },
+   {
+    "t": 1706832000,
+    "members": [
+     "ADA",
+     "ARB",
+     "AVAX",
+     "BTC",
+     "DOGE",
+     "DOT",
+     "ETH",
+     "FET",
+     "ICP",
+     "INJ",
+     "LINK",
+     "LTC",
+     "OP",
+     "SEI",
+     "SHIB",
+     "SOL",
+     "STX",
+     "TIA",
+     "TRB",
+     "XRP"
+    ]
+   },
+   {
+    "t": 1709337600,
+    "members": [
+     "ADA",
+     "ARB",
+     "AVAX",
+     "BTC",
+     "DOGE",
+     "ETH",
+     "FET",
+     "ICP",
+     "INJ",
+     "JASMY",
+     "LINK",
+     "LTC",
+     "OP",
+     "SEI",
+     "SHIB",
+     "SOL",
+     "STX",
+     "SUI",
+     "TIA",
+     "XRP"
+    ]
+   },
+   {
+    "t": 1712016000,
+    "members": [
+     "ADA",
+     "AVAX",
+     "BCH",
+     "BONK",
+     "BTC",
+     "DOGE",
+     "ETH",
+     "FET",
+     "ICP",
+     "INJ",
+     "JASMY",
+     "LINK",
+     "LTC",
+     "OP",
+     "SEI",
+     "SHIB",
+     "SOL",
+     "STX",
+     "SUI",
+     "XRP"
+    ]
+   },
+   {
+    "t": 1714608000,
+    "members": [
+     "ADA",
+     "AVAX",
+     "BCH",
+     "BONK",
+     "BTC",
+     "DOGE",
+     "ETH",
+     "FET",
+     "INJ",
+     "JASMY",
+     "LINK",
+     "LTC",
+     "NEAR",
+     "ONDO",
+     "OP",
+     "SEI",
+     "SHIB",
+     "SOL",
+     "STX",
+     "XRP"
+    ]
+   },
+   {
+    "t": 1717286400,
+    "members": [
+     "ADA",
+     "AERO",
+     "AVAX",
+     "BCH",
+     "BONK",
+     "BTC",
+     "DOGE",
+     "ETH",
+     "FET",
+     "INJ",
+     "JASMY",
+     "LINK",
+     "LTC",
+     "NEAR",
+     "ONDO",
+     "OP",
+     "SEI",
+     "SHIB",
+     "SOL",
+     "XRP"
+    ]
+   },
+   {
+    "t": 1719878400,
+    "members": [
+     "AERO",
+     "AVAX",
+     "BCH",
+     "BONK",
+     "BTC",
+     "DOGE",
+     "ETH",
+     "FET",
+     "HBAR",
+     "INJ",
+     "JASMY",
+     "LINK",
+     "LTC",
+     "NEAR",
+     "ONDO",
+     "OP",
+     "SHIB",
+     "SOL",
+     "STX",
+     "XRP"
+    ]
+   },
+   {
+    "t": 1722556800,
+    "members": [
+     "AVAX",
+     "BCH",
+     "BONK",
+     "BTC",
+     "DOGE",
+     "ETH",
+     "FET",
+     "INJ",
+     "JASMY",
+     "LDO",
+     "LINK",
+     "LTC",
+     "NEAR",
+     "ONDO",
+     "OP",
+     "SHIB",
+     "SOL",
+     "STX",
+     "UNI",
+     "XRP"
+    ]
+   },
+   {
+    "t": 1725235200,
+    "members": [
+     "ADA",
+     "AVAX",
+     "BCH",
+     "BONK",
+     "BTC",
+     "DOGE",
+     "ETH",
+     "FET",
+     "INJ",
+     "JASMY",
+     "LINK",
+     "LTC",
+     "NEAR",
+     "ONDO",
+     "SHIB",
+     "SOL",
+     "STX",
+     "SUI",
+     "XLM",
+     "XRP"
+    ]
+   },
+   {
+    "t": 1727827200,
+    "members": [
+     "AAVE",
+     "AERO",
+     "AVAX",
+     "BONK",
+     "BTC",
+     "DOGE",
+     "ETH",
+     "FET",
+     "INJ",
+     "JASMY",
+     "LINK",
+     "LTC",
+     "NEAR",
+     "ONDO",
+     "SEI",
+     "SHIB",
+     "SOL",
+     "SUI",
+     "TIA",
+     "XRP"
+    ]
+   },
+   {
+    "t": 1730505600,
+    "members": [
+     "AAVE",
+     "AERO",
+     "AVAX",
+     "BONK",
+     "BTC",
+     "DOGE",
+     "ETH",
+     "FET",
+     "INJ",
+     "JASMY",
+     "LINK",
+     "LTC",
+     "NEAR",
+     "ONDO",
+     "SEI",
+     "SHIB",
+     "SOL",
+     "SUI",
+     "TIA",
+     "XRP"
+    ]
+   },
+   {
+    "t": 1733097600,
+    "members": [
+     "ADA",
+     "AVAX",
+     "BONK",
+     "BTC",
+     "DOGE",
+     "ETH",
+     "FET",
+     "HBAR",
+     "INJ",
+     "JASMY",
+     "LINK",
+     "LTC",
+     "ONDO",
+     "SEI",
+     "SHIB",
+     "SOL",
+     "SUI",
+     "TIA",
+     "XLM",
+     "XRP"
+    ]
+   },
+   {
+    "t": 1735776000,
+    "members": [
+     "ADA",
+     "AVAX",
+     "BONK",
+     "BTC",
+     "DOGE",
+     "DOT",
+     "ETH",
+     "FET",
+     "HBAR",
+     "JASMY",
+     "LINK",
+     "LTC",
+     "ONDO",
+     "SEI",
+     "SHIB",
+     "SOL",
+     "SUI",
+     "UNI",
+     "XLM",
+     "XRP"
+    ]
+   },
+   {
+    "t": 1738454400,
+    "members": [
+     "AAVE",
+     "ADA",
+     "ALGO",
+     "AVAX",
+     "BONK",
+     "BTC",
+     "DOGE",
+     "DOT",
+     "ETH",
+     "HBAR",
+     "JASMY",
+     "LINK",
+     "LTC",
+     "ONDO",
+     "SHIB",
+     "SOL",
+     "SUI",
+     "XCN",
+     "XLM",
+     "XRP"
+    ]
+   },
+   {
+    "t": 1740873600,
+    "members": [
+     "AAVE",
+     "ADA",
+     "AVAX",
+     "BONK",
+     "BTC",
+     "DOGE",
+     "ETH",
+     "HBAR",
+     "JASMY",
+     "LINK",
+     "LTC",
+     "ONDO",
+     "PEPE",
+     "SHIB",
+     "SOL",
+     "SUI",
+     "SWFTC",
+     "XCN",
+     "XLM",
+     "XRP"
+    ]
+   },
+   {
+    "t": 1743552000,
+    "members": [
+     "AAVE",
+     "ADA",
+     "AVAX",
+     "BONK",
+     "BTC",
+     "DOGE",
+     "ETH",
+     "HBAR",
+     "JASMY",
+     "LINK",
+     "LTC",
+     "ONDO",
+     "PEPE",
+     "SHIB",
+     "SOL",
+     "SUI",
+     "SWFTC",
+     "XCN",
+     "XLM",
+     "XRP"
+    ]
+   },
+   {
+    "t": 1746144000,
+    "members": [
+     "AAVE",
+     "ADA",
+     "AVAX",
+     "BONK",
+     "BTC",
+     "DOGE",
+     "ETH",
+     "HBAR",
+     "JASMY",
+     "LINK",
+     "LTC",
+     "ONDO",
+     "PEPE",
+     "SOL",
+     "SUI",
+     "TOSHI",
+     "TRUMP",
+     "XCN",
+     "XLM",
+     "XRP"
+    ]
+   },
+   {
+    "t": 1748822400,
+    "members": [
+     "AAVE",
+     "ADA",
+     "BONK",
+     "BTC",
+     "CRV",
+     "DOGE",
+     "ETH",
+     "HBAR",
+     "LINK",
+     "LTC",
+     "MOODENG",
+     "ONDO",
+     "PEPE",
+     "SOL",
+     "SUI",
+     "TRUMP",
+     "WIF",
+     "XCN",
+     "XLM",
+     "XRP"
+    ]
+   },
+   {
+    "t": 1751414400,
+    "members": [
+     "AAVE",
+     "ADA",
+     "BONK",
+     "BTC",
+     "CRV",
+     "DOGE",
+     "ETH",
+     "HBAR",
+     "LINK",
+     "LTC",
+     "MOODENG",
+     "ONDO",
+     "PEPE",
+     "SOL",
+     "SUI",
+     "TRUMP",
+     "WIF",
+     "XCN",
+     "XLM",
+     "XRP"
+    ]
+   },
+   {
+    "t": 1754092800,
+    "members": [
+     "AAVE",
+     "ADA",
+     "BONK",
+     "BTC",
+     "CRV",
+     "DOGE",
+     "ETH",
+     "HBAR",
+     "LINK",
+     "LTC",
+     "MOODENG",
+     "ONDO",
+     "PENGU",
+     "PEPE",
+     "SOL",
+     "SUI",
+     "TRUMP",
+     "WIF",
+     "XLM",
+     "XRP"
+    ]
+   },
+   {
+    "t": 1756771200,
+    "members": [
+     "AAVE",
+     "ADA",
+     "AERO",
+     "AVAX",
+     "BONK",
+     "BTC",
+     "DOGE",
+     "ETH",
+     "HBAR",
+     "LINK",
+     "LTC",
+     "ONDO",
+     "PENGU",
+     "PEPE",
+     "SEI",
+     "SOL",
+     "SUI",
+     "XLM",
+     "XRP",
+     "ZORA"
+    ]
+   },
+   {
+    "t": 1759363200,
+    "members": [
+     "ADA",
+     "AERO",
+     "AVAX",
+     "BONK",
+     "BTC",
+     "CRO",
+     "DOGE",
+     "ETH",
+     "FARTCOIN",
+     "HBAR",
+     "LINK",
+     "LTC",
+     "ONDO",
+     "PENGU",
+     "PEPE",
+     "SOL",
+     "SUI",
+     "XLM",
+     "XRP",
+     "ZORA"
+    ]
+   },
+   {
+    "t": 1762041600,
+    "members": [
+     "ADA",
+     "AERO",
+     "AVAX",
+     "BONK",
+     "BTC",
+     "CRO",
+     "DOGE",
+     "ETH",
+     "FARTCOIN",
+     "HBAR",
+     "LINK",
+     "LTC",
+     "PENGU",
+     "PUMP",
+     "SOL",
+     "SUI",
+     "XLM",
+     "XRP",
+     "ZEC",
+     "ZORA"
+    ]
+   },
+   {
+    "t": 1764633600,
+    "members": [
+     "ADA",
+     "AVAX",
+     "BTC",
+     "DASH",
+     "DOGE",
+     "ETH",
+     "FARTCOIN",
+     "HBAR",
+     "ICP",
+     "LINK",
+     "LTC",
+     "PENGU",
+     "PUMP",
+     "SOL",
+     "SUI",
+     "TAO",
+     "WLFI",
+     "XLM",
+     "XRP",
+     "ZEC"
+    ]
+   },
+   {
+    "t": 1767312000,
+    "members": [
+     "ADA",
+     "AVAX",
+     "AVNT",
+     "BTC",
+     "DASH",
+     "DOGE",
+     "ETH",
+     "FARTCOIN",
+     "HBAR",
+     "ICP",
+     "LINK",
+     "LTC",
+     "PENGU",
+     "SOL",
+     "SUI",
+     "TAO",
+     "UNI",
+     "XLM",
+     "XRP",
+     "ZEC"
+    ]
+   },
+   {
+    "t": 1769990400,
+    "members": [
+     "ADA",
+     "AVAX",
+     "BCH",
+     "BTC",
+     "DASH",
+     "DOGE",
+     "ETH",
+     "FARTCOIN",
+     "HBAR",
+     "ICP",
+     "LINK",
+     "LTC",
+     "PUMP",
+     "SOL",
+     "SUI",
+     "TAO",
+     "UNI",
+     "XLM",
+     "XRP",
+     "ZEC"
+    ]
+   },
+   {
+    "t": 1772409600,
+    "members": [
+     "ADA",
+     "AVAX",
+     "BCH",
+     "BTC",
+     "DOGE",
+     "ETH",
+     "FARTCOIN",
+     "HBAR",
+     "LINK",
+     "LTC",
+     "MON",
+     "PENGU",
+     "PEPE",
+     "PUMP",
+     "SOL",
+     "SUI",
+     "TAO",
+     "XLM",
+     "XRP",
+     "ZEC"
+    ]
+   },
+   {
+    "t": 1775088000,
+    "members": [
+     "ADA",
+     "AVAX",
+     "BCH",
+     "BTC",
+     "DOGE",
+     "ETH",
+     "FARTCOIN",
+     "HBAR",
+     "LINK",
+     "LTC",
+     "MON",
+     "PAXG",
+     "PEPE",
+     "PUMP",
+     "SOL",
+     "SUI",
+     "TAO",
+     "XLM",
+     "XRP",
+     "ZEC"
+    ]
+   },
+   {
+    "t": 1777680000,
+    "members": [
+     "ADA",
+     "AVAX",
+     "BTC",
+     "DOGE",
+     "ETH",
+     "FARTCOIN",
+     "HBAR",
+     "LINK",
+     "LTC",
+     "MON",
+     "PAXG",
+     "PENGU",
+     "PEPE",
+     "SOL",
+     "SUI",
+     "TAO",
+     "VVV",
+     "XLM",
+     "XRP",
+     "ZEC"
+    ]
+   },
+   {
+    "t": 1780358400,
+    "members": [
+     "ADA",
+     "BTC",
+     "DOGE",
+     "ETH",
+     "HBAR",
+     "HYPE",
+     "LINK",
+     "LTC",
+     "NEAR",
+     "ONDO",
+     "PENGU",
+     "PEPE",
+     "RAVE",
+     "SOL",
+     "SUI",
+     "TAO",
+     "VVV",
+     "XLM",
+     "XRP",
+     "ZEC"
+    ]
+   },
+   {
+    "t": 1782950400,
+    "members": [
+     "ADA",
+     "AVAX",
+     "BTC",
+     "DOGE",
+     "ETH",
+     "HBAR",
+     "HYPE",
+     "LINK",
+     "LTC",
+     "NEAR",
+     "ONDO",
+     "PENGU",
+     "RAVE",
+     "SOL",
+     "SUI",
+     "TAO",
+     "VVV",
+     "XLM",
+     "XRP",
+     "ZEC"
+    ]
+   },
+   {
+    "t": 1785628800,
+    "members": [
+     "ADA",
+     "BILL",
+     "BTC",
+     "DOGE",
+     "ETH",
+     "HBAR",
+     "HYPE",
+     "ICP",
+     "LINK",
+     "LTC",
+     "NEAR",
+     "ONDO",
+     "SOL",
+     "SUI",
+     "TAO",
+     "VVV",
+     "WLD",
+     "XLM",
+     "XRP",
+     "ZEC"
+    ]
+   },
+   {
+    "t": 1788307200,
+    "members": [
+     "ADA",
+     "AVAX",
+     "BTC",
+     "DOGE",
+     "ETH",
+     "HYPE",
+     "LINK",
+     "LTC",
+     "NEAR",
+     "ONDO",
+     "PUMP",
+     "SOL",
+     "SUI",
+     "TAO",
+     "UNI",
+     "VVV",
+     "WLD",
+     "XLM",
+     "XRP",
+     "ZEC"
+    ]
+   },
+   {
+    "t": 1790899200,
+    "members": [
+     "ADA",
+     "AVAX",
+     "BTC",
+     "DOGE",
+     "ETH",
+     "HYPE",
+     "LINK",
+     "LTC",
+     "NEAR",
+     "ONDO",
+     "PUMP",
+     "QNT",
+     "SOL",
+     "SUI",
+     "TAO",
+     "UNI",
+     "VVV",
+     "XLM",
+     "XRP",
+     "ZEC"
+    ]
+   }
+  ]
+ },
+ "costs": {
+  "canonical": {
+   "maker_fee": 0.0025,
+   "taker_fee": 0.004,
+   "venue": "kraken",
+   "tier": "Kraken Pro starter taker 0.40% ASSUMED until the live account tier is read (R-A); +0.05% half-spread +0.05% slippage",
+   "spread": 0.0005,
+   "slippage": 0.0005,
+   "note": ""
+  },
+  "severe": {
+   "maker_fee": 0.0095,
+   "taker_fee": 0.0095,
+   "venue": "coinbase-daily",
+   "tier": "legacy blended COST_SIDE per side (severe sensitivity only)",
+   "spread": 0.0,
+   "slippage": 0.0,
+   "note": ""
+  }
+ },
+ "sizing": {
+  "canonical": {
+   "max_positions": 10,
+   "gross_cap": 1.0
+  },
+  "cap_0.95": {
+   "max_positions": 10,
+   "gross_cap": 0.95
+  },
+  "cap_0.90": {
+   "max_positions": 10,
+   "gross_cap": 0.9
+  }
+ },
+ "regime": {
+  "version": 2,
+  "canonical": true,
+  "band": 0.02,
+  "vol_pct": 0.9,
+  "breadth_hi": 0.55,
+  "breadth_lo": 0.35,
+  "dd_floor": -0.5,
+  "hysteresis_bars": 3,
+  "fastfail": [
+   "veto_vol",
+   "veto_dd"
+  ],
+  "lookbacks": {
+   "sma200": 200,
+   "sma50": 50,
+   "slope": 20,
+   "vol": 20,
+   "volpct": 365,
+   "dd": 365
+  },
+  "breadth": {
+   "min_bars": 50,
+   "min_names": 20,
+   "min_coverage": 0.6
+  },
+  "entry_rule": "risk_on only",
+  "data_hash": "8df7990c93dcc632",
+  "universe_hash": "64e00348d99bb713",
+  "pct_time": {
+   "risk_on": 0.19549812421842436,
+   "neutral": 0.14756148395164653,
+   "risk_off": 0.4956231763234681,
+   "unknown": 0.16131721550646103
+  },
+  "transitions_count": 62,
+  "first_label_t": 1617148800,
+  "bars": 2399
+ },
+ "candidates": {
+  "sma_trend": {
+   "candidate": "sma_trend",
+   "role": "candidate",
+   "grid": [
+    {
+     "fast": 20,
+     "slow": 100
+    },
+    {
+     "fast": 50,
+     "slow": 200
+    }
+   ],
+   "trials": 44,
+   "folds": [
+    {
+     "fit": [
+      1583625600,
+      1615161600
+     ],
+     "test": [
+      1615161600,
+      1622937600
+     ],
+     "params": {
+      "fast": 50,
+      "slow": 200
+     },
+     "fit_score": 2.2092652422602446
+    },
+    {
+     "fit": [
+      1591401600,
+      1622937600
+     ],
+     "test": [
+      1622937600,
+      1630713600
+     ],
+     "params": {
+      "fast": 50,
+      "slow": 200
+     },
+     "fit_score": 1.5729947870797143
+    },
+    {
+     "fit": [
+      1599177600,
+      1630713600
+     ],
+     "test": [
+      1630713600,
+      1638489600
+     ],
+     "params": {
+      "fast": 50,
+      "slow": 200
+     },
+     "fit_score": 1.2936918301769
+    },
+    {
+     "fit": [
+      1606953600,
+      1638489600
+     ],
+     "test": [
+      1638489600,
+      1646265600
+     ],
+     "params": {
+      "fast": 50,
+      "slow": 200
+     },
+     "fit_score": 1.1511583220360277
+    },
+    {
+     "fit": [
+      1614729600,
+      1646265600
+     ],
+     "test": [
+      1646265600,
+      1654041600
+     ],
+     "params": {
+      "fast": 50,
+      "slow": 200
+     },
+     "fit_score": 0.18522676652401407
+    },
+    {
+     "fit": [
+      1622505600,
+      1654041600
+     ],
+     "test": [
+      1654041600,
+      1661817600
+     ],
+     "params": {
+      "fast": 50,
+      "slow": 200
+     },
+     "fit_score": -0.9923885749816488
+    },
+    {
+     "fit": [
+      1630281600,
+      1661817600
+     ],
+     "test": [
+      1661817600,
+      1669593600
+     ],
+     "params": {
+      "fast": 50,
+      "slow": 200
+     },
+     "fit_score": -0.6484517841957883
+    },
+    {
+     "fit": [
+      1638057600,
+      1669593600
+     ],
+     "test": [
+      1669593600,
+      1677369600
+     ],
+     "params": {
+      "fast": 50,
+      "slow": 200
+     },
+     "fit_score": -2.482800421043374
+    },
+    {
+     "fit": [
+      1645833600,
+      1677369600
+     ],
+     "test": [
+      1677369600,
+      1685145600
+     ],
+     "params": {
+      "fast": 50,
+      "slow": 200
+     },
+     "fit_score": -0.4643912699149479
+    },
+    {
+     "fit": [
+      1653609600,
+      1685145600
+     ],
+     "test": [
+      1685145600,
+      1692921600
+     ],
+     "params": {
+      "fast": 50,
+      "slow": 200
+     },
+     "fit_score": 0.08887597005291038
+    },
+    {
+     "fit": [
+      1661385600,
+      1692921600
+     ],
+     "test": [
+      1692921600,
+      1700697600
+     ],
+     "params": {
+      "fast": 50,
+      "slow": 200
+     },
+     "fit_score": -0.5060822951921318
+    },
+    {
+     "fit": [
+      1669161600,
+      1700697600
+     ],
+     "test": [
+      1700697600,
+      1708473600
+     ],
+     "params": {
+      "fast": 50,
+      "slow": 200
+     },
+     "fit_score": 1.2191134689200684
+    },
+    {
+     "fit": [
+      1676937600,
+      1708473600
+     ],
+     "test": [
+      1708473600,
+      1716249600
+     ],
+     "params": {
+      "fast": 50,
+      "slow": 200
+     },
+     "fit_score": 1.3594356495917146
+    },
+    {
+     "fit": [
+      1684713600,
+      1716249600
+     ],
+     "test": [
+      1716249600,
+      1724025600
+     ],
+     "params": {
+      "fast": 20,
+      "slow": 100
+     },
+     "fit_score": 2.162750849329205
+    },
+    {
+     "fit": [
+      1692489600,
+      1724025600
+     ],
+     "test": [
+      1724025600,
+      1731801600
+     ],
+     "params": {
+      "fast": 20,
+      "slow": 100
+     },
+     "fit_score": 1.602199256797702
+    },
+    {
+     "fit": [
+      1700265600,
+      1731801600
+     ],
+     "test": [
+      1731801600,
+      1739577600
+     ],
+     "params": {
+      "fast": 20,
+      "slow": 100
+     },
+     "fit_score": 2.063215877103721
+    },
+    {
+     "fit": [
+      1708041600,
+      1739577600
+     ],
+     "test": [
+      1739577600,
+      1747353600
+     ],
+     "params": {
+      "fast": 50,
+      "slow": 200
+     },
+     "fit_score": -0.3544160251562763
+    },
+    {
+     "fit": [
+      1715817600,
+      1747353600
+     ],
+     "test": [
+      1747353600,
+      1755129600
+     ],
+     "params": {
+      "fast": 50,
+      "slow": 200
+     },
+     "fit_score": -1.7973567756149933
+    },
+    {
+     "fit": [
+      1723593600,
+      1755129600
+     ],
+     "test": [
+      1755129600,
+      1762905600
+     ],
+     "params": {
+      "fast": 20,
+      "slow": 100
+     },
+     "fit_score": -0.6299072953606105
+    },
+    {
+     "fit": [
+      1731369600,
+      1762905600
+     ],
+     "test": [
+      1762905600,
+      1770681600
+     ],
+     "params": {
+      "fast": 20,
+      "slow": 100
+     },
+     "fit_score": -1.2847801080944687
+    },
+    {
+     "fit": [
+      1739145600,
+      1770681600
+     ],
+     "test": [
+      1770681600,
+      1778457600
+     ],
+     "params": {
+      "fast": 20,
+      "slow": 100
+     },
+     "fit_score": -1.754729478574219
+    },
+    {
+     "fit": [
+      1746921600,
+      1778457600
+     ],
+     "test": [
+      1778457600,
+      1786233600
+     ],
+     "params": {
+      "fast": 50,
+      "slow": 200
+     },
+     "fit_score": -1.1559347694386428
+    }
+   ],
+   "oos_chained": {
+    "total_return": -0.8636573068166885,
+    "cagr": -0.30771465372323026,
+    "max_drawdown": -0.9544313055957497,
+    "sharpe": -0.17656077651602586,
+    "trades": 767,
+    "win_rate": 0.16688396349413298,
+    "avg_trade_ret": -0.009118251755802892,
+    "profit_factor": 0.9292391291178791,
+    "pnl_by_year": {
+     "2021": 1647.623755003566,
+     "2022": -7772.676429307481,
+     "2023": 9211.0497919606,
+     "2024": 9765.241587328705,
+     "2025": -14541.761100850885,
+     "2026": -2684.5722203212135
+    },
+    "pnl_by_symbol": {
+     "BAND": -312.5036202868991,
+     "BTC": -540.9109953445867,
+     "ATOM": -1598.5966255481542,
+     "DASH": 155.50179791819153,
+     "KNC": -791.8043331827453,
+     "ALGO": -1709.7677894456472,
+     "BCH": -254.28042755012,
+     "COMP": -698.6562685038705,
+     "EOS": -138.012827339326,
+     "UNI": -570.7698676135291,
+     "CGLD": -313.37778788699023,
+     "ETC": 3855.6492634293095,
+     "ETH": 361.4241251761559,
+     "MKR": 19.967450469625547,
+     "XLM": -247.3142598682223,
+     "LINK": -202.4756072008856,
+     "NMR": -39.07814334063961,
+     "YFI": -128.91956940284976,
+     "DAI": -561.7119170755411,
+     "AAVE": 108.98568309826283,
+     "LRC": 3128.2035697807096,
+     "ADA": -678.0707079753446,
+     "XTZ": -345.9717598934107,
+     "CRV": -168.77147142296255,
+     "1INCH": 39.9536701754449,
+     "GRT": -155.04870260242163,
+     "ANKR": -625.9926352308165,
+     "CTSI": -582.4414684097178,
+     "USDT": -177.30864718433125,
+     "ZEC": -635.2918070991686,
+     "SOL": -72.81536766564247,
+     "STORJ": -2.373313446181013,
+     "GTC": -168.0716970424656,
+     "BAT": -331.2942189873588,
+     "LPT": -459.8676015366318,
+     "MANA": -359.0436464963753,
+     "PAX": -338.645873269253,
+     "QNT": -327.0731675715371,
+     "TRB": -415.4587134694684,
+     "PLU": -502.7511569881578,
+     "FORTH": -204.53783242147793,
+     "ENS": -452.274900870191,
+     "RLC": 176.24345931467693,
+     "AVT": -367.9128290120668,
+     "CHZ": -691.8384674754273,
+     "DOGE": -329.25069975668305,
+     "MASK": 152.02637082892304,
+     "LTC": 7.328941049540219,
+     "SUSHI": -63.66295163373838,
+     "BAL": -218.60004443674714,
+     "TIME": -37.087797245470966,
+     "FET": 1314.2398297106774,
+     "DEXT": 1298.6952507342367,
+     "API3": 1405.6723995716202,
+     "AERGO": -1208.0334322757178,
+     "ALICE": -280.8425659310702,
+     "AMP": -351.10759686110674,
+     "APE": -192.71833539258932,
+     "ABT": 1187.8531299120014,
+     "ARPA": 765.5698330781538,
+     "BLZ": 1229.479702617748,
+     "CELR": -16.20114740369999,
+     "ALCX": -52.87499804280458,
+     "DNT": -179.11796188970493,
+     "FIS": -61.845832902525714,
+     "AGLD": 153.07687626610164,
+     "ACH": -1169.5060944131667,
+     "CBETH": 116.69830936659586,
+     "AST": -119.72827142731126,
+     "ALEPH": -327.092983808261,
+     "ELA": -91.6434059313819,
+     "MSOL": -170.3003902136726,
+     "INJ": 57.13302241963943,
+     "ORCA": 1422.0617801272488,
+     "SHPING": -319.1432964963928,
+     "ASM": 1188.8390913096496,
+     "PRIME": 2085.9982054925017,
+     "AUCTION": 2855.0925134928316,
+     "BNT": 534.6283683156694,
+     "AIOZ": 4295.71444415499,
+     "ACS": -358.3095683044557,
+     "00": -405.5572514665221,
+     "CVC": -51.25079654605927,
+     "CTX": -467.43982198817855,
+     "AERO": -162.34714466100652,
+     "BICO": -66.0823967514173,
+     "FARM": -53.49553797771576,
+     "GFI": -32.63748666673157,
+     "HIGH": -533.1062027944906,
+     "BONK": -282.24584716924403,
+     "MATH": -32.442436092041405,
+     "SWFTC": -474.86988871300684,
+     "LSETH": -87.21726507758964,
+     "TRU": -20.72121821368759,
+     "CVX": -238.00055795642115,
+     "JASMY": -498.7581992809074,
+     "ONDO": -232.13249837407585,
+     "ZEN": -609.225895898253,
+     "GODS": -198.24514094168683,
+     "XRP": -176.29390684476905,
+     "HNT": 63.478727976501204,
+     "SUI": 2691.0650812167155,
+     "DRIFT": -214.08672226112697,
+     "HONEY": -53.87413757789249,
+     "IDEX": -63.45214023668518,
+     "DIMO": -158.87472051640236,
+     "INDEX": -111.6919334445193,
+     "RARE": -495.47745892640796,
+     "LOKA": -117.41925772345608,
+     "SUPER": 530.8480668859852,
+     "APT": 423.0668790685794,
+     "ARKM": 188.73503109402043,
+     "A8": -933.8321754058683,
+     "BADGER": -260.3285454012069,
+     "INV": -134.9576471829049,
+     "LDO": -108.93286999732274,
+     "HBAR": -212.4446624369438,
+     "SPELL": -104.8901054262514,
+     "SPA": -347.9931444665351,
+     "VTHO": -105.4996351431755,
+     "XCN": -106.18034249410049,
+     "XYO": -14.400130811446306,
+     "KAVA": -101.1371381669503,
+     "NCT": -78.802383292433,
+     "LCX": -160.04845181537812,
+     "REQ": 93.92045236367494,
+     "MNDE": -353.1276163621775,
+     "ALT": -191.8100740133017,
+     "ALEO": -182.044949114418,
+     "ARB": -171.735597779811,
+     "AURORA": -11.536366328345235,
+     "CAKE": -182.31282468065348,
+     "EDGE": -37.54757775622879,
+     "AVAX": -328.91310440908376,
+     "BERA": -217.7334609908937,
+     "CRO": -125.764865055639,
+     "ATH": -347.4229730147433,
+     "TOSHI": -79.00259669080997,
+     "SQD": -230.99500378289207,
+     "LA": -313.233984837147,
+     "PUNDIX": -92.37336041058684,
+     "MANTLE": -105.57910535923263,
+     "SNX": -56.53378826707849,
+     "PAXG": 67.66555816184854,
+     "TAO": -133.90822848522993,
+     "CLANKER": -734.1004429465427,
+     "TRAC": -332.5465267257031,
+     "USDS": -56.54762567198109,
+     "SYRUP": -135.93472131856612,
+     "ICP": -286.3404279820789,
+     "GLM": -339.8649129780808,
+     "TNSR": -184.99443947292278,
+     "SKY": -128.3932087609258,
+     "COW": -186.94437323318763,
+     "BARD": -210.6175699733354,
+     "GNO": -55.13445670089747,
+     "ROSE": -154.84171057436623,
+     "AXS": -663.40257085666,
+     "HOME": -204.09236949194002,
+     "BNKR": -740.0497012058189,
+     "AWE": -324.78797643606646,
+     "USD1": -20.879779455288656,
+     "STG": -473.3086712145949,
+     "C98": -341.14975878219127,
+     "KITE": -310.57652947308065,
+     "ALLO": 412.4198071011135,
+     "FAI": -124.03027710574882,
+     "MORPHO": 235.09952568066296,
+     "VVV": 2585.066604823297,
+     "AKT": 5.858673211485382,
+     "APR": 22.322704732502118,
+     "CFG": 451.3989781283693,
+     "ACX": 16.59057496978957,
+     "SPK": -293.73616407449765,
+     "RENDER": -146.54372491146705,
+     "COSMOSDYDX": -125.49225730017078,
+     "JTO": -63.56736388267579,
+     "DEGEN": -54.71883537696413
+    },
+    "pnl_ex_top": {
+     "1": -8674.738054332483,
+     "3": -15369.94263459635,
+     "5": -20404.528274560183
+    },
+    "symbols_with_profit": 39,
+    "years": 5.418206707734429
+   },
+   "oos_chained_fee_stress": {
+    "total_return": -0.8846340208929858,
+    "cagr": -0.32873447863328953,
+    "max_drawdown": -0.9611196791188722,
+    "sharpe": -0.22048684140350802,
+    "trades": 766,
+    "win_rate": 0.16449086161879894,
+    "avg_trade_ret": -0.011242876891176739,
+    "profit_factor": 0.9085399252648573,
+    "pnl_by_year": {
+     "2021": 1482.1557556316293,
+     "2022": -7963.073124585444,
+     "2023": 8996.830953145101,
+     "2024": 9499.517358185309,
+     "2025": -14921.699486132522,
+     "2026": -2829.869003249735
+    },
+    "pnl_by_symbol": {
+     "BAND": -320.481326829579,
+     "BTC": -564.9694420072208,
+     "ATOM": -1613.2863610557642,
+     "DASH": 138.93537137992473,
+     "KNC": -804.81103008176,
+     "ALGO": -1729.459757654096,
+     "BCH": -274.3304433551551,
+     "COMP": -702.2293039111189,
+     "EOS": -141.73319293002442,
+     "UNI": -578.6804211342669,
+     "CGLD": -320.3591324863954,
+     "ETC": 3830.6963016854534,
+     "ETH": 338.1177152841732,
+     "MKR": -24.714789091571333,
+     "XLM": -255.79329094034895,
+     "LINK": -207.00312672955954,
+     "NMR": -41.84099563248879,
+     "YFI": -131.89316562867293,
+     "DAI": -669.2083616144104,
+     "AAVE": 83.37322161289717,
+     "LRC": 3098.9708782545968,
+     "ADA": -695.7124642426542,
+     "XTZ": -347.05550685619147,
+     "CRV": -184.53338182510697,
+     "1INCH": 26.8102356546581,
+     "GRT": -156.73696758018838,
+     "ANKR": -634.6497296939285,
+     "CTSI": -585.0409046533466,
+     "USDT": -210.29813048302913,
+     "ZEC": -654.8872943826718,
+     "SOL": -74.44319462757271,
+     "STORJ": -3.8814541651451826,
+     "GTC": -168.64878732476203,
+     "BAT": -340.1628641353302,
+     "LPT": -464.747942734361,
+     "MANA": -365.66363752152796,
+     "PAX": -398.2997110878007,
+     "QNT": -339.05562486091935,
+     "TRB": -421.64219754131034,
+     "PLU": -517.156687464837,
+     "FORTH": -213.14265295981323,
+     "ENS": -465.9684076922673,
+     "RLC": 171.3626267005233,
+     "AVT": -380.78593255081154,
+     "CHZ": -701.271050342231,
+     "DOGE": -339.4307097977683,
+     "MASK": 149.13417158777415,
+     "LTC": 1.3962320213558996,
+     "SUSHI": -65.53381099688876,
+     "BAL": -223.61727968072472,
+     "TIME": -38.68872534411687,
+     "FET": 1304.2721260402639,
+     "DEXT": 1284.4859058128245,
+     "API3": 1397.2926357879653,
+     "AERGO": -1219.8962495024587,
+     "ALICE": -283.55164885558054,
+     "AMP": -358.81222477485994,
+     "APE": -197.8895852664741,
+     "ABT": 1175.4335076529123,
+     "ARPA": 767.7189594323361,
+     "BLZ": 1222.1513959004467,
+     "CELR": -21.868462178480826,
+     "ALCX": -62.10899807387338,
+     "DNT": -181.65420862480914,
+     "FIS": -62.956986657028935,
+     "AGLD": 134.5120959914728,
+     "ACH": -1181.8451315159382,
+     "CBETH": 104.55035321705492,
+     "AST": -127.68090634379838,
+     "ALEPH": -347.02409026042335,
+     "ELA": -96.75560260804406,
+     "MSOL": -171.99616501506864,
+     "INJ": 47.28893798339048,
+     "ORCA": 1403.1384177370755,
+     "SHPING": -321.11617115151125,
+     "ASM": 1172.386757041249,
+     "PRIME": 2074.5275085924764,
+     "AUCTION": 2842.044604558228,
+     "BNT": 525.4126600994884,
+     "AIOZ": 4277.732194552747,
+     "ACS": -366.05822013565546,
+     "00": -412.61964857882765,
+     "CVC": -53.14645616313863,
+     "CTX": -470.92785995968535,
+     "AERO": -179.00523048474722,
+     "BICO": -67.56958939514584,
+     "FARM": -55.085963384907934,
+     "GFI": -34.1325262488402,
+     "HIGH": -532.2504345784316,
+     "BONK": -284.2201279024123,
+     "MATH": -33.62294826840947,
+     "SWFTC": -485.06408802512624,
+     "LSETH": -91.83767752067874,
+     "TRU": -21.848110492905544,
+     "CVX": -240.26984624556889,
+     "JASMY": -500.6993757576988,
+     "ONDO": -235.61898297699025,
+     "ZEN": -607.071138454785,
+     "GODS": -197.54281413600071,
+     "XRP": -185.07021440308233,
+     "HNT": 56.65375105312228,
+     "SUI": 2671.2796951178457,
+     "DRIFT": -217.32753412005206,
+     "HONEY": -55.46772107584813,
+     "IDEX": -64.87342144023182,
+     "DIMO": -161.13583497817336,
+     "INDEX": -112.85733193821,
+     "RARE": -496.14164229665283,
+     "LOKA": -118.55605849595358,
+     "SUPER": 525.7936083380184,
+     "APT": 417.85638940854005,
+     "ARKM": 110.51897459072262,
+     "A8": -935.7568797159952,
+     "BADGER": -265.11566013839195,
+     "INV": -137.89658398553485,
+     "LDO": -110.16764283481419,
+     "HBAR": -215.08516350553344,
+     "SPELL": -105.64515615042559,
+     "SPA": -353.4471784199233,
+     "VTHO": -106.250080089696,
+     "XCN": -113.86806616530265,
+     "XYO": -15.686290343682058,
+     "KAVA": -105.03311179437374,
+     "NCT": -80.09673612393027,
+     "LCX": -161.1265542534192,
+     "REQ": 89.41207193331567,
+     "MNDE": -353.8801986437294,
+     "ALT": -194.47123307642838,
+     "ALEO": -184.61845330275753,
+     "ARB": -173.3905213084286,
+     "AURORA": -13.054550383053744,
+     "CAKE": -183.95443879638367,
+     "EDGE": -38.59771180026215,
+     "AVAX": -326.70332062133804,
+     "BERA": -216.80510947881342,
+     "CRO": -125.72853314438225,
+     "ATH": -344.9957687715879,
+     "TOSHI": -79.14579937137782,
+     "SQD": -229.04141319996123,
+     "LA": -315.63042306264987,
+     "PUNDIX": -92.00709722434783,
+     "MANTLE": -105.35567495983678,
+     "SNX": -56.986956735037175,
+     "PAXG": 60.12574900126894,
+     "TAO": -135.7335621360134,
+     "CLANKER": -733.7190137618863,
+     "TRAC": -335.9703133806413,
+     "USDS": -67.29602695496334,
+     "SYRUP": -137.422440711381,
+     "ICP": -287.7663639682083,
+     "GLM": -342.09722248876085,
+     "TNSR": -185.72389875766123,
+     "SKY": -135.58727891758343,
+     "COW": -188.9529198959534,
+     "BARD": -212.60670410361814,
+     "GNO": -56.01121431217857,
+     "ROSE": -154.26963465113465,
+     "AXS": -666.1302371879824,
+     "HOME": -206.57875103328058,
+     "BNKR": -744.0016791054354,
+     "AWE": -330.60226549715975,
+     "USD1": -24.681977314587577,
+     "STG": -477.57933280728776,
+     "C98": -345.0688098299419,
+     "KITE": -313.3427060114371,
+     "ALLO": 405.7736351757864,
+     "FAI": -124.60556275529267,
+     "MORPHO": 229.9766743840915,
+     "VVV": 2571.2229118889363,
+     "AKT": 0.3724888286024566,
+     "APR": 19.182313095200627,
+     "CFG": 442.41585866587826,
+     "ACX": 14.713830058662376,
+     "SPK": -294.8214529723428,
+     "RENDER": -148.24898336094822,
+     "COSMOSDYDX": -126.56584658575984,
+     "JTO": -65.05976202847656,
+     "DEGEN": -56.16762528135445
+    },
+    "pnl_ex_top": {
+     "1": -10025.19196962014,
+     "3": -16682.3235818764,
+     "5": -21696.173176417553
+    },
+    "symbols_with_profit": 38,
+    "years": 5.418206707734429
+   },
+   "oos_continuous": {
+    "total_return": -0.6959802908438386,
+    "cagr": -0.19728229884475879,
+    "max_drawdown": -0.8924935683774207,
+    "sharpe": -0.07679251497049988,
+    "trades": 289,
+    "win_rate": 0.14878892733564014,
+    "avg_trade_ret": -0.011402282848158323,
+    "profit_factor": 0.6539038389092469,
+    "pnl_by_year": {
+     "2021": -3455.1415866642956,
+     "2022": -1676.3852619245474,
+     "2023": -1760.392075963616,
+     "2024": 2366.403779054059,
+     "2025": -2102.1507654569864,
+     "2026": -332.13699748299564
+    },
+    "pnl_by_symbol": {
+     "BAND": -388.0762397545721,
+     "BTC": -226.21239024706347,
+     "ATOM": -1123.3851929719622,
+     "LINK": -693.6820138286314,
+     "LTC": -695.8021468739325,
+     "ALGO": -1443.1444240602718,
+     "BCH": -423.47084364701664,
+     "COMP": -293.10024467927354,
+     "EOS": -219.95990217957228,
+     "UNI": -457.025389681961,
+     "XLM": -498.7676148631338,
+     "MKR": -100.29226187214795,
+     "ETH": 294.2950485461828,
+     "AAVE": -156.2640010042843,
+     "ETC": 2952.6546116588347,
+     "ADA": -1102.3086080382768,
+     "XTZ": -687.2483492531621,
+     "CGLD": -282.38126756242883,
+     "GRT": -238.160049192173,
+     "DOT": -78.98956961733148,
+     "SOL": 904.317399992482,
+     "LRC": -504.17269742731565,
+     "MANA": -143.77805029293475,
+     "QNT": -310.4056034595742,
+     "CHZ": -20.52761924082497,
+     "DOGE": 540.6616974395032,
+     "AVAX": -412.42602953367583,
+     "APE": -71.59250120615704,
+     "SHIB": 43.68148694590846,
+     "FIL": -148.97560642819786,
+     "ICP": -15.393223665169804,
+     "OP": -98.73197278622676,
+     "FET": 1478.944587066579,
+     "ACH": -70.18455997356702,
+     "LDO": -74.75620032999612,
+     "STX": -185.55398055429737,
+     "TRB": -63.700139158101635,
+     "AERO": -69.80419980569869,
+     "NEAR": -354.2092004948233,
+     "BONK": -399.36478772668545,
+     "JASMY": -93.5283997209834,
+     "ONDO": -556.3606368363455,
+     "XRP": -537.5604513688313,
+     "INJ": -92.67837778778805,
+     "SEI": -110.78342898135882,
+     "SUI": 1744.9119730060295,
+     "HBAR": -406.09681963099837,
+     "SWFTC": -242.64968773354224,
+     "CRV": -175.63504731396824,
+     "XCN": -448.84897727223415,
+     "MOODENG": 80.3059639363736,
+     "PEPE": -87.42341754766888,
+     "WIF": -25.595431431733456,
+     "PENGU": -19.277941886315336,
+     "ZORA": -87.64843466913527,
+     "DASH": -112.0762399020548,
+     "ZEC": 78.51143255621163,
+     "FARTCOIN": 25.55209493354991,
+     "MON": -29.30983262583915,
+     "PAXG": -15.949682232292293,
+     "TAO": -78.14955086250366,
+     "VVV": 67.78003469400097
+    },
+    "pnl_ex_top": {
+     "1": -10088.347388620736,
+     "3": -13666.42496339853,
+     "5": -15859.340343605829
+    },
+    "symbols_with_profit": 11,
+    "years": 5.418206707734429
+   },
+   "oos_continuous_fee_stress": {
+    "total_return": -0.7136304818931062,
+    "cagr": -0.20609446924464725,
+    "max_drawdown": -0.896016086833815,
+    "sharpe": -0.0953091805394654,
+    "trades": 289,
+    "win_rate": 0.14186851211072665,
+    "avg_trade_ret": -0.013377562261431249,
+    "profit_factor": 0.6418818014723011,
+    "pnl_by_year": {
+     "2021": -3522.645769624694,
+     "2022": -1683.2630212161578,
+     "2023": -1758.7008364306405,
+     "2024": 2250.3163865948313,
+     "2025": -2087.956729287886,
+     "2026": -334.0548489665209
+    },
+    "pnl_by_symbol": {
+     "BAND": -389.2989012933704,
+     "BTC": -253.84818944737486,
+     "ATOM": -1129.7857667050778,
+     "LINK": -691.115409372811,
+     "LTC": -693.898313427698,
+     "ALGO": -1440.902523018174,
+     "BCH": -428.68942686683914,
+     "COMP": -294.5126741333447,
+     "EOS": -223.19730713572648,
+     "UNI": -462.3652409555716,
+     "XLM": -493.6806689512287,
+     "MKR": -116.189844995371,
+     "ETH": 269.52641998105645,
+     "AAVE": -167.68199888430803,
+     "ETC": 2937.921761344043,
+     "ADA": -1077.9883742379548,
+     "XTZ": -687.7331993964846,
+     "CGLD": -281.90976151688176,
+     "GRT": -237.62252259313664,
+     "DOT": -81.27291629293354,
+     "SOL": 866.7144516751315,
+     "LRC": -501.6477539825647,
+     "MANA": -146.39741381010717,
+     "QNT": -309.41870223423297,
+     "CHZ": -21.221110905923776,
+     "DOGE": 512.2362824848827,
+     "AVAX": -406.52945083493273,
+     "APE": -71.28375193138082,
+     "SHIB": 37.644648008117684,
+     "FIL": -147.8871186945888,
+     "ICP": -15.89781713665187,
+     "OP": -97.68978096576859,
+     "FET": 1435.322789092502,
+     "ACH": -69.51794959354702,
+     "LDO": -73.81799501445417,
+     "STX": -183.90627322167566,
+     "TRB": -62.702822132788086,
+     "AERO": -70.00609239610922,
+     "NEAR": -343.3091377070185,
+     "BONK": -389.72540241127297,
+     "JASMY": -95.72287025951677,
+     "ONDO": -547.7490709531328,
+     "XRP": -526.0310812382221,
+     "INJ": -90.81425969214654,
+     "SEI": -108.13859886139835,
+     "SUI": 1683.8164429785309,
+     "HBAR": -394.4104867458709,
+     "SWFTC": -236.6834866612304,
+     "CRV": -170.19743943362622,
+     "XCN": -434.59391192867776,
+     "MOODENG": 74.70667795275816,
+     "PEPE": -84.20264042811917,
+     "WIF": -25.305493116856933,
+     "PENGU": -19.8936909631155,
+     "ZORA": -84.49368704660768,
+     "DASH": -108.60615313197667,
+     "ZEC": 70.29266681876915,
+     "FARTCOIN": 22.80725624493563,
+     "MON": -28.92484492361822,
+     "PAXG": -15.825337541161893,
+     "TAO": -76.46436591806915,
+     "VVV": 63.41481552885748
+    },
+    "pnl_ex_top": {
+     "1": -10256.600211767793,
+     "3": -13727.153128371712,
+     "5": -15854.440631920832
+    },
+    "symbols_with_profit": 11,
+    "years": 5.418206707734429
+   },
+   "gate_checks": {
+    "oos_positive": false,
+    "symbols>=min": true,
+    "not_single_year": false,
+    "survives_fees_x1.25": false,
+    "survives_fees_x1.25_oos": false,
+    "not_top3_dependent": false,
+    "param_surface_smooth": false,
+    "trials_recorded": true
+   },
+   "advancement": {
+    "oos_positive": false,
+    "survives_fees_x1.25": false,
+    "survives_fees_x1.25_oos": false,
+    "oos_trades>=100": true,
+    "thirds_2_of_3": false,
+    "scale_invariant": true,
+    "symbols>=min": true,
+    "not_single_year": false,
+    "not_top3_dependent": false,
+    "delisting_canonical": true,
+    "boundary_dependency_ok": true
+   },
+   "verdict": "rejected",
+   "boundary": {
+    "ok": true,
+    "chained_return": -0.8636573068166885,
+    "continuous_return": -0.6959802908438386,
+    "boundary_exits": 107,
+    "sign_flip": false,
+    "diff_over_20pct": false
+   },
+   "thirds": {
+    "ok": false,
+    "returns": [
+     -0.5182881318585462,
+     0.3817449042275396,
+     -0.5432416228545065
+    ]
+   },
+   "scale": {
+    "ok": true,
+    "max_abs_diff": 8.881784197001252e-16
+   },
+   "delisting": {
+    "exposure_pnl_share": 0.058402247519772764,
+    "exposure_trade_share": 0.02768166089965398,
+    "triggered": false,
+    "cases": {
+     "canonical": {
+      "multiple": 10,
+      "haircut": 0.5,
+      "repriced_exits": 0,
+      "delta_pnl": 0.0,
+      "adjusted_return": -0.6959802908438386
+     },
+     "mild": {
+      "multiple": 5,
+      "haircut": 0.25,
+      "repriced_exits": 0,
+      "delta_pnl": 0.0,
+      "adjusted_return": -0.6959802908438386
+     },
+     "tail": {
+      "multiple": 20,
+      "haircut": 1.0,
+      "repriced_exits": 0,
+      "delta_pnl": 0.0,
+      "adjusted_return": -0.6959802908438386
+     }
+    },
+    "canonical_ok": true
+   },
+   "no_fill_reasons": {
+    "cash": 3876,
+    "slots": 536
+   },
+   "per_regime_state": {
+    "risk_on": {
+     "trades": 44,
+     "pnl": -159.83400826996126
+    },
+    "neutral": {
+     "trades": 74,
+     "pnl": -3686.0899788104384
+    },
+    "risk_off": {
+     "trades": 161,
+     "pnl": -4478.344123195254
+    },
+    "unknown": {
+     "trades": 10,
+     "pnl": 1364.4652018372715
+    }
+   },
+   "monte_carlo": {
+    "n": 500,
+    "block": 20,
+    "seed": 7,
+    "terminal_p05": 0.03698266527237029,
+    "terminal_p50": 0.3104339064477189,
+    "terminal_p95": 2.724248516047893,
+    "mdd_p05": -0.9796778159450901,
+    "mdd_p50": -0.8737225503897705
+   },
+   "pnl_by_year": {
+    "2021": -3455.1415866642956,
+    "2022": -1676.3852619245474,
+    "2023": -1760.392075963616,
+    "2024": 2366.403779054059,
+    "2025": -2102.1507654569864,
+    "2026": -332.13699748299564
+   },
+   "pnl_by_symbol_top": {
+    "ETC": 2952.6546116588347,
+    "SUI": 1744.9119730060295,
+    "FET": 1478.944587066579,
+    "ALGO": -1443.1444240602718,
+    "ATOM": -1123.3851929719622,
+    "ADA": -1102.3086080382768,
+    "SOL": 904.317399992482,
+    "LTC": -695.8021468739325,
+    "LINK": -693.6820138286314,
+    "XTZ": -687.2483492531621
+   },
+   "sensitivity": {
+    "cap_0.95": {
+     "total_return": -0.710915916874631,
+     "max_drawdown": -0.8916835079394627,
+     "trades": 304,
+     "profit_factor": 0.6342169556419065
+    },
+    "cap_0.90": {
+     "total_return": -0.7363618384749779,
+     "max_drawdown": -0.8978561330168242,
+     "trades": 320,
+     "profit_factor": 0.6057439493057971
+    },
+    "severe_costs": {
+     "total_return": -0.7645480142143883,
+     "max_drawdown": -0.9142073528216307,
+     "trades": 288,
+     "profit_factor": 0.6057993920184203
+    }
+   }
+  },
+  "momentum_top": {
+   "candidate": "momentum_top",
+   "role": "candidate",
+   "grid": [
+    {
+     "lookback": 60,
+     "n": 5
+    },
+    {
+     "lookback": 60,
+     "n": 10
+    },
+    {
+     "lookback": 90,
+     "n": 5
+    },
+    {
+     "lookback": 90,
+     "n": 10
+    }
+   ],
+   "trials": 88,
+   "folds": [
+    {
+     "fit": [
+      1583625600,
+      1615161600
+     ],
+     "test": [
+      1615161600,
+      1622937600
+     ],
+     "params": {
+      "lookback": 60,
+      "n": 10
+     },
+     "fit_score": 2.329230244160658
+    },
+    {
+     "fit": [
+      1591401600,
+      1622937600
+     ],
+     "test": [
+      1622937600,
+      1630713600
+     ],
+     "params": {
+      "lookback": 60,
+      "n": 5
+     },
+     "fit_score": 1.809246054827484
+    },
+    {
+     "fit": [
+      1599177600,
+      1630713600
+     ],
+     "test": [
+      1630713600,
+      1638489600
+     ],
+     "params": {
+      "lookback": 60,
+      "n": 5
+     },
+     "fit_score": 1.3890957648965694
+    },
+    {
+     "fit": [
+      1606953600,
+      1638489600
+     ],
+     "test": [
+      1638489600,
+      1646265600
+     ],
+     "params": {
+      "lookback": 90,
+      "n": 10
+     },
+     "fit_score": 1.4637242085901725
+    },
+    {
+     "fit": [
+      1614729600,
+      1646265600
+     ],
+     "test": [
+      1646265600,
+      1654041600
+     ],
+     "params": {
+      "lookback": 90,
+      "n": 10
+     },
+     "fit_score": -0.08795080303264605
+    },
+    {
+     "fit": [
+      1622505600,
+      1654041600
+     ],
+     "test": [
+      1654041600,
+      1661817600
+     ],
+     "params": {
+      "lookback": 90,
+      "n": 10
+     },
+     "fit_score": -0.9719785648774714
+    },
+    {
+     "fit": [
+      1630281600,
+      1661817600
+     ],
+     "test": [
+      1661817600,
+      1669593600
+     ],
+     "params": {
+      "lookback": 90,
+      "n": 10
+     },
+     "fit_score": -1.2239854914594828
+    },
+    {
+     "fit": [
+      1638057600,
+      1669593600
+     ],
+     "test": [
+      1669593600,
+      1677369600
+     ],
+     "params": {
+      "lookback": 90,
+      "n": 5
+     },
+     "fit_score": -1.9370325106382142
+    },
+    {
+     "fit": [
+      1645833600,
+      1677369600
+     ],
+     "test": [
+      1677369600,
+      1685145600
+     ],
+     "params": {
+      "lookback": 90,
+      "n": 10
+     },
+     "fit_score": -0.6903513222832086
+    },
+    {
+     "fit": [
+      1653609600,
+      1685145600
+     ],
+     "test": [
+      1685145600,
+      1692921600
+     ],
+     "params": {
+      "lookback": 60,
+      "n": 10
+     },
+     "fit_score": -0.16692844770518045
+    },
+    {
+     "fit": [
+      1661385600,
+      1692921600
+     ],
+     "test": [
+      1692921600,
+      1700697600
+     ],
+     "params": {
+      "lookback": 60,
+      "n": 10
+     },
+     "fit_score": -0.42500468389299034
+    },
+    {
+     "fit": [
+      1669161600,
+      1700697600
+     ],
+     "test": [
+      1700697600,
+      1708473600
+     ],
+     "params": {
+      "lookback": 60,
+      "n": 10
+     },
+     "fit_score": 0.8382498701967459
+    },
+    {
+     "fit": [
+      1676937600,
+      1708473600
+     ],
+     "test": [
+      1708473600,
+      1716249600
+     ],
+     "params": {
+      "lookback": 60,
+      "n": 10
+     },
+     "fit_score": 0.9726191327149263
+    },
+    {
+     "fit": [
+      1684713600,
+      1716249600
+     ],
+     "test": [
+      1716249600,
+      1724025600
+     ],
+     "params": {
+      "lookback": 90,
+      "n": 10
+     },
+     "fit_score": 2.0372838461377105
+    },
+    {
+     "fit": [
+      1692489600,
+      1724025600
+     ],
+     "test": [
+      1724025600,
+      1731801600
+     ],
+     "params": {
+      "lookback": 90,
+      "n": 10
+     },
+     "fit_score": 1.4686054225524086
+    },
+    {
+     "fit": [
+      1700265600,
+      1731801600
+     ],
+     "test": [
+      1731801600,
+      1739577600
+     ],
+     "params": {
+      "lookback": 90,
+      "n": 10
+     },
+     "fit_score": 1.1120015971382788
+    },
+    {
+     "fit": [
+      1708041600,
+      1739577600
+     ],
+     "test": [
+      1739577600,
+      1747353600
+     ],
+     "params": {
+      "lookback": 90,
+      "n": 10
+     },
+     "fit_score": -0.20861259662727485
+    },
+    {
+     "fit": [
+      1715817600,
+      1747353600
+     ],
+     "test": [
+      1747353600,
+      1755129600
+     ],
+     "params": {
+      "lookback": 60,
+      "n": 10
+     },
+     "fit_score": -0.8944438182926758
+    },
+    {
+     "fit": [
+      1723593600,
+      1755129600
+     ],
+     "test": [
+      1755129600,
+      1762905600
+     ],
+     "params": {
+      "lookback": 60,
+      "n": 10
+     },
+     "fit_score": 0.13707883813982416
+    },
+    {
+     "fit": [
+      1731369600,
+      1762905600
+     ],
+     "test": [
+      1762905600,
+      1770681600
+     ],
+     "params": {
+      "lookback": 60,
+      "n": 10
+     },
+     "fit_score": -0.6174423157427463
+    },
+    {
+     "fit": [
+      1739145600,
+      1770681600
+     ],
+     "test": [
+      1770681600,
+      1778457600
+     ],
+     "params": {
+      "lookback": 60,
+      "n": 10
+     },
+     "fit_score": -0.6570906263404579
+    },
+    {
+     "fit": [
+      1746921600,
+      1778457600
+     ],
+     "test": [
+      1778457600,
+      1786233600
+     ],
+     "params": {
+      "lookback": 60,
+      "n": 5
+     },
+     "fit_score": 0.3321006988149845
+    }
+   ],
+   "oos_chained": {
+    "total_return": -0.9822017852646817,
+    "cagr": -0.5245724070408893,
+    "max_drawdown": -0.9904879863512811,
+    "sharpe": -0.5274966971395243,
+    "trades": 400,
+    "win_rate": 0.2675,
+    "avg_trade_ret": -0.06679877078550261,
+    "profit_factor": 0.6470152225610606,
+    "pnl_by_year": {
+     "2021": 1262.3770187839102,
+     "2022": -13904.573465913101,
+     "2023": 1073.132925565947,
+     "2024": -2288.277676284363,
+     "2025": -8373.544979252802,
+     "2026": -2187.714070158547
+    },
+    "pnl_by_symbol": {
+     "UNI": -18.990491470205143,
+     "AAVE": -51.976845699366436,
+     "ZRX": -397.55231809106624,
+     "ATOM": -230.09117142633755,
+     "COMP": -507.05111968672014,
+     "BAL": -356.04743006888793,
+     "UMA": -735.0387909895016,
+     "ALGO": -355.6515489541385,
+     "BNT": -176.9506104822037,
+     "GRT": -168.02585551132336,
+     "OXT": -36.07714586153142,
+     "XTZ": 6.499598827571447,
+     "FIL": -413.8983402038963,
+     "ETC": 1186.9755570052967,
+     "DASH": -363.3680625978646,
+     "NMR": -864.4316970676568,
+     "EOS": -26.658447182714873,
+     "ZEC": -247.40299056025117,
+     "BCH": -1354.7178205289106,
+     "MKR": -389.04748392704465,
+     "ETH": 201.99438699446557,
+     "ADA": 119.07856663709435,
+     "DAI": -51.50535844412457,
+     "RLC": -172.46831203994128,
+     "USDT": -51.157082931196584,
+     "BTC": 265.90678609865074,
+     "QNT": 568.9263029908033,
+     "NKN": -347.7087722421689,
+     "DOT": -47.99502871149253,
+     "CGLD": 64.58401609756187,
+     "SOL": 1320.341295916156,
+     "MANA": 252.03756685406853,
+     "IOTX": -560.8973543811695,
+     "LRC": 668.8144202445012,
+     "CRV": -720.1056280534813,
+     "AXS": -537.772673565016,
+     "SHIB": -645.1908335154292,
+     "GTC": -408.25439999382326,
+     "LPT": -514.923471560933,
+     "REQ": -600.5491016073652,
+     "BAT": -485.4017493265974,
+     "CRO": -258.7364758932693,
+     "PAX": -34.142835226746264,
+     "AVAX": 72.41805972904086,
+     "POWR": -86.2196741083356,
+     "FARM": 186.69690583537863,
+     "BTRST": 64.53284236286427,
+     "API3": -512.9148108112934,
+     "SNX": -1036.5354569943916,
+     "BAND": -755.3414636157265,
+     "KNC": -202.7175584442599,
+     "SKL": -1168.6282201534632,
+     "OGN": -331.722610691045,
+     "ENS": -1083.6714310356842,
+     "DNT": -366.48329576396975,
+     "JASMY": -213.11616399664206,
+     "PLU": -181.9511857186826,
+     "AVT": -400.8883939806808,
+     "CTX": -123.44617018916458,
+     "TRB": 1449.1059504350226,
+     "FORTH": -262.4173726562695,
+     "BLZ": 979.1133239824528,
+     "OP": 96.37857172707146,
+     "YFI": 19.104914414733965,
+     "CHZ": -287.89125326533315,
+     "DOGE": -275.17103214889266,
+     "AST": -262.45290252603894,
+     "MASK": 74.10879936227721,
+     "ABT": -332.3837111025673,
+     "SUSHI": -323.0160747309385,
+     "TIME": -502.8702640642939,
+     "LTC": 190.81876871055974,
+     "DEXT": 757.7087708289442,
+     "FET": 267.4633311727026,
+     "LCX": -718.6406970180955,
+     "APT": -515.9194722127335,
+     "OCEAN": -171.67808058407482,
+     "LDO": -259.0493047582599,
+     "FIS": -296.18490775160484,
+     "ACH": -328.1970538629808,
+     "STX": -231.82940309388334,
+     "MDT": -235.97806385946998,
+     "LQTY": -571.037286974529,
+     "INJ": 581.4351367584235,
+     "TRU": -439.5647049535962,
+     "IDEX": -347.0872386062484,
+     "AGLD": -67.4831486402349,
+     "ELA": -19.82320641352615,
+     "ALEPH": -484.63223492283043,
+     "CTSI": -161.072178284434,
+     "ARPA": -424.8282397536128,
+     "FORT": -314.69993781094536,
+     "KAVA": -352.8219298326706,
+     "SWFTC": -174.35177343559099,
+     "00": -96.83261559013253,
+     "MNDE": -136.25868165621768,
+     "AUCTION": -1553.506609919727,
+     "XLM": -727.135648063441,
+     "PRIME": 491.23748901743284,
+     "ORCA": 1063.9856706139337,
+     "MSOL": 765.5983062156641,
+     "PERP": 12.62662889177441,
+     "ASM": 1681.5417219559472,
+     "SHPING": -221.64308756310896,
+     "MINA": -208.5394692746823,
+     "GFI": -162.55864122808646,
+     "BLUR": 39.70802948279875,
+     "AIOZ": 335.15543532153185,
+     "PNG": -62.096886095239256,
+     "INDEX": -769.4283511627478,
+     "SUPER": 4393.572669686879,
+     "AURORA": -204.45627323051193,
+     "DIMO": 83.22738792583581,
+     "METIS": 212.6727790665782,
+     "SEI": 571.758232704739,
+     "TIA": 222.17721779280268,
+     "SUI": 1961.3502840923768,
+     "COTI": -319.8247689355547,
+     "GST": -447.4359107475345,
+     "AERO": -330.393957131131,
+     "PRO": -703.9670441399744,
+     "VELO": -573.2277939463702,
+     "MATH": -769.9939499223713,
+     "SUKU": -243.64479866156717,
+     "BONK": -1023.3752049233594,
+     "HIGH": -515.6260263474802,
+     "ONDO": -277.13498166341003,
+     "ZEN": -1176.2895841243032,
+     "GODS": -247.94582285617645,
+     "XRP": -224.03384087683654,
+     "RARE": -480.56293873100253,
+     "HNT": -181.9661043075222,
+     "DRIFT": -580.2705272723509,
+     "ZRO": 2.10376575904543,
+     "BIGTIME": 56.83532270327437,
+     "DIA": -237.4210905449546,
+     "STORJ": -194.81489085344055,
+     "CLV": -170.9428521111257,
+     "SD": -238.26339441186116,
+     "HBAR": -389.6753707749975,
+     "XYO": -695.2016373995472,
+     "A8": -685.009544445109,
+     "VTHO": -280.1609254575738,
+     "XCN": -436.2047086188735,
+     "SPA": -154.00857585299602,
+     "AERGO": -245.99873948239997,
+     "POPCAT": -261.41692555974475,
+     "CORECHAIN": -242.90313140181442,
+     "MOODENG": -36.286547557777574,
+     "SYRUP": 342.5741090825766,
+     "TURBO": 163.84805828676534,
+     "WIF": 56.97160321652186,
+     "ETHFI": -76.65307075523194,
+     "VOXEL": 43.96663255032556,
+     "COOKIE": 2.877175052628345,
+     "MOG": 425.671641791045,
+     "PENGU": 1966.949191721162,
+     "CLANKER": -489.96020179989637,
+     "INV": -25.627684180191395,
+     "MAGIC": -87.30428058138402,
+     "OMNI": -99.18646786154585,
+     "ZORA": -105.5762471602155,
+     "EDGE": -433.98707952773435,
+     "LOKA": -420.3158676798363,
+     "ENA": -354.8984584131429,
+     "SPK": -346.11199393942786,
+     "IP": -265.12842444689505,
+     "RED": -291.5398781521035,
+     "MANTLE": -220.02373988168685,
+     "MPLX": -353.6290970429857,
+     "ATH": -345.93996197141314,
+     "TRAC": -242.1554354421723,
+     "ICP": -499.4008686626299,
+     "LA": -221.5173834688202,
+     "ALCX": -447.2222222222222,
+     "PAXG": 75.30423287512153,
+     "SAPIEN": -31.335530667455707,
+     "BARD": -49.93860189920579,
+     "TNSR": -420.3387781093279,
+     "GLM": -90.42863195969416,
+     "VVV": 6510.63472813647,
+     "FARTCOIN": -353.9639196376063,
+     "HOME": -139.02886897357521,
+     "GNO": -64.06952257662252,
+     "IRYS": -660.4883823495276,
+     "AWE": -353.2084917029757,
+     "BNKR": -608.031201279034,
+     "KITE": -321.147864592141,
+     "STG": -148.62385215688482,
+     "SKY": 101.82724456371463,
+     "MORPHO": -111.25071890203624,
+     "FAI": -495.2760584855495,
+     "CFG": 504.2242706201282,
+     "MON": -12.664869322856653,
+     "TAO": 176.62284490949975,
+     "APR": -195.8477683111607,
+     "B3": -553.6281152738646,
+     "UP": -486.8735563871764,
+     "RAVE": -540.7306223481069,
+     "TROLL": -569.7353990096599,
+     "GWEI": -496.0510017844378,
+     "ALLO": -119.01783305760434,
+     "DEGEN": -238.6989528388508,
+     "LIGHTER": -104.25715992316171,
+     "HYPE": -125.88972013069393
+    },
+    "pnl_ex_top": {
+     "1": -31515.131415543914,
+     "3": -37211.862497844944,
+     "5": -40950.54509644027
+    },
+    "symbols_with_profit": 49,
+    "years": 5.418206707734429
+   },
+   "oos_chained_fee_stress": {
+    "total_return": -0.9832175265210255,
+    "cagr": -0.5297007879981313,
+    "max_drawdown": -0.9910055829846598,
+    "sharpe": -0.541541705227133,
+    "trades": 399,
+    "win_rate": 0.2606516290726817,
+    "avg_trade_ret": -0.06837509373945108,
+    "profit_factor": 0.6403681006372466,
+    "pnl_by_year": {
+     "2021": 1168.1968117796398,
+     "2022": -14012.176052199782,
+     "2023": 1087.3827144830025,
+     "2024": -2444.4949563046016,
+     "2025": -8495.74443873684,
+     "2026": -2261.547835728291
+    },
+    "pnl_by_symbol": {
+     "UNI": -25.045829317294135,
+     "AAVE": -59.77492875865261,
+     "ZRX": -401.6261083644343,
+     "ATOM": -237.62844521757899,
+     "COMP": -512.9134808882912,
+     "BAL": -358.19491691359224,
+     "UMA": -739.4858590042954,
+     "ALGO": -362.2128275799144,
+     "BNT": -178.59511409273722,
+     "GRT": -169.68819133455236,
+     "OXT": -39.77878338263282,
+     "XTZ": 2.5015884852913075,
+     "FIL": -414.53135210903565,
+     "ETC": 1173.546623119027,
+     "DASH": -368.096366302731,
+     "NMR": -869.2304064771467,
+     "EOS": -28.4493495530793,
+     "ZEC": -258.4400452149456,
+     "BCH": -1358.1314186949894,
+     "MKR": -397.7781410738079,
+     "ETH": 197.30061473451727,
+     "ADA": 112.84645465244478,
+     "DAI": -61.80106093892279,
+     "RLC": -179.46261288561044,
+     "USDT": -61.45345551624018,
+     "BTC": 261.27395010866337,
+     "QNT": 563.7934292723281,
+     "NKN": -349.0120904789948,
+     "DOT": -49.89719355417219,
+     "CGLD": 62.43859721090682,
+     "SOL": 1309.710924784321,
+     "MANA": 246.78359897621232,
+     "IOTX": -563.8314945094194,
+     "LRC": 661.8361904894664,
+     "CRV": -724.4298097219232,
+     "AXS": -540.6942942458256,
+     "SHIB": -647.3503868668626,
+     "GTC": -408.8114381243588,
+     "LPT": -517.8907463612551,
+     "REQ": -601.3472292203659,
+     "BAT": -489.72853527805637,
+     "CRO": -260.80293510750255,
+     "PAX": -42.664267821898406,
+     "AVAX": 71.00967022432083,
+     "POWR": -90.1626756412198,
+     "FARM": 184.32581198474273,
+     "BTRST": 60.62978307194488,
+     "API3": -515.5346755567055,
+     "SNX": -1038.4422950055246,
+     "BAND": -757.422640219201,
+     "KNC": -204.31057809830716,
+     "SKL": -1169.5716388125315,
+     "OGN": -334.2261835923257,
+     "ENS": -1088.9773791241175,
+     "DNT": -366.5742323468305,
+     "JASMY": -219.72608883108015,
+     "PLU": -186.8730537498609,
+     "AVT": -405.4721048063387,
+     "CTX": -124.75596725093085,
+     "TRB": 1437.5345893398678,
+     "FORTH": -265.3637843154835,
+     "BLZ": 973.1608712136731,
+     "OP": 89.93334678544511,
+     "YFI": 17.101909621742085,
+     "CHZ": -290.4995269224753,
+     "DOGE": -280.2927900894201,
+     "AST": -263.49858053874294,
+     "MASK": 68.15864401109792,
+     "ABT": -339.3380057817099,
+     "SUSHI": -323.84002096207365,
+     "TIME": -503.8635600390698,
+     "LTC": 188.43943912283848,
+     "DEXT": 750.1847628721612,
+     "FET": 260.5967580435673,
+     "LCX": -724.9498353071381,
+     "APT": -518.6089279669932,
+     "OCEAN": -175.30799515115154,
+     "LDO": -260.5297700973645,
+     "FIS": -297.59117385797856,
+     "ACH": -330.95117995231493,
+     "STX": -233.36425548088036,
+     "MDT": -237.5046269655382,
+     "LQTY": -573.4140538382568,
+     "INJ": 576.1318718265529,
+     "TRU": -441.1830079319827,
+     "IDEX": -349.8323243340654,
+     "ELA": -24.835751663313175,
+     "ALEPH": -487.6600334883765,
+     "CTSI": -162.74840798505545,
+     "ARPA": -425.9774685222002,
+     "FORT": -316.0692097415508,
+     "KAVA": -355.4594566500264,
+     "SWFTC": -177.9995315633362,
+     "00": -98.30728805337186,
+     "MNDE": -139.4852680300142,
+     "AUCTION": -1557.3273665668157,
+     "XLM": -735.3531451880348,
+     "PRIME": 483.61555139254097,
+     "AGLD": 81.90115223661734,
+     "ORCA": 1056.3291576078475,
+     "MSOL": 759.1371535118462,
+     "PERP": 10.511421739845579,
+     "ASM": 1669.3182524735068,
+     "SHPING": -223.05780213701937,
+     "MINA": -210.29833687631213,
+     "GFI": -168.0981894369696,
+     "BLUR": 37.63062850278366,
+     "AIOZ": 328.4527504997203,
+     "PNG": -68.46324293087656,
+     "INDEX": -770.7189961075456,
+     "SUPER": 4378.540560047438,
+     "AURORA": -207.4362476941571,
+     "DIMO": 80.2726694753679,
+     "METIS": 207.5139149762294,
+     "SEI": 562.3806451648819,
+     "TIA": 218.69846730006978,
+     "SUI": 1949.8856472224663,
+     "COTI": -320.84276453739125,
+     "GST": -448.07233480412617,
+     "AERO": -334.8830622144302,
+     "PRO": -705.8712647274972,
+     "VELO": -575.0807896173279,
+     "MATH": -771.8892195690078,
+     "SUKU": -244.40350137696734,
+     "BONK": -1028.1968149590348,
+     "HIGH": -516.593835519888,
+     "ONDO": -277.53292996999267,
+     "ZEN": -1180.6405367327015,
+     "GODS": -248.08672143946032,
+     "XRP": -229.83200364807456,
+     "RARE": -481.6008061221711,
+     "HNT": -183.60058665103395,
+     "DRIFT": -582.6586013580038,
+     "ZRO": -1.670112105773228,
+     "BIGTIME": 54.80821472108689,
+     "DIA": -242.3884106440185,
+     "STORJ": -195.98946316672726,
+     "CLV": -172.59935959464443,
+     "SD": -241.29296065676365,
+     "HBAR": -392.8688352208831,
+     "XYO": -697.6779534302195,
+     "A8": -687.2764769482371,
+     "VTHO": -281.59920847213465,
+     "XCN": -438.1533669130277,
+     "SPA": -155.69891906837114,
+     "AERGO": -248.99238830836492,
+     "POPCAT": -262.89266024597964,
+     "CORECHAIN": -244.41585779441004,
+     "MOODENG": -38.212106670322996,
+     "SYRUP": 339.89156293417534,
+     "TURBO": 161.5226178474178,
+     "WIF": 54.859708547917286,
+     "ETHFI": -78.49797505654952,
+     "VOXEL": 42.145116502799006,
+     "COOKIE": 1.178521065326626,
+     "MOG": 422.8230616302186,
+     "PENGU": 1959.0229817613804,
+     "CLANKER": -495.79456442300415,
+     "INV": -27.917737985830094,
+     "MAGIC": -89.12790310637209,
+     "OMNI": -100.98634904107875,
+     "ZORA": -107.36336116531015,
+     "EDGE": -435.1180083677042,
+     "LOKA": -421.4741124470525,
+     "ENA": -356.1874112121017,
+     "SPK": -346.7665033163112,
+     "IP": -266.0250837278695,
+     "RED": -292.35756424108723,
+     "MANTLE": -221.05526719959718,
+     "MPLX": -353.45078437871535,
+     "ATH": -345.79499257743777,
+     "TRAC": -243.66965577756255,
+     "ICP": -500.4010967041044,
+     "LA": -223.07283990913552,
+     "ALCX": -448.3267064280981,
+     "PAXG": 73.15570847803654,
+     "SAPIEN": -32.82017257631204,
+     "BARD": -51.36761855045999,
+     "TNSR": -420.66025692659184,
+     "GLM": -91.73657890560905,
+     "VVV": 6492.805862685592,
+     "FARTCOIN": -354.0340789453325,
+     "HOME": -142.30624068158855,
+     "GNO": -65.26959157775418,
+     "IRYS": -661.1667475705642,
+     "AWE": -354.5008211599966,
+     "BNKR": -608.8143791938985,
+     "KITE": -322.50425316604026,
+     "STG": -151.70142110021527,
+     "SKY": 99.62572554803226,
+     "MORPHO": -113.15260792579646,
+     "FAI": -496.0296689173513,
+     "CFG": 500.2993697801949,
+     "MON": -14.850071420325682,
+     "TAO": 173.80055533433608,
+     "APR": -198.73944004268532,
+     "B3": -554.5199939210291,
+     "UP": -487.8988147737671,
+     "RAVE": -541.6482709842337,
+     "TROLL": -570.595094307202,
+     "GWEI": -496.4294213673921,
+     "ALLO": -120.28156716401081,
+     "DEGEN": -239.68166277466995,
+     "LIGHTER": -105.25682971173079,
+     "HYPE": -126.82500231550647
+    },
+    "pnl_ex_top": {
+     "1": -32038.737554704454,
+     "3": -37718.113615963215,
+     "5": -41443.40191659937
+    },
+    "symbols_with_profit": 49,
+    "years": 5.418206707734429
+   },
+   "oos_continuous": {
+    "total_return": -0.9103660733781108,
+    "cagr": -0.35928445442754664,
+    "max_drawdown": -0.9368569037826796,
+    "sharpe": -0.2373971063021166,
+    "trades": 231,
+    "win_rate": 0.3203463203463203,
+    "avg_trade_ret": -0.04523975291913764,
+    "profit_factor": 0.42616386994390953,
+    "pnl_by_year": {
+     "2021": -2257.6555601199825,
+     "2022": -6439.6319836254615,
+     "2023": -109.13513319795439,
+     "2024": 824.4345219440219,
+     "2025": -420.9562375230953,
+     "2026": -700.7163412586362
+    },
+    "pnl_by_symbol": {
+     "ZRX": 188.42532850842352,
+     "COMP": -86.37607481528384,
+     "MKR": -605.165681860933,
+     "LINK": -690.7170602884058,
+     "CGLD": 206.04517021557396,
+     "UNI": 202.70190560827365,
+     "ATOM": 816.8630428627338,
+     "ALGO": 74.86988534131778,
+     "OXT": 284.49188130569524,
+     "BNT": 76.8912623339514,
+     "GRT": -64.3856866847666,
+     "XTZ": -77.25671127185738,
+     "FIL": -510.02861494602655,
+     "EOS": -31.370935850945955,
+     "LTC": -841.3069188026276,
+     "ETC": -733.2286565035579,
+     "BCH": -882.1106728508879,
+     "YFI": -168.48088260385018,
+     "ADA": -501.27979456275256,
+     "AAVE": -74.44126520874416,
+     "BTC": 247.60581562597946,
+     "ANKR": 79.24588492048397,
+     "ETH": -767.4968391271607,
+     "DOT": -377.30893859793275,
+     "SOL": -585.7917722612078,
+     "SHIB": -506.3210862837537,
+     "XYO": -273.0294625258657,
+     "LRC": -633.8330652763028,
+     "IOTX": -428.0335129357705,
+     "REQ": -287.2788291585264,
+     "AMP": -28.081135713175662,
+     "MANA": -213.40224463154524,
+     "CRO": -209.56393088782153,
+     "ICP": -253.737585118891,
+     "AVAX": -387.246466477564,
+     "JASMY": -166.28253650733663,
+     "DOGE": -215.64600942859357,
+     "XLM": -492.743631208378,
+     "APE": -69.86057961928957,
+     "QNT": 37.01024235622897,
+     "FET": 65.11625671268733,
+     "OP": -50.95104428736765,
+     "ACH": -24.63266964456378,
+     "LDO": -0.15113680682916328,
+     "STX": 0.2021195567997367,
+     "HBAR": -202.8813424827179,
+     "TRB": 45.32504748688934,
+     "INJ": 12.832227785802523,
+     "SEI": 93.77971789226793,
+     "ARB": -14.310272759617925,
+     "TIA": -38.380385085889046,
+     "SUI": 218.64578130059274,
+     "AERO": -38.70888627731439,
+     "BONK": 31.69153670934032,
+     "NEAR": -104.32775317343018,
+     "ONDO": -279.58827123541886,
+     "XRP": 521.0492841735123,
+     "SWFTC": 78.11732596115232,
+     "XCN": -121.53418619028936,
+     "TOSHI": -60.970871564369496,
+     "PEPE": -18.080888649088525,
+     "MOODENG": 42.807596891815514,
+     "TRUMP": -14.383460790486732,
+     "WIF": 46.80383723968473,
+     "CRV": -54.29088261330983,
+     "PENGU": -88.65051222372074,
+     "ZORA": 75.721398965526,
+     "WLFI": 19.270043863192406,
+     "DASH": -48.15796143847655,
+     "ZEC": -65.43673937732278,
+     "FARTCOIN": -138.494757028466,
+     "PUMP": -8.134494090812,
+     "MON": -1.6230815475888063,
+     "TAO": 0.38779216760275304,
+     "VVV": -28.58089921048864,
+     "HYPE": -5.484041079311169
+    },
+    "pnl_ex_top": {
+     "1": -9715.214159096828,
+     "3": -10568.411179881256,
+     "5": -11234.994325069309
+    },
+    "symbols_with_profit": 24,
+    "years": 5.418206707734429
+   },
+   "oos_continuous_fee_stress": {
+    "total_return": -0.9147347606226606,
+    "cagr": -0.365166010514792,
+    "max_drawdown": -0.9395504460122169,
+    "sharpe": -0.2490336752301081,
+    "trades": 231,
+    "win_rate": 0.3203463203463203,
+    "avg_trade_ret": -0.0471474229733469,
+    "profit_factor": 0.41866841468299915,
+    "pnl_by_year": {
+     "2021": -2305.6186368932995,
+     "2022": -6414.246197128688,
+     "2023": -116.44653107557343,
+     "2024": 787.4730599100504,
+     "2025": -419.72221902395006,
+     "2026": -678.7870820151517
+    },
+    "pnl_by_symbol": {
+     "ZRX": 186.05078116233224,
+     "COMP": -89.58898754060313,
+     "MKR": -608.6106141046214,
+     "LINK": -694.4339136666301,
+     "CGLD": 201.40015233452073,
+     "UNI": 199.2149299812809,
+     "ATOM": 809.0001680849166,
+     "ALGO": 75.04825360490236,
+     "OXT": 281.9253870425187,
+     "BNT": 74.51090620650513,
+     "GRT": -66.25810669279899,
+     "XTZ": -82.67116123366264,
+     "FIL": -510.358881342582,
+     "EOS": -33.42757593239135,
+     "LTC": -841.2364395975234,
+     "ETC": -733.1480889540901,
+     "BCH": -879.9225804474456,
+     "YFI": -169.0525542168527,
+     "ADA": -499.6707299973499,
+     "AAVE": -77.71598131856697,
+     "BTC": 235.59098766757188,
+     "ANKR": 77.31849632348042,
+     "ETH": -765.2056929837627,
+     "DOT": -375.85124488409826,
+     "SOL": -582.6287778185205,
+     "SHIB": -505.26716259691625,
+     "XYO": -271.97132707887596,
+     "LRC": -630.1456293586594,
+     "IOTX": -425.936970738628,
+     "REQ": -286.0923454099817,
+     "AMP": -28.72335663412717,
+     "MANA": -213.24114736745221,
+     "CRO": -206.82938844896083,
+     "ICP": -253.21669636790585,
+     "AVAX": -389.103101334074,
+     "JASMY": -163.57103618570795,
+     "DOGE": -217.09671979327632,
+     "XLM": -485.51834371128587,
+     "APE": -69.13678568139518,
+     "QNT": 36.03509197681145,
+     "FET": 61.82089272441671,
+     "OP": -50.67437507456404,
+     "ACH": -24.367219794902443,
+     "LDO": -0.38202062458148695,
+     "STX": -1.129854102851077,
+     "HBAR": -197.44204020528383,
+     "TRB": 43.85756295332979,
+     "INJ": 11.794226282554163,
+     "SEI": 90.23738205156985,
+     "ARB": -14.25929374616603,
+     "TIA": -37.710963081122706,
+     "SUI": 209.6878743004395,
+     "AERO": -37.700830359448645,
+     "BONK": 29.51291525114777,
+     "NEAR": -101.16014712206078,
+     "ONDO": -271.8467271901844,
+     "XRP": 504.24883777284117,
+     "SWFTC": 74.92081084851996,
+     "XCN": -117.85378580465867,
+     "TOSHI": -59.23070568339667,
+     "PEPE": -17.900907630829806,
+     "MOODENG": 40.77277620678576,
+     "TRUMP": -14.23467604207,
+     "WIF": 44.61643654493668,
+     "CRV": -52.69553175739577,
+     "PENGU": -85.71054008047261,
+     "ZORA": 71.9111374962405,
+     "WLFI": 18.140612116878827,
+     "DASH": -46.53598929076822,
+     "ZEC": -63.50805609918826,
+     "FARTCOIN": -132.64897890236227,
+     "PUMP": -7.953764761517759,
+     "MON": -1.7310887738183725,
+     "TAO": 0.18627641526581828,
+     "VVV": -27.438570403754724,
+     "HYPE": -5.403093606233754
+    },
+    "pnl_ex_top": {
+     "1": -9739.26415729038,
+     "3": -10585.277172770437,
+     "5": -11245.899910738985
+    },
+    "symbols_with_profit": 23,
+    "years": 5.418206707734429
+   },
+   "gate_checks": {
+    "oos_positive": false,
+    "symbols>=min": true,
+    "not_single_year": false,
+    "survives_fees_x1.25": false,
+    "survives_fees_x1.25_oos": false,
+    "not_top3_dependent": false,
+    "param_surface_smooth": false,
+    "trials_recorded": true
+   },
+   "advancement": {
+    "oos_positive": false,
+    "survives_fees_x1.25": false,
+    "survives_fees_x1.25_oos": false,
+    "oos_trades>=100": true,
+    "thirds_2_of_3": false,
+    "scale_invariant": true,
+    "symbols>=min": true,
+    "not_single_year": false,
+    "not_top3_dependent": false,
+    "delisting_canonical": true,
+    "boundary_dependency_ok": true
+   },
+   "verdict": "rejected",
+   "boundary": {
+    "ok": true,
+    "chained_return": -0.9822017852646817,
+    "continuous_return": -0.9103660733781108,
+    "boundary_exits": 178,
+    "sign_flip": false,
+    "diff_over_20pct": false
+   },
+   "thirds": {
+    "ok": false,
+    "returns": [
+     -0.8706091221777842,
+     0.3035246487857648,
+     -0.46856578110695857
+    ]
+   },
+   "scale": {
+    "ok": true,
+    "max_abs_diff": 4.440892098500626e-16
+   },
+   "delisting": {
+    "exposure_pnl_share": 0.07891596187823831,
+    "exposure_trade_share": 0.030303030303030304,
+    "triggered": false,
+    "cases": {
+     "canonical": {
+      "multiple": 10,
+      "haircut": 0.5,
+      "repriced_exits": 0,
+      "delta_pnl": 0.0,
+      "adjusted_return": -0.9103660733781108
+     },
+     "mild": {
+      "multiple": 5,
+      "haircut": 0.25,
+      "repriced_exits": 0,
+      "delta_pnl": 0.0,
+      "adjusted_return": -0.9103660733781108
+     },
+     "tail": {
+      "multiple": 20,
+      "haircut": 1.0,
+      "repriced_exits": 0,
+      "delta_pnl": 0.0,
+      "adjusted_return": -0.9103660733781108
+     }
+    },
+    "canonical_ok": true
+   },
+   "no_fill_reasons": {
+    "cash": 80
+   },
+   "per_regime_state": {
+    "risk_on": {
+     "trades": 59,
+     "pnl": -5697.594330361429
+    },
+    "neutral": {
+     "trades": 31,
+     "pnl": -1625.9363006951342
+    },
+    "risk_off": {
+     "trades": 131,
+     "pnl": -2928.526228091635
+    },
+    "unknown": {
+     "trades": 10,
+     "pnl": 1148.3961253670934
+    }
+   },
+   "monte_carlo": {
+    "n": 500,
+    "block": 20,
+    "seed": 7,
+    "terminal_p05": 0.006544947427753278,
+    "terminal_p50": 0.09177924938047125,
+    "terminal_p95": 0.9836088452542832,
+    "mdd_p05": -0.9958710011305609,
+    "mdd_p50": -0.9568888129990274
+   },
+   "pnl_by_year": {
+    "2021": -2257.6555601199825,
+    "2022": -6439.6319836254615,
+    "2023": -109.13513319795439,
+    "2024": 824.4345219440219,
+    "2025": -420.9562375230953,
+    "2026": -700.7163412586362
+   },
+   "pnl_by_symbol_top": {
+    "BCH": -882.1106728508879,
+    "LTC": -841.3069188026276,
+    "ATOM": 816.8630428627338,
+    "ETH": -767.4968391271607,
+    "ETC": -733.2286565035579,
+    "LINK": -690.7170602884058,
+    "LRC": -633.8330652763028,
+    "MKR": -605.165681860933,
+    "SOL": -585.7917722612078,
+    "XRP": 521.0492841735123
+   },
+   "sensitivity": {
+    "cap_0.95": {
+     "total_return": -0.9101456295468098,
+     "max_drawdown": -0.9364570159124743,
+     "trades": 242,
+     "profit_factor": 0.4237282954119304
+    },
+    "cap_0.90": {
+     "total_return": -0.9136002983624688,
+     "max_drawdown": -0.9397307944027888,
+     "trades": 252,
+     "profit_factor": 0.40421134116599633
+    },
+    "severe_costs": {
+     "total_return": -0.9289969474817666,
+     "max_drawdown": -0.9490552278303874,
+     "trades": 229,
+     "profit_factor": 0.38989575220704714
+    }
+   }
+  },
+  "mean_reversion": {
+   "candidate": "mean_reversion",
+   "role": "candidate",
+   "grid": [
+    {
+     "dip": 0.08,
+     "n": 20
+    },
+    {
+     "dip": 0.08,
+     "n": 30
+    },
+    {
+     "dip": 0.1,
+     "n": 20
+    },
+    {
+     "dip": 0.1,
+     "n": 30
+    }
+   ],
+   "trials": 88,
+   "folds": [
+    {
+     "fit": [
+      1583625600,
+      1615161600
+     ],
+     "test": [
+      1615161600,
+      1622937600
+     ],
+     "params": {
+      "dip": 0.08,
+      "n": 30
+     },
+     "fit_score": 1.8989836753146605
+    },
+    {
+     "fit": [
+      1591401600,
+      1622937600
+     ],
+     "test": [
+      1622937600,
+      1630713600
+     ],
+     "params": {
+      "dip": 0.08,
+      "n": 30
+     },
+     "fit_score": 1.6888876627199105
+    },
+    {
+     "fit": [
+      1599177600,
+      1630713600
+     ],
+     "test": [
+      1630713600,
+      1638489600
+     ],
+     "params": {
+      "dip": 0.08,
+      "n": 30
+     },
+     "fit_score": 1.3946488059744637
+    },
+    {
+     "fit": [
+      1606953600,
+      1638489600
+     ],
+     "test": [
+      1638489600,
+      1646265600
+     ],
+     "params": {
+      "dip": 0.08,
+      "n": 30
+     },
+     "fit_score": 1.732652211015056
+    },
+    {
+     "fit": [
+      1614729600,
+      1646265600
+     ],
+     "test": [
+      1646265600,
+      1654041600
+     ],
+     "params": {
+      "dip": 0.08,
+      "n": 20
+     },
+     "fit_score": 0.1953039384550072
+    },
+    {
+     "fit": [
+      1622505600,
+      1654041600
+     ],
+     "test": [
+      1654041600,
+      1661817600
+     ],
+     "params": {
+      "dip": 0.08,
+      "n": 30
+     },
+     "fit_score": -0.08471844252115668
+    },
+    {
+     "fit": [
+      1630281600,
+      1661817600
+     ],
+     "test": [
+      1661817600,
+      1669593600
+     ],
+     "params": {
+      "dip": 0.08,
+      "n": 30
+     },
+     "fit_score": -0.39136814729526775
+    },
+    {
+     "fit": [
+      1638057600,
+      1669593600
+     ],
+     "test": [
+      1669593600,
+      1677369600
+     ],
+     "params": {
+      "dip": 0.08,
+      "n": 30
+     },
+     "fit_score": -0.43505285470716215
+    },
+    {
+     "fit": [
+      1645833600,
+      1677369600
+     ],
+     "test": [
+      1677369600,
+      1685145600
+     ],
+     "params": {
+      "dip": 0.08,
+      "n": 30
+     },
+     "fit_score": 0.38272978196524005
+    },
+    {
+     "fit": [
+      1653609600,
+      1685145600
+     ],
+     "test": [
+      1685145600,
+      1692921600
+     ],
+     "params": {
+      "dip": 0.08,
+      "n": 30
+     },
+     "fit_score": -0.10691957822586393
+    },
+    {
+     "fit": [
+      1661385600,
+      1692921600
+     ],
+     "test": [
+      1692921600,
+      1700697600
+     ],
+     "params": {
+      "dip": 0.08,
+      "n": 20
+     },
+     "fit_score": -0.01115538902847525
+    },
+    {
+     "fit": [
+      1669161600,
+      1700697600
+     ],
+     "test": [
+      1700697600,
+      1708473600
+     ],
+     "params": {
+      "dip": 0.08,
+      "n": 20
+     },
+     "fit_score": 0.30505760252770353
+    },
+    {
+     "fit": [
+      1676937600,
+      1708473600
+     ],
+     "test": [
+      1708473600,
+      1716249600
+     ],
+     "params": {
+      "dip": 0.08,
+      "n": 20
+     },
+     "fit_score": 1.2461758400477132
+    },
+    {
+     "fit": [
+      1684713600,
+      1716249600
+     ],
+     "test": [
+      1716249600,
+      1724025600
+     ],
+     "params": {
+      "dip": 0.08,
+      "n": 20
+     },
+     "fit_score": 1.1435501889255162
+    },
+    {
+     "fit": [
+      1692489600,
+      1724025600
+     ],
+     "test": [
+      1724025600,
+      1731801600
+     ],
+     "params": {
+      "dip": 0.1,
+      "n": 30
+     },
+     "fit_score": 0.506594229678685
+    },
+    {
+     "fit": [
+      1700265600,
+      1731801600
+     ],
+     "test": [
+      1731801600,
+      1739577600
+     ],
+     "params": {
+      "dip": 0.1,
+      "n": 30
+     },
+     "fit_score": 0.6101559865699456
+    },
+    {
+     "fit": [
+      1708041600,
+      1739577600
+     ],
+     "test": [
+      1739577600,
+      1747353600
+     ],
+     "params": {
+      "dip": 0.1,
+      "n": 30
+     },
+     "fit_score": -1.0887366492863098
+    },
+    {
+     "fit": [
+      1715817600,
+      1747353600
+     ],
+     "test": [
+      1747353600,
+      1755129600
+     ],
+     "params": {
+      "dip": 0.1,
+      "n": 30
+     },
+     "fit_score": -0.4410196306809074
+    },
+    {
+     "fit": [
+      1723593600,
+      1755129600
+     ],
+     "test": [
+      1755129600,
+      1762905600
+     ],
+     "params": {
+      "dip": 0.08,
+      "n": 20
+     },
+     "fit_score": 0.008721282509448383
+    },
+    {
+     "fit": [
+      1731369600,
+      1762905600
+     ],
+     "test": [
+      1762905600,
+      1770681600
+     ],
+     "params": {
+      "dip": 0.08,
+      "n": 20
+     },
+     "fit_score": -0.5064900803047705
+    },
+    {
+     "fit": [
+      1739145600,
+      1770681600
+     ],
+     "test": [
+      1770681600,
+      1778457600
+     ],
+     "params": {
+      "dip": 0.1,
+      "n": 20
+     },
+     "fit_score": -0.35969479823610656
+    },
+    {
+     "fit": [
+      1746921600,
+      1778457600
+     ],
+     "test": [
+      1778457600,
+      1786233600
+     ],
+     "params": {
+      "dip": 0.1,
+      "n": 30
+     },
+     "fit_score": -0.8193694197561663
+    }
+   ],
+   "oos_chained": {
+    "total_return": -0.9658503410267327,
+    "cagr": -0.4638114693330331,
+    "max_drawdown": -0.9837948505685126,
+    "sharpe": -0.3768447315137933,
+    "trades": 2308,
+    "win_rate": 0.41161178509532065,
+    "avg_trade_ret": -0.005860056819596345,
+    "profit_factor": 0.8960088193451334,
+    "pnl_by_year": {
+     "2021": 3670.2838440587802,
+     "2022": -7635.807856236413,
+     "2023": 4047.007281865525,
+     "2024": -2596.118263544878,
+     "2025": -7242.636980211683,
+     "2026": -8864.509779350867
+    },
+    "pnl_by_symbol": {
+     "CGLD": 574.9806246464976,
+     "EOS": -258.5980676896804,
+     "AAVE": 803.1290818232721,
+     "ALGO": -83.38012443781034,
+     "ATOM": -216.85387657694622,
+     "LRC": 211.90348979890658,
+     "BAND": -657.4516305294762,
+     "ZRX": -165.7517690546682,
+     "GRT": -341.0724192478589,
+     "SNX": -354.8905936596421,
+     "BCH": -596.7543171599734,
+     "COMP": 76.77690449647078,
+     "XLM": -450.01446504746355,
+     "MKR": -119.32592540666707,
+     "LINK": 83.48326828314015,
+     "DASH": -354.7711990996942,
+     "SUSHI": -600.990461860556,
+     "KNC": 25.103609695011976,
+     "SKL": 163.17270110030114,
+     "OXT": -612.8050416689584,
+     "XTZ": -475.8343270079117,
+     "STORJ": -583.0478836038483,
+     "BNT": -281.47267130945625,
+     "CRV": 854.7834015995221,
+     "FIL": 440.0174078110814,
+     "OGN": 364.6483416876931,
+     "NKN": 720.4825181267037,
+     "ANKR": 75.58352911751753,
+     "NMR": 480.6573588088648,
+     "BTC": -202.4715571138137,
+     "BAL": -505.38138962163794,
+     "ZEC": 286.3775171689613,
+     "1INCH": 364.627767775056,
+     "UNI": 246.04028640776394,
+     "BAT": 276.8993016581579,
+     "RLC": 287.5949706038684,
+     "LTC": -154.81528850923172,
+     "ICP": 179.48123658549684,
+     "TRB": 91.25043526546398,
+     "FORTH": -413.7031646998861,
+     "MANA": 37.560140841174956,
+     "DOGE": -270.03410903800716,
+     "GTC": -249.7046301785541,
+     "AMP": -157.1064072001236,
+     "DOT": -114.23103493280858,
+     "SOL": 207.0808773679282,
+     "LPT": 600.7771897831797,
+     "CTSI": 418.52770594572746,
+     "MLN": -8.153883753147056,
+     "ACH": -66.6898419338194,
+     "CLV": 652.4817106009033,
+     "UMA": 215.8370023067042,
+     "TRU": 425.74481703498157,
+     "FARM": -261.7687007683136,
+     "IOTX": 285.12292401682265,
+     "REQ": -452.46783685474736,
+     "CHZ": -361.8622894009994,
+     "QNT": 7.3650195983900915,
+     "FET": -471.90177814375556,
+     "XYO": 597.5530805401535,
+     "BTRST": -797.5746685546292,
+     "AGLD": 781.110870015069,
+     "RAD": 330.65332822442656,
+     "ADA": 77.44158669529159,
+     "COTI": 560.5852237674178,
+     "AUCTION": -237.6631572123944,
+     "SHIB": 430.6676187542635,
+     "PERP": -1407.4321480235942,
+     "BADGER": -298.5069510207801,
+     "SUKU": -488.5916416146311,
+     "LCX": 448.98384352870517,
+     "KRL": -156.7566312276058,
+     "ARPA": 4.389590620781661,
+     "JASMY": -591.427228271119,
+     "TRAC": 723.5915682117613,
+     "ALCX": -371.8667354114731,
+     "ZEN": -156.0861013918394,
+     "RARI": 927.0879061407584,
+     "ENS": -589.9033909490477,
+     "BICO": -199.70229437470755,
+     "AXS": -779.4622682556218,
+     "GODS": 417.6313438814633,
+     "IMX": 200.82375165646573,
+     "FOX": 96.35377782896555,
+     "SPELL": -660.4560344694888,
+     "MDT": 717.6273796624121,
+     "IDEX": 2199.7378528351906,
+     "MASK": 153.40436936516903,
+     "GFI": -599.2851555441612,
+     "LQTY": 229.35976675058646,
+     "NCT": 137.77466205785186,
+     "SHPING": 398.7550176662506,
+     "INV": -345.4227417627221,
+     "PLU": 141.90524305219844,
+     "SUPER": -318.79161721167014,
+     "BLZ": -611.7092136612509,
+     "POLS": -263.1774097021863,
+     "API3": 184.19292292892587,
+     "PRO": -215.34160420211225,
+     "AVT": 221.97499160724178,
+     "ETC": 9.281695002299983,
+     "HIGH": -1709.076128495075,
+     "APE": 36.58809245960195,
+     "GLM": -132.8016482013189,
+     "AIOZ": 70.9635657476583,
+     "MINA": -21.019242687878318,
+     "DNT": 619.6509810698022,
+     "ROSE": -423.8380327406958,
+     "GMT": 159.05779075652526,
+     "GST": -2271.7307627832806,
+     "CTX": 42.15267922127376,
+     "YFI": -1.8609409409245217,
+     "FIDA": 402.1990999606149,
+     "AVAX": -289.59755161795783,
+     "OP": -307.9625377556635,
+     "INDEX": 382.90752584259,
+     "FORT": 235.67168185410503,
+     "HOPR": 145.41380094490498,
+     "MATH": 628.1256025365677,
+     "TIME": 736.5249131135035,
+     "KSM": 60.53983266836303,
+     "POND": 796.2077877988219,
+     "XCN": -2903.1268862630877,
+     "BOBA": -702.1360163271,
+     "SWFTC": -237.4406645213673,
+     "ALEPH": 369.82203234235345,
+     "GNO": -87.20346995514043,
+     "AURORA": 36.223186304445335,
+     "C98": 678.3869686941973,
+     "NEAR": -297.0235057144354,
+     "00": 139.37980016306935,
+     "AST": -456.8075644278796,
+     "ORCA": -176.1087591824403,
+     "APT": -322.4325990950438,
+     "INJ": 97.43609992366218,
+     "WAXL": 260.5979165809334,
+     "PNG": 1155.425685572652,
+     "MNDE": 57.944785406299985,
+     "FLOW": -634.7295609714478,
+     "HFT": 279.81181336698046,
+     "CRO": -209.85048726896247,
+     "ASM": -409.96920699307384,
+     "MSOL": 93.22383069567886,
+     "T": -151.05887276781456,
+     "LOKA": -138.00678915441188,
+     "MAGIC": 966.4142567525519,
+     "BLUR": -250.75993478354215,
+     "METIS": -172.7725597443947,
+     "LDO": 303.600487066294,
+     "PRIME": 522.9462496250825,
+     "ACS": -383.1296610003882,
+     "ILV": -131.7277905751871,
+     "GHST": 111.50502558713649,
+     "ABT": 746.1956795681259,
+     "STX": 62.00529202899463,
+     "AXL": 35.43007405390878,
+     "FIS": -1856.000596467067,
+     "FLR": -491.2789099307786,
+     "RARE": 70.00607732654635,
+     "DIMO": 886.6564388386505,
+     "SPA": 946.1561970587973,
+     "RPL": -354.2751319977419,
+     "XRP": -11.509828280628783,
+     "HBAR": 28.70822864668216,
+     "HNT": -250.5303858736476,
+     "SUI": 65.14109644158488,
+     "OSMO": 272.1609039287879,
+     "VARA": -515.5708314470087,
+     "PYR": -73.09672958239565,
+     "ELA": 189.34498627932203,
+     "BIGTIME": -822.5419152317114,
+     "POWR": 11.811561593700446,
+     "DEXT": 102.89723112319555,
+     "CVC": 67.4361366677419,
+     "SEI": 9.714171871735033,
+     "QI": -49.38889184530149,
+     "JTO": -184.80537191567265,
+     "AERGO": -456.50945761709085,
+     "BONK": -13.048613435973152,
+     "SEAM": 159.18935158781017,
+     "HONEY": 37.18742475932592,
+     "ZETA": 48.431705304813704,
+     "VTHO": -87.87656180369818,
+     "TIA": 189.67649626559395,
+     "STRK": -203.06830323136083,
+     "AERO": -267.5013473901167,
+     "SHDW": -563.6063828880559,
+     "OMNI": -579.5803886024456,
+     "KARRAT": 269.1363156789685,
+     "AKT": -352.05878576542875,
+     "SAFE": -166.4118553569425,
+     "TNSR": -567.8057148285983,
+     "VELO": -190.85867889195328,
+     "NEON": -118.62713832680032,
+     "DRIFT": 222.7905934732605,
+     "ARKM": -354.4850437005645,
+     "PIRATE": 445.0932837780527,
+     "BLAST": -332.361479103135,
+     "A8": -553.9876296934863,
+     "CVX": -43.181655758290226,
+     "LRDS": -148.36747681872941,
+     "ACX": 75.26341499799358,
+     "ALEO": -965.3359441224757,
+     "EIGEN": 459.1502204336939,
+     "ZRO": 126.93098489546504,
+     "DIA": 60.97696438165784,
+     "WELL": 744.3204126455367,
+     "DEGEN": 66.46283869800104,
+     "ZETACHAIN": 169.6261825017982,
+     "WIF": -554.264295817045,
+     "MOODENG": -1155.259846316427,
+     "COW": 80.81415910943778,
+     "ME": -111.66381229646497,
+     "TURBO": -455.97472625404293,
+     "MOG": -536.1039199621142,
+     "IO": -589.3738476503374,
+     "SWELL": -198.21565944245182,
+     "PNUT": 474.8266265115125,
+     "GIGA": -315.0949141982487,
+     "PRCL": 297.9121958647721,
+     "TOSHI": -625.1221639389771,
+     "TRUMP": -137.00593717319381,
+     "VVV": -53.62588194380294,
+     "KAITO": -439.54360420245325,
+     "VOXEL": 120.68824095497331,
+     "IP": -307.8033117401412,
+     "DOGINME": 219.03417985649924,
+     "BERA": -187.84816503265995,
+     "L3": -329.20444020432046,
+     "REZ": -138.90623953660673,
+     "EDGE": 494.0696193506054,
+     "PROMPT": -301.4481448268752,
+     "KERNEL": 87.46771720279357,
+     "ZORA": 119.01577340916066,
+     "PYTH": -164.7678517838068,
+     "B3": -575.3457297920534,
+     "PUNDIX": -153.47480569780708,
+     "KEYCAT": 299.13911838384604,
+     "SXT": -138.17982550730565,
+     "LA": -420.5503399985962,
+     "ATH": -49.08049972932507,
+     "SQD": -633.5666004613502,
+     "SPK": -131.6292980712849,
+     "SYRUP": 239.5522479466042,
+     "FARTCOIN": 86.06377509520675,
+     "COOKIE": -179.23915183144902,
+     "S": 159.10855988795228,
+     "FAI": -235.80106416674676,
+     "POPCAT": 124.26455950966731,
+     "PENGU": 105.71508018818282,
+     "RSC": 285.9792619983438,
+     "ERA": -159.18193027975437,
+     "TREE": 71.20086051645336,
+     "BNKR": -351.69169462714433,
+     "PUMP": 377.0381944302765,
+     "NEWT": -158.98582081746895,
+     "MAMO": -351.23293932384325,
+     "CLANKER": -47.52665807062539,
+     "EUL": 728.6261181672038,
+     "TOWNS": -215.56480270355866,
+     "PROVE": 108.0450038349133,
+     "BIO": 188.46447982398075,
+     "SAPIEN": 724.8844408008059,
+     "RSR": 131.9563022440694,
+     "USELESS": 371.19149605942704,
+     "AVNT": -117.844554276873,
+     "ZKC": 105.49085267784557,
+     "DOLO": -150.44027291901125,
+     "BARD": -818.6441712371904,
+     "KAVA": -143.40697165260408,
+     "COSMOSDYDX": -128.37448399339044,
+     "WCT": -130.90308693014822,
+     "SYND": -610.298903270559,
+     "LINEA": -103.33064213680152,
+     "TROLL": -142.12055070478237,
+     "RECALL": 328.761485701884,
+     "MPLX": -299.1784081568401,
+     "SPX": -460.70686437599915,
+     "APR": -284.8281800641132,
+     "XAN": -249.7083982073085,
+     "CORECHAIN": 675.2866925015763,
+     "TRUST": -154.53559792892534,
+     "MON": -146.58913752823614,
+     "NOICE": -757.6073544675874,
+     "WMTX": 361.2672847789098,
+     "IRYS": -535.12589276982,
+     "THQ": 102.76834949713128,
+     "SUP": 60.10794874870232,
+     "WET": -566.2737391117071,
+     "RLS": 31.18861986061438,
+     "SKY": 89.31390840987893,
+     "YB": -526.4749645783819,
+     "BREV": -313.0953985211216,
+     "FUN1": -213.93005014968355,
+     "IMU": 336.02359954680196,
+     "FIGHT": -460.27904285990945,
+     "AWE": -184.0327093931581,
+     "BOBBOB": 289.4344359082561,
+     "2Z": 49.447409174198924,
+     "SENT": 103.44105442514817,
+     "NOM": -501.3499687206918,
+     "KMNO": -167.96814901308707,
+     "RAVE": -1329.5086286162982,
+     "RNBW": -15.522149835794687,
+     "LIGHTER": 258.7106331605393,
+     "KITE": -171.9602086011228,
+     "KTA": 43.82313551785293,
+     "ESP": -167.97703914274896,
+     "ROBO": -279.9872976912095,
+     "WLD": 80.84755029159602,
+     "OPN": -266.85509724807724,
+     "HOME": 89.47313517666475,
+     "TAO": 51.45968392445814,
+     "CHECK": 607.3207191112589,
+     "LMTS": 234.3266238292485,
+     "INX": 119.67409372193319,
+     "MEZO": -640.8891080045427,
+     "XPL": 97.05367743887152,
+     "WLFI": 265.17350459329583,
+     "BASED1": 35.108585408940996,
+     "KAT": -92.86398185301607,
+     "ALLO": 282.010672132663,
+     "PRL": 367.89186628610094,
+     "MEGA": -146.74027264923367,
+     "EDGEX": -674.1386015811327,
+     "KAIO": -17.831580291970397,
+     "ICNT": -143.06166200130534,
+     "WAL": 17.7807756955013,
+     "GWEI": -149.09299323526182,
+     "TRIA": -168.19416014789923,
+     "STG": -90.95412403807012,
+     "RE": 256.1075987392484,
+     "BILL": -7.925724909977154
+    },
+    "pnl_ex_top": {
+     "1": -19822.360406187865,
+     "3": -22063.059950226605,
+     "5": -23686.657330224527
+    },
+    "symbols_with_profit": 157,
+    "years": 5.418206707734429
+   },
+   "oos_chained_fee_stress": {
+    "total_return": -0.9779100680281825,
+    "cagr": -0.5052341736067161,
+    "max_drawdown": -0.9889808331730173,
+    "sharpe": -0.47591300982333185,
+    "trades": 2307,
+    "win_rate": 0.41005635023840487,
+    "avg_trade_ret": -0.0077520381560113,
+    "profit_factor": 0.8747212273902051,
+    "pnl_by_year": {
+     "2021": 2948.746801672952,
+     "2022": -8188.082945338687,
+     "2023": 3355.823763943375,
+     "2024": -3412.187070533094,
+     "2025": -7972.726391942288,
+     "2026": -9208.543377554568
+    },
+    "pnl_by_symbol": {
+     "CGLD": 552.2911488548167,
+     "EOS": -266.87621178697907,
+     "AAVE": 782.3283265439554,
+     "ALGO": -86.28910246933508,
+     "ATOM": -223.81073473941825,
+     "LRC": 192.09648235609262,
+     "BAND": -667.5706868225337,
+     "ZRX": -183.60671187391912,
+     "GRT": -353.7953800160176,
+     "SNX": -377.73633118801087,
+     "BCH": -605.8639642166288,
+     "COMP": 56.55644103497511,
+     "XLM": -453.4266963650199,
+     "MKR": -135.2845819223864,
+     "LINK": 79.09339714476705,
+     "DASH": -368.476603170526,
+     "SUSHI": -625.0461718752499,
+     "KNC": -2.792581291249803,
+     "SKL": 122.85245161477704,
+     "OXT": -615.5907271237951,
+     "XTZ": -479.2116963313182,
+     "STORJ": -603.6985454583394,
+     "BNT": -289.8157301748929,
+     "CRV": 811.1786942730196,
+     "FIL": 411.6381404658579,
+     "OGN": 332.12940675376876,
+     "NKN": 679.042688168441,
+     "ANKR": 65.16155918661728,
+     "NMR": 467.3199706687126,
+     "BTC": -201.53281319933004,
+     "BAL": -523.929300735724,
+     "ZEC": 255.35372967924135,
+     "1INCH": 339.8191471635138,
+     "UNI": 228.7813320957138,
+     "BAT": 269.10053706934843,
+     "RLC": 266.6515595864404,
+     "LTC": -158.2298927523003,
+     "ICP": 158.59783292128918,
+     "TRB": 49.879294304264924,
+     "FORTH": -421.66552493315925,
+     "MANA": 30.424048213476254,
+     "DOGE": -275.2095709902411,
+     "GTC": -274.9266896098126,
+     "AMP": -176.79763568188355,
+     "DOT": -125.19923365055045,
+     "SOL": 191.6702645289366,
+     "LPT": 579.3668965477447,
+     "CTSI": 401.64726641799484,
+     "MLN": -13.996947986844035,
+     "ACH": -82.40666738726084,
+     "CLV": 626.1952108557939,
+     "UMA": 203.86682106145346,
+     "TRU": 395.0727260262061,
+     "FARM": -281.33247849988675,
+     "IOTX": 275.6800831260743,
+     "REQ": -454.8030937389036,
+     "CHZ": -372.5648049040695,
+     "QNT": -8.575770221137134,
+     "FET": -480.97576514939146,
+     "XYO": 586.0272198255033,
+     "BTRST": -835.8118824378032,
+     "AGLD": 851.1281392082217,
+     "RAD": 315.36125449168543,
+     "ADA": 73.8601151243895,
+     "COTI": 540.3687756245535,
+     "AUCTION": -263.0797926809811,
+     "SHIB": 420.83390770206535,
+     "PERP": -1421.5317576871012,
+     "BADGER": -317.42192456640805,
+     "SUKU": -503.91434700868956,
+     "LCX": 394.7436434687122,
+     "KRL": -158.44148365829292,
+     "ARPA": -1.5415297510003114,
+     "JASMY": -615.4132405045436,
+     "TRAC": 703.4743635830871,
+     "ALCX": -378.8347994162133,
+     "ZEN": -171.03324653858687,
+     "RARI": 900.2149237577069,
+     "ENS": -594.3871696023361,
+     "BICO": -209.19445262530476,
+     "AXS": -782.915718610459,
+     "GODS": 374.39886884847584,
+     "IMX": 190.6739154634722,
+     "FOX": 73.57895916971425,
+     "SPELL": -673.6884059969216,
+     "MDT": 686.0321794126374,
+     "IDEX": 2137.0797693999766,
+     "MASK": 136.59895401329538,
+     "GFI": -621.7041335864675,
+     "LQTY": 205.0453462354982,
+     "NCT": 121.76613921782649,
+     "SHPING": 379.45692378057703,
+     "INV": -362.89409883512866,
+     "PLU": 114.26775460025148,
+     "SUPER": -328.2996188089152,
+     "BLZ": -636.6948884533018,
+     "POLS": -264.86341722116526,
+     "API3": 168.1069631021156,
+     "PRO": -223.8846781820894,
+     "AVT": 206.29410122151495,
+     "ETC": 5.900220638505715,
+     "HIGH": -1739.6739606864812,
+     "APE": 17.641889931488542,
+     "GLM": -137.62633340960213,
+     "AIOZ": 48.076811943553565,
+     "MINA": -25.208807627009662,
+     "DNT": 605.406388683101,
+     "ROSE": -428.641077037335,
+     "GMT": 136.6233676711397,
+     "GST": -2327.5845682022464,
+     "CTX": 31.061424624332716,
+     "YFI": -9.251912403065418,
+     "FIDA": 381.2244875664895,
+     "AVAX": -292.3978481947011,
+     "OP": -325.1103381830743,
+     "INDEX": 361.9491894719987,
+     "FORT": 210.453154032761,
+     "HOPR": 131.49913956101966,
+     "MATH": 599.8133277632825,
+     "TIME": 704.7591037970121,
+     "KSM": 53.7668119918261,
+     "POND": 772.4576458366373,
+     "XCN": -2939.639635161319,
+     "BOBA": -707.2996073672806,
+     "SWFTC": -244.3002178753619,
+     "ALEPH": 324.25301302112376,
+     "GNO": -91.26699883776787,
+     "AURORA": 3.0472283158469224,
+     "C98": 664.5345664427762,
+     "NEAR": -300.6017241024742,
+     "00": 123.25854766298785,
+     "AST": -464.25041822283174,
+     "ORCA": -196.438047804298,
+     "APT": -332.09709602710245,
+     "INJ": 95.24335468669457,
+     "WAXL": 239.91899698997278,
+     "PNG": 1125.0281570291218,
+     "MNDE": 25.608422695310537,
+     "FLOW": -638.6858391007305,
+     "HFT": 262.8673979730354,
+     "CRO": -212.08943569731605,
+     "ASM": -423.03908252618436,
+     "MSOL": 90.46887872290647,
+     "T": -156.51015560408973,
+     "LOKA": -164.59463173794603,
+     "MAGIC": 936.7310707320573,
+     "BLUR": -263.91966327481134,
+     "METIS": -186.057827691879,
+     "LDO": 291.7566599087509,
+     "PRIME": 486.03627252168735,
+     "ACS": -399.26230639375814,
+     "ILV": -138.03761816385236,
+     "GHST": 106.30466099759664,
+     "ABT": 725.8405797344009,
+     "STX": 54.3039686183981,
+     "AXL": 19.117231266598097,
+     "FIS": -1859.6685548013118,
+     "FLR": -505.68405826238745,
+     "RARE": 58.81464521385752,
+     "DIMO": 855.0512207187536,
+     "SPA": 921.3338119833646,
+     "RPL": -357.1521225124402,
+     "XRP": -13.063622257600182,
+     "HBAR": 26.58693806087032,
+     "HNT": -278.46817821151905,
+     "SUI": 56.45121190368164,
+     "OSMO": 265.6952080138119,
+     "VARA": -538.6853026563444,
+     "PYR": -38.37118738810824,
+     "ELA": 178.05903183283647,
+     "BIGTIME": -840.0991878949355,
+     "POWR": 1.7545515936234324,
+     "DEXT": 88.30287006963826,
+     "CVC": 65.250862293051,
+     "SEI": 1.371878616109825,
+     "QI": -54.16785135993979,
+     "JTO": -197.12902702940482,
+     "AERGO": -459.96252454084197,
+     "BONK": -40.75628104070938,
+     "SEAM": 114.71921469733235,
+     "HONEY": 22.913579694736214,
+     "ZETA": 26.450888063571057,
+     "VTHO": -91.37185981049596,
+     "TIA": 176.4078549117392,
+     "STRK": -205.46474521177223,
+     "AERO": -269.48226493311535,
+     "SHDW": -588.5704756567048,
+     "OMNI": -584.0335113677495,
+     "KARRAT": 239.26628127859823,
+     "AKT": -353.1323894296864,
+     "SAFE": -170.0261669437178,
+     "TNSR": -584.0026443401014,
+     "VELO": -195.0162151407364,
+     "NEON": -127.99808745509162,
+     "DRIFT": 199.13573277175848,
+     "ARKM": -358.8339730299435,
+     "PIRATE": 412.91240970354806,
+     "BLAST": -332.637475750113,
+     "A8": -553.879439607735,
+     "CVX": -49.57594517081172,
+     "LRDS": -157.78404359582797,
+     "ACX": 69.615100016021,
+     "ALEO": -984.0011454388385,
+     "EIGEN": 447.87207075608666,
+     "ZRO": 123.08692823026344,
+     "DIA": 57.32332212743286,
+     "WELL": 716.3629657767092,
+     "DEGEN": 50.20347436393263,
+     "ZETACHAIN": 166.679026035912,
+     "WIF": -562.23306710058,
+     "MOODENG": -1157.7630129237136,
+     "COW": 74.41834407547393,
+     "ME": -111.4515429985847,
+     "TURBO": -454.80277735054494,
+     "MOG": -549.0079014672754,
+     "IO": -595.5519161772087,
+     "SWELL": -204.1072485431639,
+     "PNUT": 469.6316412211719,
+     "GIGA": -333.1621546170591,
+     "PRCL": 288.10123602048907,
+     "TOSHI": -628.3154280074333,
+     "TRUMP": -137.99092167628316,
+     "VVV": -62.770729436754394,
+     "KAITO": -440.6812099649857,
+     "VOXEL": 102.52270596153316,
+     "IP": -310.0272778551854,
+     "DOGINME": 210.8340581353838,
+     "BERA": -196.35414623041123,
+     "L3": -334.7770988329275,
+     "REZ": -144.03848535949606,
+     "EDGE": 475.0739708048203,
+     "PROMPT": -317.4782314538675,
+     "KERNEL": 83.827003180975,
+     "ZORA": 111.2194772807145,
+     "PYTH": -166.29689648381307,
+     "B3": -580.2696848716416,
+     "PUNDIX": -154.5582168745219,
+     "KEYCAT": 289.01351980482707,
+     "SXT": -145.9222101861721,
+     "LA": -421.27933516928977,
+     "ATH": -50.29152782146686,
+     "SQD": -650.7557677237294,
+     "SPK": -140.15279806776164,
+     "SYRUP": 233.19191990664257,
+     "FARTCOIN": 77.94645190049461,
+     "COOKIE": -181.38618474760733,
+     "S": 154.57010749680697,
+     "FAI": -244.91384131977952,
+     "POPCAT": 120.04013558377291,
+     "PENGU": 103.50579303634373,
+     "RSC": 282.9519376829171,
+     "ERA": -160.86193681285783,
+     "TREE": 66.67741695755916,
+     "BNKR": -358.05452463213965,
+     "PUMP": 370.2289874325886,
+     "NEWT": -160.66621918941317,
+     "MAMO": -361.3436747912302,
+     "CLANKER": -54.67209398509148,
+     "EUL": 714.1589442968269,
+     "TOWNS": -216.4885023614857,
+     "PROVE": 105.41884229960642,
+     "BIO": 182.41270098635755,
+     "SAPIEN": 707.7140213025123,
+     "RSR": 128.31297122616846,
+     "USELESS": 355.13473327078395,
+     "AVNT": -126.79270401205298,
+     "ZKC": 97.3350692716541,
+     "DOLO": -150.03296401803595,
+     "BARD": -820.865778478547,
+     "KAVA": -142.34496834404592,
+     "COSMOSDYDX": -127.6623355969103,
+     "WCT": -130.1444925373866,
+     "SYND": -642.1273569747865,
+     "LINEA": -104.14450656810601,
+     "TROLL": -155.8902225392727,
+     "RECALL": 318.57427517697033,
+     "MPLX": -302.0558035613005,
+     "SPX": -457.4494123138354,
+     "APR": -296.34551926801987,
+     "XAN": -254.26250203651065,
+     "CORECHAIN": 661.5420794259886,
+     "TRUST": -154.8646064263056,
+     "MON": -151.30317922182513,
+     "NOICE": -764.1861566561979,
+     "WMTX": 354.30279765388013,
+     "IRYS": -545.3318951345146,
+     "THQ": 99.0102477178032,
+     "SUP": 57.07406221244724,
+     "WET": -561.799374181322,
+     "RLS": 26.56491657284903,
+     "SKY": 85.70081933338771,
+     "YB": -523.0661760766626,
+     "BREV": -308.5655368652457,
+     "FUN1": -215.3790495351435,
+     "IMU": 330.30937696587625,
+     "FIGHT": -465.31353331079106,
+     "AWE": -187.66365333524902,
+     "BOBBOB": 285.90021246647586,
+     "2Z": 47.35054831088799,
+     "SENT": 100.78670552478127,
+     "NOM": -509.96961761190875,
+     "KMNO": -169.17932377073666,
+     "RAVE": -1332.7907317320396,
+     "RNBW": -17.6196922477395,
+     "LIGHTER": 254.77235894083074,
+     "KITE": -175.64311551065774,
+     "KTA": 40.89738551352488,
+     "ESP": -168.63760087035715,
+     "ROBO": -280.25004606048304,
+     "WLD": 78.2837192959304,
+     "OPN": -268.95025074946426,
+     "HOME": 77.85117075330885,
+     "TAO": 49.11164881883805,
+     "CHECK": 589.1353299082193,
+     "LMTS": 228.16352562976613,
+     "INX": 115.74802803112279,
+     "MEZO": -645.4292545546211,
+     "XPL": 93.12771743296933,
+     "WLFI": 257.624601602491,
+     "BASED1": 28.61540129162853,
+     "KAT": -97.01989381410876,
+     "ALLO": 276.7445581617166,
+     "PRL": 363.9052762354399,
+     "MEGA": -147.49021190381728,
+     "EDGEX": -675.691861280402,
+     "KAIO": -24.942068173535006,
+     "ICNT": -143.88929133758506,
+     "WAL": 16.276905796542078,
+     "GWEI": -157.95769911717883,
+     "TRIA": -168.46004080219052,
+     "STG": -90.69347635443282,
+     "RE": 250.20213586241513,
+     "BILL": -8.642604473916647
+    },
+    "pnl_ex_top": {
+     "1": -23652.458383647594,
+     "3": -25842.98646907574,
+     "5": -27431.52336210395
+    },
+    "symbols_with_profit": 154,
+    "years": 5.418206707734429
+   },
+   "oos_continuous": {
+    "total_return": -0.9486578205152981,
+    "cagr": -0.42190211075816664,
+    "max_drawdown": -0.963021291977195,
+    "sharpe": -0.5344617876537435,
+    "trades": 1163,
+    "win_rate": 0.45657781599312125,
+    "avg_trade_ret": -0.018155187727681273,
+    "profit_factor": 0.7348984726237087,
+    "pnl_by_year": {
+     "2021": -1697.9006220509693,
+     "2022": -5897.679432374692,
+     "2023": -21.796984639098532,
+     "2024": -593.039766330927,
+     "2025": -1117.6996433994511,
+     "2026": -158.46175635785423
+    },
+    "pnl_by_symbol": {
+     "CGLD": 298.94459939951577,
+     "EOS": 262.8799700590275,
+     "ALGO": -442.25269804359823,
+     "ATOM": -185.05797690285712,
+     "LRC": -393.15906651026165,
+     "BAND": 163.93390869217092,
+     "ZRX": -107.14908782085465,
+     "MKR": 216.82854413263647,
+     "BCH": -409.2320777641589,
+     "COMP": 199.95358581971698,
+     "XLM": -520.8826786789712,
+     "LINK": -734.0462921838958,
+     "YFI": 232.54015667391687,
+     "AAVE": 264.2461183690545,
+     "SNX": 65.469110005326,
+     "GRT": -333.0882817940074,
+     "OXT": -34.107458733416024,
+     "XTZ": -118.14052754425437,
+     "BNT": 27.23239513594757,
+     "BTC": -189.9065092453037,
+     "FIL": -417.1744880154271,
+     "UNI": -896.8877951125871,
+     "LTC": -769.2552720609241,
+     "ETC": 80.43858034507912,
+     "SUSHI": 437.314570468278,
+     "ANKR": 55.99253147266231,
+     "ETH": -256.3424684764729,
+     "ADA": -524.5833666258634,
+     "DOGE": -573.5088140779536,
+     "ICP": -734.4987755840073,
+     "QNT": 197.16095590676883,
+     "AMP": -74.9433706246973,
+     "DOT": -546.7838972507178,
+     "SOL": -405.30337759069033,
+     "IOTX": -76.12749679726412,
+     "MANA": -131.4669302644099,
+     "ACH": -14.767544022434105,
+     "REQ": 8.214758799532362,
+     "SHIB": -437.87608335215157,
+     "XYO": -173.0679832727732,
+     "AVAX": -672.6253609805868,
+     "JASMY": -100.02771379917445,
+     "CRV": 75.1510917210122,
+     "SPELL": -150.2491614481165,
+     "CRO": -181.32155265717722,
+     "APE": -23.11108231870131,
+     "CHZ": -93.54958938820067,
+     "OP": -143.61572091210374,
+     "FET": -26.612483726088197,
+     "STX": 27.66198115136238,
+     "LDO": -50.11688297602525,
+     "BLUR": -34.13683078482778,
+     "ARB": -40.95594202615759,
+     "HBAR": -96.9214776943144,
+     "TRB": -0.7526143971614907,
+     "XRP": 21.818766886656427,
+     "INJ": 7.73491009420249,
+     "SEI": -104.69294526456545,
+     "SUI": -315.1932691614158,
+     "TIA": -20.352023838255977,
+     "BONK": -324.5948845018575,
+     "NEAR": -37.59071400049195,
+     "AERO": 38.922047162421265,
+     "ONDO": -40.56032458351924,
+     "XCN": -71.06852332576433,
+     "SWFTC": -42.72848512064279,
+     "PEPE": 7.6012260433737024,
+     "TOSHI": 11.741579036099644,
+     "MOODENG": -16.70500096469126,
+     "TRUMP": 5.61838365675292,
+     "WIF": 41.51821071871008,
+     "PENGU": -90.70649314525322,
+     "ZORA": -46.89376416445476,
+     "FARTCOIN": -20.77193215010674,
+     "ZEC": 38.88676602660597,
+     "PUMP": 13.426688003732064,
+     "TAO": 17.852645493060724,
+     "DASH": -17.129858156128236,
+     "WLFI": 4.210457585595214,
+     "AVNT": 0.8499843617583975,
+     "MON": -12.460244258101966,
+     "RAVE": -24.0372651615776,
+     "VVV": -9.873939734310628,
+     "HYPE": -2.6465558747354567,
+     "BILL": 0.5240795532775818,
+     "WLD": 0.366146937215431
+    },
+    "pnl_ex_top": {
+     "1": -9884.991043046011,
+     "3": -10616.699437701487,
+     "5": -11315.95494269237
+    },
+    "symbols_with_profit": 30,
+    "years": 5.418206707734429
+   },
+   "oos_continuous_fee_stress": {
+    "total_return": -0.9592935987602844,
+    "cagr": -0.4461459919117349,
+    "max_drawdown": -0.970207363925891,
+    "sharpe": -0.6004742326778719,
+    "trades": 1163,
+    "win_rate": 0.45399828030954426,
+    "avg_trade_ret": -0.02011848894463443,
+    "profit_factor": 0.7178284148424116,
+    "pnl_by_year": {
+     "2021": -2038.7676221723918,
+     "2022": -5770.301221466291,
+     "2023": -77.71734662834015,
+     "2024": -592.2788436299032,
+     "2025": -976.6642823178001,
+     "2026": -137.2066713881119
+    },
+    "pnl_by_symbol": {
+     "CGLD": 292.1068354680168,
+     "EOS": 256.3142930827262,
+     "ALGO": -429.41482876130164,
+     "ATOM": -197.42322211789053,
+     "LRC": -395.50161613719865,
+     "BAND": 159.36153580991333,
+     "ZRX": -128.40349062717667,
+     "MKR": 207.23631433564375,
+     "BCH": -419.709992870253,
+     "COMP": 182.9660885327484,
+     "XLM": -512.249156877598,
+     "LINK": -738.8384943766389,
+     "YFI": 222.84151875285067,
+     "AAVE": 241.015294558226,
+     "SNX": 60.26414912860841,
+     "GRT": -365.3855485762707,
+     "OXT": -48.659514877545405,
+     "XTZ": -139.3530364386665,
+     "BNT": 22.365006300822415,
+     "BTC": -189.88584339045266,
+     "FIL": -441.05904985421955,
+     "UNI": -910.8841185829316,
+     "LTC": -766.6149525671945,
+     "ETC": 68.49032498540308,
+     "SUSHI": 418.18268784307367,
+     "ANKR": 51.54675932630441,
+     "ETH": -250.42815981808695,
+     "ADA": -508.04206843725905,
+     "DOGE": -556.9411907487588,
+     "ICP": -732.8533422755365,
+     "QNT": 179.15312965909,
+     "AMP": -73.52303578640776,
+     "DOT": -538.6362201025041,
+     "SOL": -414.8308151692009,
+     "IOTX": -88.89843773330963,
+     "MANA": -137.2084559249362,
+     "ACH": -13.713933629775884,
+     "REQ": 0.21937118042542636,
+     "SHIB": -414.67369547001664,
+     "XYO": -168.5058528113708,
+     "AVAX": -631.0234928264144,
+     "JASMY": -132.47359411057235,
+     "CRV": 63.72174253534414,
+     "SPELL": -142.61700228472995,
+     "CRO": -170.18869763863026,
+     "APE": -25.797043347484756,
+     "CHZ": -87.01495152467639,
+     "OP": -136.12289154772878,
+     "FET": -33.242458314763404,
+     "STX": 18.46434009109632,
+     "LDO": -46.50162271876542,
+     "BLUR": -32.26725122521089,
+     "ARB": -38.881361267821184,
+     "HBAR": -84.58402491788266,
+     "TRB": -2.0449578191617075,
+     "XRP": 17.71217260039838,
+     "INJ": 0.19853296844777546,
+     "SEI": -97.06997372011925,
+     "SUI": -272.1402689572303,
+     "TIA": -20.24540336329322,
+     "BONK": -284.9102286498628,
+     "NEAR": -36.423550477472666,
+     "AERO": 28.813527072049943,
+     "ONDO": -38.70005672403107,
+     "XCN": -60.576297033656715,
+     "SWFTC": -36.50800781965221,
+     "PEPE": 5.128504875525033,
+     "TOSHI": 9.587643893164044,
+     "MOODENG": -14.651724950604693,
+     "TRUMP": 3.9854655671467896,
+     "WIF": 33.34445568458799,
+     "PENGU": -75.65380796872546,
+     "ZORA": -39.68559297925251,
+     "FARTCOIN": -18.427116830400166,
+     "ZEC": 30.474336418832394,
+     "PUMP": 10.153610933894246,
+     "TAO": 13.405476919265439,
+     "DASH": -14.411417348285221,
+     "WLFI": 3.2965286991285114,
+     "AVNT": 0.33337668763724704,
+     "MON": -10.243346972119568,
+     "RAVE": -19.85998374205912,
+     "VVV": -8.080442451728732,
+     "HYPE": -2.178162325806118,
+     "BILL": 0.3344412349399071,
+     "WLD": 0.20935307249216714
+    },
+    "pnl_ex_top": {
+     "1": -9982.292187357176,
+     "3": -10688.964353282328,
+     "5": -11368.421151825201
+    },
+    "symbols_with_profit": 30,
+    "years": 5.418206707734429
+   },
+   "gate_checks": {
+    "oos_positive": false,
+    "symbols>=min": true,
+    "not_single_year": false,
+    "survives_fees_x1.25": false,
+    "survives_fees_x1.25_oos": false,
+    "not_top3_dependent": false,
+    "param_surface_smooth": false,
+    "trials_recorded": true
+   },
+   "advancement": {
+    "oos_positive": false,
+    "survives_fees_x1.25": false,
+    "survives_fees_x1.25_oos": false,
+    "oos_trades>=100": true,
+    "thirds_2_of_3": false,
+    "scale_invariant": true,
+    "symbols>=min": true,
+    "not_single_year": false,
+    "not_top3_dependent": false,
+    "delisting_canonical": true,
+    "boundary_dependency_ok": true
+   },
+   "verdict": "rejected",
+   "boundary": {
+    "ok": true,
+    "chained_return": -0.9658503410267327,
+    "continuous_return": -0.9486578205152981,
+    "boundary_exits": 120,
+    "sign_flip": false,
+    "diff_over_20pct": false
+   },
+   "thirds": {
+    "ok": false,
+    "returns": [
+     -0.7673647555116475,
+     -0.18447733512933862,
+     -0.7293782153259353
+    ]
+   },
+   "scale": {
+    "ok": true,
+    "max_abs_diff": 2.220446049250313e-15
+   },
+   "delisting": {
+    "exposure_pnl_share": 0.08121113034527583,
+    "exposure_trade_share": 0.034393809114359415,
+    "triggered": false,
+    "cases": {
+     "canonical": {
+      "multiple": 10,
+      "haircut": 0.5,
+      "repriced_exits": 0,
+      "delta_pnl": 0.0,
+      "adjusted_return": -0.9486578205152981
+     },
+     "mild": {
+      "multiple": 5,
+      "haircut": 0.25,
+      "repriced_exits": 0,
+      "delta_pnl": 0.0,
+      "adjusted_return": -0.9486578205152981
+     },
+     "tail": {
+      "multiple": 20,
+      "haircut": 1.0,
+      "repriced_exits": 0,
+      "delta_pnl": 0.0,
+      "adjusted_return": -0.9486578205152981
+     }
+    },
+    "canonical_ok": true
+   },
+   "no_fill_reasons": {
+    "cash": 1809,
+    "slots": 1676
+   },
+   "per_regime_state": {
+    "risk_on": {
+     "trades": 229,
+     "pnl": -2696.1623611716873
+    },
+    "neutral": {
+     "trades": 206,
+     "pnl": -1673.1521893291574
+    },
+    "risk_off": {
+     "trades": 706,
+     "pnl": -6246.43992679534
+    },
+    "unknown": {
+     "trades": 22,
+     "pnl": 1129.176272143196
+    }
+   },
+   "monte_carlo": {
+    "n": 500,
+    "block": 20,
+    "seed": 7,
+    "terminal_p05": 0.0056094516700206775,
+    "terminal_p50": 0.049139568659261564,
+    "terminal_p95": 0.3297412068972909,
+    "mdd_p05": -0.99578099820454,
+    "mdd_p50": -0.9667924918197717
+   },
+   "pnl_by_year": {
+    "2021": -1697.9006220509693,
+    "2022": -5897.679432374692,
+    "2023": -21.796984639098532,
+    "2024": -593.039766330927,
+    "2025": -1117.6996433994511,
+    "2026": -158.46175635785423
+   },
+   "pnl_by_symbol_top": {
+    "UNI": -896.8877951125871,
+    "LTC": -769.2552720609241,
+    "ICP": -734.4987755840073,
+    "LINK": -734.0462921838958,
+    "AVAX": -672.6253609805868,
+    "DOGE": -573.5088140779536,
+    "DOT": -546.7838972507178,
+    "ADA": -524.5833666258634,
+    "XLM": -520.8826786789712,
+    "ALGO": -442.25269804359823
+   },
+   "sensitivity": {
+    "cap_0.95": {
+     "total_return": -0.9437027240512703,
+     "max_drawdown": -0.9595274884498515,
+     "trades": 1195,
+     "profit_factor": 0.7366791757119723
+    },
+    "cap_0.90": {
+     "total_return": -0.9329399392444166,
+     "max_drawdown": -0.9510444796101538,
+     "trades": 1196,
+     "profit_factor": 0.7352024107034705
+    },
+    "severe_costs": {
+     "total_return": -0.9818385717499576,
+     "max_drawdown": -0.98607949253941,
+     "trades": 1163,
+     "profit_factor": 0.6623748871290286
+    }
+   }
+  },
+  "breakout20": {
+   "candidate": "breakout20",
+   "role": "negative_control",
+   "grid": [
+    {}
+   ],
+   "trials": 22,
+   "folds": [
+    {
+     "fit": [
+      1583625600,
+      1615161600
+     ],
+     "test": [
+      1615161600,
+      1622937600
+     ],
+     "params": {},
+     "fit_score": 2.766647937022397
+    },
+    {
+     "fit": [
+      1591401600,
+      1622937600
+     ],
+     "test": [
+      1622937600,
+      1630713600
+     ],
+     "params": {},
+     "fit_score": 2.037163539865701
+    },
+    {
+     "fit": [
+      1599177600,
+      1630713600
+     ],
+     "test": [
+      1630713600,
+      1638489600
+     ],
+     "params": {},
+     "fit_score": 2.1505643259917098
+    },
+    {
+     "fit": [
+      1606953600,
+      1638489600
+     ],
+     "test": [
+      1638489600,
+      1646265600
+     ],
+     "params": {},
+     "fit_score": 1.7424642952746623
+    },
+    {
+     "fit": [
+      1614729600,
+      1646265600
+     ],
+     "test": [
+      1646265600,
+      1654041600
+     ],
+     "params": {},
+     "fit_score": 0.1554859794755125
+    },
+    {
+     "fit": [
+      1622505600,
+      1654041600
+     ],
+     "test": [
+      1654041600,
+      1661817600
+     ],
+     "params": {},
+     "fit_score": -0.8883029147685226
+    },
+    {
+     "fit": [
+      1630281600,
+      1661817600
+     ],
+     "test": [
+      1661817600,
+      1669593600
+     ],
+     "params": {},
+     "fit_score": -2.5572448467403164
+    },
+    {
+     "fit": [
+      1638057600,
+      1669593600
+     ],
+     "test": [
+      1669593600,
+      1677369600
+     ],
+     "params": {},
+     "fit_score": -3.5444835463702007
+    },
+    {
+     "fit": [
+      1645833600,
+      1677369600
+     ],
+     "test": [
+      1677369600,
+      1685145600
+     ],
+     "params": {},
+     "fit_score": -2.27373923168927
+    },
+    {
+     "fit": [
+      1653609600,
+      1685145600
+     ],
+     "test": [
+      1685145600,
+      1692921600
+     ],
+     "params": {},
+     "fit_score": -2.9385399037867725
+    },
+    {
+     "fit": [
+      1661385600,
+      1692921600
+     ],
+     "test": [
+      1692921600,
+      1700697600
+     ],
+     "params": {},
+     "fit_score": -2.302666155635162
+    },
+    {
+     "fit": [
+      1669161600,
+      1700697600
+     ],
+     "test": [
+      1700697600,
+      1708473600
+     ],
+     "params": {},
+     "fit_score": -0.8885171247268944
+    },
+    {
+     "fit": [
+      1676937600,
+      1708473600
+     ],
+     "test": [
+      1708473600,
+      1716249600
+     ],
+     "params": {},
+     "fit_score": -0.6377883670643659
+    },
+    {
+     "fit": [
+      1684713600,
+      1716249600
+     ],
+     "test": [
+      1716249600,
+      1724025600
+     ],
+     "params": {},
+     "fit_score": 0.3197595290312554
+    },
+    {
+     "fit": [
+      1692489600,
+      1724025600
+     ],
+     "test": [
+      1724025600,
+      1731801600
+     ],
+     "params": {},
+     "fit_score": -0.18371747595843413
+    },
+    {
+     "fit": [
+      1700265600,
+      1731801600
+     ],
+     "test": [
+      1731801600,
+      1739577600
+     ],
+     "params": {},
+     "fit_score": 0.19480442579625606
+    },
+    {
+     "fit": [
+      1708041600,
+      1739577600
+     ],
+     "test": [
+      1739577600,
+      1747353600
+     ],
+     "params": {},
+     "fit_score": -0.9374311370188904
+    },
+    {
+     "fit": [
+      1715817600,
+      1747353600
+     ],
+     "test": [
+      1747353600,
+      1755129600
+     ],
+     "params": {},
+     "fit_score": -2.0634795248150786
+    },
+    {
+     "fit": [
+      1723593600,
+      1755129600
+     ],
+     "test": [
+      1755129600,
+      1762905600
+     ],
+     "params": {},
+     "fit_score": -1.0489091501676329
+    },
+    {
+     "fit": [
+      1731369600,
+      1762905600
+     ],
+     "test": [
+      1762905600,
+      1770681600
+     ],
+     "params": {},
+     "fit_score": -0.9250085399483212
+    },
+    {
+     "fit": [
+      1739145600,
+      1770681600
+     ],
+     "test": [
+      1770681600,
+      1778457600
+     ],
+     "params": {},
+     "fit_score": -2.3813482741123515
+    },
+    {
+     "fit": [
+      1746921600,
+      1778457600
+     ],
+     "test": [
+      1778457600,
+      1786233600
+     ],
+     "params": {},
+     "fit_score": -0.25974064052756424
+    }
+   ],
+   "oos_chained": {
+    "total_return": -0.9816485803098234,
+    "cagr": -0.5218789989357313,
+    "max_drawdown": -0.9930502227820711,
+    "sharpe": -0.6566858520820178,
+    "trades": 1024,
+    "win_rate": 0.1279296875,
+    "avg_trade_ret": -0.024512495654757615,
+    "profit_factor": 0.7668214006281323,
+    "pnl_by_year": {
+     "2021": 353.5926338854862,
+     "2022": -15523.369716830233,
+     "2023": 1744.971124963712,
+     "2024": 9974.030241309032,
+     "2025": -11874.818869079496,
+     "2026": -6560.144930077082
+    },
+    "pnl_by_symbol": {
+     "LRC": -102.28658145027123,
+     "ATOM": -363.50659580236265,
+     "OXT": -615.6975934108696,
+     "BAL": -915.6289311725686,
+     "KNC": -834.7525843895445,
+     "NMR": -797.4795591922934,
+     "ZRX": 362.2822480819866,
+     "CGLD": -1060.1092505467464,
+     "ALGO": -707.8198299034708,
+     "BAND": -843.8008989238881,
+     "XTZ": 111.41415735664438,
+     "MKR": -370.2061606742376,
+     "COMP": -173.9031948786706,
+     "YFI": -657.8656036121811,
+     "FIL": 1338.4087911051354,
+     "LINK": -560.6515194664516,
+     "SUSHI": -1048.7412643375926,
+     "EOS": -184.16941598842453,
+     "ADA": -566.8308497478588,
+     "SNX": -1536.0258172207348,
+     "ETC": 3801.7273383051247,
+     "DAI": -51.15605399215284,
+     "FORTH": -624.5032740869366,
+     "GRT": -374.4535014149292,
+     "AAVE": -1058.5239781081013,
+     "MANA": -243.92796063214035,
+     "RLC": 1446.4791371527954,
+     "UNI": -544.3667898258523,
+     "STORJ": -404.98459825261557,
+     "OGN": -510.84602830690693,
+     "AMP": 544.1862496083204,
+     "XLM": -261.15101539071185,
+     "QNT": 820.3533480482524,
+     "ANKR": -27.98733846558148,
+     "LPT": -277.6821856335817,
+     "SKL": -127.82142358620085,
+     "SOL": 1022.8172552687831,
+     "NKN": -391.6702727180644,
+     "BAT": -288.0384760764658,
+     "ICP": -624.077736177225,
+     "CHZ": -903.7873472135817,
+     "CTSI": -582.7085308791139,
+     "FET": -502.59797275293715,
+     "DOT": -340.3669183415866,
+     "CRV": 243.77805497109745,
+     "MLN": -391.73366338459647,
+     "COTI": -451.5362655213813,
+     "DOGE": -201.04445752559855,
+     "REQ": -706.8626635967918,
+     "IOTX": -495.16203111857976,
+     "1INCH": -62.33079342820893,
+     "RAD": -902.6549318415157,
+     "ZEC": -51.33431910261848,
+     "AVAX": -96.56038865204421,
+     "RARI": -742.0152688816503,
+     "AXS": 638.7008533851612,
+     "USDT": -73.16695961566424,
+     "XYO": -382.7200542856186,
+     "GTC": -745.3670143826091,
+     "CRO": 1052.7193403722092,
+     "DASH": 964.6482949842423,
+     "KRL": -256.37808594498915,
+     "CVC": 76.5972958180522,
+     "UMA": 522.2024539515518,
+     "ACH": -563.8329288670011,
+     "ALCX": -376.89175044172197,
+     "BADGER": -467.2019231739442,
+     "BTRST": -974.3747049538748,
+     "SHIB": 989.0814520264304,
+     "SUPER": -371.88377910770413,
+     "ARPA": 269.80312746204663,
+     "MDT": -601.5729406950484,
+     "BLZ": -420.04134784520267,
+     "API3": 122.7346622431498,
+     "STX": -345.63103440094017,
+     "ZEN": -548.9409542643821,
+     "IMX": -35.43961430686156,
+     "JASMY": 217.64690663575823,
+     "TRU": -666.913293857044,
+     "PRO": -679.3648433902953,
+     "ENS": -546.2704291156053,
+     "MASK": -277.8562551764681,
+     "NCT": -692.566272649289,
+     "POWR": 385.18970503363664,
+     "TRB": 4635.489001042934,
+     "CTX": -710.1814765129038,
+     "POLS": -376.5631096943397,
+     "INV": -306.9670297000021,
+     "LQTY": -562.893494876806,
+     "IDEX": -358.9307129882545,
+     "FARM": -212.5977460672783,
+     "AGLD": -895.5589528173437,
+     "HIGH": -261.0346225598993,
+     "PERP": -249.2665794096184,
+     "ALICE": -232.3275268901001,
+     "FIS": 758.9974583582398,
+     "GNO": -304.9061716949148,
+     "AVT": -348.38159638884116,
+     "AST": -262.7365629347587,
+     "PAX": -95.13550317049541,
+     "OP": -126.26187618300625,
+     "BNT": -312.71862308735035,
+     "TIME": -343.58298154826093,
+     "GLM": -478.42923905833334,
+     "INDEX": -618.216302359964,
+     "APE": -471.66443425844045,
+     "FORT": -627.3766352192681,
+     "AURORA": -330.7798698586439,
+     "CVX": -432.3697440775532,
+     "PLU": -749.5971996325533,
+     "CLV": -95.17593041592623,
+     "BICO": 835.8515863373392,
+     "FOX": -588.7697343656909,
+     "SHPING": -247.04825979379913,
+     "MATH": -253.30270363276358,
+     "LTC": -147.48489393001142,
+     "KSM": -127.8862003330852,
+     "ABT": 9733.18980314043,
+     "ORCA": -595.163542947315,
+     "PYR": -96.40653776699246,
+     "XCN": 5584.2657258212475,
+     "HOPR": 270.2491379704446,
+     "WAXL": 209.6109811515,
+     "LDO": 518.3321746933378,
+     "MNDE": -386.41155235802387,
+     "ILV": -13.146220938337166,
+     "SUKU": 699.5504084333377,
+     "GHST": -328.4002413901302,
+     "DEXT": -158.7616385690308,
+     "KAVA": -340.29977922579553,
+     "GMT": -187.04210684595256,
+     "MAGIC": -410.7322594371786,
+     "INJ": -563.775458520812,
+     "DIA": -357.60422051435216,
+     "RPL": -403.57612591807236,
+     "CELR": -354.83990241114105,
+     "SPELL": -367.59469696946576,
+     "PUNDIX": -346.3945373193496,
+     "POND": -42.503886290744816,
+     "EGLD": -81.42582984505168,
+     "ALEPH": -262.2242485849388,
+     "ELA": -752.9133893956184,
+     "DNT": -212.7323050897178,
+     "00": -140.35071789342237,
+     "OCEAN": -607.8630170622791,
+     "SAND": -126.94911612980995,
+     "PRIME": -392.4921025492117,
+     "SWFTC": -255.2165770004644,
+     "ACS": -392.86373683806164,
+     "T": -563.9966567011043,
+     "BCH": 146.63577225507774,
+     "ASM": -956.6490480456554,
+     "SPA": -667.479193241064,
+     "GFI": -153.00000198732354,
+     "VOXEL": -172.76135385911456,
+     "DIMO": -333.7628414194636,
+     "FIDA": -115.2861849418297,
+     "AERGO": 234.77948664428615,
+     "BLUR": -257.0800361690421,
+     "TRAC": -190.68126441628905,
+     "LCX": -273.78963597802453,
+     "FLR": -165.96743672929998,
+     "BOBA": 582.0004604128861,
+     "SEI": 3602.1212306542716,
+     "AERO": -147.16330271060738,
+     "SEAM": -429.70975326640877,
+     "BONK": -356.4900376129701,
+     "ARKM": -132.53655503618901,
+     "STRK": -574.3693184869235,
+     "QI": -127.10653220829012,
+     "RARE": 418.59216570499495,
+     "RENDER": 157.23746170973087,
+     "METIS": -246.08410202076192,
+     "ARB": -128.46635987491595,
+     "KARRAT": -405.97659350411516,
+     "ROSE": -219.88296326550721,
+     "CBETH": -83.42937652112398,
+     "ETH": -86.27694191646232,
+     "LSETH": -99.12976892034003,
+     "HONEY": -284.1413314069174,
+     "TIA": -203.66557363078834,
+     "VET": -87.62197158882024,
+     "VELO": -88.83103669328707,
+     "AXL": -82.82910688064678,
+     "HNT": -172.81512939110098,
+     "XRP": 257.8254872703086,
+     "SUI": 2311.745683596741,
+     "AUCTION": -313.04228326888443,
+     "GST": -469.8952605760608,
+     "PNG": -610.6568898109169,
+     "DRIFT": 281.0879983285673,
+     "LOKA": -105.81357687526932,
+     "SAFE": -109.81129420547933,
+     "WELL": -226.26938552275132,
+     "HFT": 30.78419059677904,
+     "STG": -592.8826271287737,
+     "G": -234.66622856334294,
+     "HBAR": -221.72589885658022,
+     "VARA": -352.28194627195046,
+     "PNUT": -125.91794245766538,
+     "COW": -400.78409281746553,
+     "A8": -177.89473702542276,
+     "NEON": -321.8914938020234,
+     "ACX": -105.90830189110197,
+     "PIRATE": -291.7747387082735,
+     "CORECHAIN": -164.82623372606645,
+     "BIGTIME": -37.58521511476523,
+     "SWELL": -247.5428483042204,
+     "SD": -128.45755084191072,
+     "COOKIE": -219.58611019783547,
+     "KERNEL": -303.4635120580761,
+     "PENDLE": 109.6165636048715,
+     "ALT": -99.44008324059791,
+     "JTO": -183.06630952893067,
+     "ALEO": -180.4479458673144,
+     "PAXG": 149.41792184996493,
+     "SYRUP": 281.18927065293565,
+     "CLANKER": -100.2212312811697,
+     "EDGE": -171.39760192844557,
+     "B3": -98.69372816804827,
+     "PENGU": 1239.9593994195313,
+     "IP": -18.403974280166203,
+     "MANTLE": 118.39620598885863,
+     "SHDW": -194.12671825677802,
+     "LA": -198.0798381131986,
+     "VVV": -252.169654186042,
+     "FAI": -121.09148724219148,
+     "L3": 49.670707688084974,
+     "POL": -58.9633284879805,
+     "ATH": -112.04616517176686,
+     "ME": -107.36548902234564,
+     "ZRO": -111.51768694723967,
+     "BERA": -247.5360428040393,
+     "ZORA": -105.2521246602862,
+     "SQD": 226.16665215014677,
+     "ZK": -102.06008852658032,
+     "USDS": -11.657061169188438,
+     "USD1": -10.448426940539811,
+     "WCT": -120.98572329219276,
+     "FARTCOIN": -184.4111135197723,
+     "YB": -97.33580020559398,
+     "BARD": -189.91797496129843,
+     "PROMPT": -89.10496767373891,
+     "HOME": -180.90688201100613,
+     "KAITO": -80.93918696988972,
+     "TOWNS": -169.98725465914828,
+     "WMTX": -149.94160293009412,
+     "C98": -148.81315917894364,
+     "KITE": 421.06019936375264,
+     "AWE": -81.70773159103479,
+     "SKY": 10.972793028795833,
+     "ALLO": -123.76296745175542,
+     "DOLO": -110.41481811300777,
+     "LRDS": -221.43179582488764,
+     "FLOCK": -184.85698424654976,
+     "NEWT": -100.71489845481135,
+     "LAYER": -97.90336806757529,
+     "BREV": -93.71523431597298,
+     "TRUMP": -183.5733386558997,
+     "ASTER": -140.6199236365978,
+     "EIGEN": -169.45497008114532,
+     "AKT": -85.35667593214794,
+     "MORPHO": 104.05660365271042,
+     "NOM": -77.75961595090094,
+     "SUP": -78.18628727860127,
+     "COSMOSDYDX": 462.4855752199062,
+     "UP": 546.8823613569208,
+     "PLUME": 169.13432462215812,
+     "BNKR": -224.4954870633701,
+     "IRYS": -118.84546304800115,
+     "RECALL": -110.6714990132282,
+     "BOBBOB": -198.39626851370645,
+     "2Z": -103.65676469092863,
+     "USELESS": -110.52930112849643,
+     "OPN": -109.00829721846283,
+     "ZAMA": -178.1750005491361,
+     "RSC": -101.57092642711618,
+     "HYPE": 79.15141414837439,
+     "CHECK": -95.56968594717857,
+     "SPX": -86.77905110894186,
+     "IMU": -85.35580167294941,
+     "MET": -33.81546563716045,
+     "KMNO": -50.75252683701065,
+     "LIGHTER": 581.611852043585,
+     "NEAR": 75.86217879897546,
+     "GEOD": -76.7628203538553,
+     "FLUID": 22.89364142012429,
+     "EUL": 57.44876436444049,
+     "FLOW": 22.601848720219042
+    },
+    "pnl_ex_top": {
+     "1": -31731.056080214817,
+     "3": -42264.74323718808,
+     "5": -49838.822231370934
+    },
+    "symbols_with_profit": 57,
+    "years": 5.418206707734429
+   },
+   "oos_chained_fee_stress": {
+    "total_return": -0.9854018104087295,
+    "cagr": -0.541649530590387,
+    "max_drawdown": -0.9944463207076444,
+    "sharpe": -0.7124390788565346,
+    "trades": 1025,
+    "win_rate": 0.12585365853658537,
+    "avg_trade_ret": -0.026690706981749128,
+    "profit_factor": 0.7504031811328592,
+    "pnl_by_year": {
+     "2021": 142.0561481630058,
+     "2022": -15744.591679500996,
+     "2023": 1468.6751923047082,
+     "2024": 9617.127269742383,
+     "2025": -12433.3254926744,
+     "2026": -6764.187217226416
+    },
+    "pnl_by_symbol": {
+     "LRC": -109.33475441614279,
+     "ATOM": -372.97063747668767,
+     "OXT": -622.7888345350678,
+     "BAL": -930.538791685184,
+     "KNC": -847.5700253716077,
+     "NMR": -812.2220317231506,
+     "ZRX": 348.43913656595237,
+     "CGLD": -1071.1772771103026,
+     "ALGO": -714.9686219721222,
+     "BAND": -853.2410218038603,
+     "XTZ": 99.75320961306588,
+     "MKR": -382.25334584552616,
+     "COMP": -183.07391857731793,
+     "YFI": -666.184886531864,
+     "FIL": 1333.736505639826,
+     "LINK": -566.227868400915,
+     "SUSHI": -1060.2954069661512,
+     "EOS": -191.71339657508568,
+     "ADA": -573.1443293275759,
+     "SNX": -1553.1472057731362,
+     "ETC": 3780.92864529324,
+     "DAI": -60.56206903308888,
+     "FORTH": -630.7500681236191,
+     "GRT": -379.22898010987626,
+     "AAVE": -1071.7348298328825,
+     "MANA": -246.9144789255041,
+     "RLC": 1425.5793324741878,
+     "UNI": -552.9508005955241,
+     "STORJ": -417.28795676049185,
+     "OGN": -521.0890456589021,
+     "AMP": 538.4241057201061,
+     "XLM": -269.5018861986856,
+     "QNT": 800.1206306899792,
+     "ANKR": -34.467007370386234,
+     "LPT": -289.89076963560615,
+     "SKL": -136.07802575468267,
+     "SOL": 1010.7803252624225,
+     "NKN": -398.70907116756115,
+     "BAT": -292.62828677759177,
+     "ICP": -631.1216218542261,
+     "CHZ": -917.5636330197989,
+     "CTSI": -588.9541233009088,
+     "FET": -509.075790820816,
+     "DOT": -343.72641697674885,
+     "CRV": 229.17765898769903,
+     "MLN": -395.15040931722325,
+     "COTI": -456.28554354005416,
+     "DOGE": -205.6463454084521,
+     "REQ": -715.913326691837,
+     "IOTX": -499.2132511229179,
+     "1INCH": -65.92606791081786,
+     "RAD": -910.950163986529,
+     "ZEC": -67.21685803503377,
+     "AVAX": -97.06978652010416,
+     "RARI": -749.0274833169725,
+     "AXS": 633.1299928135571,
+     "USDT": -85.03364465084749,
+     "XYO": -389.68181061325413,
+     "GTC": -752.8197442179423,
+     "CRO": 1032.6280338075487,
+     "DASH": 952.1314856772021,
+     "KRL": -259.52566913794806,
+     "CVC": 65.5492285654463,
+     "UMA": 509.0784180407722,
+     "ACH": -567.6790449143614,
+     "ALCX": -382.5905273989474,
+     "BADGER": -474.94840265405014,
+     "BTRST": -986.180241310695,
+     "SHIB": 982.0911247504085,
+     "SUPER": -375.62830903951726,
+     "ARPA": 253.15023038068355,
+     "MDT": -611.3515402988899,
+     "BLZ": -428.51499658230875,
+     "API3": 113.0557992764421,
+     "STX": -349.74491110614645,
+     "ZEN": -556.09536942749,
+     "IMX": -39.57579501512262,
+     "JASMY": 206.845835642991,
+     "TRU": -675.097420699899,
+     "PRO": -695.5413450549238,
+     "ENS": -551.8070076212409,
+     "MASK": -281.9092165357511,
+     "NCT": -699.2110186608196,
+     "POWR": 374.69754680797587,
+     "TRB": 4611.706165515641,
+     "CTX": -718.4353571103895,
+     "POLS": -380.86779106383256,
+     "INV": -312.959407372136,
+     "LQTY": -568.5839290566232,
+     "IDEX": -363.7441211581768,
+     "FARM": -214.3065045932244,
+     "AGLD": -909.8207899524294,
+     "HIGH": -272.50205654583993,
+     "PERP": -252.64928931521223,
+     "ALICE": -234.63037352012614,
+     "FIS": 746.2413389569106,
+     "GNO": -307.56533492205665,
+     "AVT": -350.3231650399635,
+     "AST": -264.3429406192048,
+     "PAX": -110.23413133761025,
+     "OP": -127.87479368896952,
+     "BNT": -316.0387211401638,
+     "TIME": -347.511530692909,
+     "GLM": -489.1256794063775,
+     "INDEX": -624.3597979131438,
+     "APE": -477.09397387563035,
+     "FORT": -634.1446171417248,
+     "AURORA": -333.54913444846983,
+     "CVX": -436.98323649339017,
+     "PLU": -758.9132625924134,
+     "CLV": -95.93238932631796,
+     "BICO": 807.4601333785782,
+     "FOX": -594.8442057873488,
+     "SHPING": -248.4632203685636,
+     "MATH": -255.07607921654454,
+     "LTC": -149.17155282915675,
+     "KSM": -129.5643279201918,
+     "ABT": 9707.024440794192,
+     "ORCA": -704.524364099862,
+     "PYR": -102.31325546554876,
+     "XCN": 5536.1020168147115,
+     "HOPR": 267.6847801610216,
+     "WAXL": 206.17546565411615,
+     "LDO": 504.1970707147864,
+     "MNDE": -389.8426572610054,
+     "ILV": -19.15840644686196,
+     "SUKU": 690.7725104671489,
+     "GHST": -331.95072269703724,
+     "DEXT": -174.89898162953236,
+     "KAVA": -345.0261470056532,
+     "GMT": -192.3276394890531,
+     "MAGIC": -418.17445099396355,
+     "INJ": -570.0711220779774,
+     "DIA": -360.8353409926267,
+     "RPL": -408.88658195685986,
+     "CELR": -358.703830561529,
+     "SPELL": -373.84525575444525,
+     "PUNDIX": -350.35576613227937,
+     "POND": -47.118544264968506,
+     "EGLD": -81.85148753869436,
+     "ALEPH": -264.65176740764457,
+     "ELA": -765.2899772349156,
+     "DNT": -214.3930136927687,
+     "00": -142.06835035414878,
+     "OCEAN": -614.0098734322072,
+     "SAND": -128.64306828682965,
+     "PRIME": -398.0777766004224,
+     "SWFTC": -263.33044763708085,
+     "ACS": -398.1359768696596,
+     "T": -570.3322427768181,
+     "BCH": 139.2219400657223,
+     "ASM": -965.9536291553444,
+     "SPA": -677.114821102524,
+     "GFI": -155.3954394372655,
+     "VOXEL": -175.21358934929802,
+     "DIMO": -337.30795560920427,
+     "FIDA": -116.57676135840686,
+     "AERGO": 225.9796698470388,
+     "BLUR": -260.48214198754573,
+     "TRAC": -198.2010128900804,
+     "LCX": -276.4810147488751,
+     "FLR": -167.6822652105717,
+     "BOBA": 577.8742999288897,
+     "SEI": 3586.0317125708493,
+     "AERO": -150.06423260498238,
+     "SEAM": -433.1267568693431,
+     "BONK": -360.140790985541,
+     "ARKM": -133.64356651349223,
+     "STRK": -579.6486773123868,
+     "QI": -128.13763937207816,
+     "RARE": 402.3523776355205,
+     "RENDER": 154.00786818767517,
+     "METIS": -249.25143169870466,
+     "ARB": -130.20773801836705,
+     "KARRAT": -409.12187679121433,
+     "ROSE": -222.27702138522517,
+     "CBETH": -85.26074134420347,
+     "ETH": -88.10261712767456,
+     "LSETH": -100.92976338786595,
+     "HONEY": -286.5682379505994,
+     "TIA": -205.58745727436235,
+     "VET": -88.13818218052582,
+     "VELO": -89.34088482016683,
+     "AXL": -83.35665378700136,
+     "HNT": -178.82566573826196,
+     "XRP": 248.20433336686176,
+     "SUI": 2296.7155758796544,
+     "AUCTION": -317.3335265401135,
+     "GST": -473.87430234341974,
+     "PNG": -617.6484290719272,
+     "DRIFT": 278.5283052342114,
+     "LOKA": -107.67677393092674,
+     "SAFE": -110.84669576108156,
+     "WELL": -228.51622377521824,
+     "HFT": 25.471165458219573,
+     "STG": -609.2176764640288,
+     "G": -237.04191151354425,
+     "HBAR": -223.7550184937135,
+     "VARA": -355.14928375836087,
+     "PNUT": -127.58397815832511,
+     "COW": -406.17352830849177,
+     "A8": -179.151568526478,
+     "NEON": -324.9939852713453,
+     "ACX": -106.67831083178693,
+     "PIRATE": -294.23308493016384,
+     "CORECHAIN": -165.99636019329878,
+     "BIGTIME": -39.54513116719838,
+     "SWELL": -250.7445322675586,
+     "SD": -130.04022995825036,
+     "COOKIE": -221.83972604673954,
+     "KERNEL": -306.08748235413253,
+     "PENDLE": 14.055438673737456,
+     "ALT": -100.21756425508482,
+     "JTO": -184.3932852875462,
+     "ALEO": -181.7581112535422,
+     "PAXG": 142.39196744083142,
+     "SYRUP": 278.6293752102091,
+     "CLANKER": -100.74284571104593,
+     "EDGE": -172.11932109477044,
+     "B3": -99.11265871545496,
+     "PENGU": 1227.4718634578646,
+     "IP": -19.76200000637143,
+     "MANTLE": 112.60969702926396,
+     "SHDW": -196.24203493650606,
+     "LA": -199.88097531464652,
+     "VVV": -255.5010370685177,
+     "FAI": -122.43709868235756,
+     "L3": 45.75061425048882,
+     "POL": -60.61729203881972,
+     "ATH": -113.13694516693094,
+     "ME": -108.44643630083044,
+     "ZRO": -112.43920325514631,
+     "BERA": -250.8773652665873,
+     "ZORA": -105.99148648164115,
+     "SQD": 220.4510292140146,
+     "ZK": -102.57346795818152,
+     "USDS": -13.46525813377786,
+     "USD1": -12.05403986138736,
+     "WCT": -122.56544257233273,
+     "FARTCOIN": -185.89672839882212,
+     "YB": -98.27385457217716,
+     "BARD": -191.5154053415453,
+     "PROMPT": -89.81082140910563,
+     "HOME": -183.2248027786664,
+     "KAITO": -81.39608939017809,
+     "TOWNS": -171.15027317327338,
+     "WMTX": -150.56391626092372,
+     "C98": -149.2889943595635,
+     "KITE": 413.08183743306364,
+     "AWE": -87.78747016632784,
+     "SKY": 9.68326192353688,
+     "ALLO": -125.31907101555748,
+     "DOLO": -111.7238660893871,
+     "LRDS": -223.70605201521155,
+     "FLOCK": -186.57301542536652,
+     "NEWT": -101.66486703766898,
+     "LAYER": -98.76324218977805,
+     "BREV": -94.46994991180685,
+     "TRUMP": -184.72431588277067,
+     "ASTER": -143.2364305783086,
+     "EIGEN": -170.48613902603915,
+     "AKT": -85.93407266995068,
+     "MORPHO": 101.85124453293203,
+     "NOM": -78.12660692978568,
+     "SUP": -78.44656580010108,
+     "COSMOSDYDX": 456.1971270211289,
+     "UP": 539.0960056608335,
+     "PLUME": 165.92020629070797,
+     "BNKR": -226.98377816919236,
+     "IRYS": -120.28229187019035,
+     "RECALL": -111.83139177588114,
+     "BOBBOB": -200.25414313698593,
+     "2Z": -104.55327467131136,
+     "USELESS": -111.29172466277562,
+     "OPN": -109.72533219973472,
+     "ZAMA": -179.28188925635197,
+     "RSC": -102.17001958728966,
+     "HYPE": 77.17029953459435,
+     "CHECK": -96.3563704670554,
+     "SPX": -87.23858525857293,
+     "IMU": -85.72591139461758,
+     "MET": -34.65993062211028,
+     "KMNO": -51.411487477497985,
+     "LIGHTER": 576.4960801192615,
+     "NEAR": 73.90051350908935,
+     "GEOD": -76.930643303234,
+     "FLUID": 21.45983566486628,
+     "EUL": 55.58172228137365,
+     "FLOW": 21.138434140280836
+    },
+    "pnl_ex_top": {
+     "1": -33537.89272997435,
+     "3": -44014.66465885685,
+     "5": -51563.10405272341
+    },
+    "symbols_with_profit": 57,
+    "years": 5.418206707734429
+   },
+   "oos_continuous": {
+    "total_return": -0.6491681202611461,
+    "cagr": -0.17578188247767712,
+    "max_drawdown": -0.8636245149968683,
+    "sharpe": -0.1161569107548283,
+    "trades": 331,
+    "win_rate": 0.18126888217522658,
+    "avg_trade_ret": -0.015443451900179586,
+    "profit_factor": 0.6546480821301787,
+    "pnl_by_year": {
+     "2021": -3241.653784366446,
+     "2022": -3563.2258681212293,
+     "2023": -689.2788672872831,
+     "2024": 2084.8559029359676,
+     "2025": 102.51087738559882,
+     "2026": -1184.8894631580717
+    },
+    "pnl_by_symbol": {
+     "LRC": -279.1239266648954,
+     "ATOM": -683.9565526139789,
+     "OXT": -125.18894821753253,
+     "ZRX": -385.11924674971635,
+     "SNX": -126.5369224122708,
+     "CGLD": -348.5431188195814,
+     "XLM": -928.3902711674743,
+     "ALGO": -633.1374766135832,
+     "BAND": -122.21645373857953,
+     "XTZ": 570.3161335746632,
+     "UNI": -425.02414329163804,
+     "LINK": -432.9467463989159,
+     "AAVE": -433.64747790468385,
+     "EOS": -128.80154330925336,
+     "YFI": -127.50269350556131,
+     "ETC": 1683.5270184749536,
+     "GRT": -347.4260077847663,
+     "SUSHI": -241.91082292312294,
+     "COMP": -110.50442379412529,
+     "MKR": 187.88104122247094,
+     "ETH": -153.47281490251464,
+     "ANKR": -75.41848591001327,
+     "AMP": -122.14689404573666,
+     "DOGE": 45.99967760554185,
+     "ICP": -687.0690830490284,
+     "LTC": -290.00293030823457,
+     "DOT": -272.5731695923574,
+     "ACH": -151.88548398236048,
+     "SOL": 129.113888165408,
+     "ADA": -302.11792328860065,
+     "SHIB": 400.63091439603494,
+     "IOTX": -81.33059649713977,
+     "MANA": -151.95238454159363,
+     "JASMY": 259.81378599400426,
+     "AVAX": -146.0554403584752,
+     "APE": -165.9911769331402,
+     "FIL": 1.3209074471864852,
+     "FET": 346.2102938284358,
+     "LDO": -116.76166120289409,
+     "STX": 108.94605226212613,
+     "ARB": 210.10679789621307,
+     "BCH": -148.80956006375405,
+     "SEI": -278.28859709131376,
+     "TRB": -62.728018147562985,
+     "OP": -83.82154089548149,
+     "SUI": 1022.84369989593,
+     "BONK": -118.16744259971438,
+     "INJ": -276.40645019989415,
+     "NEAR": -300.1075213073851,
+     "ONDO": -290.6764829833602,
+     "AERO": -255.93396184048288,
+     "XRP": -246.9950955115305,
+     "HBAR": -212.9004143759889,
+     "XCN": 92.48075362430603,
+     "PEPE": -208.6676309460146,
+     "SWFTC": 91.08850852265623,
+     "MOODENG": -46.15511479216614,
+     "WIF": -23.810868131154912,
+     "ZORA": -137.98685121487927,
+     "FARTCOIN": -344.94282539154676,
+     "ZEC": 56.79944432243084,
+     "PENGU": -176.8298223185055,
+     "MON": -60.78180994427306,
+     "TAO": 125.50401933285453,
+     "HYPE": -52.5867912945324,
+     "VVV": 99.08748039463116
+    },
+    "pnl_ex_top": {
+     "1": -8175.208221086422,
+     "3": -10247.465676675241,
+     "5": -11654.220821337147
+    },
+    "symbols_with_profit": 17,
+    "years": 5.418206707734429
+   },
+   "oos_continuous_fee_stress": {
+    "total_return": -0.6718054759035377,
+    "cagr": -0.18586619149759043,
+    "max_drawdown": -0.8677825482484648,
+    "sharpe": -0.13961242728471318,
+    "trades": 331,
+    "win_rate": 0.18126888217522658,
+    "avg_trade_ret": -0.017410656807619124,
+    "profit_factor": 0.6380442712274403,
+    "pnl_by_year": {
+     "2021": -3320.317217118937,
+     "2022": -3559.38987914288,
+     "2023": -696.081578727816,
+     "2024": 1957.5442180454124,
+     "2025": 43.955172051776046,
+     "2026": -1143.765474142933
+    },
+    "pnl_by_symbol": {
+     "LRC": -280.61048360996404,
+     "ATOM": -693.1067292743394,
+     "OXT": -126.86917747596662,
+     "ZRX": -389.9134220298853,
+     "SNX": -128.0646930572582,
+     "CGLD": -351.22753952265685,
+     "XLM": -926.2617423964034,
+     "ALGO": -635.0779406712454,
+     "BAND": -123.75602192823975,
+     "XTZ": 560.8953556564919,
+     "UNI": -424.55006096919305,
+     "LINK": -446.4788180319662,
+     "AAVE": -451.6604141655205,
+     "EOS": -131.99908294376056,
+     "YFI": -129.02714780052017,
+     "ETC": 1676.7181171840296,
+     "GRT": -347.12554786655016,
+     "SUSHI": -243.72139206444118,
+     "COMP": -111.34162335441928,
+     "MKR": 175.86690290634883,
+     "ETH": -165.44054864993436,
+     "ANKR": -76.48355379697553,
+     "AMP": -122.81291184809251,
+     "DOGE": 16.16642985218686,
+     "ICP": -681.4073395518961,
+     "LTC": -297.62107839227167,
+     "DOT": -272.4817013379417,
+     "ACH": -151.71504799864223,
+     "SOL": 108.92533500753645,
+     "ADA": -308.2939797914295,
+     "SHIB": 369.2970829494632,
+     "IOTX": -81.39800655088285,
+     "MANA": -151.6675538046827,
+     "JASMY": 240.85749965800392,
+     "AVAX": -147.36363328442704,
+     "APE": -166.26374361349525,
+     "FIL": -0.8573109915331187,
+     "FET": 329.67145711669775,
+     "LDO": -115.00523904147886,
+     "STX": 102.83450849390246,
+     "ARB": 201.45630267243223,
+     "BCH": -145.5130048152838,
+     "SEI": -271.2333583197205,
+     "TRB": -61.324225276756216,
+     "OP": -82.39289629332615,
+     "SUI": 972.7288959527823,
+     "BONK": -121.99981952053108,
+     "INJ": -269.03306473091817,
+     "NEAR": -290.5504064044868,
+     "ONDO": -281.5873523136454,
+     "AERO": -246.56256678087814,
+     "XRP": -240.6047982837235,
+     "HBAR": -204.93722166542594,
+     "XCN": 86.01728773630416,
+     "PEPE": -201.57607893005982,
+     "SWFTC": 85.48377885805169,
+     "MOODENG": -44.717245102875744,
+     "WIF": -23.55689102623539,
+     "ZORA": -132.0933829732046,
+     "FARTCOIN": -329.20272252433114,
+     "ZEC": 49.664551021754306,
+     "PENGU": -168.75932920436588,
+     "MON": -58.552075057405254,
+     "TAO": 117.08523352321725,
+     "HYPE": -49.97000992778377,
+     "VVV": 92.04643734239173
+    },
+    "pnl_ex_top": {
+     "1": -8394.77287621942,
+     "3": -10403.632169394486,
+     "5": -11751.628664579592
+    },
+    "symbols_with_profit": 16,
+    "years": 5.418206707734429
+   },
+   "gate_checks": {
+    "oos_positive": false,
+    "symbols>=min": true,
+    "not_single_year": true,
+    "survives_fees_x1.25": false,
+    "survives_fees_x1.25_oos": false,
+    "not_top3_dependent": false,
+    "param_surface_smooth": true,
+    "trials_recorded": true
+   },
+   "advancement": {
+    "oos_positive": false,
+    "survives_fees_x1.25": false,
+    "survives_fees_x1.25_oos": false,
+    "oos_trades>=100": true,
+    "thirds_2_of_3": false,
+    "scale_invariant": true,
+    "symbols>=min": true,
+    "not_single_year": true,
+    "not_top3_dependent": false,
+    "delisting_canonical": true,
+    "boundary_dependency_ok": false
+   },
+   "verdict": "n/a (negative_control)",
+   "boundary": {
+    "ok": false,
+    "chained_return": -0.9816485803098234,
+    "continuous_return": -0.6491681202611461,
+    "boundary_exits": 82,
+    "sign_flip": false,
+    "diff_over_20pct": true
+   },
+   "thirds": {
+    "ok": false,
+    "returns": [
+     -0.6804879652487673,
+     0.44967106155255343,
+     -0.24257024876231148
+    ]
+   },
+   "scale": {
+    "ok": true,
+    "max_abs_diff": 8.881784197001252e-16
+   },
+   "delisting": {
+    "exposure_pnl_share": 0.031442014023805184,
+    "exposure_trade_share": 0.027190332326283987,
+    "triggered": false,
+    "cases": {
+     "canonical": {
+      "multiple": 10,
+      "haircut": 0.5,
+      "repriced_exits": 0,
+      "delta_pnl": 0.0,
+      "adjusted_return": -0.6491681202611461
+     },
+     "mild": {
+      "multiple": 5,
+      "haircut": 0.25,
+      "repriced_exits": 0,
+      "delta_pnl": 0.0,
+      "adjusted_return": -0.6491681202611461
+     },
+     "tail": {
+      "multiple": 20,
+      "haircut": 1.0,
+      "repriced_exits": 0,
+      "delta_pnl": 0.0,
+      "adjusted_return": -0.6491681202611461
+     }
+    },
+    "canonical_ok": true
+   },
+   "no_fill_reasons": {
+    "cash": 375
+   },
+   "per_regime_state": {
+    "risk_on": {
+     "trades": 62,
+     "pnl": 29.86786445124047
+    },
+    "neutral": {
+     "trades": 56,
+     "pnl": -1406.786490975947
+    },
+    "risk_off": {
+     "trades": 207,
+     "pnl": -4358.8339528932665
+    },
+    "unknown": {
+     "trades": 6,
+     "pnl": -755.9286231934899
+    }
+   },
+   "monte_carlo": {
+    "n": 500,
+    "block": 20,
+    "seed": 7,
+    "terminal_p05": 0.05926182049535777,
+    "terminal_p50": 0.38129944951712375,
+    "terminal_p95": 2.7473051821655856,
+    "mdd_p05": -0.9630821950921393,
+    "mdd_p50": -0.8400627626703064
+   },
+   "pnl_by_year": {
+    "2021": -3241.653784366446,
+    "2022": -3563.2258681212293,
+    "2023": -689.2788672872831,
+    "2024": 2084.8559029359676,
+    "2025": 102.51087738559882,
+    "2026": -1184.8894631580717
+   },
+   "pnl_by_symbol_top": {
+    "ETC": 1683.5270184749536,
+    "SUI": 1022.84369989593,
+    "XLM": -928.3902711674743,
+    "ICP": -687.0690830490284,
+    "ATOM": -683.9565526139789,
+    "ALGO": -633.1374766135832,
+    "XTZ": 570.3161335746632,
+    "AAVE": -433.64747790468385,
+    "LINK": -432.9467463989159,
+    "UNI": -425.02414329163804
+   }
+  },
+  "buy_and_hold_btc": {
+   "candidate": "buy_and_hold_btc",
+   "role": "benchmark",
+   "grid": [
+    {}
+   ],
+   "trials": 22,
+   "folds": [
+    {
+     "fit": [
+      1583625600,
+      1615161600
+     ],
+     "test": [
+      1615161600,
+      1622937600
+     ],
+     "params": {},
+     "fit_score": 2.492217041246147
+    },
+    {
+     "fit": [
+      1591401600,
+      1622937600
+     ],
+     "test": [
+      1622937600,
+      1630713600
+     ],
+     "params": {},
+     "fit_score": 1.2124650282646157
+    },
+    {
+     "fit": [
+      1599177600,
+      1630713600
+     ],
+     "test": [
+      1630713600,
+      1638489600
+     ],
+     "params": {},
+     "fit_score": 1.5248431348032587
+    },
+    {
+     "fit": [
+      1606953600,
+      1638489600
+     ],
+     "test": [
+      1638489600,
+      1646265600
+     ],
+     "params": {},
+     "fit_score": 1.1520462966033014
+    },
+    {
+     "fit": [
+      1614729600,
+      1646265600
+     ],
+     "test": [
+      1646265600,
+      1654041600
+     ],
+     "params": {},
+     "fit_score": -0.1679828473635566
+    },
+    {
+     "fit": [
+      1622505600,
+      1654041600
+     ],
+     "test": [
+      1654041600,
+      1661817600
+     ],
+     "params": {},
+     "fit_score": -0.14093212212214967
+    },
+    {
+     "fit": [
+      1630281600,
+      1661817600
+     ],
+     "test": [
+      1661817600,
+      1669593600
+     ],
+     "params": {},
+     "fit_score": -0.9761148628027413
+    },
+    {
+     "fit": [
+      1638057600,
+      1669593600
+     ],
+     "test": [
+      1669593600,
+      1677369600
+     ],
+     "params": {},
+     "fit_score": -1.918393300559654
+    },
+    {
+     "fit": [
+      1645833600,
+      1677369600
+     ],
+     "test": [
+      1677369600,
+      1685145600
+     ],
+     "params": {},
+     "fit_score": -0.9163928365921938
+    },
+    {
+     "fit": [
+      1653609600,
+      1685145600
+     ],
+     "test": [
+      1685145600,
+      1692921600
+     ],
+     "params": {},
+     "fit_score": -0.140718725666281
+    },
+    {
+     "fit": [
+      1661385600,
+      1692921600
+     ],
+     "test": [
+      1692921600,
+      1700697600
+     ],
+     "params": {},
+     "fit_score": 0.4161343728400357
+    },
+    {
+     "fit": [
+      1669161600,
+      1700697600
+     ],
+     "test": [
+      1700697600,
+      1708473600
+     ],
+     "params": {},
+     "fit_score": 1.8531077788727706
+    },
+    {
+     "fit": [
+      1676937600,
+      1708473600
+     ],
+     "test": [
+      1708473600,
+      1716249600
+     ],
+     "params": {},
+     "fit_score": 1.9360095815030058
+    },
+    {
+     "fit": [
+      1684713600,
+      1716249600
+     ],
+     "test": [
+      1716249600,
+      1724025600
+     ],
+     "params": {},
+     "fit_score": 1.888359485593958
+    },
+    {
+     "fit": [
+      1692489600,
+      1724025600
+     ],
+     "test": [
+      1724025600,
+      1731801600
+     ],
+     "params": {},
+     "fit_score": 1.2433013265149377
+    },
+    {
+     "fit": [
+      1700265600,
+      1731801600
+     ],
+     "test": [
+      1731801600,
+      1739577600
+     ],
+     "params": {},
+     "fit_score": 1.6876758938770184
+    },
+    {
+     "fit": [
+      1708041600,
+      1739577600
+     ],
+     "test": [
+      1739577600,
+      1747353600
+     ],
+     "params": {},
+     "fit_score": 1.2300584038191855
+    },
+    {
+     "fit": [
+      1715817600,
+      1747353600
+     ],
+     "test": [
+      1747353600,
+      1755129600
+     ],
+     "params": {},
+     "fit_score": 0.9847553765878322
+    },
+    {
+     "fit": [
+      1723593600,
+      1755129600
+     ],
+     "test": [
+      1755129600,
+      1762905600
+     ],
+     "params": {},
+     "fit_score": 1.647212735911753
+    },
+    {
+     "fit": [
+      1731369600,
+      1762905600
+     ],
+     "test": [
+      1762905600,
+      1770681600
+     ],
+     "params": {},
+     "fit_score": 0.36029372869310794
+    },
+    {
+     "fit": [
+      1739145600,
+      1770681600
+     ],
+     "test": [
+      1770681600,
+      1778457600
+     ],
+     "params": {},
+     "fit_score": -0.6548869987028766
+    },
+    {
+     "fit": [
+      1746921600,
+      1778457600
+     ],
+     "test": [
+      1778457600,
+      1786233600
+     ],
+     "params": {},
+     "fit_score": -0.5903292088369816
+    }
+   ],
+   "oos_chained": {
+    "total_return": 0.1016310409102148,
+    "cagr": 0.01802470379908261,
+    "max_drawdown": -0.11448290551986517,
+    "sharpe": 0.3541294027731098,
+    "trades": 22,
+    "win_rate": 0.5454545454545454,
+    "avg_trade_ret": 0.047792828733286725,
+    "profit_factor": 1.4861317360323603,
+    "pnl_by_year": {
+     "2021": 175.1571603755065,
+     "2022": -953.6540471303754,
+     "2023": 924.003269585684,
+     "2024": 1085.4678493540896,
+     "2025": 168.4686935867155,
+     "2026": -348.00069363931254
+    },
+    "pnl_by_symbol": {
+     "BTC": 1051.442232132308
+    },
+    "pnl_ex_top": {
+     "1": 542.1803641050849,
+     "3": -295.03394756124396,
+     "5": -1065.9039466466595
+    },
+    "symbols_with_profit": 1,
+    "years": 5.418206707734429
+   },
+   "oos_chained_fee_stress": {
+    "total_return": 0.09662404613653774,
+    "cagr": 0.01716914475140463,
+    "max_drawdown": -0.11503940207292251,
+    "sharpe": 0.33897286754443995,
+    "trades": 22,
+    "win_rate": 0.5454545454545454,
+    "avg_trade_ret": 0.045699273824081954,
+    "profit_factor": 1.4614956412736908,
+    "pnl_by_year": {
+     "2021": 168.81299989042554,
+     "2022": -959.740834852025,
+     "2023": 914.1648063558449,
+     "2024": 1075.3067699024496,
+     "2025": 160.13983519218405,
+     "2026": -353.2995523590762
+    },
+    "pnl_by_symbol": {
+     "BTC": 1005.3840241298027
+    },
+    "pnl_ex_top": {
+     "1": 499.13775470798714,
+     "3": -332.4076271968781,
+     "5": -1097.74125656275
+    },
+    "symbols_with_profit": 1,
+    "years": 5.418206707734429
+   },
+   "oos_continuous": {
+    "total_return": 0.02260823394111111,
+    "cagr": 0.004134696885113698,
+    "max_drawdown": -0.11054854398377434,
+    "sharpe": 0.10109474195083405,
+    "trades": 1,
+    "win_rate": 1.0,
+    "avg_trade_ret": 0.2260823394111109,
+    "profit_factor": Infinity,
+    "pnl_by_year": {
+     "2026": 226.0823394111109
+    },
+    "pnl_by_symbol": {
+     "BTC": 226.0823394111109
+    },
+    "pnl_ex_top": {
+     "1": 0,
+     "3": 0,
+     "5": 0
+    },
+    "symbols_with_profit": 1,
+    "years": 5.418206707734429
+   },
+   "oos_continuous_fee_stress": {
+    "total_return": 0.022363255102702206,
+    "cagr": 0.004090295336901084,
+    "max_drawdown": -0.11046152496118111,
+    "sharpe": 0.1003541083526604,
+    "trades": 1,
+    "win_rate": 1.0,
+    "avg_trade_ret": 0.22363255102702095,
+    "profit_factor": Infinity,
+    "pnl_by_year": {
+     "2026": 223.63255102702092
+    },
+    "pnl_by_symbol": {
+     "BTC": 223.63255102702092
+    },
+    "pnl_ex_top": {
+     "1": 0,
+     "3": 0,
+     "5": 0
+    },
+    "symbols_with_profit": 1,
+    "years": 5.418206707734429
+   },
+   "gate_checks": {
+    "oos_positive": true,
+    "symbols>=min": false,
+    "not_single_year": false,
+    "survives_fees_x1.25": true,
+    "survives_fees_x1.25_oos": true,
+    "not_top3_dependent": false,
+    "param_surface_smooth": true,
+    "trials_recorded": true
+   },
+   "advancement": {
+    "oos_positive": true,
+    "survives_fees_x1.25": true,
+    "survives_fees_x1.25_oos": true,
+    "oos_trades>=100": false,
+    "thirds_2_of_3": false,
+    "scale_invariant": true,
+    "symbols>=min": false,
+    "not_single_year": false,
+    "not_top3_dependent": false,
+    "delisting_canonical": true,
+    "boundary_dependency_ok": false
+   },
+   "verdict": "n/a (benchmark)",
+   "boundary": {
+    "ok": false,
+    "chained_return": 0.1016310409102148,
+    "continuous_return": 0.02260823394111111,
+    "boundary_exits": 22,
+    "sign_flip": false,
+    "diff_over_20pct": true
+   },
+   "thirds": {
+    "ok": false,
+    "returns": [
+     -0.06860069113482659,
+     0.1057575929623571,
+     -0.007081863054037574
+    ]
+   },
+   "scale": {
+    "ok": true,
+    "max_abs_diff": 2.220446049250313e-16
+   },
+   "delisting": {
+    "exposure_pnl_share": 0.0,
+    "exposure_trade_share": 0.0,
+    "triggered": false,
+    "cases": {
+     "canonical": {
+      "multiple": 10,
+      "haircut": 0.5,
+      "repriced_exits": 0,
+      "delta_pnl": 0.0,
+      "adjusted_return": 0.02260823394111111
+     },
+     "mild": {
+      "multiple": 5,
+      "haircut": 0.25,
+      "repriced_exits": 0,
+      "delta_pnl": 0.0,
+      "adjusted_return": 0.02260823394111111
+     },
+     "tail": {
+      "multiple": 20,
+      "haircut": 1.0,
+      "repriced_exits": 0,
+      "delta_pnl": 0.0,
+      "adjusted_return": 0.02260823394111111
+     }
+    },
+    "canonical_ok": true
+   },
+   "no_fill_reasons": {},
+   "per_regime_state": {
+    "risk_on": {
+     "trades": 0,
+     "pnl": 0.0
+    },
+    "neutral": {
+     "trades": 0,
+     "pnl": 0.0
+    },
+    "risk_off": {
+     "trades": 0,
+     "pnl": 0.0
+    },
+    "unknown": {
+     "trades": 1,
+     "pnl": 226.0823394111109
+    }
+   },
+   "monte_carlo": {
+    "n": 500,
+    "block": 20,
+    "seed": 7,
+    "terminal_p05": 0.8085726102270273,
+    "terminal_p50": 1.0090066693452375,
+    "terminal_p95": 1.2756468725343117,
+    "mdd_p05": -0.24899421196002391,
+    "mdd_p50": -0.13077538514542175
+   },
+   "pnl_by_year": {
+    "2026": 226.0823394111109
+   },
+   "pnl_by_symbol_top": {
+    "BTC": 226.0823394111109
+   }
+  },
+  "cash": {
+   "candidate": "cash",
+   "role": "benchmark",
+   "grid": [
+    {}
+   ],
+   "trials": 22,
+   "folds": [
+    {
+     "fit": [
+      1583625600,
+      1615161600
+     ],
+     "test": [
+      1615161600,
+      1622937600
+     ],
+     "params": {},
+     "fit_score": -1000000000.0
+    },
+    {
+     "fit": [
+      1591401600,
+      1622937600
+     ],
+     "test": [
+      1622937600,
+      1630713600
+     ],
+     "params": {},
+     "fit_score": -1000000000.0
+    },
+    {
+     "fit": [
+      1599177600,
+      1630713600
+     ],
+     "test": [
+      1630713600,
+      1638489600
+     ],
+     "params": {},
+     "fit_score": -1000000000.0
+    },
+    {
+     "fit": [
+      1606953600,
+      1638489600
+     ],
+     "test": [
+      1638489600,
+      1646265600
+     ],
+     "params": {},
+     "fit_score": -1000000000.0
+    },
+    {
+     "fit": [
+      1614729600,
+      1646265600
+     ],
+     "test": [
+      1646265600,
+      1654041600
+     ],
+     "params": {},
+     "fit_score": -1000000000.0
+    },
+    {
+     "fit": [
+      1622505600,
+      1654041600
+     ],
+     "test": [
+      1654041600,
+      1661817600
+     ],
+     "params": {},
+     "fit_score": -1000000000.0
+    },
+    {
+     "fit": [
+      1630281600,
+      1661817600
+     ],
+     "test": [
+      1661817600,
+      1669593600
+     ],
+     "params": {},
+     "fit_score": -1000000000.0
+    },
+    {
+     "fit": [
+      1638057600,
+      1669593600
+     ],
+     "test": [
+      1669593600,
+      1677369600
+     ],
+     "params": {},
+     "fit_score": -1000000000.0
+    },
+    {
+     "fit": [
+      1645833600,
+      1677369600
+     ],
+     "test": [
+      1677369600,
+      1685145600
+     ],
+     "params": {},
+     "fit_score": -1000000000.0
+    },
+    {
+     "fit": [
+      1653609600,
+      1685145600
+     ],
+     "test": [
+      1685145600,
+      1692921600
+     ],
+     "params": {},
+     "fit_score": -1000000000.0
+    },
+    {
+     "fit": [
+      1661385600,
+      1692921600
+     ],
+     "test": [
+      1692921600,
+      1700697600
+     ],
+     "params": {},
+     "fit_score": -1000000000.0
+    },
+    {
+     "fit": [
+      1669161600,
+      1700697600
+     ],
+     "test": [
+      1700697600,
+      1708473600
+     ],
+     "params": {},
+     "fit_score": -1000000000.0
+    },
+    {
+     "fit": [
+      1676937600,
+      1708473600
+     ],
+     "test": [
+      1708473600,
+      1716249600
+     ],
+     "params": {},
+     "fit_score": -1000000000.0
+    },
+    {
+     "fit": [
+      1684713600,
+      1716249600
+     ],
+     "test": [
+      1716249600,
+      1724025600
+     ],
+     "params": {},
+     "fit_score": -1000000000.0
+    },
+    {
+     "fit": [
+      1692489600,
+      1724025600
+     ],
+     "test": [
+      1724025600,
+      1731801600
+     ],
+     "params": {},
+     "fit_score": -1000000000.0
+    },
+    {
+     "fit": [
+      1700265600,
+      1731801600
+     ],
+     "test": [
+      1731801600,
+      1739577600
+     ],
+     "params": {},
+     "fit_score": -1000000000.0
+    },
+    {
+     "fit": [
+      1708041600,
+      1739577600
+     ],
+     "test": [
+      1739577600,
+      1747353600
+     ],
+     "params": {},
+     "fit_score": -1000000000.0
+    },
+    {
+     "fit": [
+      1715817600,
+      1747353600
+     ],
+     "test": [
+      1747353600,
+      1755129600
+     ],
+     "params": {},
+     "fit_score": -1000000000.0
+    },
+    {
+     "fit": [
+      1723593600,
+      1755129600
+     ],
+     "test": [
+      1755129600,
+      1762905600
+     ],
+     "params": {},
+     "fit_score": -1000000000.0
+    },
+    {
+     "fit": [
+      1731369600,
+      1762905600
+     ],
+     "test": [
+      1762905600,
+      1770681600
+     ],
+     "params": {},
+     "fit_score": -1000000000.0
+    },
+    {
+     "fit": [
+      1739145600,
+      1770681600
+     ],
+     "test": [
+      1770681600,
+      1778457600
+     ],
+     "params": {},
+     "fit_score": -1000000000.0
+    },
+    {
+     "fit": [
+      1746921600,
+      1778457600
+     ],
+     "test": [
+      1778457600,
+      1786233600
+     ],
+     "params": {},
+     "fit_score": -1000000000.0
+    }
+   ],
+   "oos_chained": {
+    "total_return": 0.0,
+    "cagr": 0.0,
+    "max_drawdown": 0.0,
+    "sharpe": 0.0,
+    "trades": 0,
+    "win_rate": null,
+    "avg_trade_ret": null,
+    "profit_factor": null,
+    "pnl_by_year": {},
+    "pnl_by_symbol": {},
+    "pnl_ex_top": {
+     "1": 0,
+     "3": 0,
+     "5": 0
+    },
+    "symbols_with_profit": 0,
+    "years": 5.418206707734429
+   },
+   "oos_chained_fee_stress": {
+    "total_return": 0.0,
+    "cagr": 0.0,
+    "max_drawdown": 0.0,
+    "sharpe": 0.0,
+    "trades": 0,
+    "win_rate": null,
+    "avg_trade_ret": null,
+    "profit_factor": null,
+    "pnl_by_year": {},
+    "pnl_by_symbol": {},
+    "pnl_ex_top": {
+     "1": 0,
+     "3": 0,
+     "5": 0
+    },
+    "symbols_with_profit": 0,
+    "years": 5.418206707734429
+   },
+   "oos_continuous": {
+    "total_return": 0.0,
+    "cagr": 0.0,
+    "max_drawdown": 0.0,
+    "sharpe": 0.0,
+    "trades": 0,
+    "win_rate": null,
+    "avg_trade_ret": null,
+    "profit_factor": null,
+    "pnl_by_year": {},
+    "pnl_by_symbol": {},
+    "pnl_ex_top": {
+     "1": 0,
+     "3": 0,
+     "5": 0
+    },
+    "symbols_with_profit": 0,
+    "years": 5.418206707734429
+   },
+   "oos_continuous_fee_stress": {
+    "total_return": 0.0,
+    "cagr": 0.0,
+    "max_drawdown": 0.0,
+    "sharpe": 0.0,
+    "trades": 0,
+    "win_rate": null,
+    "avg_trade_ret": null,
+    "profit_factor": null,
+    "pnl_by_year": {},
+    "pnl_by_symbol": {},
+    "pnl_ex_top": {
+     "1": 0,
+     "3": 0,
+     "5": 0
+    },
+    "symbols_with_profit": 0,
+    "years": 5.418206707734429
+   },
+   "gate_checks": {
+    "oos_positive": false,
+    "symbols>=min": false,
+    "not_single_year": false,
+    "survives_fees_x1.25": false,
+    "survives_fees_x1.25_oos": false,
+    "not_top3_dependent": false,
+    "param_surface_smooth": true,
+    "trials_recorded": true
+   },
+   "advancement": {
+    "oos_positive": false,
+    "survives_fees_x1.25": false,
+    "survives_fees_x1.25_oos": false,
+    "oos_trades>=100": false,
+    "thirds_2_of_3": false,
+    "scale_invariant": true,
+    "symbols>=min": false,
+    "not_single_year": false,
+    "not_top3_dependent": false,
+    "delisting_canonical": true,
+    "boundary_dependency_ok": true
+   },
+   "verdict": "n/a (benchmark)",
+   "boundary": {
+    "ok": true,
+    "chained_return": 0.0,
+    "continuous_return": 0.0,
+    "boundary_exits": 0,
+    "sign_flip": false,
+    "diff_over_20pct": false
+   },
+   "thirds": {
+    "ok": false,
+    "returns": [
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   "scale": {
+    "ok": true,
+    "max_abs_diff": 0.0
+   },
+   "delisting": {
+    "exposure_pnl_share": 0.0,
+    "exposure_trade_share": 0.0,
+    "triggered": false,
+    "cases": {
+     "canonical": {
+      "multiple": 10,
+      "haircut": 0.5,
+      "repriced_exits": 0,
+      "delta_pnl": 0.0,
+      "adjusted_return": 0.0
+     },
+     "mild": {
+      "multiple": 5,
+      "haircut": 0.25,
+      "repriced_exits": 0,
+      "delta_pnl": 0.0,
+      "adjusted_return": 0.0
+     },
+     "tail": {
+      "multiple": 20,
+      "haircut": 1.0,
+      "repriced_exits": 0,
+      "delta_pnl": 0.0,
+      "adjusted_return": 0.0
+     }
+    },
+    "canonical_ok": true
+   },
+   "no_fill_reasons": {},
+   "per_regime_state": {
+    "risk_on": {
+     "trades": 0,
+     "pnl": 0.0
+    },
+    "neutral": {
+     "trades": 0,
+     "pnl": 0.0
+    },
+    "risk_off": {
+     "trades": 0,
+     "pnl": 0.0
+    },
+    "unknown": {
+     "trades": 0,
+     "pnl": 0.0
+    }
+   },
+   "monte_carlo": {
+    "n": 500,
+    "block": 20,
+    "seed": 7,
+    "terminal_p05": 1.0,
+    "terminal_p50": 1.0,
+    "terminal_p95": 1.0,
+    "mdd_p05": 0.0,
+    "mdd_p50": 0.0
+   },
+   "pnl_by_year": {},
+   "pnl_by_symbol_top": {}
+  }
+ }
+}

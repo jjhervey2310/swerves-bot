@@ -16,8 +16,10 @@ def folds(start_t, end_t, fit_days, test_days, step_days=None):
     return out
 
 
-def walk_forward(market, make_strategy, param_grid, costs, fit_days, test_days, select="sharpe", sizing=None, fee_stress=1.25, regime=None, gate_fn=None):
-    sizing = sizing or {}
+def walk_forward(market, make_strategy, param_grid, costs, fit_days, test_days, select="sharpe", sizing=None, fee_stress=1.25, regime=None, gate_fn=None, universe=None):
+    sizing = dict(sizing or {})
+    if universe is not None:
+        sizing["universe"] = universe      # Phase 4: the frozen monthly schedule applies to EVERY run below — fit, OOS, stress, filtered (R-U)
     stressed = dataclasses.replace(costs, maker_fee=min(0.099, costs.maker_fee * fee_stress), taker_fee=min(0.099, costs.taker_fee * fee_stress), tier=f"{costs.tier} x{fee_stress}")
     """For each fold: run every param set on the fit window, pick the best by `select`, run it on the test window.
     Returns per-fold picks and the concatenated out-of-sample trades/metrics. Trial count is recorded (multiple testing)."""
@@ -103,8 +105,10 @@ def regime_sensitivity(market, make_strategy, params, costs, fit_days, test_days
     return out
 
 
-def robustness(market, make_strategy, params, costs, perturb=0.2, sizing=None):
-    sizing = sizing or {}
+def robustness(market, make_strategy, params, costs, perturb=0.2, sizing=None, universe=None):
+    sizing = dict(sizing or {})
+    if universe is not None:
+        sizing["universe"] = universe      # same universe as the tournament verdict run (R-U)
     """Fee stress, parameter neighbourhood, top-winner exclusion — the shape of the metric surface."""
     base = summarize(run(market, make_strategy(**params), costs, **sizing))
     out = {"base": base, "fees_x1.25": None, "fees_x1.5": None, "neighbours": []}

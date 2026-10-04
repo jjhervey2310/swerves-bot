@@ -38,8 +38,8 @@ class Market:
         """Index one past the last bar completed by t (bars[:i] are visible at t)."""
         return bisect.bisect_right(self._ts.get(sym, []), t - self.bar_seconds)
 
-    def as_of(self, t, regime=None):
-        return AsOfView.build(self, int(t), regime)
+    def as_of(self, t, regime=None, universe=None):
+        return AsOfView.build(self, int(t), regime, universe)
 
     def bar_opening_at(self, sym, t):
         """The engine's fill bar: the bar whose open time is exactly t, else None. Not exposed to strategies."""
@@ -71,7 +71,7 @@ class AsOfView:
     __slots__ = ("t", "_bars", "_universe", "_bar_seconds", "_regime")
 
     @classmethod
-    def build(cls, market, t, regime=None):
+    def build(cls, market, t, regime=None, universe=None):
         v = cls.__new__(cls)
         v.t, v._bar_seconds = t, market.bar_seconds
         v._regime = regime.at(t) if regime is not None else None      # Phase 3: the published label at the last decision time <= t, materialised (no series reference)
@@ -85,6 +85,9 @@ class AsOfView:
             fresh = i and bs[i - 1].t + market.bar_seconds > t - market.bar_seconds   # completed in the last interval
             if a is not None and a <= t and (d is None or t < d) and fresh:
                 uni.append(s)
+        if universe is not None:                                       # Phase 4: frozen monthly membership (tournament.UniverseSchedule)
+            allowed = universe.at(t)
+            uni = [s for s in uni if s in allowed]
         v._universe = tuple(sorted(uni))
         return v
 

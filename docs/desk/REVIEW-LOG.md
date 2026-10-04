@@ -345,3 +345,78 @@ inconclusive rule; (4) four-cell attribution dropped for Phase 4, gross_cap 0.95
 canonical delisting case 10×/−50% triggered at ≥ 10% of OOS P&L or trades, mild and tail cases reported. mean_reversion
 `n` confirmed as the MA lookback; breakout20 negative control never enters selection or trial accounting. Awaiting
 acceptance to freeze.
+
+---
+
+## R-2026-10-03-S (acceptance) — Phase 4 pre-registration v2 FROZEN
+
+> R-S — Phase 4 strategy-tournament pre-registration v2 ACCEPTED AND FROZEN at `0665068`. Implementation may begin. No
+> candidate, parameter grid, universe rule, exclusion map, cost assumption, sizing rule, robustness threshold, or
+> advancement criterion may change after tournament results begin. Any change requires a new pre-registration/version and
+> cannot retroactively replace this tournament.
+
+Implementation clarification (not a design change): the manifest persists the exact advancement booleans rather than a
+recomputed "core" category — `oos_positive`, `survives_fees_x1.25`, `survives_fees_x1.25_oos`, `oos_trades>=100`,
+`thirds_2_of_3`, `scale_invariant`, `symbols>=min`, `not_single_year`, `not_top3_dependent`, `delisting_canonical`
+(with its trigger share), `boundary_dependency_ok`. Build order: universe builder → continuous OOS runner → cost sets →
+delisting stress → manifest/gate fields → synthetic tests → one real frozen-snapshot tournament run → complete table to the
+independent reviewer unchanged. Nothing is promoted to `research_accepted` before that review.
+
+> **R-S FINAL — Phase 4 strategy-tournament pre-registration v2 ACCEPTED AND FROZEN after Phase 3 merge. Claude may build
+> the tournament infrastructure. No candidate, parameter grid, universe rule, exclusion map, cost assumption, sizing rule,
+> robustness threshold, or advancement criterion may change after tournament results begin. Any later change requires a new
+> pre-registration/version and cannot retroactively replace this tournament. The first real frozen-snapshot tournament table
+> must be sent unchanged to ChatGPT for independent review before any candidate is marked `research_accepted`.**
+
+---
+
+## R-2026-10-03-T — Phase 4 tournament, first frozen-snapshot run (UNREVIEWED; nothing promoted)
+
+Table: `docs/desk/PHASE4-TABLE-2026-10-03.{md,json}` @ 65974d2. Snapshot data_hash `8df7990c93dcc632`, universe_hash
+`64e00348d99bb713`, membership_hash `99c437c3e40dbb57`, 77 monthly rankings, OOS span 2021-03-08 → 2026-08-09 (22 folds).
+All three candidates REJECTED on the frozen booleans: sma_trend continuous OOS −69.6% (×1.25 −71.4%, DD −89.2%, 289 trades,
+PF 0.65); momentum_top −91.0% (−91.5%, DD −93.7%, 231, PF 0.43); mean_reversion −94.9% (−95.9%, DD −96.3%, 1,163, PF 0.73).
+Every candidate fails oos_positive, both fee-stress checks, thirds, not_single_year and not_top3_dependent; all pass
+scale invariance, ≥100 trades, delisting (not triggered) and boundary dependency. Negative control breakout20 −64.9%
+(boundary-dependent). Benchmarks: BTC buy-and-hold +2.3% equity from a single 10% slot; BTC price itself +23.8% over the
+span (52,415 → 64,909, peak 124,720); cash 0%. Sent unchanged to the independent reviewer. Observation for the reviewer,
+not a rule change: under the frozen allocator the buy_and_hold benchmark deploys one engine slot, so its equity return
+understates the asset's price return; both numbers are reported.
+
+---
+
+## R-2026-10-03-U — ChatGPT integrity review of the first Phase 4 table: FAIL, rerun required
+
+Finding accepted: `evaluate()` passed the frozen monthly universe to the continuous verdict run but not to
+`research.walk_forward` (parameter selection, chained OOS, OOS fee stress) nor to `research.robustness` (full-sample fee
+gate), so those ran on the full listed universe. Implementation correction, not a rule change: `walk_forward` and
+`robustness` now take `universe=` and apply it to every run; `evaluate()` passes it to both. Regression test
+`UniverseThreading.test_outsider_cannot_influence_selection_or_gate`: a perfectly trending name with negligible volume
+(never top-N) appears in the unthreaded run's P&L and never in the threaded selection, OOS, fee-stress, robustness or
+continuous results. 82/82 tests. The first table (65974d2) is marked INVALID for integrity; provisional FAILs stand pending
+the single corrected rerun on the same snapshot, costs, grids and rules.
+
+---
+
+## R-2026-10-03-V — Phase 4 tournament, corrected rerun (first VALID table; UNREVIEWED; nothing promoted)
+
+Table: `docs/desk/PHASE4-TABLE-2026-10-03-rerun.{md,json}`. Same snapshot (data_hash `8df7990c93dcc632`, universe_hash
+`64e00348d99bb713`), same membership_hash `99c437c3e40dbb57`, same costs, grids, sizing and rules; only change is R-U
+(frozen universe threaded through selection, fee stress and robustness). Continuous OOS 2021-03-08 → 2026-08-09:
+sma_trend −80.5% (×1.25 −81.7%, DD −92.9%, 305 trades, PF 0.53); momentum_top −90.5% (−90.9%, DD −91.8%, 219, PF 0.39);
+mean_reversion −91.3% (−92.9%, DD −93.7%, 1,064, PF 0.75). All three fail oos_positive, both fee-stress checks, thirds,
+not_single_year, not_top3_dependent; all pass ≥100 trades, scale invariance, delisting (exposure 3–8%, below the 10%
+trigger) and boundary dependency (chained vs continuous within 20%, no sign flip). Negative control breakout20 −64.9%,
+now boundary-clean. Benchmarks unchanged: BTC B&H +2.3% equity from one 10% slot (BTC price +23.8%), cash 0%. Verdicts per
+frozen rules: three REJECTED. Sent unchanged for independent final verdicts.
+
+> **R-V — Corrected Phase 4 tournament table VALID after R-U universe-threading fix. `sma_trend`, `momentum_top`, and
+> `mean_reversion` are independently REJECTED. No candidate advances to Phase 5 or Phase 10. Round 2 design may begin
+> under a new pre-registration. Before any future positive candidate can be accepted, held-position temporary missing
+> bars must mark to the last known completed close rather than entry price, with stale marks surfaced in the evidence record.**
+
+Nuances recorded with the table: `delisting_canonical=✓` in round 1 means the stress was not triggered (exposure 3–8%,
+below 10%), not that the strategies survived the haircut. Hardening item implemented the same day: `Position.last_mark`
+holds the last completed close; `Portfolio.equity()` marks a held name with no bar today at that close, never at entry
+price; each such bar-day is an engine event `stale_mark` and the run result carries `stale_marks`. Test
+`StaleMarks.test_missing_bar_marks_at_last_close_not_entry`. 83/83.

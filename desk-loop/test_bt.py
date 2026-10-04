@@ -340,3 +340,18 @@ class Loader(unittest.TestCase):
             load.sb_get = orig
         self.assertEqual(len(rows), 2001); self.assertEqual(counts["AAA"], 2001)
         self.assertEqual(sum(1 for q in calls if "md_candles" in q or "offset=" in q), 3)   # 1000 + 1000 + 1
+
+
+class StaleMarks(unittest.TestCase):
+    """R-V hardening: a held name with no bar today is marked at its last known completed close, and the stale mark is surfaced."""
+    def test_missing_bar_marks_at_last_close_not_entry(self):
+        bars = [Bar(T0 + i * DAY, 100 + i, 101 + i, 99 + i, 100 + i, 1) for i in range(6)]
+        bars = [b for b in bars if b.t != T0 + 3 * DAY]                                   # day 3 missing while held
+        m = mk({"X": bars, "Y": [Bar(T0 + i * DAY, 1, 1, 1, 1, 1) for i in range(6)]}, {"X": (T0, None), "Y": (T0, None)})
+        s = lambda view, pf: [Order("X", "buy")] if view.t == T0 + DAY else []
+        r = run(m, s, COSTS, start_cash=1_000, max_positions=1)
+        eq = dict(r["equity"])
+        units = 1_000 / (101 * (1 + COSTS.per_side()))
+        self.assertAlmostEqual(eq[T0 + 4 * DAY], units * 102, places=6)                    # day 3 marked at day-2 close (102), not entry (101+cost)
+        self.assertEqual(r["stale_marks"], 1)
+        self.assertEqual([e for e in r["events"] if e[2] == "stale_mark"][0][:2], (T0 + 3 * DAY, "X"))
