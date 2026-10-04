@@ -1,3 +1,4 @@
+import type { Venue } from './rh-universe'
 // TIMING GRADE — A/B/C/D/F for "is NOW a good moment to add this name", scored against the house
 // laws (constitution v4/v4.1) and the tape. Deterministic, numbers only — never from thesis text.
 // HARD bars (chase laws, RUNNING extension, drawdown halt) are an F that no button can override:
@@ -41,9 +42,11 @@ export interface TimingInput {
   regime?: Regime; regimeWhy?: string
   breaker?: string | null                // ISO since-timestamp when the A9 sleeve breaker is tripped
   sleeveUsd?: number; nameUsd?: number
-  // Venue. false = the broker has no tradeable pair for this symbol, however many places show a price
-  // for it. Optional so older callers keep working; only an explicit false bars.
-  onRobinhood?: boolean
+  // Venue (lib/rh-universe.ts). 'robinhood' = the agentic account can place the order; 'kraken' = Jacob
+  // buys by hand; 'none' = watch only. Optional so older callers keep working. The venue NEVER touches the
+  // grade — the first version made it a hard bar, which graded GRASS/DRV F and the C+ filter then hid the
+  // very rows Jacob had asked to see (2026-10-03). It gates `buyable` and the pole seat only.
+  venue?: Venue
 }
 
 export interface TimingResult {
@@ -51,8 +54,10 @@ export interface TimingResult {
   hard: string[]; soft: string[]; plus: string[]
   size: { usd: number; pctBook: number; halfSize: boolean; cappedBy: string | null; book: 'SLEEVE-RULE' | 'OWNER-BOOK' }
   stop: { price: number; source: string; pct: number }
-  buyable: boolean            // no hard bar and score >= C
-  overridable: boolean        // soft bars only
+  buyable: boolean            // no hard bar, score >= C, AND the agentic account has a pair for it
+  overridable: boolean        // soft bars only, same venue condition
+  venue: Venue                // where this name can actually be bought
+  venueNote: string | null    // plain-English reason the button is off, when it is off for venue
 }
 
 const round2 = (n: number) => Math.round(n * 100) / 100
@@ -80,10 +85,6 @@ export function gradeTiming(i: TimingInput): TimingResult {
   // the name must not clear. 2026-09-11: a rate limit nulled d30 and ARB — up 84% in 30 days and
   // hard-barred — graded A/100 and read as buyable. A check that cannot run is never a pass.
   if (i.d1 == null || i.d30 == null) hard.push(`CHASE LAWS UNCHECKABLE: ${i.d1 == null ? '24h' : ''}${i.d1 == null && i.d30 == null ? ' and ' : ''}${i.d30 == null ? '30d' : ''} change unavailable from every source. Cannot confirm the name has not already run.`)
-  // A name the account cannot buy is never a buy, whatever the chart says. This bar is MERIT, not a data
-  // gap: it stays in meritHard, so the grade is F and not '?', and it is listed first so it is the reason
-  // you read. GRASS (2026-10-03) had a live Robinhood quote, a Coinbase price and a clean tape — and no pair.
-  if (i.onRobinhood === false) hard.unshift('NOT ON ROBINHOOD: no tradeable pair for this symbol in the broker catalog. A quote page is not a listing. Watch it, chart it, never queue it.')
   if (i.halted) hard.push('desk loop halted or paused — no new entries')
   if (i.held) hard.push('already held — adds go through the deposit basket, not the queue')
   // A rate-limited quote falls back to the last daily close so the grade is still readable, but an
@@ -179,6 +180,8 @@ export function gradeTiming(i: TimingInput): TimingResult {
   // A stale price means UNGRADEABLE, not failed: report '?' and keep the merit score visible so a
   // data outage is never mistaken for a bad name. The hard bar still stands — '?' is never buyable.
   const blind = i.priceStale != null || i.hi20 == null || i.d1 == null || i.d30 == null
+  const venue: Venue = i.venue ?? 'robinhood'
+  const onRh = venue === 'robinhood'
   const meritHard = hard.filter((h) => !/^stale price|^RUNNING law UNCHECKABLE|^CHASE LAWS UNCHECKABLE/.test(h))
   let grade: Grade = blind && meritHard.length === 0 ? '?'
     : meritHard.length || hard.length ? 'F'
@@ -189,7 +192,10 @@ export function gradeTiming(i: TimingInput): TimingResult {
     grade, score, hard, soft, plus,
     size: { usd, pctBook: i.bookUsd ? round2((usd / i.bookUsd) * 100) : 0, halfSize: i.halfSize || halveDay, cappedBy, book: i.signal ? 'SLEEVE-RULE' : 'OWNER-BOOK' },
     stop,
-    buyable: hard.length === 0 && (grade === 'A' || grade === 'B' || grade === 'C') && usd > 0,   // D = override only, F = never
-    overridable: hard.length === 0 && usd > 0,
+    buyable: onRh && hard.length === 0 && (grade === 'A' || grade === 'B' || grade === 'C') && usd > 0,   // D = override only, F = never
+    overridable: onRh && hard.length === 0 && usd > 0,
+    venue,
+    venueNote: venue === 'kraken' ? 'Not on Robinhood. Buyable on Kraken by hand — this account cannot place the order.'
+      : venue === 'none' ? 'Not on Robinhood or Kraken. Watch only.' : null,
   }
 }

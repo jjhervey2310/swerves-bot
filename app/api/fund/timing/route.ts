@@ -3,7 +3,7 @@ import { createServiceClient } from '@/lib/supabase'
 import { resolveIds, cgFetch, lastKnownPrices, coinbaseSpot } from '@/lib/desk-cg'
 import { gradeTiming, ANCHOR, type TimingInput, type Regime } from '@/lib/desk-timing'
 import { rhConfigured, bestBidAsk } from '@/lib/robinhood'
-import { RH_SYMBOLS } from '@/lib/rh-universe'
+import { venueFor } from '@/lib/rh-universe'
 import { denverWeekStartIso } from '@/lib/desk/market-time'
 import { rsCompletedPct } from '@/lib/desk/relative-strength'
 
@@ -211,7 +211,7 @@ export async function buildTiming(symbol: string) {
     weeklyEntries: new Set(((tradesQ.data ?? []) as { symbol: string }[]).map((t) => t.symbol).filter((s) => !ANCHOR.has(s))).size,
     blackout, halted: String(cfg.loop_enabled ?? 'true').toLowerCase() !== 'true',
     halfSize, held: positions.some((p) => p.symbol === sym),
-    onRobinhood: RH_SYMBOLS.has(sym),
+    venue: venueFor(sym),
     signal, signalWhy, regime, regimeWhy, breaker: cfg.sleeve_breaker ? String(cfg.sleeve_breaker) : null, sleeveUsd, nameUsd,
   }
   const result = gradeTiming(input)

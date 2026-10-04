@@ -19,3 +19,16 @@ export const RH_SYMBOLS = new Set([
   'RENDER','SEI','SENT','SHIB','SKR','SKY','SNX','SOL','STRK','SUI','SYRUP','TRUMP','UNI','VIRTUAL',
   'VVV','W','WIF','WLD','WLFI','XCN','XLM','XPL','XRP','XTZ','ZEC','ZORA','ZRO','ZRX','PUMP',
 ])
+
+// WATCH-LIST NAMES ROBINHOOD DOES NOT LIST BUT KRAKEN DOES. Checked against api.kraken.com/0/public/
+// AssetPairs on 2026-10-03: GRASSUSD and DRVUSD exist; ORBIO is on neither venue. Jacob buys these BY
+// HAND on Kraken (2026-10-03: "we can get them on kraken") — the agentic Robinhood account cannot, so
+// the buy button never fires for them, but the grade is computed on merit like everyone else and the
+// row stays visible. A Kraken name can never take the pole seat: the pole is a standing pre-approved
+// buy, and there is no executor for it.
+export const KRAKEN_SYMBOLS = new Set(['GRASS', 'DRV'])
+export type Venue = 'robinhood' | 'kraken' | 'none'
+export function venueFor(sym: string): Venue {
+  const s = sym.toUpperCase()
+  return RH_SYMBOLS.has(s) ? 'robinhood' : KRAKEN_SYMBOLS.has(s) ? 'kraken' : 'none'
+}
