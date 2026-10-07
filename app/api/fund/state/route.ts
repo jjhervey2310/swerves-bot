@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server'
 import { createServiceClient } from '@/lib/supabase'
 import { resolveIds, coinbaseSpot, lastKnownPrices } from '@/lib/desk-cg'
-import { rhConfigured, bestBidAsk, listOpenOrders, getOrder, orderLevel, orderQty } from '@/lib/robinhood'
+import { rhConfigured, bestBidAsk, listOpenOrders, orderState, orderLevel, orderQty } from '@/lib/robinhood'
 import type { SupabaseClient } from '@supabase/supabase-js'
 
 // Live desk state for the ROBINHOOD tab's 60s client refresh.
@@ -48,17 +48,16 @@ async function syncOpenOrders(supabase: SupabaseClient): Promise<void> {
     const mentioned = new Set([...orders, ...closed].map((o) => o.id))
     const { data: snap } = await supabase.from('broker_open_orders').select('order_id')
     const unmentioned = ((snap ?? []) as { order_id: string }[]).map((r) => r.order_id).filter((id) => id && !mentioned.has(id))
+    // Three answers, three actions. A reported state that is not open → gone. NOT FOUND → gone: through
+    // the API key a cancelled order a few weeks old 404s (2026-10-07, seven of them), and a broker that has
+    // just answered the list call and then says "no such order" has told us there is nothing resting by
+    // that id. UNKNOWN (5xx, network, auth) → leave the row and write why into the sync note, because a
+    // swallowed error is how seven phantoms survived a deploy.
     for (const id of unmentioned.slice(0, 20)) {
-      try {
-        const o = await getOrder(id)
-        const st = (o.state ?? '').toLowerCase()
-        if (st && !['queued', 'confirmed', 'partially_filled', 'open'].includes(st)) goneIds.push(id)
-      } catch (e) {
-        // Could not ask — leave the row, say nothing false. But SAY WHY in the sync note: this is the
-        // only way to see from prod what the per-id endpoint actually returned (2026-10-07: the first
-        // version swallowed it, and seven rows survived a deploy with no visible reason).
-        if (!lastSyncNote?.includes('lookup')) lastSyncNote = `${lastSyncNote ?? ''} | lookup ${id.slice(0, 8)} failed: ${e instanceof Error ? e.message.slice(0, 140) : 'unknown'}`
-      }
+      const r = await orderState(id)
+      if (r.kind === 'state' && r.state && !['queued', 'confirmed', 'partially_filled', 'open', 'new', 'pending'].includes(r.state)) goneIds.push(id)
+      else if (r.kind === 'not_found') goneIds.push(id)
+      else if (r.kind === 'unknown' && !lastSyncNote?.includes('lookup')) lastSyncNote = `${lastSyncNote ?? ''} | lookup ${id.slice(0, 8)} unknown: ${r.why}`
     }
     if (goneIds.length) await supabase.from('broker_open_orders').delete().in('order_id', goneIds)
     if (rows.length || goneIds.length) await supabase.from('desk_config').upsert({ key: 'open_orders_synced_at', value: new Date().toISOString() }, { onConflict: 'key' })

@@ -82,6 +82,20 @@ export async function stopLimitSell(symbol: string, assetQty: string, stopPrice:
 export async function getOrder(id: string): Promise<Order> {
   return call<Order>('GET', `/api/v1/crypto/trading/orders/${id}/`)
 }
+/** What the broker says about ONE order id, with "it does not exist" kept apart from "I could not ask".
+ *  Through the API key, a cancelled order a few weeks old returns 404 "Not found." (2026-10-07: seven of
+ *  them, all shown as `canceled` by the app's own channel). A 404 from a broker that is answering other
+ *  calls is a definite answer — there is no open order by that id — and must not be read as unknown.
+ *  Anything else (5xx, network, auth) is unknown and the caller leaves the row alone. */
+export async function orderState(id: string): Promise<{ kind: 'state'; state: string } | { kind: 'not_found' } | { kind: 'unknown'; why: string }> {
+  try {
+    const o = await getOrder(id)
+    return { kind: 'state', state: (o.state ?? '').toLowerCase() }
+  } catch (e) {
+    const msg = e instanceof Error ? e.message : String(e)
+    return /→ 404:/.test(msg) ? { kind: 'not_found' } : { kind: 'unknown', why: msg.slice(0, 140) }
+  }
+}
 
 export interface OpenOrder {
   id: string; state: string; side: string; type: string; symbol: string; created_at?: string
