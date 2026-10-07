@@ -53,7 +53,12 @@ async function syncOpenOrders(supabase: SupabaseClient): Promise<void> {
         const o = await getOrder(id)
         const st = (o.state ?? '').toLowerCase()
         if (st && !['queued', 'confirmed', 'partially_filled', 'open'].includes(st)) goneIds.push(id)
-      } catch { /* could not ask — leave it, say nothing false */ }
+      } catch (e) {
+        // Could not ask — leave the row, say nothing false. But SAY WHY in the sync note: this is the
+        // only way to see from prod what the per-id endpoint actually returned (2026-10-07: the first
+        // version swallowed it, and seven rows survived a deploy with no visible reason).
+        if (!lastSyncNote?.includes('lookup')) lastSyncNote = `${lastSyncNote ?? ''} | lookup ${id.slice(0, 8)} failed: ${e instanceof Error ? e.message.slice(0, 140) : 'unknown'}`
+      }
     }
     if (goneIds.length) await supabase.from('broker_open_orders').delete().in('order_id', goneIds)
     if (rows.length || goneIds.length) await supabase.from('desk_config').upsert({ key: 'open_orders_synced_at', value: new Date().toISOString() }, { onConflict: 'key' })

@@ -106,8 +106,18 @@ export async function listOpenOrders(): Promise<{ orders: OpenOrder[]; closed: O
     .catch(() => ({ results: undefined }))
   if (byState.results?.length) return { orders: byState.results, closed: [], seen: byState.results.length, states: ['open'] }
   // The state filter is not accepted on every account; fall back to the unfiltered page and filter here.
-  const all = await call<{ results?: OpenOrder[] }>('GET', '/api/v1/crypto/trading/orders/')
-  const rows = all.results ?? []
+  // PAGINATE. The unfiltered list is paged, and on 2026-10-07 its first page carried only the three most
+  // recent fills — so seven orders cancelled on 09-15 and 09-20 were never in `closed`, and the sync's
+  // "remove only what the broker reports closed" rule kept them on the tab for three weeks. Follow `next`
+  // for a bounded number of pages; every row on every page counts as mentioned by the broker.
+  const rows: OpenOrder[] = []
+  let path: string | null = '/api/v1/crypto/trading/orders/'
+  for (let page = 0; page < 6 && path; page++) {
+    const r: { results?: OpenOrder[]; next?: string | null } = await call('GET', path)
+    rows.push(...(r.results ?? []))
+    const nx = r.next ?? null
+    path = nx ? (nx.startsWith('http') ? nx.replace(/^https?:\/\/[^/]+/, '') : nx) : null
+  }
   const open = rows.filter((o) => OPEN_STATES.includes((o.state ?? '').toLowerCase()))
   return {
     orders: open,
