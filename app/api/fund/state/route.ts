@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server'
 import { createServiceClient } from '@/lib/supabase'
 import { resolveIds, coinbaseSpot, lastKnownPrices } from '@/lib/desk-cg'
-import { rhConfigured, bestBidAsk, listOpenOrders, orderLevel, orderQty } from '@/lib/robinhood'
+import { rhConfigured, bestBidAsk, listOpenOrders, getOrder, orderLevel, orderQty } from '@/lib/robinhood'
 import type { SupabaseClient } from '@supabase/supabase-js'
 
 // Live desk state for the ROBINHOOD tab's 60s client refresh.
@@ -38,8 +38,25 @@ async function syncOpenOrders(supabase: SupabaseClient): Promise<void> {
     // every row the response did not mention, which erased seven live orders the moment one API
     // call came back thin. An order we were not told about is an order we know nothing about.
     const goneIds = closed.map((o) => o.id).filter(Boolean)
+    // ...BUT ALSO ASK ABOUT THE ONES THE BROKER NO LONGER MENTIONS. Robinhood's order list only returns
+    // recent orders, so a snapshot row older than that window is never in `orders` and never in
+    // `closed`: the rule above kept it forever. Found 2026-10-07 — seven bids and stops from 09-09..15
+    // still on the tab three weeks after the account was emptied and every order cancelled. The broker
+    // answered (seen > 0), so each unmentioned id is looked up by itself and removed only when the broker
+    // says, for that id, that it is not open. A lookup that fails leaves the row in place: unknown is
+    // not closed.
+    const mentioned = new Set([...orders, ...closed].map((o) => o.id))
+    const { data: snap } = await supabase.from('broker_open_orders').select('order_id')
+    const unmentioned = ((snap ?? []) as { order_id: string }[]).map((r) => r.order_id).filter((id) => id && !mentioned.has(id))
+    for (const id of unmentioned.slice(0, 20)) {
+      try {
+        const o = await getOrder(id)
+        const st = (o.state ?? '').toLowerCase()
+        if (st && !['queued', 'confirmed', 'partially_filled', 'open'].includes(st)) goneIds.push(id)
+      } catch { /* could not ask — leave it, say nothing false */ }
+    }
     if (goneIds.length) await supabase.from('broker_open_orders').delete().in('order_id', goneIds)
-    if (rows.length) await supabase.from('desk_config').upsert({ key: 'open_orders_synced_at', value: new Date().toISOString() }, { onConflict: 'key' })
+    if (rows.length || goneIds.length) await supabase.from('desk_config').upsert({ key: 'open_orders_synced_at', value: new Date().toISOString() }, { onConflict: 'key' })
   } catch (e) {
     // Leave the last snapshot and its age in place — a failed sync is never an empty book.
     lastSyncNote = `${new Date().toISOString()} sync failed: ${e instanceof Error ? e.message.slice(0, 160) : 'unknown'}`
