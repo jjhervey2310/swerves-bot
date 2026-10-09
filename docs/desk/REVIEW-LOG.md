@@ -604,3 +604,16 @@ formulas and bar requirements, NaN ⇒ ineligible. Assumed pipeline: 6 DeFiLlama
 and ≥ listedAt, NaN → 0 with an explicit `has_fundamentals` feature. Audit: 480 names, 290 with a symbol family, 188 with
 fees, most fees history from 2024+. No feature value, label or model output exists. Awaiting review.
 
+---
+
+## R-2026-10-09-AG — ChatGPT review of the Stage 0 manifest v1 (Revise / Revise / Revise / Not yet)
+
+| # | Claim | Verdict | Action in v2 |
+|---|---|---|---|
+| 1 | `breadth_ctx` must use a non-circular denominator (the pre-feature candidate set), not the post-NaN-filter set it belongs to; note that 90-day returns need 91 closes | **Correct.** | Pre-feature candidate set defined in §1 as the breadth denominator and stratification population; NaN filter applied after it and counted; 91-closes note added. |
+| 2 | Remove the symbol-only DeFiLlama fallback; require a real identity match; rerun the audit and report survivors of the final rule, not raw symbol matches | **Correct — and the v1 rule was worse than that:** `token_map.gecko_id` was derived from DeFiLlama's own records, so "symbol + gecko_id" was circular and still produced WIF→world-is-flat. | New identity chain: Coinbase currency name → the unique CoinGecko coin with the same symbol AND normalised name → DeFiLlama child-level protocols with that gecko_id plus every child of a parent with that gecko_id (parents never summed); no fallback; slug set frozen in the audit file. Survivors: 111 usable of 480 (83 with fees); 123 no identity; 145 no DeFiLlama family; 101 resolved but no `listedAt` (unusable under the strict rule; these are the oldest protocols, pre-dating DeFiLlama's stamping on 2021-10-12 — alternative floor offered in Q2). |
+| 3 | No single `has_fundamentals` flag with all-missing → 0; per-feature missingness indicators with training-only mean imputation; fail the month closed when the global stablecoin value is missing; `has_family` allowed as an extra | **Correct.** | Four per-feature `_missing` indicators, training-only means/stds, `stable_supply_30` fails closed, `has_family` retained as an additional indicator. |
+| 4 | Freeze the family slug set once and avoid summing overlapping parent and child series | **Correct.** | Child-level slugs only, parents never summed; set stored per symbol in `PHASE4-ROUND3-STAGE0-AUDIT.json`; no dynamic remapping. |
+
+v2 sent for review; no feature value, label or model output computed.
+

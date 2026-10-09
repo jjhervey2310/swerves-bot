@@ -1,10 +1,11 @@
 {
- "version": "stage0-v1",
+ "version": "stage0-v2",
  "frozen_rules": "docs/desk/PHASE4-ROUND3-PREREGISTRATION.md v3 (R-AE)",
  "status": "DRAFT for independent review; no value computed",
  "formation": {
   "dates": "first decision close of each UTC month 2021-03 .. 2025-11 (57)",
-  "eligibility": "listed at the close (universe_history incl. delisted), >= 90 contiguous completed daily bars ending at the close, 3-day median dollar volume >= 250000 USD, not in the round-1 exclusion map, has an executable open after the close"
+  "eligibility": "listed at the close (universe_history incl. delisted), >= 90 contiguous completed daily bars ending at the close, 3-day median dollar volume >= 250000 USD, not in the round-1 exclusion map, has an executable open after the close",
+  "candidate_set": "PRE-FEATURE candidate set per month: listed, >= 90 contiguous completed bars, 3-day median dollar volume >= 250000 USD, not excluded, executable next open. This set is the breadth_ctx denominator and the stratification population; the verified-feature NaN filter is applied AFTER it and counted (R-AG). Note: ret_90 and rs_btc_90 need 91 closes, so a name with exactly 90 bars enters the candidate set and becomes verified-feature-ineligible that month, counted as such."
  },
  "conventions": {
   "bars": "completed daily bars only (bar.t + 86400 <= formation close)",
@@ -17,7 +18,7 @@
    "evidence_class": "verified",
    "source": "md_candles daily (data_hash 8df7990c93dcc632) + universe_history",
    "lag_days": 0,
-   "nan_rule": "a name with any NaN verified feature at a formation date is ineligible at that date (counted); no imputation",
+   "nan_rule": "a candidate with any NaN verified feature at a formation date is verified-feature-ineligible at that date (counted); no imputation; breadth_ctx and strata are computed on the pre-feature candidate set",
    "features": [
     {
      "name": "ret_30",
@@ -96,7 +97,7 @@
     },
     {
      "name": "breadth_ctx",
-     "formula": "share of eligible names at this formation close with close[-1] > SMA50 (market-context, same value for every name that month)",
+     "formula": "share of the month's PRE-FEATURE candidate set with close[-1] > own SMA50 (denominator fixed before any feature NaN filter; market-context, same value for every name)",
      "bars": 50
     }
    ]
@@ -105,9 +106,9 @@
    "evidence_class": "assumed_availability",
    "source": "DeFiLlama historical endpoints backfilled with available_at NULL; usable only under the declared lag",
    "lag_days": 7,
-   "family_rule": "DeFiLlama protocols whose token symbol == S (case-insensitive) AND whose gecko_id equals token_map.gecko_id for S when token_map knows S; if token_map has no gecko_id for S, symbol-only match is accepted only when exactly one protocol carries that symbol; otherwise no family. Values are summed across the family (all versions/chains). Frozen before any value is read.",
-   "availability_rule": "a family value dated D is usable from the decision close of D+7 AND only for D >= the family's earliest listedAt on DeFiLlama (history before listing was back-computed by DeFiLlama, never published point-in-time)",
-   "nan_rule": "fundamental features are NaN when no family or no data at D; NaN -> 0 after standardisation PLUS the indicator has_fundamentals (0/1) as a feature; the indicator's own coefficient is reported so a 'has-fundamentals' effect cannot masquerade as a fundamentals signal",
+   "family_rule": "Identity chain, resolved ONCE and frozen in PHASE4-ROUND3-STAGE0-AUDIT.json: Coinbase currency name for the symbol -> the unique CoinGecko coin with the same symbol AND normalised name (none or several -> no family) -> DeFiLlama child-level protocols whose gecko_id is that CoinGecko id, plus every child of a parentProtocol whose gecko_id is that id. Parents are never summed themselves (only child-level /protocols entries), so no parent/child overlap. No symbol-only fallback, no guessing, no remapping after results.",
+   "availability_rule": "a family value dated D is usable from the decision close of D+7 AND only for D >= the family's earliest listedAt on DeFiLlama; a family with no listedAt on any member is UNUSABLE (strict default; the alternative floor 2021-10-12 = the date DeFiLlama began stamping listedAt is offered to the reviewer, see Q2)",
+   "nan_rule": "per-feature: training-only mean imputation (standardised 0) PLUS a missingness indicator per fundamental feature (fees_growth_30_missing, rev_growth_30_missing, rev_yield_missing, tvl_change_30_missing); has_family retained as an additional indicator, never a replacement; stable_supply_30 missing => the formation month FAILS CLOSED for the assumed pipeline (no imputation of the global series); all means/stds from observed training-month values only",
    "features": [
     {
      "name": "fees_growth_30",
@@ -135,8 +136,24 @@
      "endpoint": "stablecoins.llama.fi/stablecoincharts/all"
     },
     {
-     "name": "has_fundamentals",
-     "formula": "1 if the family exists and fees or tvl exist at D under the availability rule, else 0"
+     "name": "fees_growth_30_missing",
+     "formula": "1 if fees_growth_30 is NaN at D else 0"
+    },
+    {
+     "name": "rev_growth_30_missing",
+     "formula": "1 if rev_growth_30 is NaN"
+    },
+    {
+     "name": "rev_yield_missing",
+     "formula": "1 if rev_yield is NaN"
+    },
+    {
+     "name": "tvl_change_30_missing",
+     "formula": "1 if tvl_change_30 is NaN"
+    },
+    {
+     "name": "has_family",
+     "formula": "1 if the frozen audit resolves a usable family for the symbol, else 0"
     }
    ]
   }
@@ -149,29 +166,32 @@
  "audit": {
   "file": "docs/desk/PHASE4-ROUND3-STAGE0-AUDIT.json",
   "generated": "2026-10-09",
+  "rule": "identity chain (see family_rule)",
   "universe_names": 480,
-  "with_symbol_family": 290,
-  "multi_protocol_families": 134,
-  "with_fees_module": 188,
-  "earliest_listedAt_by_year": {
-   "2021": 23,
-   "2022": 47,
-   "2023": 47,
-   "2024": 29,
-   "2025": 23,
-   "2026": 19,
-   "none": 102
-  },
-  "earliest_daily_fees_by_year_best_family_member": {
-   "<=2020": 15,
-   "2021": 13,
-   "2022": 22,
-   "2023": 27,
-   "2024": 47,
-   "2025": 50,
+  "no_unique_coingecko_identity": 123,
+  "no_defillama_family": 145,
+  "family_but_no_listedAt_unusable_strict": 101,
+  "families_usable_strict": 111,
+  "usable_with_fees_module": 83,
+  "usable_earliest_listedAt_by_year": {
+   "2021": 11,
+   "2022": 23,
+   "2023": 25,
+   "2024": 18,
+   "2025": 20,
    "2026": 14
   },
-  "stablecoin_series": "2017-11-29 .. 2026-10-08 daily",
-  "note": "symbol-only matching invents false families (WIF->world-is-flat, MASK->nullmask); the gecko_id rule above is the frozen defence; the audit file lists every family candidate per symbol for the reviewer"
+  "usable_earliest_daily_fees_by_year": {
+   "<=2020": 7,
+   "2021": 6,
+   "2022": 9,
+   "2023": 15,
+   "2024": 22,
+   "2025": 20,
+   "2026": 2,
+   "none": 2
+  },
+  "listedAt_stamping_began": "2021-10-12 (min listedAt over 6,916 of 8,589 protocols)",
+  "stablecoin_series": "2017-11-29 .. 2026-10-08 daily"
  }
 }
