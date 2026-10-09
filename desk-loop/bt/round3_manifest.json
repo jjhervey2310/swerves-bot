@@ -1,0 +1,197 @@
+{
+ "version": "stage0-v2",
+ "frozen_rules": "docs/desk/PHASE4-ROUND3-PREREGISTRATION.md v3 (R-AE)",
+ "status": "DRAFT for independent review; no value computed",
+ "formation": {
+  "dates": "first decision close of each UTC month 2021-03 .. 2025-11 (57)",
+  "eligibility": "listed at the close (universe_history incl. delisted), >= 90 contiguous completed daily bars ending at the close, 3-day median dollar volume >= 250000 USD, not in the round-1 exclusion map, has an executable open after the close",
+  "candidate_set": "PRE-FEATURE candidate set per month: listed, >= 90 contiguous completed bars, 3-day median dollar volume >= 250000 USD, not excluded, executable next open. This set is the breadth_ctx denominator and the stratification population; the verified-feature NaN filter is applied AFTER it and counted (R-AG). Note: ret_90 and rs_btc_90 need 91 closes, so a name with exactly 90 bars enters the candidate set and becomes verified-feature-ineligible that month, counted as such."
+ },
+ "conventions": {
+  "bars": "completed daily bars only (bar.t + 86400 <= formation close)",
+  "dollar_volume": "close * volume per bar",
+  "returns": "close_t / close_{t-k} - 1 on completed closes",
+  "missing": "a feature needing k bars with fewer than k available is NaN; NaN handling is frozen per family below; nothing is forward-filled"
+ },
+ "pipelines": {
+  "verified": {
+   "evidence_class": "verified",
+   "source": "md_candles daily (data_hash 8df7990c93dcc632) + universe_history",
+   "lag_days": 0,
+   "nan_rule": "a candidate with any NaN verified feature at a formation date is verified-feature-ineligible at that date (counted); no imputation; breadth_ctx and strata are computed on the pre-feature candidate set",
+   "features": [
+    {
+     "name": "ret_30",
+     "formula": "close[-1]/close[-31]-1",
+     "bars": 31
+    },
+    {
+     "name": "ret_90",
+     "formula": "close[-1]/close[-91]-1",
+     "bars": 91
+    },
+    {
+     "name": "rs_btc_7",
+     "formula": "(close[-1]/close[-8]) / (btc_close[-1]/btc_close[-8]) - 1",
+     "bars": 8
+    },
+    {
+     "name": "rs_btc_30",
+     "formula": "(close[-1]/close[-31]) / (btc_close[-1]/btc_close[-31]) - 1",
+     "bars": 31
+    },
+    {
+     "name": "rs_btc_90",
+     "formula": "(close[-1]/close[-91]) / (btc_close[-1]/btc_close[-91]) - 1",
+     "bars": 91
+    },
+    {
+     "name": "dv_accel_7_30",
+     "formula": "mean(dv[-7:]) / mean(dv[-30:]) - 1",
+     "bars": 30
+    },
+    {
+     "name": "dv_accel_30_90",
+     "formula": "mean(dv[-30:]) / mean(dv[-90:]) - 1",
+     "bars": 90
+    },
+    {
+     "name": "vol_z_20",
+     "formula": "(volume[-1] - mean(volume[-21:-1])) / std(volume[-21:-1]); std 0 -> NaN",
+     "bars": 21
+    },
+    {
+     "name": "dist_hi_90",
+     "formula": "close[-1] / max(close[-90:]) - 1",
+     "bars": 90
+    },
+    {
+     "name": "dist_hi_365",
+     "formula": "close[-1] / max(close[-365:]) - 1 (uses the bars available if listed < 365 bars; count >= 90 required)",
+     "bars": 90
+    },
+    {
+     "name": "dd_listing_high",
+     "formula": "close[-1] / max(close since first bar) - 1",
+     "bars": 1
+    },
+    {
+     "name": "rv_20",
+     "formula": "std(log returns over last 20 bars) * sqrt(365)",
+     "bars": 21
+    },
+    {
+     "name": "rv_60",
+     "formula": "std(log returns over last 60 bars) * sqrt(365)",
+     "bars": 61
+    },
+    {
+     "name": "age_bars",
+     "formula": "number of completed bars since first bar, log1p",
+     "bars": 1
+    },
+    {
+     "name": "log_dv_90",
+     "formula": "log(mean(dv[-90:])) \u2014 also the stratification variable (quintiles within month)",
+     "bars": 90
+    },
+    {
+     "name": "breadth_ctx",
+     "formula": "share of the month's PRE-FEATURE candidate set with close[-1] > own SMA50 (denominator fixed before any feature NaN filter; market-context, same value for every name)",
+     "bars": 50
+    }
+   ]
+  },
+  "assumed": {
+   "evidence_class": "assumed_availability",
+   "source": "DeFiLlama historical endpoints backfilled with available_at NULL; usable only under the declared lag",
+   "lag_days": 7,
+   "family_rule": "Identity chain, resolved ONCE and frozen in PHASE4-ROUND3-STAGE0-AUDIT.json: Coinbase currency name for the symbol -> the unique CoinGecko coin with the same symbol AND normalised name (none or several -> no family) -> DeFiLlama child-level protocols whose gecko_id is that CoinGecko id, plus every child of a parentProtocol whose gecko_id is that id. Parents are never summed themselves (only child-level /protocols entries), so no parent/child overlap. No symbol-only fallback, no guessing, no remapping after results.",
+   "availability_rule": "a family value dated D is usable from the decision close of D+7 AND only for D >= the family's earliest listedAt on DeFiLlama; a family with no listedAt on any member is UNUSABLE (strict default; the alternative floor 2021-10-12 = the date DeFiLlama began stamping listedAt is offered to the reviewer, see Q2)",
+   "nan_rule": "per-feature: training-only mean imputation (standardised 0) PLUS a missingness indicator per fundamental feature (fees_growth_30_missing, rev_growth_30_missing, rev_yield_missing, tvl_change_30_missing); has_family retained as an additional indicator, never a replacement; stable_supply_30 missing => the formation month FAILS CLOSED for the assumed pipeline (no imputation of the global series); all means/stds from observed training-month values only",
+   "features": [
+    {
+     "name": "fees_growth_30",
+     "formula": "sum(fees over the 30 days ending D) / sum(fees over the 30 days ending D-30) - 1",
+     "endpoint": "summary/fees/{slug}?dataType=dailyFees"
+    },
+    {
+     "name": "rev_growth_30",
+     "formula": "same on dailyRevenue",
+     "endpoint": "summary/fees/{slug}?dataType=dailyRevenue"
+    },
+    {
+     "name": "rev_yield",
+     "formula": "sum(revenue over 30 days ending D) * 12 / market cap at D (market cap = close * circulating supply from DeFiLlama mcap at D; NaN if absent)",
+     "endpoint": "protocol/{slug}"
+    },
+    {
+     "name": "tvl_change_30",
+     "formula": "tvl[D]/tvl[D-30]-1 (family sum)",
+     "endpoint": "protocol/{slug}"
+    },
+    {
+     "name": "stable_supply_30",
+     "formula": "totalCirculatingUSD[D]/totalCirculatingUSD[D-30]-1 (global market-context series; same for every name)",
+     "endpoint": "stablecoins.llama.fi/stablecoincharts/all"
+    },
+    {
+     "name": "fees_growth_30_missing",
+     "formula": "1 if fees_growth_30 is NaN at D else 0"
+    },
+    {
+     "name": "rev_growth_30_missing",
+     "formula": "1 if rev_growth_30 is NaN"
+    },
+    {
+     "name": "rev_yield_missing",
+     "formula": "1 if rev_yield is NaN"
+    },
+    {
+     "name": "tvl_change_30_missing",
+     "formula": "1 if tvl_change_30 is NaN"
+    },
+    {
+     "name": "has_family",
+     "formula": "1 if the frozen audit resolves a usable family for the symbol, else 0"
+    }
+   ]
+  }
+ },
+ "excluded": {
+  "tokenomics": "no point-in-time source (unlocks, supply changes)",
+  "catalysts": "no point-in-time source; any reconstruction is hindsight",
+  "market_cap_point_in_time": "DeFiLlama mcap history is not stored point-in-time; used only inside rev_yield in the assumed pipeline and NaN when absent"
+ },
+ "audit": {
+  "file": "docs/desk/PHASE4-ROUND3-STAGE0-AUDIT.json",
+  "generated": "2026-10-09",
+  "rule": "identity chain (see family_rule)",
+  "universe_names": 480,
+  "no_unique_coingecko_identity": 123,
+  "no_defillama_family": 145,
+  "family_but_no_listedAt_unusable_strict": 101,
+  "families_usable_strict": 111,
+  "usable_with_fees_module": 83,
+  "usable_earliest_listedAt_by_year": {
+   "2021": 11,
+   "2022": 23,
+   "2023": 25,
+   "2024": 18,
+   "2025": 20,
+   "2026": 14
+  },
+  "usable_earliest_daily_fees_by_year": {
+   "<=2020": 7,
+   "2021": 6,
+   "2022": 9,
+   "2023": 15,
+   "2024": 22,
+   "2025": 20,
+   "2026": 2,
+   "none": 2
+  },
+  "listedAt_stamping_began": "2021-10-12 (min listedAt over 6,916 of 8,589 protocols)",
+  "stablecoin_series": "2017-11-29 .. 2026-10-08 daily"
+ }
+}
