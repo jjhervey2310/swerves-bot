@@ -1,0 +1,177 @@
+{
+ "version": "stage0-v1",
+ "frozen_rules": "docs/desk/PHASE4-ROUND3-PREREGISTRATION.md v3 (R-AE)",
+ "status": "DRAFT for independent review; no value computed",
+ "formation": {
+  "dates": "first decision close of each UTC month 2021-03 .. 2025-11 (57)",
+  "eligibility": "listed at the close (universe_history incl. delisted), >= 90 contiguous completed daily bars ending at the close, 3-day median dollar volume >= 250000 USD, not in the round-1 exclusion map, has an executable open after the close"
+ },
+ "conventions": {
+  "bars": "completed daily bars only (bar.t + 86400 <= formation close)",
+  "dollar_volume": "close * volume per bar",
+  "returns": "close_t / close_{t-k} - 1 on completed closes",
+  "missing": "a feature needing k bars with fewer than k available is NaN; NaN handling is frozen per family below; nothing is forward-filled"
+ },
+ "pipelines": {
+  "verified": {
+   "evidence_class": "verified",
+   "source": "md_candles daily (data_hash 8df7990c93dcc632) + universe_history",
+   "lag_days": 0,
+   "nan_rule": "a name with any NaN verified feature at a formation date is ineligible at that date (counted); no imputation",
+   "features": [
+    {
+     "name": "ret_30",
+     "formula": "close[-1]/close[-31]-1",
+     "bars": 31
+    },
+    {
+     "name": "ret_90",
+     "formula": "close[-1]/close[-91]-1",
+     "bars": 91
+    },
+    {
+     "name": "rs_btc_7",
+     "formula": "(close[-1]/close[-8]) / (btc_close[-1]/btc_close[-8]) - 1",
+     "bars": 8
+    },
+    {
+     "name": "rs_btc_30",
+     "formula": "(close[-1]/close[-31]) / (btc_close[-1]/btc_close[-31]) - 1",
+     "bars": 31
+    },
+    {
+     "name": "rs_btc_90",
+     "formula": "(close[-1]/close[-91]) / (btc_close[-1]/btc_close[-91]) - 1",
+     "bars": 91
+    },
+    {
+     "name": "dv_accel_7_30",
+     "formula": "mean(dv[-7:]) / mean(dv[-30:]) - 1",
+     "bars": 30
+    },
+    {
+     "name": "dv_accel_30_90",
+     "formula": "mean(dv[-30:]) / mean(dv[-90:]) - 1",
+     "bars": 90
+    },
+    {
+     "name": "vol_z_20",
+     "formula": "(volume[-1] - mean(volume[-21:-1])) / std(volume[-21:-1]); std 0 -> NaN",
+     "bars": 21
+    },
+    {
+     "name": "dist_hi_90",
+     "formula": "close[-1] / max(close[-90:]) - 1",
+     "bars": 90
+    },
+    {
+     "name": "dist_hi_365",
+     "formula": "close[-1] / max(close[-365:]) - 1 (uses the bars available if listed < 365 bars; count >= 90 required)",
+     "bars": 90
+    },
+    {
+     "name": "dd_listing_high",
+     "formula": "close[-1] / max(close since first bar) - 1",
+     "bars": 1
+    },
+    {
+     "name": "rv_20",
+     "formula": "std(log returns over last 20 bars) * sqrt(365)",
+     "bars": 21
+    },
+    {
+     "name": "rv_60",
+     "formula": "std(log returns over last 60 bars) * sqrt(365)",
+     "bars": 61
+    },
+    {
+     "name": "age_bars",
+     "formula": "number of completed bars since first bar, log1p",
+     "bars": 1
+    },
+    {
+     "name": "log_dv_90",
+     "formula": "log(mean(dv[-90:])) \u2014 also the stratification variable (quintiles within month)",
+     "bars": 90
+    },
+    {
+     "name": "breadth_ctx",
+     "formula": "share of eligible names at this formation close with close[-1] > SMA50 (market-context, same value for every name that month)",
+     "bars": 50
+    }
+   ]
+  },
+  "assumed": {
+   "evidence_class": "assumed_availability",
+   "source": "DeFiLlama historical endpoints backfilled with available_at NULL; usable only under the declared lag",
+   "lag_days": 7,
+   "family_rule": "DeFiLlama protocols whose token symbol == S (case-insensitive) AND whose gecko_id equals token_map.gecko_id for S when token_map knows S; if token_map has no gecko_id for S, symbol-only match is accepted only when exactly one protocol carries that symbol; otherwise no family. Values are summed across the family (all versions/chains). Frozen before any value is read.",
+   "availability_rule": "a family value dated D is usable from the decision close of D+7 AND only for D >= the family's earliest listedAt on DeFiLlama (history before listing was back-computed by DeFiLlama, never published point-in-time)",
+   "nan_rule": "fundamental features are NaN when no family or no data at D; NaN -> 0 after standardisation PLUS the indicator has_fundamentals (0/1) as a feature; the indicator's own coefficient is reported so a 'has-fundamentals' effect cannot masquerade as a fundamentals signal",
+   "features": [
+    {
+     "name": "fees_growth_30",
+     "formula": "sum(fees over the 30 days ending D) / sum(fees over the 30 days ending D-30) - 1",
+     "endpoint": "summary/fees/{slug}?dataType=dailyFees"
+    },
+    {
+     "name": "rev_growth_30",
+     "formula": "same on dailyRevenue",
+     "endpoint": "summary/fees/{slug}?dataType=dailyRevenue"
+    },
+    {
+     "name": "rev_yield",
+     "formula": "sum(revenue over 30 days ending D) * 12 / market cap at D (market cap = close * circulating supply from DeFiLlama mcap at D; NaN if absent)",
+     "endpoint": "protocol/{slug}"
+    },
+    {
+     "name": "tvl_change_30",
+     "formula": "tvl[D]/tvl[D-30]-1 (family sum)",
+     "endpoint": "protocol/{slug}"
+    },
+    {
+     "name": "stable_supply_30",
+     "formula": "totalCirculatingUSD[D]/totalCirculatingUSD[D-30]-1 (global market-context series; same for every name)",
+     "endpoint": "stablecoins.llama.fi/stablecoincharts/all"
+    },
+    {
+     "name": "has_fundamentals",
+     "formula": "1 if the family exists and fees or tvl exist at D under the availability rule, else 0"
+    }
+   ]
+  }
+ },
+ "excluded": {
+  "tokenomics": "no point-in-time source (unlocks, supply changes)",
+  "catalysts": "no point-in-time source; any reconstruction is hindsight",
+  "market_cap_point_in_time": "DeFiLlama mcap history is not stored point-in-time; used only inside rev_yield in the assumed pipeline and NaN when absent"
+ },
+ "audit": {
+  "file": "docs/desk/PHASE4-ROUND3-STAGE0-AUDIT.json",
+  "generated": "2026-10-09",
+  "universe_names": 480,
+  "with_symbol_family": 290,
+  "multi_protocol_families": 134,
+  "with_fees_module": 188,
+  "earliest_listedAt_by_year": {
+   "2021": 23,
+   "2022": 47,
+   "2023": 47,
+   "2024": 29,
+   "2025": 23,
+   "2026": 19,
+   "none": 102
+  },
+  "earliest_daily_fees_by_year_best_family_member": {
+   "<=2020": 15,
+   "2021": 13,
+   "2022": 22,
+   "2023": 27,
+   "2024": 47,
+   "2025": 50,
+   "2026": 14
+  },
+  "stablecoin_series": "2017-11-29 .. 2026-10-08 daily",
+  "note": "symbol-only matching invents false families (WIF->world-is-flat, MASK->nullmask); the gecko_id rule above is the frozen defence; the audit file lists every family candidate per symbol for the reviewer"
+ }
+}

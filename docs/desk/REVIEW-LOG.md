@@ -593,3 +593,14 @@ Recorded verbatim (Q1 Accept, Q2 Accept, Q3 Freeze). Next step: Stage 0 feature 
 evidence classes, lags and date ranges only; no feature value, label or model output is computed until the manifest
 is reviewed and frozen.
 
+---
+
+## R-2026-10-09-AF — Stage 0 feature manifest submitted (round 3; no value computed)
+
+`docs/desk/PHASE4-ROUND3-STAGE0-FEATURES.md` v1 + `desk-loop/bt/round3_manifest.json` (definitions only) + the
+read-only availability audit `PHASE4-ROUND3-STAGE0-AUDIT.json`. Verified pipeline: 16 price/volume features with
+formulas and bar requirements, NaN ⇒ ineligible. Assumed pipeline: 6 DeFiLlama features with a frozen family rule
+(symbol + gecko_id, unique-symbol fallback — replacing the ambiguous one-slug mapping in `token_map`), availability D+7
+and ≥ listedAt, NaN → 0 with an explicit `has_fundamentals` feature. Audit: 480 names, 290 with a symbol family, 188 with
+fees, most fees history from 2024+. No feature value, label or model output exists. Awaiting review.
+
