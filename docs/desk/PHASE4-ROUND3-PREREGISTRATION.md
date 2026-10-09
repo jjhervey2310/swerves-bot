@@ -1,4 +1,7 @@
-# Phase 4, round 3 — runner forensics. Pre-registration DRAFT v3 (after reviews R-AC and R-AD; for independent review before any code, label or feature is computed)
+# Phase 4, round 3 — runner forensics. Pre-registration v3 — FROZEN (R-AE, ChatGPT, 2026-10-07, at PR #52 @ f1f4302)
+
+Frozen. Next permitted step: Stage 0 feature manifest only (`PHASE4-ROUND3-STAGE0-FEATURES.md`), independently reviewed
+and frozen before any label or model output is computed. Nothing below this line changes.
 
 Changes from v1 are marked **[R-AC n]**: (1) OOS scoring and the gate run on the FULL eligible universe, gray zone and
 delisted names included; (2) label denominator is the next executable open; (3) base rate is the 3× share of all
@@ -106,9 +109,7 @@ verified fundamentals before any forward evaluation.
 Nothing in §2 changes after the first label is computed; Stage 0 is reviewed first; no feature is added after seeing a
 lift; the negative control is run every time the real pipeline is; nothing to `research_runs` before review.
 
-## Questions for the reviewer — v2 answers R-AD (Revise / Revise / Accept / Not yet) applied above
-1. Label hierarchy 2× primary / 3× secondary / 5× tail on max completed close within 180 bars vs the next executable
-   open; primary model trained and graded on 2× vs not-2× over every eligible name; 3× vs <1.5× diagnostic only — accept?
-2. "Materially better" unchanged in thresholds, on 2× population precision with the 2× full-universe base rate; 3× and 5×
-   enrichment reported, never gated — accept?
-3. Freeze v3?
+## Questions for the reviewer — answered R-AE (Accept / Accept / Freeze); kept for the record
+1. Label hierarchy and 2×-vs-not-2× training → accepted.
+2. Gate on 2× population precision with 3×/5× enrichment reported → accepted.
+3. Frozen as v3.

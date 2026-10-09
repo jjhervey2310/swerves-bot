@@ -577,3 +577,19 @@ v2 sent for review; no code, label or feature computed.
 
 v3 sent for review; no code, label or feature computed.
 
+---
+
+## R-2026-10-07-AE — ChatGPT acceptance of the round-3 pre-registration v3 (FROZEN)
+
+> **R-AE — Phase 4 Round 3 runner-forensics pre-registration v3 ACCEPTED AND FROZEN at PR #52 @ `f1f4302`. Primary
+> target = runner_2x versus not-runner_2x over the full eligible population using next executable open as the entry
+> reference; runner_3x and runner_5x are secondary enrichment tiers. The frozen gate is population precision@10% ≥2× the
+> full-universe 2× base rate pooled, ≥1.5× in at least 3 of 4 OOS years, and survival after removing the top liquidity
+> quintile and top three contributing months. Verified and assumed-availability pipelines remain separate evidence
+> classes. No labels or model outputs may be computed until Stage 0 feature manifest is independently reviewed and
+> frozen.**
+
+Recorded verbatim (Q1 Accept, Q2 Accept, Q3 Freeze). Next step: Stage 0 feature manifest — definitions, sources,
+evidence classes, lags and date ranges only; no feature value, label or model output is computed until the manifest
+is reviewed and frozen.
+
