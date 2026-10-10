@@ -633,3 +633,33 @@ v2 sent for review; no feature value, label or model output computed.
 Recorded verbatim (Accept / Accept-strict / Accept / Freeze). Build starts: computation module with a per-feature
 look-ahead test, the DeFiLlama backfill with `available_at` NULL, the two pipelines, negative controls, then one run.
 
+---
+
+## R-2026-10-10-AI — Phase 4 round 3 runner-forensics table, run once (UNREVIEWED; nothing promoted)
+
+Table: `docs/desk/PHASE4-ROUND3-TABLE-2026-10-10.{md,json}` on PR #52, built from the frozen candle snapshot (data_hash
+`8df7990c93dcc632`, universe_hash `64e00348d99bb713`) and the DeFiLlama backfill snapshot (hash `e1a657594990b69e`: 271 TVL,
+170 fees, 165 revenue series, stablecoin series; every record `available_at` null, used only under the frozen D+7 lag and
+≥ listedAt rule; stored as a snapshot file, not in Supabase, for the Free-plan quota). Code: `bt/round3.py`,
+`test_round3.py` (14 tests incl. a per-feature look-ahead test; 112/112 overall). Dataset: 5,484 (month, candidate) rows
+over 57 formation months; labels runner_2x 993 (base rate 45.6% of eligible rows), runner_3x 355, runner_5x 107;
+verified-ineligible 1. Trials 8 per pipeline (C ∈ {0.1, 1.0} × 4 test years); C = 1.0 selected every year by in-fit
+log-loss, as expected under that frozen selection rule. Sent unchanged:
+
+| pipeline | OOS positives | precision@10% | base rate | lift | ex top-liquidity | ex top-3 months | years | perm p | negative control | outcome |
+|---|---|---|---|---|---|---|---|---|---|---|
+| verified (16 price/volume features) | 909 | 0.481 | 0.456 | 1.06 | 1.09 | 1.01 | 0.60 / 1.06 / 1.08 / 1.10 | 0.16 | 0.98 (valid) | **historical_rejected** (all four gate checks fail) |
+| assumed (+ fundamentals at D+7, subordinate) | 909 | 0.500 | 0.456 | 1.10 | 1.10 | 1.04 | 1.29 / 0.98 / 1.21 / 1.03 | 0.043 | 1.04 (valid) | **historical_rejected** (all four fail) |
+
+Enrichment (reported, never gated): 5× runners are 1.4× (verified) / 1.8× (assumed) over-represented in the top-5% score
+bucket, 3× runners ≈ 1.0–1.1×; nothing survives at top-10%/20%. Diagnostic 3×-vs-<1.5× model graded on 2×: lift 1.05.
+Fundamentals coverage in the assumed pipeline: fees_growth 401 rows, rev_growth 303, tvl_change 514 of 5,483; rev_yield
+0 (DeFiLlama has no point-in-time market cap, so the feature is NaN everywhere and its indicator constant, as the Stage 0
+manifest anticipated); has_family 1,112 rows; no month failed closed. Minimum evidence met (909 positives, ≥ 5 per year).
+
+Observations for the reviewer, not rule changes: (1) with a 45.6% base rate the frozen "≥ 2× lift" gate required
+precision@10% ≥ 91%; doubling within 180 bars is common in this universe, so the question "which names double" is
+weakly separable from the tape, while the rarer 5× tier shows a small, unstable enrichment. (2) The assumed pipeline's
+permutation p of 0.043 with a lift of 1.10 is a real but economically small effect, and the subordination rule applies.
+Nothing in `research_runs`. Awaiting the independent verdict.
+
