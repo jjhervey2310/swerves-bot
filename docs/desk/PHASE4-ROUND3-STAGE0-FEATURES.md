@@ -1,4 +1,8 @@
-# Phase 4 round 3 — Stage 0 feature manifest, DRAFT v2 (after review R-AG; NO feature value, label or model output exists)
+# Phase 4 round 3 — Stage 0 feature manifest v2 — FROZEN (R-AH, ChatGPT, 2026-10-10, at PR #52 @ e1f7445)
+
+Frozen answers (R-AH): Q1 Accept; Q2 Accept — STRICT: the 101 families with no `listedAt` stay unusable, the 2021-10-12
+stamping date is NOT an availability date (it would manufacture provenance we do not possess); Q3 Accept; Q4 Freeze.
+No feature definition, mapping, lag, eligibility rule or missing-data treatment changes after this line.
 
 Changes from v1 **[R-AG]**: (1) `breadth_ctx` denominator = the pre-feature candidate set; 91-closes note; (2) no symbol-only
 fallback — identity chain Coinbase name → CoinGecko id → DeFiLlama family incl. parent children, slug set frozen in the
@@ -81,10 +85,4 @@ proof: a spike in the bar opening at the formation close changes nothing); the D
 `available_at` NULL and the lag rule applied in code; the shuffled-label negative control runs with the real pipeline.
 Only then are labels computed, once, and the table sent unchanged.
 
-## Questions for the reviewer — v1 answers R-AG (Revise ×3 / Not yet) applied above
-1. `breadth_ctx` on the pre-feature candidate set; 91-closes note; NaN filter after the candidate set — accept?
-2. Identity chain (Coinbase name → unique CoinGecko symbol+name → DeFiLlama gecko_id incl. parent children; frozen slug set;
-   no fallback) — accept? And for the 101 families with no `listedAt`: keep them unusable (strict), or set their
-   availability start to 2021-10-12, the date DeFiLlama began stamping `listedAt` (they were listed before it)?
-3. Per-feature missingness indicators + training-only mean imputation, `stable_supply_30` fails closed, `has_family` kept — accept?
-4. Freeze Stage 0 v2?
+## Questions for the reviewer — answered R-AH (Accept / Accept-strict / Accept / Freeze); kept for the record

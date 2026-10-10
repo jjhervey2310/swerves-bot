@@ -1,7 +1,7 @@
 {
  "version": "stage0-v2",
  "frozen_rules": "docs/desk/PHASE4-ROUND3-PREREGISTRATION.md v3 (R-AE)",
- "status": "DRAFT for independent review; no value computed",
+ "status": "FROZEN R-AH 2026-10-10 at PR #52 @ e1f7445",
  "formation": {
   "dates": "first decision close of each UTC month 2021-03 .. 2025-11 (57)",
   "eligibility": "listed at the close (universe_history incl. delisted), >= 90 contiguous completed daily bars ending at the close, 3-day median dollar volume >= 250000 USD, not in the round-1 exclusion map, has an executable open after the close",

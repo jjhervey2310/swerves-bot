@@ -617,3 +617,19 @@ fees, most fees history from 2024+. No feature value, label or model output exis
 
 v2 sent for review; no feature value, label or model output computed.
 
+---
+
+## R-2026-10-10-AH — ChatGPT acceptance of the Stage 0 feature manifest v2 (FROZEN)
+
+> R-AH — Phase 4 Round 3 Stage 0 feature manifest v2 ACCEPTED AND FROZEN at PR #52 @ `e1f7445`. `breadth_ctx` denominator
+> and liquidity strata use the frozen pre-feature candidate set; verified-feature NaN exclusions occur afterward and are
+> counted. DeFiLlama identity uses the frozen Coinbase-name → unique CoinGecko symbol+name → DeFiLlama gecko_id family
+> chain with fixed child-level slug sets and no fallback. Families lacking any `listedAt` remain unusable; the 2021-10-12
+> DeFiLlama stamping start is not treated as synthetic availability evidence. Fundamental missingness is represented per
+> feature with training-only observed-value imputation; global stablecoin context fails closed when missing. Stage 0 is
+> frozen; feature computation and the single preregistered Round-3 label/model run may now be built under these
+> definitions.
+
+Recorded verbatim (Accept / Accept-strict / Accept / Freeze). Build starts: computation module with a per-feature
+look-ahead test, the DeFiLlama backfill with `available_at` NULL, the two pipelines, negative controls, then one run.
+
