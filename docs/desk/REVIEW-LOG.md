@@ -663,3 +663,33 @@ weakly separable from the tape, while the rarer 5× tier shows a small, unstable
 permutation p of 0.043 with a lift of 1.10 is a real but economically small effect, and the subordination rule applies.
 Nothing in `research_runs`. Awaiting the independent verdict.
 
+---
+
+## R-2026-10-11-AJ — ChatGPT independent verdict on the round-3 table (PR #52 @ a9b8a0a)
+
+> R-AJ — Phase 4 Round 3 historical screening table VALID at PR #52 @ a9b8a0a. Verified runner-forensics pipeline =
+> historical_rejected: population precision@10% 0.481 vs 0.456 base rate (1.056× lift), with all four frozen advancement
+> checks failed. Assumed-availability fundamentals pipeline = historical_rejected: precision 0.500 vs 0.456 (1.097× lift),
+> also failing all four frozen advancement checks; sparse fundamentals coverage and rev_yield absence do not invalidate
+> the pipeline because missingness handling was frozen in Stage 0. Negative controls are acceptable; minimum evidence is
+> satisfied; no rerun is justified. The reported 5× enrichment is exploratory/non-gating and cannot rescue either
+> pipeline. No Round-3 candidate advances to Round 4, forward validation, Phase 5, or Phase 10; nothing becomes
+> research_accepted or trade_approved.
+
+Recorded verbatim. Reviewer's reading, adopted: the 45.6% 2× base rate made the frozen ≥ 2× lift gate imply ≈ 91%
+precision; that gate is not weakened after seeing results; a rarer objective would be a new hypothesis, not a rerun. The
+5× enrichment is exploratory only and may not be examined further (which coins, which features) without a new
+pre-registration. Reviewer: PR #52 ready to close out; no round 4 from these results.
+
+### Close-out of the Phase 4 research path (three rounds, 2026-10-03 → 2026-10-11)
+| round | hypotheses | outcome |
+|---|---|---|
+| 1 (R-S…R-V) | sma_trend, momentum_top, mean_reversion on the monthly top-20 alt universe | all three REJECTED (−80% to −91% OOS) |
+| 2 (R-W…R-AA) | BTC-only trend, breadth-floored momentum, Extreme-Fear BTC timing | all historical_rejected (C-verified inconclusive at 0% coverage); the breadth cash floor helped but did not produce an edge |
+| 3 (R-AB…R-AJ) | runner forensics: tape-only and tape + sparse fundamentals | both historical_rejected (lift 1.06 / 1.10 vs the frozen 2×) |
+Zero survivors; zero forward-validation entrants; nothing in `research_runs`; no model consensus authorised anything.
+Infrastructure left in place: frozen snapshots and hashes, point-in-time F&G with `available_at`, the forward-validation
+stage (idle), live collectors, 112 tests. The only edge with evidence in this project remains structural: producing BTC
+below market cost (mining) and holding it with a drawdown rule — 100% BTC buy-and-hold made +22.6% over the test span
+with a −76.7% drawdown while every tested rule lost. Any further research starts from a new pre-registration.
+
