@@ -530,3 +530,166 @@ positive after costs; the only measurably helpful mechanism was the breadth cash
 100% BTC buy-and-hold made +22.6% with a −76.7% drawdown; cash 0%. The forward-validation stage exists and is frozen but
 has no entrant; the live F&G collector keeps accumulating verified rows regardless.
 
+---
+
+## R-2026-10-04-AB — ChatGPT direction for round 3 and its falsifier; data audit; draft v1 for review
+
+Direction received after R-AA: **round 3 — runner forensics**, falsifier verbatim: "if a point-in-time runner-forensics
+model built from fundamentals, revenue/fees, tokenomics, liquidity/volume acceleration, relative strength, flows, and
+catalysts cannot distinguish future 3x–5x runners from matched non-runners out-of-sample with materially better precision
+than the base rate, after liquidity and survivorship controls, reject the entire Round-3 hypothesis."
+
+Data audit before design (Supabase, 2026-10-04): point-in-time history over 2021–2026 exists only for price/volume
+(`md_candles`, `universe_history`). `fund_snapshots_daily` (fees/revenue/TVL/DEX volume, 2,629 names) starts 2026-10-02
+(3 days); `features_daily` 2026-09-30; `flow_radar` 10 days in September; no tokenomics or catalyst history anywhere.
+Draft v1 (`docs/desk/PHASE4-ROUND3-PREREGISTRATION.md`) therefore: Stage 0 feature manifest reviewed before any label;
+two studies (verified price-only; assumed-availability with backfilled DeFiLlama fundamentals at a 7-day lag); tokenomics
+and catalysts excluded for lack of point-in-time sources; case-control with (month, liquidity-quintile) matching, delisted
+names kept; L2 logistic regression, grid ≤ 4, expanding test years 2022–2025; precision@10% vs base rate with a frozen
+"materially better" definition; shuffled-label negative control; minimum 40 runners. Awaiting review. No code, no label,
+no feature computed. PRs #49 and #51 merged to main at Jacob's word (3d5ac5d, 7f88fb4).
+
+---
+
+## R-2026-10-04-AC — ChatGPT review of the round-3 draft v1 (Revise / Revise / Accept / Accept)
+
+| # | Severity | Claim | Verdict | Action in v2 |
+|---|---|---|---|---|
+| 1 | serious (leakage) | Excluding 1.5×–<3× names from scoring uses a future label to shape the ranked population; precision@10% becomes artificially easy | **Correct.** | OOS model scores every eligible name at every formation date; primary metric is population precision (positive = 3×, non-positive = everything else incl. gray zone and delisted); gray-zone exclusion allowed only inside the binary fit; matched 3× vs <1.5× kept as a diagnostic that never gates; negative control on the full population. |
+| 2 | metric | Label denominator must be the next executable open, not the formation close (overnight gap not capturable) | **Correct.** | `entry_reference` = next executable open after the formation close; `runner_3x` = max completed close during the next 180 bars ≥ 3 × entry_reference; same for 5× and 1.5×; no executable open ⇒ ineligible that month. |
+| 3 | metric | Base rate must be the 3× share among ALL eligible candidates | **Correct.** | Frozen so, within (month, quintile) strata, positive-count weighted. |
+| 4 | implementation | {verified, assumed} must not be a selectable hyperparameter | **Correct.** | Two separate pipelines, each selecting only C ∈ {0.1, 1.0}; 8 trials each; no step compares them. |
+| Q3 | — | Run both studies now; assumed DeFiLlama study stays subordinate | Accepted | Subordination written into §3: a survivor can only generate a round-4 hypothesis, never a verified fundamental edge. |
+| Q4 | — | Stage 0 before any labels | Accepted | Unchanged. |
+
+v2 sent for review; no code, label or feature computed.
+
+---
+
+## R-2026-10-04-AD — ChatGPT review of the round-3 draft v2 (Revise / Revise / Accept / Not yet)
+
+| # | Claim | Verdict | Action in v3 |
+|---|---|---|---|
+| 1 | 3× primary no longer matches the stated objective (2× and above is a win); hierarchy must be 2× primary / 3× secondary / 5× tail; non-positive = everything below 2× incl. delisted; no gray zone removed from scoring | **Correct.** | Labels rewritten; primary positive `runner_2x` = max completed close within 180 bars ≥ 2 × next executable open; 3× and 5× tiers defined identically; primary non-positive = M < 2×. |
+| 2 | Do not train on 3× vs <1.5× and grade on another objective; the primary model learns 2× vs not-2×; the case-control contrast may remain a diagnostic model only | **Correct.** | Training population = scoring population, 2× vs not-2×; 3× vs <1.5× demoted to a labelled diagnostic that never gates. |
+| 3 | Gate base rate and precision@10% become 2× population precision; keep the existing bar (≥ 2× pooled, ≥ 1.5× in 3 of 4 years, liquidity and top-month removals); report 3× and 5× lift as enrichment | **Correct.** | Statistic and gate rewritten on `runner_2x`; enrichment tests for 3×/5× in the top-10/5/20% buckets vs their own base rates, reported only; minimum evidence and negative control re-based on 2×. |
+| Q3 | Separate verified / assumed pipelines | Accepted | Unchanged. |
+
+v3 sent for review; no code, label or feature computed.
+
+---
+
+## R-2026-10-07-AE — ChatGPT acceptance of the round-3 pre-registration v3 (FROZEN)
+
+> **R-AE — Phase 4 Round 3 runner-forensics pre-registration v3 ACCEPTED AND FROZEN at PR #52 @ `f1f4302`. Primary
+> target = runner_2x versus not-runner_2x over the full eligible population using next executable open as the entry
+> reference; runner_3x and runner_5x are secondary enrichment tiers. The frozen gate is population precision@10% ≥2× the
+> full-universe 2× base rate pooled, ≥1.5× in at least 3 of 4 OOS years, and survival after removing the top liquidity
+> quintile and top three contributing months. Verified and assumed-availability pipelines remain separate evidence
+> classes. No labels or model outputs may be computed until Stage 0 feature manifest is independently reviewed and
+> frozen.**
+
+Recorded verbatim (Q1 Accept, Q2 Accept, Q3 Freeze). Next step: Stage 0 feature manifest — definitions, sources,
+evidence classes, lags and date ranges only; no feature value, label or model output is computed until the manifest
+is reviewed and frozen.
+
+---
+
+## R-2026-10-09-AF — Stage 0 feature manifest submitted (round 3; no value computed)
+
+`docs/desk/PHASE4-ROUND3-STAGE0-FEATURES.md` v1 + `desk-loop/bt/round3_manifest.json` (definitions only) + the
+read-only availability audit `PHASE4-ROUND3-STAGE0-AUDIT.json`. Verified pipeline: 16 price/volume features with
+formulas and bar requirements, NaN ⇒ ineligible. Assumed pipeline: 6 DeFiLlama features with a frozen family rule
+(symbol + gecko_id, unique-symbol fallback — replacing the ambiguous one-slug mapping in `token_map`), availability D+7
+and ≥ listedAt, NaN → 0 with an explicit `has_fundamentals` feature. Audit: 480 names, 290 with a symbol family, 188 with
+fees, most fees history from 2024+. No feature value, label or model output exists. Awaiting review.
+
+---
+
+## R-2026-10-09-AG — ChatGPT review of the Stage 0 manifest v1 (Revise / Revise / Revise / Not yet)
+
+| # | Claim | Verdict | Action in v2 |
+|---|---|---|---|
+| 1 | `breadth_ctx` must use a non-circular denominator (the pre-feature candidate set), not the post-NaN-filter set it belongs to; note that 90-day returns need 91 closes | **Correct.** | Pre-feature candidate set defined in §1 as the breadth denominator and stratification population; NaN filter applied after it and counted; 91-closes note added. |
+| 2 | Remove the symbol-only DeFiLlama fallback; require a real identity match; rerun the audit and report survivors of the final rule, not raw symbol matches | **Correct — and the v1 rule was worse than that:** `token_map.gecko_id` was derived from DeFiLlama's own records, so "symbol + gecko_id" was circular and still produced WIF→world-is-flat. | New identity chain: Coinbase currency name → the unique CoinGecko coin with the same symbol AND normalised name → DeFiLlama child-level protocols with that gecko_id plus every child of a parent with that gecko_id (parents never summed); no fallback; slug set frozen in the audit file. Survivors: 111 usable of 480 (83 with fees); 123 no identity; 145 no DeFiLlama family; 101 resolved but no `listedAt` (unusable under the strict rule; these are the oldest protocols, pre-dating DeFiLlama's stamping on 2021-10-12 — alternative floor offered in Q2). |
+| 3 | No single `has_fundamentals` flag with all-missing → 0; per-feature missingness indicators with training-only mean imputation; fail the month closed when the global stablecoin value is missing; `has_family` allowed as an extra | **Correct.** | Four per-feature `_missing` indicators, training-only means/stds, `stable_supply_30` fails closed, `has_family` retained as an additional indicator. |
+| 4 | Freeze the family slug set once and avoid summing overlapping parent and child series | **Correct.** | Child-level slugs only, parents never summed; set stored per symbol in `PHASE4-ROUND3-STAGE0-AUDIT.json`; no dynamic remapping. |
+
+v2 sent for review; no feature value, label or model output computed.
+
+---
+
+## R-2026-10-10-AH — ChatGPT acceptance of the Stage 0 feature manifest v2 (FROZEN)
+
+> R-AH — Phase 4 Round 3 Stage 0 feature manifest v2 ACCEPTED AND FROZEN at PR #52 @ `e1f7445`. `breadth_ctx` denominator
+> and liquidity strata use the frozen pre-feature candidate set; verified-feature NaN exclusions occur afterward and are
+> counted. DeFiLlama identity uses the frozen Coinbase-name → unique CoinGecko symbol+name → DeFiLlama gecko_id family
+> chain with fixed child-level slug sets and no fallback. Families lacking any `listedAt` remain unusable; the 2021-10-12
+> DeFiLlama stamping start is not treated as synthetic availability evidence. Fundamental missingness is represented per
+> feature with training-only observed-value imputation; global stablecoin context fails closed when missing. Stage 0 is
+> frozen; feature computation and the single preregistered Round-3 label/model run may now be built under these
+> definitions.
+
+Recorded verbatim (Accept / Accept-strict / Accept / Freeze). Build starts: computation module with a per-feature
+look-ahead test, the DeFiLlama backfill with `available_at` NULL, the two pipelines, negative controls, then one run.
+
+---
+
+## R-2026-10-10-AI — Phase 4 round 3 runner-forensics table, run once (UNREVIEWED; nothing promoted)
+
+Table: `docs/desk/PHASE4-ROUND3-TABLE-2026-10-10.{md,json}` on PR #52, built from the frozen candle snapshot (data_hash
+`8df7990c93dcc632`, universe_hash `64e00348d99bb713`) and the DeFiLlama backfill snapshot (hash `e1a657594990b69e`: 271 TVL,
+170 fees, 165 revenue series, stablecoin series; every record `available_at` null, used only under the frozen D+7 lag and
+≥ listedAt rule; stored as a snapshot file, not in Supabase, for the Free-plan quota). Code: `bt/round3.py`,
+`test_round3.py` (14 tests incl. a per-feature look-ahead test; 112/112 overall). Dataset: 5,484 (month, candidate) rows
+over 57 formation months; labels runner_2x 993 (base rate 45.6% of eligible rows), runner_3x 355, runner_5x 107;
+verified-ineligible 1. Trials 8 per pipeline (C ∈ {0.1, 1.0} × 4 test years); C = 1.0 selected every year by in-fit
+log-loss, as expected under that frozen selection rule. Sent unchanged:
+
+| pipeline | OOS positives | precision@10% | base rate | lift | ex top-liquidity | ex top-3 months | years | perm p | negative control | outcome |
+|---|---|---|---|---|---|---|---|---|---|---|
+| verified (16 price/volume features) | 909 | 0.481 | 0.456 | 1.06 | 1.09 | 1.01 | 0.60 / 1.06 / 1.08 / 1.10 | 0.16 | 0.98 (valid) | **historical_rejected** (all four gate checks fail) |
+| assumed (+ fundamentals at D+7, subordinate) | 909 | 0.500 | 0.456 | 1.10 | 1.10 | 1.04 | 1.29 / 0.98 / 1.21 / 1.03 | 0.043 | 1.04 (valid) | **historical_rejected** (all four fail) |
+
+Enrichment (reported, never gated): 5× runners are 1.4× (verified) / 1.8× (assumed) over-represented in the top-5% score
+bucket, 3× runners ≈ 1.0–1.1×; nothing survives at top-10%/20%. Diagnostic 3×-vs-<1.5× model graded on 2×: lift 1.05.
+Fundamentals coverage in the assumed pipeline: fees_growth 401 rows, rev_growth 303, tvl_change 514 of 5,483; rev_yield
+0 (DeFiLlama has no point-in-time market cap, so the feature is NaN everywhere and its indicator constant, as the Stage 0
+manifest anticipated); has_family 1,112 rows; no month failed closed. Minimum evidence met (909 positives, ≥ 5 per year).
+
+Observations for the reviewer, not rule changes: (1) with a 45.6% base rate the frozen "≥ 2× lift" gate required
+precision@10% ≥ 91%; doubling within 180 bars is common in this universe, so the question "which names double" is
+weakly separable from the tape, while the rarer 5× tier shows a small, unstable enrichment. (2) The assumed pipeline's
+permutation p of 0.043 with a lift of 1.10 is a real but economically small effect, and the subordination rule applies.
+Nothing in `research_runs`. Awaiting the independent verdict.
+
+---
+
+## R-2026-10-11-AJ — ChatGPT independent verdict on the round-3 table (PR #52 @ a9b8a0a)
+
+> R-AJ — Phase 4 Round 3 historical screening table VALID at PR #52 @ a9b8a0a. Verified runner-forensics pipeline =
+> historical_rejected: population precision@10% 0.481 vs 0.456 base rate (1.056× lift), with all four frozen advancement
+> checks failed. Assumed-availability fundamentals pipeline = historical_rejected: precision 0.500 vs 0.456 (1.097× lift),
+> also failing all four frozen advancement checks; sparse fundamentals coverage and rev_yield absence do not invalidate
+> the pipeline because missingness handling was frozen in Stage 0. Negative controls are acceptable; minimum evidence is
+> satisfied; no rerun is justified. The reported 5× enrichment is exploratory/non-gating and cannot rescue either
+> pipeline. No Round-3 candidate advances to Round 4, forward validation, Phase 5, or Phase 10; nothing becomes
+> research_accepted or trade_approved.
+
+Recorded verbatim. Reviewer's reading, adopted: the 45.6% 2× base rate made the frozen ≥ 2× lift gate imply ≈ 91%
+precision; that gate is not weakened after seeing results; a rarer objective would be a new hypothesis, not a rerun. The
+5× enrichment is exploratory only and may not be examined further (which coins, which features) without a new
+pre-registration. Reviewer: PR #52 ready to close out; no round 4 from these results.
+
+### Close-out of the Phase 4 research path (three rounds, 2026-10-03 → 2026-10-11)
+| round | hypotheses | outcome |
+|---|---|---|
+| 1 (R-S…R-V) | sma_trend, momentum_top, mean_reversion on the monthly top-20 alt universe | all three REJECTED (−80% to −91% OOS) |
+| 2 (R-W…R-AA) | BTC-only trend, breadth-floored momentum, Extreme-Fear BTC timing | all historical_rejected (C-verified inconclusive at 0% coverage); the breadth cash floor helped but did not produce an edge |
+| 3 (R-AB…R-AJ) | runner forensics: tape-only and tape + sparse fundamentals | both historical_rejected (lift 1.06 / 1.10 vs the frozen 2×) |
+Zero survivors; zero forward-validation entrants; nothing in `research_runs`; no model consensus authorised anything.
+Infrastructure left in place: frozen snapshots and hashes, point-in-time F&G with `available_at`, the forward-validation
+stage (idle), live collectors, 112 tests. The only edge with evidence in this project remains structural: producing BTC
+below market cost (mining) and holding it with a drawdown rule — 100% BTC buy-and-hold made +22.6% over the test span
+with a −76.7% drawdown while every tested rule lost. Any further research starts from a new pre-registration.
+

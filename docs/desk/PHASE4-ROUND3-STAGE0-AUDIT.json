@@ -1,0 +1,5458 @@
+{
+ "generated": "2026-10-09T01:01:50.320435Z",
+ "identity_rule": "Coinbase currency name for the symbol -> the unique CoinGecko coin with the same symbol AND normalised name -> DeFiLlama child-level protocols whose gecko_id is that id, plus every child of a parentProtocol whose gecko_id is that id (parents are never summed themselves); the slug set per symbol is frozen in this file; a family with no listedAt on any member is unusable",
+ "summary": {
+  "universe_names_excl_map": 480,
+  "reasons": {
+   "no DeFiLlama family": 145,
+   "family resolved, no listedAt (unusable)": 101,
+   "family resolved, usable": 111,
+   "no unique CoinGecko identity": 123
+  },
+  "families_usable": 111,
+  "usable_with_fees_module": 83,
+  "usable_earliest_listedAt_by_year": {
+   "2021": 11,
+   "2022": 23,
+   "2023": 25,
+   "2024": 18,
+   "2025": 20,
+   "2026": 14
+  },
+  "usable_earliest_daily_fees_by_year": {
+   "2018": 1,
+   "2019": 2,
+   "2020": 4,
+   "2021": 6,
+   "2022": 9,
+   "2023": 15,
+   "2024": 22,
+   "2025": 20,
+   "2026": 2,
+   "none": 2
+  },
+  "multi_slug_usable_families": 59,
+  "usable_names": [
+   "2Z",
+   "AAVE",
+   "ACS",
+   "ACX",
+   "AERO",
+   "ALCX",
+   "API3",
+   "ARPA",
+   "ASTER",
+   "ATH",
+   "AXL",
+   "BAL",
+   "BARD",
+   "BICO",
+   "BIO",
+   "BLAST",
+   "BLUR",
+   "BONK",
+   "C98",
+   "CAKE",
+   "CELR",
+   "CFG",
+   "CHIP",
+   "COMP",
+   "CT",
+   "CTR",
+   "CTX",
+   "DBR",
+   "DEEP",
+   "DOLO",
+   "DOT",
+   "DRIFT",
+   "DRV",
+   "EDGE",
+   "ENA",
+   "ETHFI",
+   "EUL",
+   "FLOCK",
+   "FLOKI",
+   "FLOW",
+   "FLUID",
+   "GFI",
+   "GHST",
+   "GROVE",
+   "HFT",
+   "HOME",
+   "HYPE",
+   "HYPER",
+   "IDEX",
+   "INV",
+   "JTO",
+   "JUP",
+   "KAIO",
+   "KAITO",
+   "KMNO",
+   "LAYER",
+   "LINK",
+   "LMTS",
+   "LQTY",
+   "MAMO",
+   "ME",
+   "MET",
+   "META",
+   "MNDE",
+   "MORPHO",
+   "MUSE",
+   "NEAR",
+   "OGN",
+   "OPN",
+   "PENDLE",
+   "POLS",
+   "POND",
+   "PRCL",
+   "PUMP",
+   "PYR",
+   "QI",
+   "QUICK",
+   "RARE",
+   "RE",
+   "REQ",
+   "REZ",
+   "RPL",
+   "SAND",
+   "SAPIEN",
+   "SD",
+   "SKY",
+   "SNX",
+   "SOL",
+   "SPA",
+   "SPK",
+   "SUP",
+   "SUPER",
+   "SWELL",
+   "SYN",
+   "SYRUP",
+   "THQ",
+   "TNSR",
+   "TREE",
+   "TRUST",
+   "UNI",
+   "VELO",
+   "VVV",
+   "W",
+   "WELL",
+   "WLD",
+   "WMTX",
+   "YB",
+   "YFI",
+   "ZAMA",
+   "ZETA",
+   "ZORA"
+  ]
+ },
+ "audit": {
+  "00": {
+   "family": [],
+   "coinbase_name": "00 Token",
+   "gecko_id": "zer0zer0",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "1INCH": {
+   "coinbase_name": "1Inch",
+   "gecko_id": "1inch",
+   "parents": [
+    "parent#1inch"
+   ],
+   "family": [
+    "1inch-aqua",
+    "1inch-swap"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [
+    "1inch-aqua"
+   ],
+   "fees_first": {
+    "1inch-aqua": null
+   },
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "2Z": {
+   "coinbase_name": "Doublezero",
+   "gecko_id": "doublezero",
+   "parents": [
+    "parent#doublezero"
+   ],
+   "family": [
+    "doublezero-edge",
+    "doublezero-network",
+    "doublezero-staked-sol"
+   ],
+   "earliest_listedAt": "2025-11-13",
+   "fees_slugs": [
+    "doublezero-edge",
+    "doublezero-network",
+    "doublezero-staked-sol"
+   ],
+   "fees_first": {
+    "doublezero-edge": "2026-05-02",
+    "doublezero-network": "2025-10-24",
+    "doublezero-staked-sol": "2025-07-27"
+   },
+   "reason": "family resolved"
+  },
+  "A8": {
+   "coinbase_name": "Ancient8",
+   "gecko_id": "ancient8",
+   "parents": [],
+   "family": [
+    "ancient8"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [
+    "ancient8"
+   ],
+   "fees_first": {
+    "ancient8": "2024-01-24"
+   },
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "AAVE": {
+   "coinbase_name": "Aave",
+   "gecko_id": "aave",
+   "parents": [
+    "parent#aave"
+   ],
+   "family": [
+    "aave-aptos",
+    "aave-arc",
+    "aave-horizon-rwa",
+    "aave-v1",
+    "aave-v2",
+    "aave-v3",
+    "aave-v4"
+   ],
+   "earliest_listedAt": "2022-04-01",
+   "fees_slugs": [
+    "aave-v2",
+    "aave-v3",
+    "aave-v4"
+   ],
+   "fees_first": {
+    "aave-v2": "2020-12-04",
+    "aave-v3": "2022-03-17",
+    "aave-v4": "2026-03-31"
+   },
+   "reason": "family resolved"
+  },
+  "ABT": {
+   "family": [],
+   "coinbase_name": "Arcblock",
+   "gecko_id": "arcblock",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "ACH": {
+   "family": [],
+   "coinbase_name": "Alchemy Pay",
+   "gecko_id": "alchemy-pay",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "ACS": {
+   "coinbase_name": "Access Protocol",
+   "gecko_id": "access-protocol",
+   "parents": [],
+   "family": [
+    "access-protocol"
+   ],
+   "earliest_listedAt": "2024-12-11",
+   "fees_slugs": [],
+   "fees_first": {},
+   "reason": "family resolved"
+  },
+  "ACX": {
+   "coinbase_name": "Across Protocol",
+   "gecko_id": "across-protocol",
+   "parents": [],
+   "family": [
+    "across"
+   ],
+   "earliest_listedAt": "2022-01-07",
+   "fees_slugs": [
+    "across"
+   ],
+   "fees_first": {
+    "across": "2023-05-01"
+   },
+   "reason": "family resolved"
+  },
+  "ADA": {
+   "coinbase_name": "Cardano",
+   "gecko_id": "cardano",
+   "parents": [],
+   "family": [
+    "cardano"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [
+    "cardano"
+   ],
+   "fees_first": {
+    "cardano": "2018-09-23"
+   },
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "AERGO": {
+   "family": [],
+   "coinbase_name": "Aergo",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "AERO": {
+   "coinbase_name": "Aerodrome Finance",
+   "gecko_id": "aerodrome-finance",
+   "parents": [
+    "parent#aerodrome"
+   ],
+   "family": [
+    "aero-lite",
+    "aerodrome-ignition",
+    "aerodrome-slipstream",
+    "aerodrome-v1"
+   ],
+   "earliest_listedAt": "2023-08-29",
+   "fees_slugs": [
+    "aero-lite",
+    "aerodrome-slipstream",
+    "aerodrome-v1"
+   ],
+   "fees_first": {
+    "aero-lite": null,
+    "aerodrome-slipstream": "2024-05-04",
+    "aerodrome-v1": "2023-08-29"
+   },
+   "reason": "family resolved"
+  },
+  "AGLD": {
+   "family": [],
+   "coinbase_name": "Adventure Gold",
+   "gecko_id": "adventure-gold",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "AI": {
+   "family": [],
+   "coinbase_name": "Gensyn",
+   "gecko_id": "gensyn",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "AIOZ": {
+   "family": [],
+   "coinbase_name": "Aioz Network",
+   "gecko_id": "aioz-network",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "AKT": {
+   "family": [],
+   "coinbase_name": "Akash",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "ALCX": {
+   "coinbase_name": "Alchemix",
+   "gecko_id": "alchemix",
+   "parents": [
+    "parent#alchemix"
+   ],
+   "family": [
+    "alchemix-v2",
+    "alchemix-v3"
+   ],
+   "earliest_listedAt": "2026-04-23",
+   "fees_slugs": [
+    "alchemix-v2",
+    "alchemix-v3"
+   ],
+   "fees_first": {
+    "alchemix-v2": "2022-12-09",
+    "alchemix-v3": "2025-04-25"
+   },
+   "reason": "family resolved"
+  },
+  "ALEO": {
+   "family": [],
+   "coinbase_name": "Aleo",
+   "gecko_id": "aleo",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "ALEPH": {
+   "family": [],
+   "coinbase_name": "Aleph.im v2",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "ALGO": {
+   "family": [],
+   "coinbase_name": "Algorand",
+   "gecko_id": "algorand",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "ALICE": {
+   "coinbase_name": "My Neighbor Alice",
+   "gecko_id": "my-neighbor-alice",
+   "parents": [],
+   "family": [
+    "my-neighbor-alice"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [],
+   "fees_first": {},
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "ALIGN": {
+   "family": [],
+   "coinbase_name": "Aligned",
+   "gecko_id": "aligned",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "ALLO": {
+   "family": [],
+   "coinbase_name": "Allora",
+   "gecko_id": "allora",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "ALT": {
+   "coinbase_name": "Altlayer",
+   "gecko_id": "altlayer",
+   "parents": [],
+   "family": [
+    "altlayer"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [],
+   "fees_first": {},
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "AMP": {
+   "coinbase_name": "Amp",
+   "gecko_id": "amp-token",
+   "parents": [],
+   "family": [
+    "flexa"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [],
+   "fees_first": {},
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "ANKR": {
+   "family": [],
+   "coinbase_name": "Ankr",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "ANT": {
+   "coinbase_name": "Aragon",
+   "gecko_id": "aragon",
+   "parents": [],
+   "family": [
+    "aragon"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [],
+   "fees_first": {},
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "APE": {
+   "coinbase_name": "ApeCoin",
+   "gecko_id": "apecoin",
+   "parents": [],
+   "family": [
+    "apecoin"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [],
+   "fees_first": {},
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "API3": {
+   "coinbase_name": "API3",
+   "gecko_id": "api3",
+   "parents": [],
+   "family": [
+    "api3"
+   ],
+   "earliest_listedAt": "2022-02-01",
+   "fees_slugs": [
+    "api3"
+   ],
+   "fees_first": {
+    "api3": "2025-12-30"
+   },
+   "reason": "family resolved"
+  },
+  "APR": {
+   "family": [],
+   "coinbase_name": "aPriori",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "APT": {
+   "coinbase_name": "Aptos",
+   "gecko_id": "aptos",
+   "parents": [],
+   "family": [
+    "aptos"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [
+    "aptos"
+   ],
+   "fees_first": {
+    "aptos": "2022-10-18"
+   },
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "ARB": {
+   "coinbase_name": "Arbitrum",
+   "gecko_id": "arbitrum",
+   "parents": [
+    "parent#arbitrum-foundation"
+   ],
+   "family": [
+    "arbitrum-bridge",
+    "arbitrum-nitro",
+    "arbitrum-timeboost"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [
+    "arbitrum-nitro",
+    "arbitrum-timeboost"
+   ],
+   "fees_first": {
+    "arbitrum-nitro": "2026-05-05",
+    "arbitrum-timeboost": null
+   },
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "ARKM": {
+   "coinbase_name": "Arkham",
+   "gecko_id": "arkham",
+   "parents": [],
+   "family": [
+    "arkham"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [],
+   "fees_first": {},
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "ARPA": {
+   "coinbase_name": "ARPA",
+   "gecko_id": "arpa",
+   "parents": [],
+   "family": [
+    "arpa-staking"
+   ],
+   "earliest_listedAt": "2023-07-04",
+   "fees_slugs": [],
+   "fees_first": {},
+   "reason": "family resolved"
+  },
+  "ARX": {
+   "coinbase_name": "Arcium",
+   "gecko_id": "arcium",
+   "parents": [],
+   "family": [
+    "arcium"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [],
+   "fees_first": {},
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "ASM": {
+   "family": [],
+   "coinbase_name": "Assemble Protocol",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "AST": {
+   "coinbase_name": "AirSwap",
+   "gecko_id": "airswap",
+   "parents": [],
+   "family": [
+    "airswap"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [
+    "airswap"
+   ],
+   "fees_first": {
+    "airswap": "2023-04-01"
+   },
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "ASTER": {
+   "coinbase_name": "Aster",
+   "gecko_id": "aster-2",
+   "parents": [
+    "parent#astherus"
+   ],
+   "family": [
+    "apx-bridge",
+    "aster-asbnb",
+    "aster-asbtc",
+    "aster-bridge",
+    "aster-perps",
+    "aster-predictions",
+    "aster-spot",
+    "aster-usdf"
+   ],
+   "earliest_listedAt": "2022-05-19",
+   "fees_slugs": [
+    "aster-perps",
+    "aster-spot"
+   ],
+   "fees_first": {
+    "aster-perps": "2023-07-18",
+    "aster-spot": "2026-06-16"
+   },
+   "reason": "family resolved"
+  },
+  "ATA": {
+   "family": [],
+   "coinbase_name": "Automata Network",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "ATH": {
+   "coinbase_name": "Aethir",
+   "gecko_id": "aethir",
+   "parents": [],
+   "family": [
+    "aethir"
+   ],
+   "earliest_listedAt": "2025-10-28",
+   "fees_slugs": [
+    "aethir"
+   ],
+   "fees_first": {
+    "aethir": "2024-10-31"
+   },
+   "reason": "family resolved"
+  },
+  "ATOM": {
+   "family": [],
+   "coinbase_name": "Cosmos",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "AUCTION": {
+   "family": [],
+   "coinbase_name": "Bounce Token",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "AUDIO": {
+   "family": [],
+   "coinbase_name": "Audius",
+   "gecko_id": "audius",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "AURORA": {
+   "family": [],
+   "coinbase_name": "Aurora",
+   "reason": "2 CoinGecko coins match symbol AND name",
+   "cg_candidates": [
+    "aurora-near",
+    "aurora-terminal"
+   ]
+  },
+  "AVAX": {
+   "coinbase_name": "Avalanche",
+   "gecko_id": "avalanche-2",
+   "parents": [],
+   "family": [
+    "avalanche"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [
+    "avalanche"
+   ],
+   "fees_first": {
+    "avalanche": "2022-11-08"
+   },
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "AVNT": {
+   "family": [],
+   "coinbase_name": "Avantis",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "AVT": {
+   "family": [],
+   "coinbase_name": "Aventus",
+   "gecko_id": "aventus",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "AWE": {
+   "family": [],
+   "coinbase_name": "Awe",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "AXL": {
+   "coinbase_name": "Axelar",
+   "gecko_id": "axelar",
+   "parents": [
+    "parent#axelar-network"
+   ],
+   "family": [
+    "axelar",
+    "axelar-cross-chain"
+   ],
+   "earliest_listedAt": "2022-10-29",
+   "fees_slugs": [
+    "axelar"
+   ],
+   "fees_first": {
+    "axelar": "2024-12-26"
+   },
+   "reason": "family resolved"
+  },
+  "AXS": {
+   "coinbase_name": "Axie Infinity",
+   "gecko_id": "axie-infinity",
+   "parents": [],
+   "family": [
+    "axie-infinity"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [
+    "axie-infinity"
+   ],
+   "fees_first": {
+    "axie-infinity": "2018-03-26"
+   },
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "AZTEC": {
+   "family": [],
+   "coinbase_name": "Aztec",
+   "gecko_id": "aztec",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "B3": {
+   "family": [],
+   "coinbase_name": "B3 (Base)",
+   "gecko_id": "b3",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "BADGER": {
+   "family": [],
+   "coinbase_name": "Badger DAO",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "BAL": {
+   "coinbase_name": "Balancer",
+   "gecko_id": "balancer",
+   "parents": [
+    "parent#balancer"
+   ],
+   "family": [
+    "balancer-cow-amm",
+    "balancer-v1",
+    "balancer-v2",
+    "balancer-v3"
+   ],
+   "earliest_listedAt": "2024-08-06",
+   "fees_slugs": [
+    "balancer-v1",
+    "balancer-v2",
+    "balancer-v3"
+   ],
+   "fees_first": {
+    "balancer-v1": "2020-03-23",
+    "balancer-v2": "2021-04-24",
+    "balancer-v3": "2024-12-11"
+   },
+   "reason": "family resolved"
+  },
+  "BAND": {
+   "family": [],
+   "coinbase_name": "Band Protocol",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "BARD": {
+   "coinbase_name": "Lombard",
+   "gecko_id": "lombard-protocol",
+   "parents": [
+    "parent#lombard-finance"
+   ],
+   "family": [
+    "lombard-btc.b",
+    "lombard-lbtc",
+    "lombard-vaults"
+   ],
+   "earliest_listedAt": "2024-09-04",
+   "fees_slugs": [
+    "lombard-lbtc",
+    "lombard-vaults"
+   ],
+   "fees_first": {
+    "lombard-lbtc": "2024-09-04",
+    "lombard-vaults": "2024-09-12"
+   },
+   "reason": "family resolved"
+  },
+  "BASECAT": {
+   "family": [],
+   "coinbase_name": "Basecat",
+   "gecko_id": "basecat",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "BASED1": {
+   "family": [],
+   "coinbase_name": "Based One",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "BAT": {
+   "family": [],
+   "coinbase_name": "Basic Attention Token",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "BCH": {
+   "family": [],
+   "coinbase_name": "Bitcoin Cash",
+   "gecko_id": "bitcoin-cash",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "BEAM": {
+   "family": [],
+   "coinbase_name": "Beam",
+   "reason": "2 CoinGecko coins match symbol AND name",
+   "cg_candidates": [
+    "beam",
+    "beam-2"
+   ]
+  },
+  "BERA": {
+   "coinbase_name": "Berachain",
+   "gecko_id": "berachain-bera",
+   "parents": [],
+   "family": [
+    "berachain"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [
+    "berachain"
+   ],
+   "fees_first": {
+    "berachain": "2025-02-06"
+   },
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "BICO": {
+   "coinbase_name": "Biconomy",
+   "gecko_id": "biconomy",
+   "parents": [],
+   "family": [
+    "hyphen"
+   ],
+   "earliest_listedAt": "2022-03-24",
+   "fees_slugs": [],
+   "fees_first": {},
+   "reason": "family resolved"
+  },
+  "BIGTIME": {
+   "coinbase_name": "Big Time",
+   "gecko_id": "big-time",
+   "parents": [],
+   "family": [
+    "big-time"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [],
+   "fees_first": {},
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "BILL": {
+   "coinbase_name": "Billions Network",
+   "gecko_id": "billions-network",
+   "parents": [],
+   "family": [
+    "billions-network"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [],
+   "fees_first": {},
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "BIO": {
+   "coinbase_name": "Bio Protocol",
+   "gecko_id": "bio-protocol",
+   "parents": [],
+   "family": [
+    "bio-protocol"
+   ],
+   "earliest_listedAt": "2025-10-17",
+   "fees_slugs": [],
+   "fees_first": {},
+   "reason": "family resolved"
+  },
+  "BIRB": {
+   "family": [],
+   "coinbase_name": "Moonbirds",
+   "gecko_id": "moonbirds",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "BIT": {
+   "family": [],
+   "coinbase_name": "BitDAO",
+   "gecko_id": "bitdao",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "BLAST": {
+   "coinbase_name": "Blast",
+   "gecko_id": "blast",
+   "parents": [
+    "parent#blast-l2"
+   ],
+   "family": [
+    "blast-bridge",
+    "blast-pre-launch-farm"
+   ],
+   "earliest_listedAt": "2023-11-22",
+   "fees_slugs": [],
+   "fees_first": {},
+   "reason": "family resolved"
+  },
+  "BLEND": {
+   "family": [],
+   "coinbase_name": "Fluent",
+   "gecko_id": "fluent-network",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "BLUECHIP": {
+   "family": [],
+   "coinbase_name": "Blue Chip",
+   "reason": "5 CoinGecko coins match symbol AND name",
+   "cg_candidates": [
+    "bluechip",
+    "blue-chip-2",
+    "bluechip-2",
+    "blue-chip-3",
+    "blue-chip-4"
+   ]
+  },
+  "BLUR": {
+   "coinbase_name": "Blur",
+   "gecko_id": "blur",
+   "parents": [
+    "parent#blur"
+   ],
+   "family": [
+    "blur-bids",
+    "blur-lending"
+   ],
+   "earliest_listedAt": "2023-01-06",
+   "fees_slugs": [
+    "blur-bids"
+   ],
+   "fees_first": {
+    "blur-bids": "2023-01-03"
+   },
+   "reason": "family resolved"
+  },
+  "BLZ": {
+   "family": [],
+   "coinbase_name": "Bluzelle",
+   "gecko_id": "bluzelle",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "BNB": {
+   "coinbase_name": "BNB",
+   "gecko_id": "binancecoin",
+   "parents": [],
+   "family": [
+    "binance-smart-chain"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [],
+   "fees_first": {},
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "BNKR": {
+   "coinbase_name": "BankrCoin",
+   "gecko_id": "bankercoin-2",
+   "parents": [],
+   "family": [
+    "bankr"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [
+    "bankr"
+   ],
+   "fees_first": {
+    "bankr": "2025-08-12"
+   },
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "BNT": {
+   "family": [],
+   "coinbase_name": "Bancor",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "BOBA": {
+   "family": [],
+   "coinbase_name": "Boba Network",
+   "gecko_id": "boba-network",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "BOBBOB": {
+   "family": [],
+   "coinbase_name": "Bob",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "BOND": {
+   "coinbase_name": "BarnBridge",
+   "gecko_id": "barnbridge",
+   "parents": [],
+   "family": [
+    "barnbridge"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [],
+   "fees_first": {},
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "BONK": {
+   "coinbase_name": "Bonk",
+   "gecko_id": "bonk",
+   "parents": [
+    "parent#bonkfun"
+   ],
+   "family": [
+    "bonk-staked-sol",
+    "bonk.fun-launchpad",
+    "bonkbot",
+    "bonkswap",
+    "telemetry"
+   ],
+   "earliest_listedAt": "2023-04-13",
+   "fees_slugs": [
+    "bonk-staked-sol",
+    "bonk.fun-launchpad",
+    "bonkbot",
+    "bonkswap",
+    "telemetry"
+   ],
+   "fees_first": {
+    "bonk-staked-sol": "2024-07-18",
+    "bonk.fun-launchpad": "2025-05-04",
+    "bonkbot": "2023-08-23",
+    "bonkswap": "2025-06-06",
+    "telemetry": "2025-08-13"
+   },
+   "reason": "family resolved"
+  },
+  "BREV": {
+   "family": [],
+   "coinbase_name": "Brevis",
+   "gecko_id": "brevis",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "BTC": {
+   "coinbase_name": "Bitcoin",
+   "gecko_id": "bitcoin",
+   "parents": [],
+   "family": [
+    "bitcoin"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [
+    "bitcoin"
+   ],
+   "fees_first": {
+    "bitcoin": "2011-01-31"
+   },
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "BTRST": {
+   "family": [],
+   "coinbase_name": "Braintrust",
+   "gecko_id": "braintrust",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "BUSD": {
+   "family": [],
+   "coinbase_name": "Binance USD",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "C98": {
+   "coinbase_name": "Coin98",
+   "gecko_id": "coin98",
+   "parents": [
+    "parent#coin98-protocol"
+   ],
+   "family": [
+    "coin98",
+    "coin98-perps",
+    "coin98-spot"
+   ],
+   "earliest_listedAt": "2025-04-04",
+   "fees_slugs": [
+    "coin98-perps",
+    "coin98-spot"
+   ],
+   "fees_first": {
+    "coin98-perps": null,
+    "coin98-spot": null
+   },
+   "reason": "family resolved"
+  },
+  "CAKE": {
+   "coinbase_name": "Pancakeswap",
+   "gecko_id": "pancakeswap-token",
+   "parents": [
+    "parent#pancakeswap"
+   ],
+   "family": [
+    "pancakeswap-aggregator",
+    "pancakeswap-amm",
+    "pancakeswap-amm-v1",
+    "pancakeswap-amm-v3",
+    "pancakeswap-infinity",
+    "pancakeswap-lottery",
+    "pancakeswap-options",
+    "pancakeswap-perps",
+    "pancakeswap-prediction",
+    "pancakeswap-stableswap",
+    "pancakeswap-x"
+   ],
+   "earliest_listedAt": "2023-02-13",
+   "fees_slugs": [
+    "pancakeswap-amm",
+    "pancakeswap-amm-v3",
+    "pancakeswap-infinity",
+    "pancakeswap-lottery",
+    "pancakeswap-prediction",
+    "pancakeswap-stableswap"
+   ],
+   "fees_first": {
+    "pancakeswap-amm": "2021-04-24",
+    "pancakeswap-amm-v3": "2023-04-03",
+    "pancakeswap-infinity": "2025-04-14",
+    "pancakeswap-lottery": "2024-07-01",
+    "pancakeswap-prediction": "2024-01-01",
+    "pancakeswap-stableswap": "2023-03-02"
+   },
+   "reason": "family resolved"
+  },
+  "CAP": {
+   "family": [],
+   "coinbase_name": "Cap",
+   "reason": "3 CoinGecko coins match symbol AND name",
+   "cg_candidates": [
+    "cap-2",
+    "cap-3",
+    "cap-4"
+   ]
+  },
+  "CELR": {
+   "coinbase_name": "Celer Network",
+   "gecko_id": "celer-network",
+   "parents": [],
+   "family": [
+    "cbridge"
+   ],
+   "earliest_listedAt": "2021-11-07",
+   "fees_slugs": [],
+   "fees_first": {},
+   "reason": "family resolved"
+  },
+  "CFG": {
+   "coinbase_name": "Centrifuge",
+   "gecko_id": "centrifuge-2",
+   "parents": [
+    "parent#centrifuge"
+   ],
+   "family": [
+    "centrifuge-protocol",
+    "tinlake"
+   ],
+   "earliest_listedAt": "2024-08-01",
+   "fees_slugs": [
+    "centrifuge-protocol"
+   ],
+   "fees_first": {
+    "centrifuge-protocol": "2025-07-25"
+   },
+   "reason": "family resolved"
+  },
+  "CGLD": {
+   "family": [],
+   "coinbase_name": "Celo",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "CHECK": {
+   "family": [],
+   "coinbase_name": "Checkmate",
+   "gecko_id": "checkmate-2",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "CHIP": {
+   "coinbase_name": "USD.AI",
+   "gecko_id": "chip-2",
+   "parents": [],
+   "family": [
+    "usd-ai"
+   ],
+   "earliest_listedAt": "2025-05-19",
+   "fees_slugs": [
+    "usd-ai"
+   ],
+   "fees_first": {
+    "usd-ai": "2025-05-14"
+   },
+   "reason": "family resolved"
+  },
+  "CHZ": {
+   "family": [],
+   "coinbase_name": "Chiliz",
+   "gecko_id": "chiliz",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "CLANKER": {
+   "family": [],
+   "coinbase_name": "Tokenbot",
+   "gecko_id": "tokenbot-2",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "CLV": {
+   "family": [],
+   "coinbase_name": "Clover Finance",
+   "gecko_id": "clover-finance",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "COMP": {
+   "coinbase_name": "Compound",
+   "gecko_id": "compound-governance-token",
+   "parents": [
+    "parent#compound-finance"
+   ],
+   "family": [
+    "compound-v1",
+    "compound-v2",
+    "compound-v3"
+   ],
+   "earliest_listedAt": "2022-09-14",
+   "fees_slugs": [
+    "compound-v2",
+    "compound-v3"
+   ],
+   "fees_first": {
+    "compound-v2": "2019-05-08",
+    "compound-v3": "2025-02-11"
+   },
+   "reason": "family resolved"
+  },
+  "COOKIE": {
+   "coinbase_name": "Cookie Dao",
+   "gecko_id": "cookie",
+   "parents": [],
+   "family": [
+    "cookie-dao"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [],
+   "fees_first": {},
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "CORECHAIN": {
+   "family": [],
+   "coinbase_name": "Core",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "COSMOSDYDX": {
+   "family": [],
+   "coinbase_name": "dYdX",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "COTI": {
+   "family": [],
+   "coinbase_name": "COTI",
+   "gecko_id": "coti",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "COVAL": {
+   "family": [],
+   "coinbase_name": "Circuits of Value",
+   "gecko_id": "circuits-of-value",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "COW": {
+   "coinbase_name": "Cow Protocol",
+   "gecko_id": "cow-protocol",
+   "parents": [],
+   "family": [
+    "cowswap"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [
+    "cowswap"
+   ],
+   "fees_first": {
+    "cowswap": "2023-02-03"
+   },
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "CP": {
+   "family": [],
+   "coinbase_name": "Cluster Protocol",
+   "gecko_id": "cluster-protocol",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "CRO": {
+   "family": [],
+   "coinbase_name": "Crypto.com Coin",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "CRPT": {
+   "family": [],
+   "coinbase_name": "Crypterium",
+   "gecko_id": "crypterium",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "CRV": {
+   "family": [],
+   "coinbase_name": "Curve DAO Token",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "CT": {
+   "coinbase_name": "Concrete",
+   "gecko_id": "concrete",
+   "parents": [],
+   "family": [
+    "concrete"
+   ],
+   "earliest_listedAt": "2025-02-07",
+   "fees_slugs": [
+    "concrete"
+   ],
+   "fees_first": {
+    "concrete": "2024-12-29"
+   },
+   "reason": "family resolved"
+  },
+  "CTR": {
+   "coinbase_name": "Citrea",
+   "gecko_id": "citrea",
+   "parents": [],
+   "family": [
+    "citrea-staking"
+   ],
+   "earliest_listedAt": "2026-06-02",
+   "fees_slugs": [],
+   "fees_first": {},
+   "reason": "family resolved"
+  },
+  "CTSI": {
+   "family": [],
+   "coinbase_name": "Cartesi",
+   "gecko_id": "cartesi",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "CTX": {
+   "coinbase_name": "Cryptex Finance",
+   "gecko_id": "cryptex-finance",
+   "parents": [
+    "parent#cryptex-finance"
+   ],
+   "family": [
+    "cryptex-pi",
+    "cryptex-v1",
+    "cryptex-v2"
+   ],
+   "earliest_listedAt": "2023-05-31",
+   "fees_slugs": [
+    "cryptex-v2"
+   ],
+   "fees_first": {
+    "cryptex-v2": "2023-05-20"
+   },
+   "reason": "family resolved"
+  },
+  "CVC": {
+   "family": [],
+   "coinbase_name": "Civic",
+   "gecko_id": "civic",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "CVX": {
+   "coinbase_name": "Convex Finance",
+   "gecko_id": "convex-finance",
+   "parents": [],
+   "family": [
+    "convex-finance"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [
+    "convex-finance"
+   ],
+   "fees_first": {
+    "convex-finance": "2021-05-18"
+   },
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "DAR": {
+   "family": [],
+   "coinbase_name": "Mines of Dalarnia",
+   "gecko_id": "mines-of-dalarnia",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "DASH": {
+   "family": [],
+   "coinbase_name": "Dash",
+   "reason": "3 CoinGecko coins match symbol AND name",
+   "cg_candidates": [
+    "dash",
+    "dash-2",
+    "dash-3"
+   ]
+  },
+  "DBR": {
+   "coinbase_name": "Debridge",
+   "gecko_id": "debridge",
+   "parents": [],
+   "family": [
+    "debridge"
+   ],
+   "earliest_listedAt": "2022-02-23",
+   "fees_slugs": [
+    "debridge"
+   ],
+   "fees_first": {
+    "debridge": "2023-04-01"
+   },
+   "reason": "family resolved"
+  },
+  "DDX": {
+   "coinbase_name": "DerivaDAO",
+   "gecko_id": "derivadao",
+   "parents": [],
+   "family": [
+    "derivadex"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [],
+   "fees_first": {},
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "DEEP": {
+   "coinbase_name": "Deepbook",
+   "gecko_id": "deep",
+   "parents": [
+    "parent#deepbook"
+   ],
+   "family": [
+    "deepbook-v2",
+    "deepbook-v3"
+   ],
+   "earliest_listedAt": "2023-07-21",
+   "fees_slugs": [
+    "deepbook-v3"
+   ],
+   "fees_first": {
+    "deepbook-v3": "2026-05-18"
+   },
+   "reason": "family resolved"
+  },
+  "DEGEN": {
+   "family": [],
+   "coinbase_name": "Degen",
+   "gecko_id": "degen-base",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "DESO": {
+   "family": [],
+   "coinbase_name": "Decentralized Social",
+   "gecko_id": "deso",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "DEXT": {
+   "coinbase_name": "DEXTools",
+   "gecko_id": "dextools",
+   "parents": [],
+   "family": [
+    "dextools"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [
+    "dextools"
+   ],
+   "fees_first": {
+    "dextools": "2024-08-02"
+   },
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "DIA": {
+   "family": [],
+   "coinbase_name": "DIA",
+   "gecko_id": "dia-data",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "DIEM": {
+   "family": [],
+   "coinbase_name": "Diem",
+   "gecko_id": "diem",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "DIMO": {
+   "family": [],
+   "coinbase_name": "Dimo",
+   "gecko_id": "dimo",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "DNT": {
+   "family": [],
+   "coinbase_name": "district0x",
+   "gecko_id": "district0x",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "DOGE": {
+   "coinbase_name": "Dogecoin",
+   "gecko_id": "dogecoin",
+   "parents": [],
+   "family": [
+    "dogecoin"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [],
+   "fees_first": {},
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "DOGINME": {
+   "family": [],
+   "coinbase_name": "Doginme",
+   "gecko_id": "doginme",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "DOLO": {
+   "coinbase_name": "Dolomite",
+   "gecko_id": "dolomite",
+   "parents": [],
+   "family": [
+    "dolomite"
+   ],
+   "earliest_listedAt": "2022-10-17",
+   "fees_slugs": [
+    "dolomite"
+   ],
+   "fees_first": {
+    "dolomite": "2024-12-04"
+   },
+   "reason": "family resolved"
+  },
+  "DOOD": {
+   "family": [],
+   "coinbase_name": "Doodles",
+   "gecko_id": "doodles",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "DOT": {
+   "coinbase_name": "Polkadot",
+   "gecko_id": "polkadot",
+   "parents": [],
+   "family": [
+    "polkadot-treasury"
+   ],
+   "earliest_listedAt": "2025-04-01",
+   "fees_slugs": [],
+   "fees_first": {},
+   "reason": "family resolved"
+  },
+  "DRB": {
+   "family": [],
+   "coinbase_name": "Debtreliefbot",
+   "gecko_id": "debtreliefbot",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "DREP": {
+   "family": [],
+   "coinbase_name": "Drep",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "DRIFT": {
+   "coinbase_name": "Drift Protocol",
+   "gecko_id": "drift-protocol",
+   "parents": [
+    "parent#drift"
+   ],
+   "family": [
+    "drift-amm",
+    "drift-staked-sol",
+    "drift-trade",
+    "velocity"
+   ],
+   "earliest_listedAt": "2021-12-03",
+   "fees_slugs": [
+    "drift-staked-sol",
+    "drift-trade"
+   ],
+   "fees_first": {
+    "drift-staked-sol": "2024-09-01",
+    "drift-trade": "2024-05-31"
+   },
+   "reason": "family resolved"
+  },
+  "DRV": {
+   "coinbase_name": "Derive",
+   "gecko_id": "derive",
+   "parents": [
+    "parent#lyra"
+   ],
+   "family": [
+    "derive-options",
+    "derive-v1",
+    "derive-v2",
+    "derive-v2-spot",
+    "derive-v3-options",
+    "derive-v3-perps",
+    "derive-v3-spot"
+   ],
+   "earliest_listedAt": "2023-12-15",
+   "fees_slugs": [
+    "derive-options",
+    "derive-v1",
+    "derive-v2",
+    "derive-v3-options",
+    "derive-v3-perps",
+    "derive-v3-spot"
+   ],
+   "fees_first": {
+    "derive-options": "2024-12-18",
+    "derive-v1": "2022-06-29",
+    "derive-v2": "2023-12-06",
+    "derive-v3-options": "2026-10-07",
+    "derive-v3-perps": "2026-10-07",
+    "derive-v3-spot": "2026-10-07"
+   },
+   "reason": "family resolved"
+  },
+  "DYP": {
+   "family": [],
+   "coinbase_name": "DeFi Yield Protocol",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "EDGE": {
+   "coinbase_name": "Definitive",
+   "gecko_id": "definitive",
+   "parents": [],
+   "family": [
+    "definitive"
+   ],
+   "earliest_listedAt": "2024-03-07",
+   "fees_slugs": [
+    "definitive"
+   ],
+   "fees_first": {
+    "definitive": "2024-12-25"
+   },
+   "reason": "family resolved"
+  },
+  "EDGEX": {
+   "family": [],
+   "coinbase_name": "Edgex",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "EGLD": {
+   "family": [],
+   "coinbase_name": "MultiversX",
+   "gecko_id": "elrond-erd-2",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "EIGEN": {
+   "family": [],
+   "coinbase_name": "Eigenlayer",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "ELA": {
+   "family": [],
+   "coinbase_name": "Elastos",
+   "gecko_id": "elastos",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "ELSA": {
+   "coinbase_name": "Elsa",
+   "gecko_id": "elsa",
+   "parents": [],
+   "family": [
+    "heyelsa"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [],
+   "fees_first": {},
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "ENA": {
+   "coinbase_name": "Ethena",
+   "gecko_id": "ethena",
+   "parents": [
+    "parent#ethena"
+   ],
+   "family": [
+    "ethena-pay",
+    "ethena-tsusde",
+    "ethena-usde",
+    "ethena-usdtb"
+   ],
+   "earliest_listedAt": "2024-02-15",
+   "fees_slugs": [
+    "ethena-usde"
+   ],
+   "fees_first": {
+    "ethena-usde": "2023-11-27"
+   },
+   "reason": "family resolved"
+  },
+  "ENJ": {
+   "family": [],
+   "coinbase_name": "Enjin Coin",
+   "gecko_id": "enjincoin",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "ENS": {
+   "coinbase_name": "Ethereum Name Service",
+   "gecko_id": "ethereum-name-service",
+   "parents": [],
+   "family": [
+    "ens"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [
+    "ens"
+   ],
+   "fees_first": {
+    "ens": "2019-12-31"
+   },
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "EOS": {
+   "family": [],
+   "coinbase_name": "EOS",
+   "gecko_id": "eos",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "ERA": {
+   "coinbase_name": "Caldera",
+   "gecko_id": "caldera",
+   "parents": [],
+   "family": [
+    "caldera"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [
+    "caldera"
+   ],
+   "fees_first": {
+    "caldera": "2025-08-07"
+   },
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "ERN": {
+   "coinbase_name": "Ethernity Chain",
+   "gecko_id": "ethernity-chain",
+   "parents": [],
+   "family": [
+    "ethernity-chain"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [],
+   "fees_first": {},
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "ESP": {
+   "family": [],
+   "coinbase_name": "Espresso",
+   "gecko_id": "espresso",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "ETC": {
+   "family": [],
+   "coinbase_name": "Ether Classic",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "ETH": {
+   "family": [],
+   "coinbase_name": "Ether",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "ETHFI": {
+   "coinbase_name": "Ether.Fi",
+   "gecko_id": "ether-fi",
+   "parents": [
+    "parent#ether-fi"
+   ],
+   "family": [
+    "ether.fi-liquid",
+    "ether.fi-stake",
+    "etherfi-borrowing-market",
+    "etherfi-cash-liquid"
+   ],
+   "earliest_listedAt": "2023-03-02",
+   "fees_slugs": [
+    "ether.fi-liquid",
+    "ether.fi-stake",
+    "etherfi-borrowing-market",
+    "etherfi-cash-liquid"
+   ],
+   "fees_first": {
+    "ether.fi-liquid": "2024-05-01",
+    "ether.fi-stake": "2024-06-01",
+    "etherfi-borrowing-market": "2025-01-11",
+    "etherfi-cash-liquid": "2025-05-02"
+   },
+   "reason": "family resolved"
+  },
+  "EUL": {
+   "coinbase_name": "Euler",
+   "gecko_id": "euler",
+   "parents": [
+    "parent#euler"
+   ],
+   "family": [
+    "euler-v1",
+    "euler-v2"
+   ],
+   "earliest_listedAt": "2022-01-03",
+   "fees_slugs": [
+    "euler-v2"
+   ],
+   "fees_first": {
+    "euler-v2": "2024-08-30"
+   },
+   "reason": "family resolved"
+  },
+  "FAI": {
+   "family": [],
+   "coinbase_name": "Freysa Ai",
+   "gecko_id": "freysa-ai",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "FARM": {
+   "coinbase_name": "Harvest Finance",
+   "gecko_id": "harvest-finance",
+   "parents": [],
+   "family": [
+    "harvest-finance"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [],
+   "fees_first": {},
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "FARTCOIN": {
+   "family": [],
+   "coinbase_name": "Fartcoin",
+   "gecko_id": "fartcoin",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "FET": {
+   "family": [],
+   "coinbase_name": "Fetch.ai",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "FIDA": {
+   "family": [],
+   "coinbase_name": "Bonfida",
+   "gecko_id": "bonfida",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "FIGHT": {
+   "family": [],
+   "coinbase_name": "Fight",
+   "reason": "2 CoinGecko coins match symbol AND name",
+   "cg_candidates": [
+    "fight",
+    "fight-2"
+   ]
+  },
+  "FIL": {
+   "coinbase_name": "Filecoin",
+   "gecko_id": "filecoin",
+   "parents": [],
+   "family": [
+    "filecoin"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [
+    "filecoin"
+   ],
+   "fees_first": {
+    "filecoin": "2024-09-23"
+   },
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "FIS": {
+   "coinbase_name": "Stafi",
+   "gecko_id": "stafi",
+   "parents": [],
+   "family": [
+    "stafi"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [],
+   "fees_first": {},
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "FLOCK": {
+   "coinbase_name": "Flock",
+   "gecko_id": "flock-2",
+   "parents": [],
+   "family": [
+    "flock.io"
+   ],
+   "earliest_listedAt": "2026-01-27",
+   "fees_slugs": [
+    "flock.io"
+   ],
+   "fees_first": {
+    "flock.io": "2025-05-29"
+   },
+   "reason": "family resolved"
+  },
+  "FLOKI": {
+   "coinbase_name": "Floki",
+   "gecko_id": "floki",
+   "parents": [],
+   "family": [
+    "flokifi-locker"
+   ],
+   "earliest_listedAt": "2023-01-04",
+   "fees_slugs": [],
+   "fees_first": {},
+   "reason": "family resolved"
+  },
+  "FLOW": {
+   "coinbase_name": "Flow",
+   "gecko_id": "flow",
+   "parents": [
+    "parent#flow-swap"
+   ],
+   "family": [
+    "flow",
+    "flowswap-v2",
+    "flowswap-v3"
+   ],
+   "earliest_listedAt": "2025-10-31",
+   "fees_slugs": [
+    "flow",
+    "flowswap-v3"
+   ],
+   "fees_first": {
+    "flow": "2024-12-08",
+    "flowswap-v3": "2025-10-31"
+   },
+   "reason": "family resolved"
+  },
+  "FLR": {
+   "coinbase_name": "Flare",
+   "gecko_id": "flare-networks",
+   "parents": [],
+   "family": [
+    "flare"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [
+    "flare"
+   ],
+   "fees_first": {
+    "flare": "2024-09-23"
+   },
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "FLUID": {
+   "coinbase_name": "Fluid",
+   "gecko_id": "instadapp",
+   "parents": [
+    "parent#fluid"
+   ],
+   "family": [
+    "fluid-dex",
+    "fluid-dex-lite",
+    "fluid-lending",
+    "fluid-lite"
+   ],
+   "earliest_listedAt": "2024-02-25",
+   "fees_slugs": [
+    "fluid-dex",
+    "fluid-dex-lite",
+    "fluid-lending",
+    "fluid-lite"
+   ],
+   "fees_first": {
+    "fluid-dex": "2024-10-29",
+    "fluid-dex-lite": "2025-08-12",
+    "fluid-lending": "2024-02-23",
+    "fluid-lite": "2023-02-20"
+   },
+   "reason": "family resolved"
+  },
+  "FORT": {
+   "coinbase_name": "Forta",
+   "gecko_id": "forta",
+   "parents": [],
+   "family": [
+    "forta"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [],
+   "fees_first": {},
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "FORTH": {
+   "family": [],
+   "coinbase_name": "Ampleforth Governance Token",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "FOX": {
+   "family": [],
+   "coinbase_name": "ShapeShift FOX Token",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "FUN1": {
+   "family": [],
+   "coinbase_name": "Sport.Fun",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "FX": {
+   "family": [],
+   "coinbase_name": "Function X",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "G": {
+   "family": [],
+   "coinbase_name": "Gravity",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "GAL": {
+   "family": [],
+   "coinbase_name": "Project Galaxy",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "GALA": {
+   "family": [],
+   "coinbase_name": "Gala V1",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "GEOD": {
+   "coinbase_name": "Geodnet",
+   "gecko_id": "geodnet",
+   "parents": [],
+   "family": [
+    "geodnet"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [
+    "geodnet"
+   ],
+   "fees_first": {
+    "geodnet": "2024-03-15"
+   },
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "GFI": {
+   "coinbase_name": "Goldfinch",
+   "gecko_id": "goldfinch",
+   "parents": [],
+   "family": [
+    "goldfinch"
+   ],
+   "earliest_listedAt": "2021-10-24",
+   "fees_slugs": [
+    "goldfinch"
+   ],
+   "fees_first": {
+    "goldfinch": "2021-08-19"
+   },
+   "reason": "family resolved"
+  },
+  "GHST": {
+   "coinbase_name": "Aavegotchi",
+   "gecko_id": "aavegotchi",
+   "parents": [],
+   "family": [
+    "aavegotchi"
+   ],
+   "earliest_listedAt": "2021-10-15",
+   "fees_slugs": [],
+   "fees_first": {},
+   "reason": "family resolved"
+  },
+  "GIGA": {
+   "family": [],
+   "coinbase_name": "Gigachad",
+   "gecko_id": "gigachad-2",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "GLM": {
+   "family": [],
+   "coinbase_name": "Golem Network",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "GMT": {
+   "family": [],
+   "coinbase_name": "STEPN",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "GNO": {
+   "coinbase_name": "Gnosis",
+   "gecko_id": "gnosis",
+   "parents": [],
+   "family": [
+    "gnosis-dao"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [],
+   "fees_first": {},
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "GODS": {
+   "family": [],
+   "coinbase_name": "Gods Unchained",
+   "gecko_id": "gods-unchained",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "GRASS": {
+   "family": [],
+   "coinbase_name": "Grass",
+   "reason": "2 CoinGecko coins match symbol AND name",
+   "cg_candidates": [
+    "grass",
+    "grass-2"
+   ]
+  },
+  "GROVE": {
+   "coinbase_name": "Grove",
+   "gecko_id": "grove-2",
+   "parents": [],
+   "family": [
+    "grove-finance"
+   ],
+   "earliest_listedAt": "2026-03-26",
+   "fees_slugs": [
+    "grove-finance"
+   ],
+   "fees_first": {
+    "grove-finance": "2025-07-28"
+   },
+   "reason": "family resolved"
+  },
+  "GRT": {
+   "coinbase_name": "The Graph",
+   "gecko_id": "the-graph",
+   "parents": [],
+   "family": [
+    "the-graph"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [
+    "the-graph"
+   ],
+   "fees_first": {
+    "the-graph": "2022-12-15"
+   },
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "GRVT": {
+   "family": [],
+   "coinbase_name": "Grvt",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "GST": {
+   "family": [],
+   "coinbase_name": "Green Satoshi Token",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "GTC": {
+   "coinbase_name": "Gitcoin",
+   "gecko_id": "gitcoin",
+   "parents": [],
+   "family": [
+    "gitcoin"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [],
+   "fees_first": {},
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "GWEI": {
+   "family": [],
+   "coinbase_name": "Ethgas",
+   "gecko_id": "ethgas-2",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "GYEN": {
+   "family": [],
+   "coinbase_name": "GYEN",
+   "gecko_id": "gyen",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "HBAR": {
+   "coinbase_name": "Hedera",
+   "gecko_id": "hedera-hashgraph",
+   "parents": [],
+   "family": [
+    "hedera"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [
+    "hedera"
+   ],
+   "fees_first": {
+    "hedera": "2024-09-23"
+   },
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "HFT": {
+   "coinbase_name": "Hashflow",
+   "gecko_id": "hashflow",
+   "parents": [],
+   "family": [
+    "hashflow"
+   ],
+   "earliest_listedAt": "2022-02-22",
+   "fees_slugs": [],
+   "fees_first": {},
+   "reason": "family resolved"
+  },
+  "HIGH": {
+   "family": [],
+   "coinbase_name": "Highstreet",
+   "gecko_id": "highstreet",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "HNT": {
+   "coinbase_name": "Helium",
+   "gecko_id": "helium",
+   "parents": [],
+   "family": [
+    "helium-network"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [
+    "helium-network"
+   ],
+   "fees_first": {
+    "helium-network": "2025-10-21"
+   },
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "HOME": {
+   "coinbase_name": "HOME",
+   "gecko_id": "home",
+   "parents": [
+    "parent#defi-app"
+   ],
+   "family": [
+    "defi-app-aggregator",
+    "defi-app-perps",
+    "defi-app-spot"
+   ],
+   "earliest_listedAt": "2026-10-08",
+   "fees_slugs": [
+    "defi-app-perps"
+   ],
+   "fees_first": {
+    "defi-app-perps": "2025-06-27"
+   },
+   "reason": "family resolved"
+  },
+  "HONEY": {
+   "coinbase_name": "Hivemapper",
+   "gecko_id": "hivemapper",
+   "parents": [],
+   "family": [
+    "hivemapper"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [
+    "hivemapper"
+   ],
+   "fees_first": {
+    "hivemapper": "2025-07-13"
+   },
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "HOPR": {
+   "family": [],
+   "coinbase_name": "Hopr Token",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "HYPE": {
+   "coinbase_name": "Hyperliquid",
+   "gecko_id": "hyperliquid",
+   "parents": [
+    "parent#hyperliquid"
+   ],
+   "family": [
+    "hyperliquid-bridge",
+    "hyperliquid-hlp",
+    "hyperliquid-outcomes",
+    "hyperliquid-perps",
+    "hyperliquid-spot-orderbook"
+   ],
+   "earliest_listedAt": "2023-04-18",
+   "fees_slugs": [
+    "hyperliquid-hlp",
+    "hyperliquid-outcomes",
+    "hyperliquid-perps",
+    "hyperliquid-spot-orderbook"
+   ],
+   "fees_first": {
+    "hyperliquid-hlp": "2024-12-24",
+    "hyperliquid-outcomes": "2026-10-07",
+    "hyperliquid-perps": "2024-12-23",
+    "hyperliquid-spot-orderbook": "2024-12-23"
+   },
+   "reason": "family resolved"
+  },
+  "HYPER": {
+   "coinbase_name": "Hyperlane",
+   "gecko_id": "hyperlane",
+   "parents": [],
+   "family": [
+    "hyperlane"
+   ],
+   "earliest_listedAt": "2026-02-26",
+   "fees_slugs": [
+    "hyperlane"
+   ],
+   "fees_first": {
+    "hyperlane": "2025-05-15"
+   },
+   "reason": "family resolved"
+  },
+  "ICNT": {
+   "family": [],
+   "coinbase_name": "Impossible Cloud Network",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "ICP": {
+   "coinbase_name": "Internet Computer",
+   "gecko_id": "internet-computer",
+   "parents": [],
+   "family": [
+    "internet-computer"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [],
+   "fees_first": {},
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "IDEX": {
+   "coinbase_name": "IDEX",
+   "gecko_id": "aurora-dao",
+   "parents": [
+    "parent#idex"
+   ],
+   "family": [
+    "idex-classic",
+    "idex-v1",
+    "kuma-perpetuals-dex"
+   ],
+   "earliest_listedAt": "2024-08-29",
+   "fees_slugs": [],
+   "fees_first": {},
+   "reason": "family resolved"
+  },
+  "ILV": {
+   "coinbase_name": "Illuvium",
+   "gecko_id": "illuvium",
+   "parents": [],
+   "family": [
+    "illuvium"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [
+    "illuvium"
+   ],
+   "fees_first": {
+    "illuvium": "2024-07-24"
+   },
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "IMU": {
+   "coinbase_name": "Immunefi",
+   "gecko_id": "immunefi",
+   "parents": [],
+   "family": [
+    "immunefi"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [
+    "immunefi"
+   ],
+   "fees_first": {
+    "immunefi": "2026-04-20"
+   },
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "IMX": {
+   "family": [],
+   "coinbase_name": "ImmutableX",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "INDEX": {
+   "coinbase_name": "Index Cooperative",
+   "gecko_id": "index-cooperative",
+   "parents": [],
+   "family": [
+    "index-coop"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [
+    "index-coop"
+   ],
+   "fees_first": {
+    "index-coop": "2025-02-05"
+   },
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "INJ": {
+   "family": [],
+   "coinbase_name": "Injective Protocol",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "INV": {
+   "coinbase_name": "Inverse Finance",
+   "gecko_id": "inverse-finance",
+   "parents": [
+    "parent#inverse-finance"
+   ],
+   "family": [
+    "inverse-finance-firm",
+    "inverse-finance-frontier"
+   ],
+   "earliest_listedAt": "2023-01-13",
+   "fees_slugs": [
+    "inverse-finance-firm"
+   ],
+   "fees_first": {
+    "inverse-finance-firm": "2023-05-08"
+   },
+   "reason": "family resolved"
+  },
+  "INX": {
+   "coinbase_name": "Infinex",
+   "gecko_id": "infinex-2",
+   "parents": [
+    "parent#infinex"
+   ],
+   "family": [
+    "infinex-perp",
+    "infinex-spot"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [
+    "infinex-perp",
+    "infinex-spot"
+   ],
+   "fees_first": {
+    "infinex-perp": "2025-08-19",
+    "infinex-spot": "2025-12-24"
+   },
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "IO": {
+   "family": [],
+   "coinbase_name": "Io.Net",
+   "gecko_id": "io",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "IOTX": {
+   "family": [],
+   "coinbase_name": "IoTeX (ERC-20)",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "IP": {
+   "family": [],
+   "coinbase_name": "Story",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "IRYS": {
+   "family": [],
+   "coinbase_name": "Irys",
+   "gecko_id": "irys",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "JASMY": {
+   "family": [],
+   "coinbase_name": "JasmyCoin",
+   "gecko_id": "jasmycoin",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "JITOSOL": {
+   "family": [],
+   "coinbase_name": "Jito Staked Sol",
+   "gecko_id": "jito-staked-sol",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "JTO": {
+   "coinbase_name": "Jito",
+   "gecko_id": "jito-governance-token",
+   "parents": [
+    "parent#jito"
+   ],
+   "family": [
+    "jito-dao",
+    "jito-liquid-staking",
+    "jito-mev-tips",
+    "jito-restaking"
+   ],
+   "earliest_listedAt": "2022-11-24",
+   "fees_slugs": [
+    "jito-dao",
+    "jito-liquid-staking",
+    "jito-mev-tips"
+   ],
+   "fees_first": {
+    "jito-dao": "2022-11-21",
+    "jito-liquid-staking": "2022-11-22",
+    "jito-mev-tips": null
+   },
+   "reason": "family resolved"
+  },
+  "JUP": {
+   "coinbase_name": "Jupiter",
+   "gecko_id": "jupiter-exchange-solana",
+   "parents": [
+    "parent#jupiter"
+   ],
+   "family": [
+    "ape-jupiter",
+    "jupiter-aggregator",
+    "jupiter-dca",
+    "jupiter-gacha",
+    "jupiter-lend",
+    "jupiter-lend-dex",
+    "jupiter-limit",
+    "jupiter-offerbook",
+    "jupiter-perpetual-exchange",
+    "jupiter-prediction",
+    "jupiter-staked-sol",
+    "jupiter-studio",
+    "jupiterz",
+    "jupusd"
+   ],
+   "earliest_listedAt": "2022-10-01",
+   "fees_slugs": [
+    "ape-jupiter",
+    "jupiter-aggregator",
+    "jupiter-dca",
+    "jupiter-lend",
+    "jupiter-lend-dex",
+    "jupiter-limit",
+    "jupiter-offerbook",
+    "jupiter-perpetual-exchange",
+    "jupiter-prediction",
+    "jupiter-staked-sol",
+    "jupiter-studio"
+   ],
+   "fees_first": {
+    "ape-jupiter": "2024-07-10",
+    "jupiter-aggregator": "2023-01-04",
+    "jupiter-dca": "2024-01-02",
+    "jupiter-lend": "2025-08-06",
+    "jupiter-lend-dex": "2026-07-20",
+    "jupiter-limit": "2022-12-16",
+    "jupiter-offerbook": "2026-04-25",
+    "jupiter-perpetual-exchange": "2023-10-01",
+    "jupiter-prediction": "2025-10-22",
+    "jupiter-staked-sol": "2024-09-02",
+    "jupiter-studio": "2025-07-03"
+   },
+   "reason": "family resolved"
+  },
+  "JUPITER": {
+   "family": [],
+   "coinbase_name": "Jupiter",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "KAIO": {
+   "coinbase_name": "Kaio",
+   "gecko_id": "kaio",
+   "parents": [],
+   "family": [
+    "kaio"
+   ],
+   "earliest_listedAt": "2025-01-29",
+   "fees_slugs": [
+    "kaio"
+   ],
+   "fees_first": {
+    "kaio": "2026-05-18"
+   },
+   "reason": "family resolved"
+  },
+  "KAITO": {
+   "coinbase_name": "Kaito",
+   "gecko_id": "kaito",
+   "parents": [
+    "parent#kaito"
+   ],
+   "family": [
+    "kaito-capital-launchpad",
+    "kaito-stake"
+   ],
+   "earliest_listedAt": "2025-11-20",
+   "fees_slugs": [
+    "kaito-capital-launchpad"
+   ],
+   "fees_first": {
+    "kaito-capital-launchpad": "2025-08-06"
+   },
+   "reason": "family resolved"
+  },
+  "KARRAT": {
+   "family": [],
+   "coinbase_name": "Karrat",
+   "gecko_id": "karrat",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "KAT": {
+   "family": [],
+   "coinbase_name": "Katana",
+   "gecko_id": "katana-network-token",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "KAVA": {
+   "family": [],
+   "coinbase_name": "Kava",
+   "gecko_id": "kava",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "KEEP": {
+   "coinbase_name": "Keep Network",
+   "gecko_id": "keep-network",
+   "parents": [],
+   "family": [
+    "keep-network"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [],
+   "fees_first": {},
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "KERNEL": {
+   "family": [],
+   "coinbase_name": "Kernel",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "KEYCAT": {
+   "family": [],
+   "coinbase_name": "Keyboard Cat",
+   "gecko_id": "keyboard-cat",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "KITE": {
+   "family": [],
+   "coinbase_name": "Kite",
+   "reason": "2 CoinGecko coins match symbol AND name",
+   "cg_candidates": [
+    "kite",
+    "kite-2"
+   ]
+  },
+  "KMNO": {
+   "coinbase_name": "Kamino",
+   "gecko_id": "kamino",
+   "parents": [
+    "parent#kamino-finance"
+   ],
+   "family": [
+    "kamino-institutional-yield",
+    "kamino-lend",
+    "kamino-liquidity"
+   ],
+   "earliest_listedAt": "2022-09-05",
+   "fees_slugs": [
+    "kamino-lend",
+    "kamino-liquidity"
+   ],
+   "fees_first": {
+    "kamino-lend": "2023-10-19",
+    "kamino-liquidity": "2023-10-13"
+   },
+   "reason": "family resolved"
+  },
+  "KNC": {
+   "family": [],
+   "coinbase_name": "Kyber Network",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "KRL": {
+   "family": [],
+   "coinbase_name": "kryll",
+   "gecko_id": "kryll",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "KSM": {
+   "family": [],
+   "coinbase_name": "Kusama",
+   "gecko_id": "kusama",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "KTA": {
+   "family": [],
+   "coinbase_name": "Keeta",
+   "gecko_id": "keeta",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "L3": {
+   "coinbase_name": "Layer3",
+   "gecko_id": "layer3",
+   "parents": [],
+   "family": [
+    "layer3"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [
+    "layer3"
+   ],
+   "fees_first": {
+    "layer3": "2024-11-13"
+   },
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "LA": {
+   "family": [],
+   "coinbase_name": "Lagrange",
+   "gecko_id": "lagrange",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "LAYER": {
+   "coinbase_name": "Solayer",
+   "gecko_id": "solayer",
+   "parents": [
+    "parent#solayer"
+   ],
+   "family": [
+    "solayer-card",
+    "solayer-restaking",
+    "solayer-usd"
+   ],
+   "earliest_listedAt": "2024-11-14",
+   "fees_slugs": [
+    "solayer-restaking"
+   ],
+   "fees_first": {
+    "solayer-restaking": "2024-11-15"
+   },
+   "reason": "family resolved"
+  },
+  "LCX": {
+   "family": [],
+   "coinbase_name": "LCX Token",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "LDO": {
+   "coinbase_name": "Lido DAO",
+   "gecko_id": "lido-dao",
+   "parents": [],
+   "family": [
+    "lido"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [
+    "lido"
+   ],
+   "fees_first": {
+    "lido": "2021-04-30"
+   },
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "LIGHTER": {
+   "family": [],
+   "coinbase_name": "Lighter",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "LINEA": {
+   "family": [],
+   "coinbase_name": "Linea",
+   "gecko_id": "linea",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "LINK": {
+   "coinbase_name": "Chainlink",
+   "gecko_id": "chainlink",
+   "parents": [
+    "parent#chainlink"
+   ],
+   "family": [
+    "ccip",
+    "chainlink-ccip",
+    "chainlink-requests",
+    "chainlink-staking"
+   ],
+   "earliest_listedAt": "2023-10-23",
+   "fees_slugs": [
+    "chainlink-requests",
+    "chainlink-staking"
+   ],
+   "fees_first": {
+    "chainlink-requests": "2023-08-07",
+    "chainlink-staking": "2025-08-07"
+   },
+   "reason": "family resolved"
+  },
+  "LIT": {
+   "family": [],
+   "coinbase_name": "Litentry",
+   "gecko_id": "litentry",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "LMTS": {
+   "coinbase_name": "Limitless",
+   "gecko_id": "limitless-3",
+   "parents": [],
+   "family": [
+    "limitless-exchange"
+   ],
+   "earliest_listedAt": "2024-09-25",
+   "fees_slugs": [
+    "limitless-exchange"
+   ],
+   "fees_first": {
+    "limitless-exchange": "2024-10-12"
+   },
+   "reason": "family resolved"
+  },
+  "LOKA": {
+   "family": [],
+   "coinbase_name": "League of Kingdoms Arena",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "LOOM": {
+   "family": [],
+   "coinbase_name": "Loom Network",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "LPT": {
+   "coinbase_name": "Livepeer",
+   "gecko_id": "livepeer",
+   "parents": [],
+   "family": [
+    "livepeer"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [
+    "livepeer"
+   ],
+   "fees_first": {
+    "livepeer": "2024-08-14"
+   },
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "LQTY": {
+   "coinbase_name": "Liquity",
+   "gecko_id": "liquity",
+   "parents": [
+    "parent#liquity"
+   ],
+   "family": [
+    "liquity-v1",
+    "liquity-v2"
+   ],
+   "earliest_listedAt": "2025-01-23",
+   "fees_slugs": [
+    "liquity-v1",
+    "liquity-v2"
+   ],
+   "fees_first": {
+    "liquity-v1": "2021-04-05",
+    "liquity-v2": "2025-01-23"
+   },
+   "reason": "family resolved"
+  },
+  "LRC": {
+   "coinbase_name": "Loopring",
+   "gecko_id": "loopring",
+   "parents": [],
+   "family": [
+    "loopring"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [],
+   "fees_first": {},
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "LRDS": {
+   "family": [],
+   "coinbase_name": "Blocklords",
+   "gecko_id": "blocklords",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "LTC": {
+   "coinbase_name": "Litecoin",
+   "gecko_id": "litecoin",
+   "parents": [],
+   "family": [
+    "litecoin"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [
+    "litecoin"
+   ],
+   "fees_first": {
+    "litecoin": "2013-04-01"
+   },
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "MAGIC": {
+   "family": [],
+   "coinbase_name": "Magic",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "MAMO": {
+   "coinbase_name": "Mamo",
+   "gecko_id": "mamo",
+   "parents": [],
+   "family": [
+    "mamo"
+   ],
+   "earliest_listedAt": "2026-10-02",
+   "fees_slugs": [
+    "mamo"
+   ],
+   "fees_first": {
+    "mamo": "2025-10-07"
+   },
+   "reason": "family resolved"
+  },
+  "MANA": {
+   "family": [],
+   "coinbase_name": "Decentraland",
+   "gecko_id": "decentraland",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "MANTLE": {
+   "family": [],
+   "coinbase_name": "Mantle",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "MASK": {
+   "family": [],
+   "coinbase_name": "Mask Network",
+   "gecko_id": "mask-network",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "MATH": {
+   "family": [],
+   "coinbase_name": "MATH",
+   "gecko_id": "math",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "MATIC": {
+   "family": [],
+   "coinbase_name": "Polygon",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "MCO2": {
+   "family": [],
+   "coinbase_name": "Moss Carbon Credit",
+   "gecko_id": "moss-carbon-credit",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "MDT": {
+   "family": [],
+   "coinbase_name": "Measurable Data Token",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "ME": {
+   "coinbase_name": "Magic Eden",
+   "gecko_id": "magic-eden",
+   "parents": [],
+   "family": [
+    "magic-eden"
+   ],
+   "earliest_listedAt": "2025-10-08",
+   "fees_slugs": [],
+   "fees_first": {},
+   "reason": "family resolved"
+  },
+  "MEDIA": {
+   "family": [],
+   "coinbase_name": "Media Network",
+   "gecko_id": "media-network",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "MEGA": {
+   "family": [],
+   "coinbase_name": "MegaETH",
+   "gecko_id": "megaeth",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "MET": {
+   "coinbase_name": "Meteora",
+   "gecko_id": "meteora",
+   "parents": [
+    "parent#meteora"
+   ],
+   "family": [
+    "meteora-damm-v1",
+    "meteora-damm-v2",
+    "meteora-dlmm",
+    "meteora-dynamic-bonding-curve",
+    "meteora-vaults"
+   ],
+   "earliest_listedAt": "2022-10-25",
+   "fees_slugs": [
+    "meteora-damm-v1",
+    "meteora-damm-v2",
+    "meteora-dlmm",
+    "meteora-dynamic-bonding-curve"
+   ],
+   "fees_first": {
+    "meteora-damm-v1": "2025-01-20",
+    "meteora-damm-v2": "2025-06-09",
+    "meteora-dlmm": "2025-01-20",
+    "meteora-dynamic-bonding-curve": "2025-04-23"
+   },
+   "reason": "family resolved"
+  },
+  "META": {
+   "coinbase_name": "Metadao",
+   "gecko_id": "meta-2-2",
+   "parents": [
+    "parent#metadao"
+   ],
+   "family": [
+    "futarchy-amm",
+    "metadao-treasuries"
+   ],
+   "earliest_listedAt": "2026-01-27",
+   "fees_slugs": [
+    "futarchy-amm"
+   ],
+   "fees_first": {
+    "futarchy-amm": "2025-10-10"
+   },
+   "reason": "family resolved"
+  },
+  "METIS": {
+   "family": [],
+   "coinbase_name": "MetisDAO",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "MEZO": {
+   "family": [],
+   "coinbase_name": "Mezo",
+   "gecko_id": "mezo",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "MINA": {
+   "family": [],
+   "coinbase_name": "Mina",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "MIR": {
+   "coinbase_name": "Mirror Protocol",
+   "gecko_id": "mirror-protocol",
+   "parents": [],
+   "family": [
+    "mirror"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [],
+   "fees_first": {},
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "MKR": {
+   "family": [],
+   "coinbase_name": "Maker",
+   "gecko_id": "maker",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "MLN": {
+   "coinbase_name": "Enzyme",
+   "gecko_id": "melon",
+   "parents": [],
+   "family": [
+    "enzyme-finance"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [
+    "enzyme-finance"
+   ],
+   "fees_first": {
+    "enzyme-finance": "2026-01-05"
+   },
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "MNDE": {
+   "coinbase_name": "Marinade",
+   "gecko_id": "marinade",
+   "parents": [
+    "parent#marinade-finance"
+   ],
+   "family": [
+    "marinade-liquid-staking",
+    "marinade-native",
+    "marinade-select"
+   ],
+   "earliest_listedAt": "2023-10-21",
+   "fees_slugs": [
+    "marinade-liquid-staking",
+    "marinade-native",
+    "marinade-select"
+   ],
+   "fees_first": {
+    "marinade-liquid-staking": "2024-02-20",
+    "marinade-native": "2024-02-20",
+    "marinade-select": "2025-07-01"
+   },
+   "reason": "family resolved"
+  },
+  "MOBILE": {
+   "family": [],
+   "coinbase_name": "Helium Mobile",
+   "gecko_id": "helium-mobile",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "MOG": {
+   "family": [],
+   "coinbase_name": "Mog Coin",
+   "gecko_id": "mog-coin",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "MON": {
+   "coinbase_name": "Monad",
+   "gecko_id": "monad",
+   "parents": [],
+   "family": [
+    "monad"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [
+    "monad"
+   ],
+   "fees_first": {
+    "monad": "2025-11-25"
+   },
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "MONA": {
+   "family": [],
+   "coinbase_name": "Monavale",
+   "gecko_id": "monavale",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "MOODENG": {
+   "family": [],
+   "coinbase_name": "Moo Deng",
+   "reason": "2 CoinGecko coins match symbol AND name",
+   "cg_candidates": [
+    "moo-deng",
+    "moo-deng-2"
+   ]
+  },
+  "MORPHO": {
+   "coinbase_name": "Morpho",
+   "gecko_id": "morpho",
+   "parents": [
+    "parent#morpho"
+   ],
+   "family": [
+    "morpho-blue",
+    "morpho-midnight",
+    "morpho-optimizer-aavev2",
+    "morpho-optimizer-aavev3",
+    "morpho-optimizer-compoundv2"
+   ],
+   "earliest_listedAt": "2022-08-19",
+   "fees_slugs": [
+    "morpho-blue",
+    "morpho-midnight"
+   ],
+   "fees_first": {
+    "morpho-blue": "2024-02-15",
+    "morpho-midnight": "2026-07-15"
+   },
+   "reason": "family resolved"
+  },
+  "MOVE": {
+   "coinbase_name": "Movement",
+   "gecko_id": "movement",
+   "parents": [],
+   "family": [
+    "movement"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [
+    "movement"
+   ],
+   "fees_first": {
+    "movement": "2025-03-27"
+   },
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "MPL": {
+   "family": [],
+   "coinbase_name": "Maple",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "MPLX": {
+   "coinbase_name": "Metaplex",
+   "gecko_id": "metaplex",
+   "parents": [],
+   "family": [
+    "metaplex"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [
+    "metaplex"
+   ],
+   "fees_first": {
+    "metaplex": "2023-06-01"
+   },
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "MSOL": {
+   "family": [],
+   "coinbase_name": "Marinade staked SOL",
+   "gecko_id": "msol",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "MTL": {
+   "family": [],
+   "coinbase_name": "Metal",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "MULTI": {
+   "coinbase_name": "Multichain",
+   "gecko_id": "multichain",
+   "parents": [],
+   "family": [
+    "multichain"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [],
+   "fees_first": {},
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "MUSD": {
+   "family": [],
+   "coinbase_name": "mStable USD",
+   "gecko_id": "musd",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "MUSE": {
+   "coinbase_name": "Muse Dao",
+   "gecko_id": "muse-2",
+   "parents": [],
+   "family": [
+    "nft20"
+   ],
+   "earliest_listedAt": "2021-11-11",
+   "fees_slugs": [],
+   "fees_first": {},
+   "reason": "family resolved"
+  },
+  "MXC": {
+   "family": [],
+   "coinbase_name": "MXC",
+   "gecko_id": "mxc",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "NCT": {
+   "family": [],
+   "coinbase_name": "Polyswarm",
+   "gecko_id": "polyswarm",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "NEAR": {
+   "coinbase_name": "Near Protocol",
+   "gecko_id": "near",
+   "parents": [
+    "parent#near-protocol"
+   ],
+   "family": [
+    "near-bridge",
+    "near-intents",
+    "near-perps"
+   ],
+   "earliest_listedAt": "2025-10-16",
+   "fees_slugs": [
+    "near-intents",
+    "near-perps"
+   ],
+   "fees_first": {
+    "near-intents": "2025-05-10",
+    "near-perps": null
+   },
+   "reason": "family resolved"
+  },
+  "NEON": {
+   "family": [],
+   "coinbase_name": "Neon",
+   "gecko_id": "neon",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "NEST": {
+   "family": [],
+   "coinbase_name": "Nest Protocol",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "NEWT": {
+   "family": [],
+   "coinbase_name": "Newton",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "NEX": {
+   "family": [],
+   "coinbase_name": "Nexus",
+   "reason": "2 CoinGecko coins match symbol AND name",
+   "cg_candidates": [
+    "nexus-2",
+    "nexus-4"
+   ]
+  },
+  "NKN": {
+   "family": [],
+   "coinbase_name": "NKN",
+   "gecko_id": "nkn",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "NMR": {
+   "coinbase_name": "Numeraire",
+   "gecko_id": "numeraire",
+   "parents": [],
+   "family": [
+    "erasure"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [],
+   "fees_first": {},
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "NOICE": {
+   "family": [],
+   "coinbase_name": "Noice",
+   "gecko_id": "noice",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "NOM": {
+   "family": [],
+   "coinbase_name": "Nomina",
+   "gecko_id": "nomina",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "NU": {
+   "family": [],
+   "coinbase_name": "NuCypher",
+   "gecko_id": "nucypher",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "O": {
+   "coinbase_name": "O1.Exchange",
+   "gecko_id": "o1-exchange",
+   "parents": [
+    "parent#o1-exchange"
+   ],
+   "family": [
+    "o1-launchpad",
+    "o1.exchange-trading-terminal"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [
+    "o1-launchpad",
+    "o1.exchange-trading-terminal"
+   ],
+   "fees_first": {
+    "o1-launchpad": "2026-07-03",
+    "o1.exchange-trading-terminal": "2025-07-02"
+   },
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "OCEAN": {
+   "family": [],
+   "coinbase_name": "Ocean Protocol",
+   "gecko_id": "ocean-protocol",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "OGN": {
+   "coinbase_name": "Origin Token",
+   "gecko_id": "origin-protocol",
+   "parents": [
+    "parent#origin-defi"
+   ],
+   "family": [
+    "origin-arm",
+    "origin-dollar",
+    "origin-ether",
+    "origin-sonic",
+    "prime-staked-eth"
+   ],
+   "earliest_listedAt": "2023-05-08",
+   "fees_slugs": [
+    "origin-arm",
+    "origin-dollar",
+    "origin-ether",
+    "origin-sonic"
+   ],
+   "fees_first": {
+    "origin-arm": "2025-12-02",
+    "origin-dollar": "2022-01-01",
+    "origin-ether": "2023-05-09",
+    "origin-sonic": null
+   },
+   "reason": "family resolved"
+  },
+  "OMG": {
+   "family": [],
+   "coinbase_name": "OMG Network",
+   "gecko_id": "omisego",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "OMNI": {
+   "family": [],
+   "coinbase_name": "Omni Network",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "ONDO": {
+   "family": [],
+   "coinbase_name": "Ondo Finance",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "OOKI": {
+   "family": [],
+   "coinbase_name": "Ooki Protocol",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "OP": {
+   "coinbase_name": "Optimism",
+   "gecko_id": "optimism",
+   "parents": [
+    "parent#optimism-foundation"
+   ],
+   "family": [
+    "optimism-bridge",
+    "optimism-op-unlocks",
+    "superchain"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [
+    "superchain"
+   ],
+   "fees_first": {
+    "superchain": null
+   },
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "OPG": {
+   "family": [],
+   "coinbase_name": "Opengradient",
+   "gecko_id": "opengradient",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "OPN": {
+   "coinbase_name": "OPINION",
+   "gecko_id": "opinion",
+   "parents": [],
+   "family": [
+    "opinion"
+   ],
+   "earliest_listedAt": "2025-10-28",
+   "fees_slugs": [
+    "opinion"
+   ],
+   "fees_first": {
+    "opinion": "2025-10-23"
+   },
+   "reason": "family resolved"
+  },
+  "ORCA": {
+   "coinbase_name": "Orca",
+   "gecko_id": "orca",
+   "parents": [
+    "parent#orca"
+   ],
+   "family": [
+    "orca-dex",
+    "orca-wavebreak"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [
+    "orca-dex"
+   ],
+   "fees_first": {
+    "orca-dex": "2024-11-12"
+   },
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "ORN": {
+   "family": [],
+   "coinbase_name": "Orion Protocol",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "OSMO": {
+   "coinbase_name": "Osmosis",
+   "gecko_id": "osmosis",
+   "parents": [],
+   "family": [
+    "osmosis-dex"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [
+    "osmosis-dex"
+   ],
+   "fees_first": {
+    "osmosis-dex": "2022-04-16"
+   },
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "OXT": {
+   "family": [],
+   "coinbase_name": "Orchid",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "PAX": {
+   "family": [],
+   "coinbase_name": "Paxos Standard",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "PAXG": {
+   "family": [],
+   "coinbase_name": "PAX Gold",
+   "gecko_id": "pax-gold",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "PENDLE": {
+   "coinbase_name": "Pendle",
+   "gecko_id": "pendle",
+   "parents": [
+    "parent#pendle"
+   ],
+   "family": [
+    "boros",
+    "pendle-v2"
+   ],
+   "earliest_listedAt": "2025-08-07",
+   "fees_slugs": [
+    "boros",
+    "pendle-v2"
+   ],
+   "fees_first": {
+    "boros": null,
+    "pendle-v2": "2023-07-07"
+   },
+   "reason": "family resolved"
+  },
+  "PENGU": {
+   "coinbase_name": "Pudgy Penguins",
+   "gecko_id": "pudgy-penguins",
+   "parents": [],
+   "family": [
+    "pudgy-penguins"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [],
+   "fees_first": {},
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "PEPE": {
+   "family": [],
+   "coinbase_name": "Pepe",
+   "gecko_id": "pepe",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "PERP": {
+   "coinbase_name": "Perpetual Protocol",
+   "gecko_id": "perpetual-protocol",
+   "parents": [],
+   "family": [
+    "perpetual-protocol"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [
+    "perpetual-protocol"
+   ],
+   "fees_first": {
+    "perpetual-protocol": "2023-01-01"
+   },
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "PIRATE": {
+   "family": [],
+   "coinbase_name": "Pirate Nation",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "PLA": {
+   "family": [],
+   "coinbase_name": "PlayDapp",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "PLU": {
+   "family": [],
+   "coinbase_name": "Pluton",
+   "gecko_id": "pluton",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "PLUME": {
+   "coinbase_name": "Plume",
+   "gecko_id": "plume",
+   "parents": [],
+   "family": [
+    "plume-mainnet"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [
+    "plume-mainnet"
+   ],
+   "fees_first": {
+    "plume-mainnet": "2025-04-09"
+   },
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "PNG": {
+   "coinbase_name": "Pangolin",
+   "gecko_id": "pangolin",
+   "parents": [
+    "parent#pangolin"
+   ],
+   "family": [
+    "pangolin-v2",
+    "pangolin-v3"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [
+    "pangolin-v2",
+    "pangolin-v3"
+   ],
+   "fees_first": {
+    "pangolin-v2": "2021-02-09",
+    "pangolin-v3": null
+   },
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "PNUT": {
+   "family": [],
+   "coinbase_name": "Peanut The Squirrel",
+   "gecko_id": "peanut-the-squirrel",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "POL": {
+   "family": [],
+   "coinbase_name": "Polygon Ecosystem Token",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "POLS": {
+   "coinbase_name": "Polkastarter",
+   "gecko_id": "polkastarter",
+   "parents": [],
+   "family": [
+    "polkastarter"
+   ],
+   "earliest_listedAt": "2021-12-22",
+   "fees_slugs": [],
+   "fees_first": {},
+   "reason": "family resolved"
+  },
+  "POLY": {
+   "family": [],
+   "coinbase_name": "Polymath Network",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "POND": {
+   "coinbase_name": "Marlin",
+   "gecko_id": "marlin",
+   "parents": [],
+   "family": [
+    "marlin-protocol"
+   ],
+   "earliest_listedAt": "2025-01-09",
+   "fees_slugs": [],
+   "fees_first": {},
+   "reason": "family resolved"
+  },
+  "POPCAT": {
+   "family": [],
+   "coinbase_name": "Popcat",
+   "gecko_id": "popcat",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "POWR": {
+   "family": [],
+   "coinbase_name": "Power Ledger",
+   "gecko_id": "power-ledger",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "PRCL": {
+   "coinbase_name": "Parcl",
+   "gecko_id": "parcl",
+   "parents": [
+    "parent#parcl"
+   ],
+   "family": [
+    "parcl-v2",
+    "parcl-v3"
+   ],
+   "earliest_listedAt": "2023-02-15",
+   "fees_slugs": [
+    "parcl-v3"
+   ],
+   "fees_first": {
+    "parcl-v3": "2025-01-03"
+   },
+   "reason": "family resolved"
+  },
+  "PRIME": {
+   "family": [],
+   "coinbase_name": "Prime",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "PRL": {
+   "family": [],
+   "coinbase_name": "Perle",
+   "gecko_id": "perle",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "PRO": {
+   "family": [],
+   "coinbase_name": "Propy",
+   "gecko_id": "propy",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "PROMPT": {
+   "family": [],
+   "coinbase_name": "Prompt",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "PROS": {
+   "family": [],
+   "coinbase_name": "Pharos",
+   "gecko_id": "pharos-network",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "PROVE": {
+   "family": [],
+   "coinbase_name": "Succinct",
+   "gecko_id": "succinct",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "PRQ": {
+   "family": [],
+   "coinbase_name": "PARSIQ",
+   "gecko_id": "parsiq",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "PUMP": {
+   "coinbase_name": "Pump.fun",
+   "gecko_id": "pump-fun",
+   "parents": [
+    "parent#pump"
+   ],
+   "family": [
+    "pump.fun",
+    "pump.fun-mobile-app",
+    "pumpswap",
+    "terminal"
+   ],
+   "earliest_listedAt": "2024-04-06",
+   "fees_slugs": [
+    "pump.fun",
+    "pump.fun-mobile-app",
+    "pumpswap",
+    "terminal"
+   ],
+   "fees_first": {
+    "pump.fun": "2024-03-01",
+    "pump.fun-mobile-app": "2026-05-22",
+    "pumpswap": "2025-02-24",
+    "terminal": "2025-10-25"
+   },
+   "reason": "family resolved"
+  },
+  "PUNDIX": {
+   "family": [],
+   "coinbase_name": "Pundi X",
+   "gecko_id": "pundi-x-2",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "PYR": {
+   "coinbase_name": "Vulcan Forged",
+   "gecko_id": "vulcan-forged",
+   "parents": [],
+   "family": [
+    "vulcandex"
+   ],
+   "earliest_listedAt": "2024-03-19",
+   "fees_slugs": [],
+   "fees_first": {},
+   "reason": "family resolved"
+  },
+  "PYTH": {
+   "coinbase_name": "Pyth Network",
+   "gecko_id": "pyth-network",
+   "parents": [
+    "parent#pyth"
+   ],
+   "family": [
+    "pyth-core",
+    "pyth-entropy",
+    "pyth-express-relay",
+    "pyth-network",
+    "pyth-pro"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [
+    "pyth-core",
+    "pyth-entropy",
+    "pyth-express-relay",
+    "pyth-pro"
+   ],
+   "fees_first": {
+    "pyth-core": "2025-06-19",
+    "pyth-entropy": "2025-07-14",
+    "pyth-express-relay": "2025-07-09",
+    "pyth-pro": "2025-12-02"
+   },
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "QI": {
+   "coinbase_name": "Benqi",
+   "gecko_id": "benqi",
+   "parents": [
+    "parent#benqi"
+   ],
+   "family": [
+    "benqi-lending",
+    "benqi-staked-avax"
+   ],
+   "earliest_listedAt": "2022-02-17",
+   "fees_slugs": [
+    "benqi-lending",
+    "benqi-staked-avax"
+   ],
+   "fees_first": {
+    "benqi-lending": "2023-07-01",
+    "benqi-staked-avax": "2022-02-14"
+   },
+   "reason": "family resolved"
+  },
+  "QNT": {
+   "family": [],
+   "coinbase_name": "Quant",
+   "gecko_id": "quant-network",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "QSP": {
+   "family": [],
+   "coinbase_name": "Quantstamp",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "QUICK": {
+   "coinbase_name": "QuickSwap",
+   "gecko_id": "quickswap",
+   "parents": [
+    "parent#quickswap"
+   ],
+   "family": [
+    "quickperps",
+    "quickswap-dex",
+    "quickswap-hydra",
+    "quickswap-liquidity-hub",
+    "quickswap-v3",
+    "quickswap-v4"
+   ],
+   "earliest_listedAt": "2022-10-29",
+   "fees_slugs": [
+    "quickperps",
+    "quickswap-dex",
+    "quickswap-hydra",
+    "quickswap-v3",
+    "quickswap-v4"
+   ],
+   "fees_first": {
+    "quickperps": "2024-10-16",
+    "quickswap-dex": "2020-10-09",
+    "quickswap-hydra": "2024-10-16",
+    "quickswap-v3": "2022-09-14",
+    "quickswap-v4": "2025-08-13"
+   },
+   "reason": "family resolved"
+  },
+  "RAD": {
+   "family": [],
+   "coinbase_name": "Radicle",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "RAI": {
+   "family": [],
+   "coinbase_name": "Rai Reflex Index",
+   "gecko_id": "rai",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "RARE": {
+   "coinbase_name": "SuperRare",
+   "gecko_id": "superrare",
+   "parents": [],
+   "family": [
+    "superrare"
+   ],
+   "earliest_listedAt": "2023-10-17",
+   "fees_slugs": [],
+   "fees_first": {},
+   "reason": "family resolved"
+  },
+  "RARI": {
+   "family": [],
+   "coinbase_name": "Rarible",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "RAVE": {
+   "family": [],
+   "coinbase_name": "Ravedao",
+   "gecko_id": "ravedao",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "RAY": {
+   "coinbase_name": "Raydium",
+   "gecko_id": "raydium",
+   "parents": [
+    "parent#raydium"
+   ],
+   "family": [
+    "launchlab",
+    "raydium-amm",
+    "raydium-perps"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [
+    "launchlab",
+    "raydium-amm"
+   ],
+   "fees_first": {
+    "launchlab": "2025-04-16",
+    "raydium-amm": "2022-10-17"
+   },
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "RBN": {
+   "coinbase_name": "Ribbon Finance",
+   "gecko_id": "ribbon-finance",
+   "parents": [
+    "parent#ribbon-finance"
+   ],
+   "family": [
+    "ribbon",
+    "ribbon-earn",
+    "ribbon-lend"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [
+    "ribbon"
+   ],
+   "fees_first": {
+    "ribbon": "2024-06-08"
+   },
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "RE": {
+   "coinbase_name": "Re",
+   "gecko_id": "re",
+   "parents": [],
+   "family": [
+    "re"
+   ],
+   "earliest_listedAt": "2025-12-22",
+   "fees_slugs": [
+    "re"
+   ],
+   "fees_first": {
+    "re": "2025-05-28"
+   },
+   "reason": "family resolved"
+  },
+  "RECALL": {
+   "family": [],
+   "coinbase_name": "Recall Network",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "RED": {
+   "coinbase_name": "Redstone",
+   "gecko_id": "redstone-oracles",
+   "parents": [],
+   "family": [
+    "redstone-finance"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [],
+   "fees_first": {},
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "REN": {
+   "coinbase_name": "Ren",
+   "gecko_id": "republic-protocol",
+   "parents": [],
+   "family": [
+    "renvm"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [],
+   "fees_first": {},
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "RENDER": {
+   "family": [],
+   "coinbase_name": "Render Network",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "REP": {
+   "family": [],
+   "coinbase_name": "Augur",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "REQ": {
+   "coinbase_name": "Request",
+   "gecko_id": "request-network",
+   "parents": [],
+   "family": [
+    "request-network"
+   ],
+   "earliest_listedAt": "2025-06-16",
+   "fees_slugs": [],
+   "fees_first": {},
+   "reason": "family resolved"
+  },
+  "REZ": {
+   "coinbase_name": "Renzo",
+   "gecko_id": "renzo",
+   "parents": [],
+   "family": [
+    "renzo"
+   ],
+   "earliest_listedAt": "2023-12-19",
+   "fees_slugs": [
+    "renzo"
+   ],
+   "fees_first": {
+    "renzo": "2024-09-05"
+   },
+   "reason": "family resolved"
+  },
+  "RGT": {
+   "family": [],
+   "coinbase_name": "Rari Governance Token",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "RLC": {
+   "family": [],
+   "coinbase_name": "iExec RLC",
+   "gecko_id": "iexec-rlc",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "RLS": {
+   "family": [],
+   "coinbase_name": "Rayls",
+   "gecko_id": "rayls",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "RLY": {
+   "family": [],
+   "coinbase_name": "Rally",
+   "gecko_id": "rally-2",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "RNBW": {
+   "coinbase_name": "Rainbow",
+   "gecko_id": "rainbow-3-2",
+   "parents": [
+    "parent#rainbow"
+   ],
+   "family": [
+    "rainbow-perps",
+    "rainbow-predictions",
+    "rainbow-token-launchpad",
+    "rainbow-wallet"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [
+    "rainbow-perps",
+    "rainbow-predictions",
+    "rainbow-token-launchpad",
+    "rainbow-wallet"
+   ],
+   "fees_first": {
+    "rainbow-perps": null,
+    "rainbow-predictions": null,
+    "rainbow-token-launchpad": null,
+    "rainbow-wallet": null
+   },
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "RNDR": {
+   "family": [],
+   "coinbase_name": "Render Token",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "ROBO": {
+   "family": [],
+   "coinbase_name": "Robo Token",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "RONIN": {
+   "family": [],
+   "coinbase_name": "Ronin",
+   "gecko_id": "ronin-2",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "ROSE": {
+   "family": [],
+   "coinbase_name": "Oasis Network",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "RPL": {
+   "coinbase_name": "Rocket Pool",
+   "gecko_id": "rocket-pool",
+   "parents": [],
+   "family": [
+    "rocket-pool"
+   ],
+   "earliest_listedAt": "2021-11-24",
+   "fees_slugs": [
+    "rocket-pool"
+   ],
+   "fees_first": {
+    "rocket-pool": "2023-01-01"
+   },
+   "reason": "family resolved"
+  },
+  "RSC": {
+   "family": [],
+   "coinbase_name": "ResearchCoin",
+   "gecko_id": "researchcoin",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "RSR": {
+   "coinbase_name": "Reserve Rights",
+   "gecko_id": "reserve-rights-token",
+   "parents": [],
+   "family": [
+    "reserve-protocol"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [
+    "reserve-protocol"
+   ],
+   "fees_first": {
+    "reserve-protocol": "2023-04-20"
+   },
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "S": {
+   "coinbase_name": "Sonic",
+   "gecko_id": "sonic-3",
+   "parents": [],
+   "family": [
+    "sonic"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [
+    "sonic"
+   ],
+   "fees_first": {
+    "sonic": "2025-02-06"
+   },
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "SAFE": {
+   "family": [],
+   "coinbase_name": "Safe",
+   "reason": "2 CoinGecko coins match symbol AND name",
+   "cg_candidates": [
+    "safe",
+    "safe-2"
+   ]
+  },
+  "SAND": {
+   "coinbase_name": "The Sandbox",
+   "gecko_id": "the-sandbox",
+   "parents": [],
+   "family": [
+    "the-sandbox"
+   ],
+   "earliest_listedAt": "2021-12-21",
+   "fees_slugs": [],
+   "fees_first": {},
+   "reason": "family resolved"
+  },
+  "SAPIEN": {
+   "coinbase_name": "Sapien",
+   "gecko_id": "sapien-2",
+   "parents": [],
+   "family": [
+    "sapien-vault"
+   ],
+   "earliest_listedAt": "2026-08-20",
+   "fees_slugs": [],
+   "fees_first": {},
+   "reason": "family resolved"
+  },
+  "SD": {
+   "coinbase_name": "Stader",
+   "gecko_id": "stader",
+   "parents": [],
+   "family": [
+    "stader"
+   ],
+   "earliest_listedAt": "2021-12-18",
+   "fees_slugs": [
+    "stader"
+   ],
+   "fees_first": {
+    "stader": "2024-12-21"
+   },
+   "reason": "family resolved"
+  },
+  "SEAM": {
+   "family": [],
+   "coinbase_name": "Seamless",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "SEI": {
+   "coinbase_name": "Sei",
+   "gecko_id": "sei-network",
+   "parents": [],
+   "family": [
+    "sei"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [
+    "sei"
+   ],
+   "fees_first": {
+    "sei": "2024-07-10"
+   },
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "SENT": {
+   "family": [],
+   "coinbase_name": "Sentient",
+   "gecko_id": "sentient",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "SHDW": {
+   "family": [],
+   "coinbase_name": "Shadow",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "SHIB": {
+   "family": [],
+   "coinbase_name": "Shiba Inu",
+   "gecko_id": "shiba-inu",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "SHPING": {
+   "family": [],
+   "coinbase_name": "Shping",
+   "gecko_id": "shping",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "SIGN": {
+   "coinbase_name": "Sign",
+   "gecko_id": "sign-global",
+   "parents": [],
+   "family": [
+    "sign"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [],
+   "fees_first": {},
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "SKL": {
+   "family": [],
+   "coinbase_name": "SKALE",
+   "gecko_id": "skale",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "SKR": {
+   "family": [],
+   "coinbase_name": "Seeker",
+   "gecko_id": "seeker",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "SKY": {
+   "coinbase_name": "Sky",
+   "gecko_id": "sky",
+   "parents": [
+    "parent#maker"
+   ],
+   "family": [
+    "sky-lending",
+    "sky-money",
+    "sky-rwa"
+   ],
+   "earliest_listedAt": "2023-10-19",
+   "fees_slugs": [
+    "sky-lending",
+    "sky-money"
+   ],
+   "fees_first": {
+    "sky-lending": "2019-11-18",
+    "sky-money": "2026-01-23"
+   },
+   "reason": "family resolved"
+  },
+  "SNT": {
+   "coinbase_name": "Status",
+   "gecko_id": "status",
+   "parents": [],
+   "family": [
+    "status"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [],
+   "fees_first": {},
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "SNX": {
+   "coinbase_name": "Synthetix",
+   "gecko_id": "havven",
+   "parents": [
+    "parent#synthetix"
+   ],
+   "family": [
+    "synthetix-v1+v2",
+    "synthetix-v3",
+    "synthetix-v4"
+   ],
+   "earliest_listedAt": "2024-04-05",
+   "fees_slugs": [
+    "synthetix-v1+v2",
+    "synthetix-v3",
+    "synthetix-v4"
+   ],
+   "fees_first": {
+    "synthetix-v1+v2": "2021-11-12",
+    "synthetix-v3": "2024-01-14",
+    "synthetix-v4": "2026-05-21"
+   },
+   "reason": "family resolved"
+  },
+  "SOL": {
+   "coinbase_name": "Solana",
+   "gecko_id": "solana",
+   "parents": [],
+   "family": [
+    "solana"
+   ],
+   "earliest_listedAt": "2024-05-15",
+   "fees_slugs": [
+    "solana"
+   ],
+   "fees_first": {
+    "solana": "2021-01-17"
+   },
+   "reason": "family resolved"
+  },
+  "SPA": {
+   "coinbase_name": "Sperax",
+   "gecko_id": "sperax",
+   "parents": [
+    "parent#sperax"
+   ],
+   "family": [
+    "sperax-demeter",
+    "sperax-demeter-v2",
+    "sperax-usd"
+   ],
+   "earliest_listedAt": "2022-01-05",
+   "fees_slugs": [
+    "sperax-usd"
+   ],
+   "fees_first": {
+    "sperax-usd": "2025-07-18"
+   },
+   "reason": "family resolved"
+  },
+  "SPELL": {
+   "family": [],
+   "coinbase_name": "Spell Token",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "SPK": {
+   "coinbase_name": "Spark",
+   "gecko_id": "spark-2",
+   "parents": [
+    "parent#spark"
+   ],
+   "family": [
+    "spark-liquidity-layer",
+    "spark-savings",
+    "sparklend"
+   ],
+   "earliest_listedAt": "2023-05-03",
+   "fees_slugs": [
+    "spark-liquidity-layer",
+    "sparklend"
+   ],
+   "fees_first": {
+    "spark-liquidity-layer": "2025-04-07",
+    "sparklend": "2024-07-08"
+   },
+   "reason": "family resolved"
+  },
+  "SPX": {
+   "family": [],
+   "coinbase_name": "Spx6900",
+   "gecko_id": "spx6900",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "SQD": {
+   "family": [],
+   "coinbase_name": "Subsquid",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "STG": {
+   "family": [],
+   "coinbase_name": "Stargate Finance V1",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "STORJ": {
+   "family": [],
+   "coinbase_name": "Storj",
+   "gecko_id": "storj",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "STRK": {
+   "coinbase_name": "Starknet",
+   "gecko_id": "starknet",
+   "parents": [],
+   "family": [
+    "starknet-bridge"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [],
+   "fees_first": {},
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "STX": {
+   "coinbase_name": "Stacks",
+   "gecko_id": "blockstack",
+   "parents": [],
+   "family": [
+    "stacks-staking"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [],
+   "fees_first": {},
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "SUI": {
+   "coinbase_name": "Sui",
+   "gecko_id": "sui",
+   "parents": [],
+   "family": [
+    "sui-foundation"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [
+    "sui-foundation"
+   ],
+   "fees_first": {
+    "sui-foundation": "2026-03-01"
+   },
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "SUKU": {
+   "family": [],
+   "coinbase_name": "SUKU",
+   "gecko_id": "suku",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "SUP": {
+   "coinbase_name": "Superfluid",
+   "gecko_id": "superfluid",
+   "parents": [],
+   "family": [
+    "superfluid"
+   ],
+   "earliest_listedAt": "2021-10-21",
+   "fees_slugs": [],
+   "fees_first": {},
+   "reason": "family resolved"
+  },
+  "SUPER": {
+   "coinbase_name": "SuperVerse",
+   "gecko_id": "superfarm",
+   "parents": [],
+   "family": [
+    "superfarm"
+   ],
+   "earliest_listedAt": "2021-12-26",
+   "fees_slugs": [],
+   "fees_first": {},
+   "reason": "family resolved"
+  },
+  "SUSHI": {
+   "family": [],
+   "coinbase_name": "SushiSwap",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "SWELL": {
+   "coinbase_name": "Swell",
+   "gecko_id": "swell-network",
+   "parents": [
+    "parent#swell"
+   ],
+   "family": [
+    "supersweth-vault",
+    "swell-btc-lrt",
+    "swell-earn",
+    "swell-l2-farm",
+    "swell-liquid-restaking",
+    "swell-liquid-staking"
+   ],
+   "earliest_listedAt": "2023-04-27",
+   "fees_slugs": [
+    "swell-liquid-restaking",
+    "swell-liquid-staking"
+   ],
+   "fees_first": {
+    "swell-liquid-restaking": "2024-12-16",
+    "swell-liquid-staking": "2023-10-15"
+   },
+   "reason": "family resolved"
+  },
+  "SWFTC": {
+   "family": [],
+   "coinbase_name": "SwftCoin",
+   "gecko_id": "swftcoin",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "SXT": {
+   "coinbase_name": "Space and Time",
+   "gecko_id": "space-and-time",
+   "parents": [],
+   "family": [
+    "space-and-time"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [
+    "space-and-time"
+   ],
+   "fees_first": {
+    "space-and-time": "2025-08-27"
+   },
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "SYLO": {
+   "family": [],
+   "coinbase_name": "Sylo",
+   "gecko_id": "sylo",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "SYN": {
+   "coinbase_name": "Synapse",
+   "gecko_id": "synapse-2",
+   "parents": [
+    "parent#synapse"
+   ],
+   "family": [
+    "hypercall",
+    "hypercall-perps",
+    "synapse-cross-chain-bridge"
+   ],
+   "earliest_listedAt": "2026-07-02",
+   "fees_slugs": [
+    "hypercall-perps",
+    "synapse-cross-chain-bridge"
+   ],
+   "fees_first": {
+    "hypercall-perps": null,
+    "synapse-cross-chain-bridge": "2021-08-21"
+   },
+   "reason": "family resolved"
+  },
+  "SYND": {
+   "family": [],
+   "coinbase_name": "Syndicate",
+   "gecko_id": "syndicate-3",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "SYRUP": {
+   "coinbase_name": "Maple Finance",
+   "gecko_id": "syrup",
+   "parents": [
+    "parent#maple-finance"
+   ],
+   "family": [
+    "maple",
+    "maple-rwa"
+   ],
+   "earliest_listedAt": "2025-03-03",
+   "fees_slugs": [
+    "maple"
+   ],
+   "fees_first": {
+    "maple": "2022-01-18"
+   },
+   "reason": "family resolved"
+  },
+  "T": {
+   "family": [],
+   "coinbase_name": "Threshold",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "TAO": {
+   "coinbase_name": "Bittensor",
+   "gecko_id": "bittensor",
+   "parents": [],
+   "family": [
+    "bittensor"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [],
+   "fees_first": {},
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "THQ": {
+   "coinbase_name": "Theoriq",
+   "gecko_id": "theoriq",
+   "parents": [
+    "parent#theoriq"
+   ],
+   "family": [
+    "theoriq-alphavault-eth",
+    "theoriq-gold-vault"
+   ],
+   "earliest_listedAt": "2026-02-27",
+   "fees_slugs": [],
+   "fees_first": {},
+   "reason": "family resolved"
+  },
+  "TIA": {
+   "coinbase_name": "Celestia",
+   "gecko_id": "celestia",
+   "parents": [],
+   "family": [
+    "celestia"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [
+    "celestia"
+   ],
+   "fees_first": {
+    "celestia": "2023-12-15"
+   },
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "TIME": {
+   "coinbase_name": "Chrono.tech",
+   "gecko_id": "chronobank",
+   "parents": [],
+   "family": [
+    "timewarp"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [],
+   "fees_first": {},
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "TNSR": {
+   "coinbase_name": "Tensor",
+   "gecko_id": "tensor",
+   "parents": [],
+   "family": [
+    "tensor"
+   ],
+   "earliest_listedAt": "2026-05-08",
+   "fees_slugs": [],
+   "fees_first": {},
+   "reason": "family resolved"
+  },
+  "TON": {
+   "family": [],
+   "coinbase_name": "Toncoin",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "TONE": {
+   "family": [],
+   "coinbase_name": "TE-FOOD",
+   "gecko_id": "te-food",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "TOSHI": {
+   "family": [],
+   "coinbase_name": "Toshi",
+   "reason": "2 CoinGecko coins match symbol AND name",
+   "cg_candidates": [
+    "toshi",
+    "toshi-3"
+   ]
+  },
+  "TOWNS": {
+   "family": [],
+   "coinbase_name": "Towns Protocol",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "TRAC": {
+   "family": [],
+   "coinbase_name": "OriginTrail",
+   "gecko_id": "origintrail",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "TRB": {
+   "family": [],
+   "coinbase_name": "Tellor",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "TREE": {
+   "coinbase_name": "Treehouse",
+   "gecko_id": "treehouse",
+   "parents": [],
+   "family": [
+    "treehouse-protocol"
+   ],
+   "earliest_listedAt": "2024-09-10",
+   "fees_slugs": [
+    "treehouse-protocol"
+   ],
+   "fees_first": {
+    "treehouse-protocol": "2024-09-24"
+   },
+   "reason": "family resolved"
+  },
+  "TRIA": {
+   "coinbase_name": "Tria",
+   "gecko_id": "tria",
+   "parents": [
+    "parent#tria"
+   ],
+   "family": [
+    "tria-card",
+    "tria-perps"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [
+    "tria-card",
+    "tria-perps"
+   ],
+   "fees_first": {
+    "tria-card": "2025-06-06",
+    "tria-perps": "2026-01-28"
+   },
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "TRIBE": {
+   "family": [],
+   "coinbase_name": "Tribe",
+   "reason": "2 CoinGecko coins match symbol AND name",
+   "cg_candidates": [
+    "tribe-2",
+    "tribe-3"
+   ]
+  },
+  "TROLL": {
+   "family": [],
+   "coinbase_name": "Troll",
+   "reason": "2 CoinGecko coins match symbol AND name",
+   "cg_candidates": [
+    "troll",
+    "troll-2"
+   ]
+  },
+  "TRU": {
+   "coinbase_name": "TrueFi",
+   "gecko_id": "truefi",
+   "parents": [],
+   "family": [
+    "truefi"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [],
+   "fees_first": {},
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "TRUMP": {
+   "coinbase_name": "Official Trump",
+   "gecko_id": "official-trump",
+   "parents": [],
+   "family": [
+    "official-trump"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [],
+   "fees_first": {},
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "TRUST": {
+   "coinbase_name": "Intuition",
+   "gecko_id": "intuition",
+   "parents": [],
+   "family": [
+    "intuition"
+   ],
+   "earliest_listedAt": "2024-08-31",
+   "fees_slugs": [],
+   "fees_first": {},
+   "reason": "family resolved"
+  },
+  "TURBO": {
+   "family": [],
+   "coinbase_name": "Turbo",
+   "gecko_id": "turbo",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "TVK": {
+   "family": [],
+   "coinbase_name": "The Virtua Kolect",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "UMA": {
+   "family": [],
+   "coinbase_name": "UMA",
+   "gecko_id": "uma",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "UNFI": {
+   "coinbase_name": "Unifi Protocol DAO",
+   "gecko_id": "unifi-protocol-dao",
+   "parents": [],
+   "family": [
+    "unifi"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [],
+   "fees_first": {},
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "UNI": {
+   "coinbase_name": "Uniswap",
+   "gecko_id": "uniswap",
+   "parents": [
+    "parent#uniswap"
+   ],
+   "family": [
+    "uniswap-auctions",
+    "uniswap-v1",
+    "uniswap-v2",
+    "uniswap-v3",
+    "uniswap-v4"
+   ],
+   "earliest_listedAt": "2022-10-19",
+   "fees_slugs": [
+    "uniswap-v1",
+    "uniswap-v2",
+    "uniswap-v3",
+    "uniswap-v4"
+   ],
+   "fees_first": {
+    "uniswap-v1": "2018-11-03",
+    "uniswap-v2": "2020-05-15",
+    "uniswap-v3": "2021-05-05",
+    "uniswap-v4": "2025-02-01"
+   },
+   "reason": "family resolved"
+  },
+  "UP": {
+   "family": [],
+   "coinbase_name": "Superform",
+   "gecko_id": "superform",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "UPI": {
+   "family": [],
+   "coinbase_name": "Pawtocol",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "USD1": {
+   "family": [],
+   "coinbase_name": "World Liberty Financial Usd",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "USELESS": {
+   "family": [],
+   "coinbase_name": "Useless Coin",
+   "reason": "2 CoinGecko coins match symbol AND name",
+   "cg_candidates": [
+    "useless-3",
+    "useless-coin"
+   ]
+  },
+  "UST": {
+   "family": [],
+   "coinbase_name": "TerraClassicUSD",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "VARA": {
+   "family": [],
+   "coinbase_name": "Vara",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "VELO": {
+   "coinbase_name": "Velodrome Finance",
+   "gecko_id": "velodrome-finance",
+   "parents": [
+    "parent#velodrome"
+   ],
+   "family": [
+    "velodrome-v1",
+    "velodrome-v2",
+    "velodrome-v3"
+   ],
+   "earliest_listedAt": "2022-06-02",
+   "fees_slugs": [
+    "velodrome-v1",
+    "velodrome-v2",
+    "velodrome-v3"
+   ],
+   "fees_first": {
+    "velodrome-v1": "2022-06-01",
+    "velodrome-v2": "2023-07-24",
+    "velodrome-v3": "2024-03-08"
+   },
+   "reason": "family resolved"
+  },
+  "VET": {
+   "family": [],
+   "coinbase_name": "VeChain",
+   "gecko_id": "vechain",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "VGX": {
+   "family": [],
+   "coinbase_name": "Voyager Token",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "VIRTUAL": {
+   "coinbase_name": "Virtuals Protocol",
+   "gecko_id": "virtual-protocol",
+   "parents": [],
+   "family": [
+    "virtuals-protocol"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [
+    "virtuals-protocol"
+   ],
+   "fees_first": {
+    "virtuals-protocol": "2024-10-16"
+   },
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "VOXEL": {
+   "family": [],
+   "coinbase_name": "Voxies",
+   "gecko_id": "voxies",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "VTHO": {
+   "family": [],
+   "coinbase_name": "VeThor",
+   "gecko_id": "vethor-token",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "VVV": {
+   "coinbase_name": "Venice Token",
+   "gecko_id": "venice-token",
+   "parents": [],
+   "family": [
+    "venice"
+   ],
+   "earliest_listedAt": "2026-05-20",
+   "fees_slugs": [
+    "venice"
+   ],
+   "fees_first": {
+    "venice": "2025-12-08"
+   },
+   "reason": "family resolved"
+  },
+  "W": {
+   "coinbase_name": "Wormhole",
+   "gecko_id": "wormhole",
+   "parents": [],
+   "family": [
+    "portal"
+   ],
+   "earliest_listedAt": "2022-03-13",
+   "fees_slugs": [
+    "portal"
+   ],
+   "fees_first": {
+    "portal": "2025-05-05"
+   },
+   "reason": "family resolved"
+  },
+  "WAL": {
+   "coinbase_name": "Walrus",
+   "gecko_id": "walrus-2",
+   "parents": [],
+   "family": [
+    "walrus-protocol"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [
+    "walrus-protocol"
+   ],
+   "fees_first": {
+    "walrus-protocol": "2025-03-25"
+   },
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "WAMPL": {
+   "family": [],
+   "coinbase_name": "Wrapped Ampleforth",
+   "gecko_id": "wrapped-ampleforth",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "WAXL": {
+   "family": [],
+   "coinbase_name": "Wrapped Axelar",
+   "gecko_id": "wrapped-axelar",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "WCFG": {
+   "family": [],
+   "coinbase_name": "Wrapped Centrifuge",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "WCT": {
+   "family": [],
+   "coinbase_name": "Walletconnect Token",
+   "gecko_id": "connect-token-wct",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "WELL": {
+   "coinbase_name": "Moonwell",
+   "gecko_id": "moonwell-artemis",
+   "parents": [
+    "parent#moonwell"
+   ],
+   "family": [
+    "moonwell-lending",
+    "moonwell-vaults"
+   ],
+   "earliest_listedAt": "2022-06-23",
+   "fees_slugs": [
+    "moonwell-lending",
+    "moonwell-vaults"
+   ],
+   "fees_first": {
+    "moonwell-lending": "2024-06-01",
+    "moonwell-vaults": "2024-06-19"
+   },
+   "reason": "family resolved"
+  },
+  "WET": {
+   "coinbase_name": "Humidifi",
+   "gecko_id": "humidifi",
+   "parents": [],
+   "family": [
+    "humidifi"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [
+    "humidifi"
+   ],
+   "fees_first": {
+    "humidifi": "2026-01-01"
+   },
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "WIF": {
+   "family": [],
+   "coinbase_name": "Dogwifhat",
+   "reason": "2 CoinGecko coins match symbol AND name",
+   "cg_candidates": [
+    "dogwifcoin",
+    "dogwifhat-base"
+   ]
+  },
+  "WLD": {
+   "coinbase_name": "Worldcoin",
+   "gecko_id": "worldcoin-wld",
+   "parents": [],
+   "family": [
+    "worldcoin"
+   ],
+   "earliest_listedAt": "2024-05-15",
+   "fees_slugs": [],
+   "fees_first": {},
+   "reason": "family resolved"
+  },
+  "WLFI": {
+   "coinbase_name": "World Liberty Financial",
+   "gecko_id": "world-liberty-financial",
+   "parents": [],
+   "family": [
+    "world-liberty-financial"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [
+    "world-liberty-financial"
+   ],
+   "fees_first": {
+    "world-liberty-financial": "2025-06-07"
+   },
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "WLUNA": {
+   "family": [],
+   "coinbase_name": "Wrapped Luna Classic",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "WMTX": {
+   "coinbase_name": "World Mobile Token",
+   "gecko_id": "world-mobile-token",
+   "parents": [],
+   "family": [
+    "world-mobile-token"
+   ],
+   "earliest_listedAt": "2023-04-16",
+   "fees_slugs": [
+    "world-mobile-token"
+   ],
+   "fees_first": {
+    "world-mobile-token": null
+   },
+   "reason": "family resolved"
+  },
+  "WRON": {
+   "family": [],
+   "coinbase_name": "Wrapped Ronin",
+   "gecko_id": "wrapped-ronin",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "XAN": {
+   "family": [],
+   "coinbase_name": "Anoma",
+   "gecko_id": "anoma",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "XCN": {
+   "family": [],
+   "coinbase_name": "Onyxcoin",
+   "gecko_id": "chain-2",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "XLM": {
+   "family": [],
+   "coinbase_name": "Stellar",
+   "gecko_id": "stellar",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "XPL": {
+   "coinbase_name": "Plasma",
+   "gecko_id": "plasma",
+   "parents": [],
+   "family": [
+    "plasma"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [
+    "plasma"
+   ],
+   "fees_first": {
+    "plasma": "2025-09-24"
+   },
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "XRP": {
+   "family": [],
+   "coinbase_name": "XRP",
+   "gecko_id": "ripple",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "XTZ": {
+   "coinbase_name": "Tezos",
+   "gecko_id": "tezos",
+   "parents": [],
+   "family": [
+    "tezos"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [
+    "tezos"
+   ],
+   "fees_first": {
+    "tezos": "2022-04-15"
+   },
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "XYO": {
+   "family": [],
+   "coinbase_name": "XYO",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "YB": {
+   "coinbase_name": "Yield Basis",
+   "gecko_id": "yield-basis",
+   "parents": [],
+   "family": [
+    "yield-basis"
+   ],
+   "earliest_listedAt": "2025-09-25",
+   "fees_slugs": [
+    "yield-basis"
+   ],
+   "fees_first": {
+    "yield-basis": "2025-09-25"
+   },
+   "reason": "family resolved"
+  },
+  "YFI": {
+   "coinbase_name": "yearn.finance",
+   "gecko_id": "yearn-finance",
+   "parents": [
+    "parent#yearn"
+   ],
+   "family": [
+    "yearn-curating",
+    "yearn-ether",
+    "yearn-finance"
+   ],
+   "earliest_listedAt": "2023-12-29",
+   "fees_slugs": [
+    "yearn-curating",
+    "yearn-ether",
+    "yearn-finance"
+   ],
+   "fees_first": {
+    "yearn-curating": "2025-04-26",
+    "yearn-ether": "2024-09-23",
+    "yearn-finance": "2020-07-28"
+   },
+   "reason": "family resolved"
+  },
+  "YFII": {
+   "coinbase_name": "DFI.Money",
+   "gecko_id": "yfii-finance",
+   "parents": [],
+   "family": [
+    "yfii"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [],
+   "fees_first": {},
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "ZAMA": {
+   "coinbase_name": "Zama",
+   "gecko_id": "zama",
+   "parents": [],
+   "family": [
+    "zama"
+   ],
+   "earliest_listedAt": "2026-05-04",
+   "fees_slugs": [],
+   "fees_first": {},
+   "reason": "family resolved"
+  },
+  "ZEC": {
+   "family": [],
+   "coinbase_name": "Zcash",
+   "gecko_id": "zcash",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "ZEN": {
+   "family": [],
+   "coinbase_name": "Horizen",
+   "gecko_id": "zencash",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "ZETA": {
+   "coinbase_name": "Zetachain",
+   "gecko_id": "zetachain",
+   "parents": [],
+   "family": [
+    "zetachain"
+   ],
+   "earliest_listedAt": "2024-04-30",
+   "fees_slugs": [
+    "zetachain"
+   ],
+   "fees_first": {
+    "zetachain": "2024-02-23"
+   },
+   "reason": "family resolved"
+  },
+  "ZETACHAIN": {
+   "family": [],
+   "coinbase_name": "ZetaChain",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  },
+  "ZK": {
+   "coinbase_name": "zkSync",
+   "gecko_id": "zksync",
+   "parents": [],
+   "family": [
+    "zksync-era"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [
+    "zksync-era"
+   ],
+   "fees_first": {
+    "zksync-era": "2023-02-15"
+   },
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "ZKC": {
+   "family": [],
+   "coinbase_name": "Boundless",
+   "gecko_id": "boundless",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "ZKP": {
+   "family": [],
+   "coinbase_name": "Zkpass",
+   "gecko_id": "zkpass",
+   "reason": "no DeFiLlama protocol or parent with this gecko_id"
+  },
+  "ZORA": {
+   "coinbase_name": "Zora",
+   "gecko_id": "zora",
+   "parents": [
+    "parent#zora"
+   ],
+   "family": [
+    "zora-bridge",
+    "zora-coins",
+    "zora-marketplace"
+   ],
+   "earliest_listedAt": "2023-02-28",
+   "fees_slugs": [
+    "zora-coins",
+    "zora-marketplace"
+   ],
+   "fees_first": {
+    "zora-coins": "2025-02-20",
+    "zora-marketplace": "2022-12-01"
+   },
+   "reason": "family resolved"
+  },
+  "ZRO": {
+   "coinbase_name": "Layerzero",
+   "gecko_id": "layerzero",
+   "parents": [
+    "parent#layerzero"
+   ],
+   "family": [
+    "layerzero-v1",
+    "layerzero-v2"
+   ],
+   "earliest_listedAt": null,
+   "fees_slugs": [
+    "layerzero-v1",
+    "layerzero-v2"
+   ],
+   "fees_first": {
+    "layerzero-v1": "2022-11-09",
+    "layerzero-v2": "2024-02-01"
+   },
+   "reason": "family resolved but no listedAt on any member: unusable under the strict availability rule"
+  },
+  "ZRX": {
+   "family": [],
+   "coinbase_name": "0x",
+   "reason": "no CoinGecko coin with same symbol AND name",
+   "cg_candidates": []
+  }
+ }
+}
