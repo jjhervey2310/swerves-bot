@@ -693,3 +693,16 @@ stage (idle), live collectors, 112 tests. The only edge with evidence in this pr
 below market cost (mining) and holding it with a drawdown rule — 100% BTC buy-and-hold made +22.6% over the test span
 with a −76.7% drawdown while every tested rule lost. Any further research starts from a new pre-registration.
 
+---
+
+## R-2026-10-11-AK — Jacob: "merge 52", then "accumulation"; Phase 5 draft v1 for review
+
+PR #52 merged to main (79850c9). Phase 5 pre-registration draft v1 (`docs/desk/PHASE5-ACCUMULATION-PREREGISTRATION.md`):
+the question that matches the structural edge — mined BTC plus cash into the strongest accumulation policy versus holding
+every coin. Benchmark HODL; four policies with ≤ 4 grid points (fixed sweep, trend hedge, drawdown ladder,
+fear-weighted sweep under the assumed-availability F&G label); block-bootstrap verdict (2,000 paths, block 60, joint
+F&G resampling, 5-year horizon) with a six-condition falsifier against HODL (median wealth, tail, drawdown, BTC retained,
+cost stress, historical path); US tax treatment as frozen rates with a 0% sensitivity; four inputs declared by Jacob
+before the freeze (mined BTC/month, all-in cost per BTC, cash/month, reserve months). Output is a policy comparison,
+never a signal; a `beats_hodl` policy goes to a 12-month live shadow run before any approval. No code until accepted.
+
